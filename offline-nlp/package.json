@@ -1,0 +1,9 @@
+{
+  "name": "qsafe-offline-nlp",
+  "version": "1.0.0",
+  "description": "Ahead-of-Time compilation for offline intent classification",
+  "main": "train.js",
+  "dependencies": {
+    "@nlpjs/nlp": "^4.26.1"
+  }
+}

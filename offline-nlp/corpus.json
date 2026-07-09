@@ -1,0 +1,26 @@
+{
+  "name": "QSAFE-Bilingual-Intents",
+  "locale": "en",
+  "data": [
+    {
+      "intent": "intent.earthquake",
+      "utterances": [
+        "earthquake safety steps",
+        "bhuikampa bhanda kasari bachne",
+        "where to hide during tremor",
+        "भूकम्प आउँदा के गर्ने",
+        "safe zone inside house"
+      ]
+    },
+    {
+      "intent": "intent.landslide",
+      "utterances": [
+        "landslide alert signs",
+        "pahiro bata kasari bachne",
+        "heavy rain mudslide risk",
+        "पहिरो सुरक्षा उपाय",
+        "sliding hills safety"
+      ]
+    }
+  ]
+}

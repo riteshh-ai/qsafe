@@ -1,0 +1,11 @@
+{
+  "hotlines": [
+    { "name": "National Emergency Operations (NDRRMA)", "phone": "16666" },
+    { "name": "Nepal Police Control", "phone": "100" },
+    { "name": "Armed Police Force Rescue", "phone": "1114" },
+    { "name": "Red Cross Ambulance Central", "phone": "102" }
+  ],
+  "static_checklists": {
+    "earthquake": "DROP, COVER, and HOLD ON under structural beams or stable furniture. Stay clear of masonry brick walls, windows, and heavy overhead fixtures. If outdoors, navigate immediately to open territory."
+  }
+}
