@@ -1,11 +1,38 @@
 {
-  "hotlines": [
-    { "name": "National Emergency Operations (NDRRMA)", "phone": "16666" },
-    { "name": "Nepal Police Control", "phone": "100" },
-    { "name": "Armed Police Force Rescue", "phone": "1114" },
-    { "name": "Red Cross Ambulance Central", "phone": "102" }
-  ],
+  "hotlines": {
+    "en": [
+      { "name": "National Emergency Operations (NDRRMA)", "phone": "16666" },
+      { "name": "Nepal Police Control", "phone": "100" },
+      { "name": "Armed Police Force Rescue", "phone": "1114" },
+      { "name": "Red Cross Ambulance Central", "phone": "102" }
+    ],
+    "ne": [
+      { "name": "राष्ट्रिय आपतकालीन कार्यसञ्चालन केन्द्र", "phone": "16666" },
+      { "name": "नेपाल प्रहरी नियन्त्रण कक्ष", "phone": "100" },
+      { "name": "सशस्त्र प्रहरी बल उद्धार", "phone": "1114" },
+      { "name": "नेपाल रेडक्रस एम्बुलेन्स सेवा", "phone": "102" }
+    ]
+  },
   "static_checklists": {
-    "earthquake": "DROP, COVER, and HOLD ON under structural beams or stable furniture. Stay clear of masonry brick walls, windows, and heavy overhead fixtures. If outdoors, navigate immediately to open territory."
+    "earthquake": {
+      "en": "DROP, COVER, and HOLD ON under structural beams or stable furniture. Stay clear of masonry brick walls, windows, and heavy overhead fixtures. If outdoors, navigate immediately to open territory.",
+      "ne": "भुइँचालो जाँदा घुँडा टेकी, गुडुल्किई, ओत लागेर दह्रोसँग समात्नुहोस् (DROP, COVER, HOLD ON)। इँटाका पर्खाल, झ्याल र झुन्डिएका गह्रौँ सामानहरूबाट टाढा रहनुहोस्। यदि खुल्ला ठाउँमा हुनुहुन्छ भने त्यहीँ सुरक्षित बस्नुहोस्।"
+    },
+    "landslide": {
+      "en": "If inside, move to the highest level of the building facing away from the hillside. If outdoors, watch for sudden changes in water flow or falling boulders; run to the nearest ridge or elevated stable ground.",
+      "ne": "पहिरो आउँदा घरभित्र हुनुहुन्छ भने डाँडापट्टि नभएको कोठा वा माथिल्लो तलामा जानुहोस्। बाहिर हुनुहुन्छ भने थर्किन थालेको जमिन, खसिरहेका ढुङ्गा वा हिलोको बहाव हेरी सुरक्षित, उच्च वा थुम्को भएको ठाउँतिर तुरुन्तै भाग्नुहोस्।"
+    },
+    "first_aid": {
+      "en": "Bleeding: Apply direct, firm pressure with clean cloth. Fractures: Immobilize the limb using a splint without trying to realign the bone. Burns: Flush immediately with cool, running water for 10 minutes.",
+      "ne": "प्राथमिक उपचार - रक्तस्राव: सफा कपडाले सिधै बलियोसँग थिच्नुहोस्। हड्डी भाँचिएमा: हड्डी सिधा बनाउने प्रयास नगरी काम्रो वा फल्याक बाँधेर अचल बनाउनुहोस्। पोलेमा: तुरुन्तै १० मिनेटसम्म चिसो बगिरहेको पानीले धुनुहोस्।"
+    },
+    "kit": {
+      "en": "Pack a Go-Bag with 3 days of water (4L per person/day), dry foods, flashlight, portable radio, copy of citizenship cards, essential medical prescriptions, and extra cash.",
+      "ne": "झोला (Go-Bag) तयार पार्नुहोस्: प्रतिव्यक्ति दैनिक ४ लिटरका दरले ३ दिन पुग्ने पानी, सुख्खा खानेकुरा, टर्चलाइट, रेडियो, नागरिकताको प्रतिलिपि, आवश्यक औषधिहरू र केही नगद पैसा राख्नुहोस्।"
+    },
+    "failsafe": {
+      "en": "System is offline. The local cache cannot resolve specific instructions for this phrase. Keep clear of fragile walls, tall trees, and steep hillsides. Call 16666 immediately if you have cellular network bars.",
+      "ne": "प्रणाली अफलाइन छ। यो वाक्यांशको लागि स्थानीय क्यासमा कुनै स्पष्ट निर्देशन भेटिएन। कमजोर पर्खाल, अग्ला रूख र भिरालो जमिनबाट टाढा रहनुहोस्। नेटवर्क उपलब्ध भएमा तुरुन्तै १६६६६ मा फोन गर्नुहोस्।"
+    }
   }
 }
