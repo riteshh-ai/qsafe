@@ -1,0 +1,484 @@
+keyword,intent,language
+hi,greeting,en
+hello,greeting,en
+hey,greeting,en
+good morning,greeting,en
+good evening,greeting,en
+good afternoon,greeting,en
+namaste,greeting,en
+greetings,greeting,en
+yo,greeting,en
+hiya,greeting,en
+नमस्ते,greeting,ne
+नमस्कार,greeting,ne
+हेल्लो,greeting,ne
+शुभ प्रभात,greeting,ne
+शुभ साँझ,greeting,ne
+सुप्रभात,greeting,ne
+के छ हाल,greeting,ne
+आदाब,greeting,ne
+हजुर नमस्ते,greeting,ne
+नमस्ते जी,greeting,ne
+thank you,goodbye_thanks,en
+thanks,goodbye_thanks,en
+thanks a lot,goodbye_thanks,en
+bye,goodbye_thanks,en
+goodbye,goodbye_thanks,en
+appreciate it,goodbye_thanks,en
+thnx,goodbye_thanks,en
+much appreciated,goodbye_thanks,en
+ok bye,goodbye_thanks,en
+take care,goodbye_thanks,en
+धन्यवाद,goodbye_thanks,ne
+धेरै धन्यवाद,goodbye_thanks,ne
+बाई,goodbye_thanks,ne
+फेरि भेटौंला,goodbye_thanks,ne
+ठिक छ धन्यवाद,goodbye_thanks,ne
+सहयोगको लागि धन्यवाद,goodbye_thanks,ne
+धन्यबाद है,goodbye_thanks,ne
+दाई धन्यवाद,goodbye_thanks,ne
+बहिनी धन्यवाद,goodbye_thanks,ne
+ओके धन्यवाद,goodbye_thanks,ne
+help,sos_help_request,en
+help me,sos_help_request,en
+sos,sos_help_request,en
+emergency,sos_help_request,en
+urgent help,sos_help_request,en
+need help,sos_help_request,en
+please help,sos_help_request,en
+send help,sos_help_request,en
+help now,sos_help_request,en
+help asap,sos_help_request,en
+rescue me,sos_help_request,en
+somebody help,sos_help_request,en
+help required,sos_help_request,en
+सहयोग,sos_help_request,ne
+मद्दत,sos_help_request,ne
+सहयोग गर्नुहोस्,sos_help_request,ne
+मद्दत चाहियो,sos_help_request,ne
+बचाउनुहोस्,sos_help_request,ne
+एस ओ एस,sos_help_request,ne
+छिटो मद्दत चाहियो,sos_help_request,ne
+मलाई बचाउनुहोस्,sos_help_request,ne
+हामीलाई मद्दत चाहियो,sos_help_request,ne
+मद्दत पठाउनुहोस्,sos_help_request,ne
+earthquake,earthquake_occurring_report,en
+tremor,earthquake_occurring_report,en
+shaking,earthquake_occurring_report,en
+quake,earthquake_occurring_report,en
+ground shaking,earthquake_occurring_report,en
+earthquake now,earthquake_occurring_report,en
+strong tremor,earthquake_occurring_report,en
+quake alert,earthquake_occurring_report,en
+seismic shaking,earthquake_occurring_report,en
+earthquake happening,earthquake_occurring_report,en
+भूकम्प,earthquake_occurring_report,ne
+भूकम्प गयो,earthquake_occurring_report,ne
+भूकम्प आयो,earthquake_occurring_report,ne
+भूइँ हल्लियो,earthquake_occurring_report,ne
+घर हल्लियो,earthquake_occurring_report,ne
+जोडदार धक्का,earthquake_occurring_report,ne
+भूकम्पको धक्का,earthquake_occurring_report,ne
+जोडदार भूकम्प,earthquake_occurring_report,ne
+अहिले भूकम्प,earthquake_occurring_report,ne
+धक्का,earthquake_occurring_report,ne
+trapped,trapped_debris_report,en
+stuck,trapped_debris_report,en
+buried,trapped_debris_report,en
+rubble,trapped_debris_report,en
+debris,trapped_debris_report,en
+trapped under debris,trapped_debris_report,en
+pinned,trapped_debris_report,en
+collapsed wall,trapped_debris_report,en
+cannot move,trapped_debris_report,en
+stuck inside,trapped_debris_report,en
+थुनिएको,trapped_debris_report,ne
+पुरिएको,trapped_debris_report,ne
+भग्नावशेष,trapped_debris_report,ne
+पर्खालमुनि थुनिएँ,trapped_debris_report,ne
+फसेको,trapped_debris_report,ne
+हल्लन सक्दिन,trapped_debris_report,ne
+उद्धार चाहियो,trapped_debris_report,ne
+थिचेको छ,trapped_debris_report,ne
+छत खसेर,trapped_debris_report,ne
+फसियौं,trapped_debris_report,ne
+ambulance,medical_emergency_request,en
+medical emergency,medical_emergency_request,en
+unconscious,medical_emergency_request,en
+not breathing,medical_emergency_request,en
+chest pain,medical_emergency_request,en
+heart attack,medical_emergency_request,en
+critical patient,medical_emergency_request,en
+need doctor,medical_emergency_request,en
+severe bleeding,medical_emergency_request,en
+collapsed,medical_emergency_request,en
+एम्बुलेन्स,medical_emergency_request,ne
+मेडिकल इमर्जेन्सी,medical_emergency_request,ne
+बेहोस,medical_emergency_request,ne
+सास फेर्न सकिरहेको छैन,medical_emergency_request,ne
+छातीमा दुखाइ,medical_emergency_request,ne
+डाक्टर चाहियो,medical_emergency_request,ne
+रगत बगिरहेको,medical_emergency_request,ne
+गम्भीर बिरामी,medical_emergency_request,ne
+injured,injury_report,en
+injury,injury_report,en
+bleeding,injury_report,en
+broken arm,injury_report,en
+head injury,injury_report,en
+cut,injury_report,en
+wound,injury_report,en
+sprained ankle,injury_report,en
+burned hand,injury_report,en
+hurt,injury_report,en
+चोट लागेको,injury_report,ne
+घाउ,injury_report,ne
+रगत बगिरहेको,injury_report,ne
+हात भाँचिएको,injury_report,ne
+टाउकोमा चोट,injury_report,ne
+गोडा मर्केको,injury_report,ne
+पोलेको,injury_report,ne
+गम्भीर चोट,injury_report,ne
+fire,fire_incident_report,en
+fire broke out,fire_incident_report,en
+building on fire,fire_incident_report,en
+smoke,fire_incident_report,en
+burning,fire_incident_report,en
+electrical fire,fire_incident_report,en
+kitchen fire,fire_incident_report,en
+fire brigade,fire_incident_report,en
+flames,fire_incident_report,en
+आगलागी,fire_incident_report,ne
+आगो लागेको,fire_incident_report,ne
+आगो,fire_incident_report,ne
+धुवाँ,fire_incident_report,ne
+बलिरहेको,fire_incident_report,ne
+दमकल चाहियो,fire_incident_report,ne
+भान्सामा आगो,fire_incident_report,ne
+आगो फैलिँदैछ,fire_incident_report,ne
+gas leak,gas_leak_report,en
+gas smell,gas_leak_report,en
+cylinder leaking,gas_leak_report,en
+gas pipe broke,gas_leak_report,en
+smell of gas,gas_leak_report,en
+leaking gas,gas_leak_report,en
+gas cylinder,gas_leak_report,en
+ग्यास चुहावट,gas_leak_report,ne
+ग्यासको गन्ध,gas_leak_report,ne
+सिलिन्डर चुहावट,gas_leak_report,ne
+ग्यास चुहियो,gas_leak_report,ne
+ग्यासको पाइप,gas_leak_report,ne
+ग्यास चुहिँदैछ,gas_leak_report,ne
+building collapsed,building_collapse_report,en
+house collapsed,building_collapse_report,en
+roof caved in,building_collapse_report,en
+wall collapsed,building_collapse_report,en
+structure collapsed,building_collapse_report,en
+apartment collapsed,building_collapse_report,en
+घर भत्कियो,building_collapse_report,ne
+भवन ढल्यो,building_collapse_report,ne
+छत खस्यो,building_collapse_report,ne
+पर्खाल भत्कियो,building_collapse_report,ne
+संरचना भत्कियो,building_collapse_report,ne
+cracks in wall,building_damage_check,en
+is it safe to re-enter,building_damage_check,en
+structural damage,building_damage_check,en
+building tilted,building_damage_check,en
+safety inspection,building_damage_check,en
+cracks appeared,building_damage_check,en
+चिरा परेको,building_damage_check,ne
+सुरक्षित छ कि,building_damage_check,ne
+भवनको सुरक्षा जाँच,building_damage_check,ne
+भवन ढल्किएको,building_damage_check,ne
+पर्खालमा चिरा,building_damage_check,ne
+safe place,safe_location_query,en
+safe zone,safe_location_query,en
+evacuation point,safe_location_query,en
+open ground,safe_location_query,en
+assembly point,safe_location_query,en
+nearest safe zone,safe_location_query,en
+where to go for safety,safe_location_query,en
+सुरक्षित ठाउँ,safe_location_query,ne
+सुरक्षित क्षेत्र,safe_location_query,ne
+खुल्ला ठाउँ,safe_location_query,ne
+भेला हुने ठाउँ,safe_location_query,ne
+सुरक्षाको लागि कहाँ जाने,safe_location_query,ne
+shelter,shelter_request,en
+temporary shelter,shelter_request,en
+relief camp,shelter_request,en
+tent camp,shelter_request,en
+displaced,shelter_request,en
+need tents,shelter_request,en
+place to stay,shelter_request,en
+आश्रय,shelter_request,ne
+अस्थायी आश्रय,shelter_request,ne
+राहत शिविर,shelter_request,ne
+पाल शिविर,shelter_request,ne
+विस्थापित,shelter_request,ne
+बस्ने ठाउँ,shelter_request,ne
+evacuate,evacuation_guidance_query,en
+evacuation route,evacuation_guidance_query,en
+evacuation plan,evacuation_guidance_query,en
+evacuation instructions,evacuation_guidance_query,en
+leave the building safely,evacuation_guidance_query,en
+निकासा,evacuation_guidance_query,ne
+निकासाको मार्ग,evacuation_guidance_query,ne
+निकासा योजना,evacuation_guidance_query,ne
+निकासाका निर्देशन,evacuation_guidance_query,ne
+missing,family_member_missing,en
+cannot find,family_member_missing,en
+lost contact,family_member_missing,en
+missing person,family_member_missing,en
+not reachable,family_member_missing,en
+did not come home,family_member_missing,en
+बेपत्ता,family_member_missing,ne
+भेट्टाउन सकिएको छैन,family_member_missing,ne
+सम्पर्क टुटेको,family_member_missing,ne
+फोन लाग्दैन,family_member_missing,ne
+घर आउनुभएको छैन,family_member_missing,ne
+found safe,family_reunification_status,en
+reunited,family_reunification_status,en
+located safely,family_reunification_status,en
+family reunification,family_reunification_status,en
+report found person,family_reunification_status,en
+सुरक्षित भेटियो,family_reunification_status,ne
+पुनर्मिलन,family_reunification_status,ne
+फेला परेको,family_reunification_status,ne
+स्थिति अपडेट,family_reunification_status,ne
+drinking water,food_water_request,en
+food supplies,food_water_request,en
+ration,food_water_request,en
+no food,food_water_request,en
+clean water,food_water_request,en
+food distribution,food_water_request,en
+baby formula,food_water_request,en
+खानेपानी,food_water_request,ne
+खाद्य सामग्री,food_water_request,ne
+खाद्यान्न,food_water_request,ne
+खाना छैन,food_water_request,ne
+सफा पानी,food_water_request,ne
+खाद्य वितरण,food_water_request,ne
+first aid,first_aid_query,en
+stop bleeding,first_aid_query,en
+cpr,first_aid_query,en
+bandage wound,first_aid_query,en
+treat burn,first_aid_query,en
+sprain treatment,first_aid_query,en
+choking help,first_aid_query,en
+प्राथमिक उपचार,first_aid_query,ne
+रगत बग्न रोक्ने,first_aid_query,ne
+सी पी आर,first_aid_query,ne
+पट्टी बाँध्ने,first_aid_query,ne
+पोलेको उपचार,first_aid_query,ne
+aftershock,aftershock_information_query,en
+aftershocks,aftershock_information_query,en
+more tremors,aftershock_information_query,en
+another earthquake,aftershock_information_query,en
+aftershock warning,aftershock_information_query,en
+aftershock update,aftershock_information_query,en
+पराकम्प,aftershock_information_query,ne
+थप धक्का,aftershock_information_query,ne
+अर्को भूकम्प,aftershock_information_query,ne
+पराकम्प चेतावनी,aftershock_information_query,ne
+ambulance number,emergency_contact_request,en
+police number,emergency_contact_request,en
+fire brigade number,emergency_contact_request,en
+emergency contact,emergency_contact_request,en
+helpline number,emergency_contact_request,en
+rescue number,emergency_contact_request,en
+एम्बुलेन्स नम्बर,emergency_contact_request,ne
+प्रहरी नम्बर,emergency_contact_request,ne
+दमकल नम्बर,emergency_contact_request,ne
+हेल्पलाइन नम्बर,emergency_contact_request,ne
+power outage,power_outage_report,en
+no electricity,power_outage_report,en
+electricity cut off,power_outage_report,en
+power lines down,power_outage_report,en
+power restored,power_outage_report,en
+बिजुली गएको,power_outage_report,ne
+बिजुली छैन,power_outage_report,ne
+बिजुली कटौती,power_outage_report,ne
+तार खसेको,power_outage_report,ne
+road blocked,road_blockage_report,en
+landslide,road_blockage_report,en
+bridge collapsed,road_blockage_report,en
+road cracked,road_blockage_report,en
+highway blocked,road_blockage_report,en
+road damaged,road_blockage_report,en
+सडक बन्द,road_blockage_report,ne
+पहिरो,road_blockage_report,ne
+पुल भत्कियो,road_blockage_report,ne
+सडक चिरा,road_blockage_report,ne
+राजमार्ग बन्द,road_blockage_report,ne
+earthquake go bag,preparedness_tips_query,en
+emergency kit,preparedness_tips_query,en
+secure furniture,preparedness_tips_query,en
+preparedness tips,preparedness_tips_query,en
+earthquake drill,preparedness_tips_query,en
+family meeting point,preparedness_tips_query,en
+गो-ब्याग,preparedness_tips_query,ne
+आपतकालीन किट,preparedness_tips_query,ne
+फर्निचर सुरक्षा,preparedness_tips_query,ne
+तयारी सुझाव,preparedness_tips_query,ne
+भूकम्प अभ्यास,preparedness_tips_query,ne
+what should i do now,status_check_general,en
+next steps,status_check_general,en
+current situation,status_check_general,en
+what to do after earthquake,status_check_general,en
+guide me,status_check_general,en
+अहिले के गर्ने,status_check_general,ne
+अर्को चरण,status_check_general,ne
+अहिलेको अवस्था,status_check_general,ne
+मार्गदर्शन गर्नुहोस्,status_check_general,ne
+test,fallback_unclear,en
+random text,fallback_unclear,en
+not related,fallback_unclear,en
+unclear message,fallback_unclear,en
+unrecognized input,fallback_unclear,en
+के हो यो,fallback_unclear,ne
+थाहा छैन,fallback_unclear,ne
+अनि,fallback_unclear,ne
+सम्बन्धित छैन,fallback_unclear,ne
+Kathmandu,earthquake_occurring_report,en
+Kathmandu,safe_location_query,en
+Bhaktapur,earthquake_occurring_report,en
+Bhaktapur,safe_location_query,en
+Lalitpur,earthquake_occurring_report,en
+Lalitpur,safe_location_query,en
+Pokhara,earthquake_occurring_report,en
+Pokhara,safe_location_query,en
+Gorkha,earthquake_occurring_report,en
+Gorkha,safe_location_query,en
+Jajarkot,earthquake_occurring_report,en
+Jajarkot,safe_location_query,en
+Dharan,earthquake_occurring_report,en
+Dharan,safe_location_query,en
+Butwal,earthquake_occurring_report,en
+Butwal,safe_location_query,en
+Chitwan,earthquake_occurring_report,en
+Chitwan,safe_location_query,en
+Biratnagar,earthquake_occurring_report,en
+Biratnagar,safe_location_query,en
+Sindhupalchok,earthquake_occurring_report,en
+Sindhupalchok,safe_location_query,en
+Nuwakot,earthquake_occurring_report,en
+Nuwakot,safe_location_query,en
+the school,earthquake_occurring_report,en
+the school,safe_location_query,en
+my hostel,earthquake_occurring_report,en
+my hostel,safe_location_query,en
+our village,earthquake_occurring_report,en
+our village,safe_location_query,en
+the market area,earthquake_occurring_report,en
+the market area,safe_location_query,en
+near the temple,earthquake_occurring_report,en
+near the temple,safe_location_query,en
+the apartment building,earthquake_occurring_report,en
+the apartment building,safe_location_query,en
+downtown,earthquake_occurring_report,en
+downtown,safe_location_query,en
+my office,earthquake_occurring_report,en
+my office,safe_location_query,en
+काठमाडौं,earthquake_occurring_report,ne
+काठमाडौं,safe_location_query,ne
+भक्तपुर,earthquake_occurring_report,ne
+भक्तपुर,safe_location_query,ne
+ललितपुर,earthquake_occurring_report,ne
+ललितपुर,safe_location_query,ne
+पोखरा,earthquake_occurring_report,ne
+पोखरा,safe_location_query,ne
+गोर्खा,earthquake_occurring_report,ne
+गोर्खा,safe_location_query,ne
+जाजरकोट,earthquake_occurring_report,ne
+जाजरकोट,safe_location_query,ne
+धरान,earthquake_occurring_report,ne
+धरान,safe_location_query,ne
+बुटवल,earthquake_occurring_report,ne
+बुटवल,safe_location_query,ne
+चितवन,earthquake_occurring_report,ne
+चितवन,safe_location_query,ne
+विराटनगर,earthquake_occurring_report,ne
+विराटनगर,safe_location_query,ne
+सिन्धुपाल्चोक,earthquake_occurring_report,ne
+सिन्धुपाल्चोक,safe_location_query,ne
+नुवाकोट,earthquake_occurring_report,ne
+नुवाकोट,safe_location_query,ne
+स्कूल नजिकै,earthquake_occurring_report,ne
+स्कूल नजिकै,safe_location_query,ne
+होस्टलमा,earthquake_occurring_report,ne
+होस्टलमा,safe_location_query,ne
+गाउँमा,earthquake_occurring_report,ne
+गाउँमा,safe_location_query,ne
+बजार क्षेत्रमा,earthquake_occurring_report,ne
+बजार क्षेत्रमा,safe_location_query,ne
+मन्दिर नजिकै,earthquake_occurring_report,ne
+मन्दिर नजिकै,safe_location_query,ne
+अपार्टमेन्टमा,earthquake_occurring_report,ne
+अपार्टमेन्टमा,safe_location_query,ne
+सहरको बीचमा,earthquake_occurring_report,ne
+सहरको बीचमा,safe_location_query,ne
+अफिसमा,earthquake_occurring_report,ne
+अफिसमा,safe_location_query,ne
+my mother,family_member_missing,en
+my mother,medical_emergency_request,en
+my father,family_member_missing,en
+my father,medical_emergency_request,en
+my brother,family_member_missing,en
+my brother,medical_emergency_request,en
+my sister,family_member_missing,en
+my sister,medical_emergency_request,en
+my grandmother,family_member_missing,en
+my grandmother,medical_emergency_request,en
+my grandfather,family_member_missing,en
+my grandfather,medical_emergency_request,en
+my son,family_member_missing,en
+my son,medical_emergency_request,en
+my daughter,family_member_missing,en
+my daughter,medical_emergency_request,en
+my neighbor,family_member_missing,en
+my neighbor,medical_emergency_request,en
+my friend,family_member_missing,en
+my friend,medical_emergency_request,en
+my wife,family_member_missing,en
+my wife,medical_emergency_request,en
+my husband,family_member_missing,en
+my husband,medical_emergency_request,en
+my cousin,family_member_missing,en
+my cousin,medical_emergency_request,en
+my roommate,family_member_missing,en
+my roommate,medical_emergency_request,en
+my aunt,family_member_missing,en
+my aunt,medical_emergency_request,en
+my uncle,family_member_missing,en
+my uncle,medical_emergency_request,en
+आमा,family_member_missing,ne
+आमा,medical_emergency_request,ne
+बुबा,family_member_missing,ne
+बुबा,medical_emergency_request,ne
+दाजु,family_member_missing,ne
+दाजु,medical_emergency_request,ne
+दिदी,family_member_missing,ne
+दिदी,medical_emergency_request,ne
+हजुरआमा,family_member_missing,ne
+हजुरआमा,medical_emergency_request,ne
+हजुरबुबा,family_member_missing,ne
+हजुरबुबा,medical_emergency_request,ne
+छोरा,family_member_missing,ne
+छोरा,medical_emergency_request,ne
+छोरी,family_member_missing,ne
+छोरी,medical_emergency_request,ne
+छिमेकी,family_member_missing,ne
+छिमेकी,medical_emergency_request,ne
+साथी,family_member_missing,ne
+साथी,medical_emergency_request,ne
+श्रीमती,family_member_missing,ne
+श्रीमती,medical_emergency_request,ne
+श्रीमान,family_member_missing,ne
+श्रीमान,medical_emergency_request,ne
+काका,family_member_missing,ne
+काका,medical_emergency_request,ne
+साथी दिदी,family_member_missing,ne
+साथी दिदी,medical_emergency_request,ne
+फुपू,family_member_missing,ne
+फुपू,medical_emergency_request,ne
+मामा,family_member_missing,ne
+मामा,medical_emergency_request,ne
