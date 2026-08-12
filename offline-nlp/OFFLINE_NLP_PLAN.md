@@ -2,154 +2,138 @@
 
 ## Objective
 
-Build a fully offline NLP intent classification pipeline for the QSAFE Nepal project, from dataset collection through model training, offline browser integration, and validation.
+Create a self-contained offline NLP pipeline inside `offline-nlp/` that trains, evaluates, and exports a serialized intent classification model.
 
-The final goal is to have an offline model that can classify emergency-related user queries locally and drive the frontend’s offline response behavior.
+This plan is limited to the offline-NLP workspace only; it does not modify code outside `offline-nlp/`.
 
 ---
 
-## Phase 0: Inventory & Data Collection
+## Stage 1: Data Inventory and Preparation
 
-1. Gather all available datasets:
-   - `offline-nlp/corpus.json`
-   - any uploaded or external bilingual emergency intent data
-   - Nepal disaster guidelines in `backend/data/ndrrma_guidlines.txt`
-   - static safety content in `frontend/public/emergency_contacts.json`
+1. Inventory available offline-NLP data:
+   - confirm `offline-nlp/corpus.json` exists and is the main training corpus
+   - identify any additional uploaded intent data that should be merged
 
-2. Create a dataset manifest:
-   - list target intents
+2. Create a dataset manifest inside `offline-nlp/`:
+   - list all intents
    - count utterances per intent
-   - label each example by language (English, Nepali, Romanized Nepali)
-   - verify coverage for critical disaster categories such as earthquake, landslide, flood, fire, missing person, evacuation, medical emergency, and hotline requests.
+   - label examples by language: English, Nepali, Romanized Nepali
+   - note any missing emergency categories that need more examples
 
-3. Confirm dataset quality before training:
-   - remove duplicates
-   - normalize punctuation and spacing
-   - preserve Nepali Unicode and Romanized spellings
-   - expand underrepresented intents with more examples if needed
+3. Clean and normalize the corpus:
+   - deduplicate repeated utterances
+   - normalize whitespace and punctuation
+   - preserve Nepali Unicode and Romanized phrases
+   - keep the NLP.js corpus format intact
 
-> Do not execute model training until the dataset has been reviewed and finalized.
-
----
-
-## Phase 1: Data Preparation
-
-1. Prepare the training corpus in `offline-nlp/corpus.json`:
-   - ensure it matches NLP.js corpus format
-   - include `intent`, `utterances`, and optional `answers` if desired
-
-2. Normalize training text:
-   - lowercase all inputs
-   - remove extraneous whitespace
-   - keep relevant tokens such as emergency keywords
-   - optionally add normalized Roman Nepali patterns for the same intent
-
-3. Split data for evaluation:
-   - reserve a test set of held-out utterances
-   - keep at least 10-20% of examples for validation
-   - store the test split separately or annotate it clearly in the corpus manifest
+4. Reserve a validation set:
+   - separate 10-20% of examples for offline validation
+   - optionally create `offline-nlp/validation.json` or annotate held-out examples
 
 ---
 
-## Phase 2: Training the Offline Model
+## Stage 2: Training Pipeline Implementation
 
-1. Update the `offline-nlp/train.js` pipeline:
-   - bootstrap the NLP.js container using `@nlpjs/core`
+1. Fix `offline-nlp/train.js` to be fully offline:
+   - bootstrap `@nlpjs/core`
    - register `Nlp` and `Language`
-   - load the corpus data
+   - load `offline-nlp/corpus.json`
    - train the model
-   - export the serialized model as JSON
+   - export serialized JSON
 
-2. Generate the model artifact:
-   - output to `offline-nlp/model.nlp.json`
-   - copy or export to `frontend/public/model.nlp.json`
+2. Persist the trained model artifact locally:
+   - output `offline-nlp/model.nlp.json`
+   - keep the pipeline reproducible and contained in `offline-nlp/`
 
-3. Add developer scripts:
-   - `npm run train` in `offline-nlp/package.json`
+3. Add a developer command in `offline-nlp/package.json`:
+   - `"scripts": { "train": "node train.js" }`
 
-4. Confirm the model is valid:
-   - ensure `model.nlp.json` is written successfully
-   - verify the file can be loaded back into NLP.js
-
----
-
-## Phase 3: Offline Evaluation
-
-1. Create a test harness:
-   - add `offline-nlp/test.js`
-   - load the serialized model with `nlp.fromJSON(...)`
-   - run sample queries from the held-out test set
-
-2. Measure accuracy and confidence:
-   - compare predicted intents against expected labels
-   - verify `earthquake` and other high-priority intents are recognized reliably
-   - observe low-confidence cases and tune thresholds if needed
-
-3. Debug model behavior:
-   - inspect where classification fails
-   - enrich the corpus with missing phrasings for failure cases
+4. Validate the training flow locally:
+   - ensure `npm run train` succeeds
+   - confirm `offline-nlp/model.nlp.json` is produced
 
 ---
 
-## Phase 4: Frontend Offline Integration
+## Stage 3: Evaluation and Test Harness
 
-1. Load the serialized model in the browser:
-   - fetch `frontend/public/model.nlp.json`
-   - initialize `@nlpjs` or a compatible lightweight runtime in the frontend
-   - call `nlp.fromJSON(...)` to load model state
+1. Create `offline-nlp/test.js`:
+   - load `offline-nlp/model.nlp.json`
+   - initialize the NLP model with `nlp.fromJSON(...)`
+   - run sample queries and report predicted intents
 
-2. Add an offline query path in `frontend/app.js`:
-   - when the app is offline, use the local NLP model first
-   - classify the user query into an intent
-   - map recognized intents to local safety responses
-   - use `emergency_contacts.json` for hotline delivery and checklist output
+2. Define validation criteria:
+   - check correct intent predictions for emergency phrases
+   - log confidence scores for each sample
+   - identify any low-confidence or incorrect outputs
 
-3. Keep the existing offline fallback for unmatched queries:
-   - show a fail-safe advice message when the model cannot classify the input
-   - preserve the current local response structure and notification UI
+3. Evaluate held-out examples:
+   - run the validation set through `test.js`
+   - calculate accuracy and highlight failure cases
 
----
-
-## Phase 5: Offline Validation & Testing
-
-1. Test in a browser with network disabled:
-   - verify UI still loads
-   - confirm offline model inference works for example queries
-   - check that the online/offline badge updates correctly
-
-2. Validate the full offline flow:
-   - ask earthquake-related questions in English and Nepali
-   - test source language detection and intent assignment
-   - confirm responses are routed through the offline model and local JSON content
-
-3. Check responsiveness and performance:
-   - ensure inference runs quickly enough for a front-end chat interaction
-   - identify any issues with model loading latency or memory usage
+4. Iterate corpus if needed:
+   - add missing phrasing for failed intents
+   - increase examples for weak categories
+   - retrain after corpus updates
 
 ---
 
-## Phase 6: Deployment & Documentation
+## Stage 4: Export Readiness
 
-1. Document offline training and testing steps:
-   - add this plan to `offline-nlp/OFFLINE_NLP_PLAN.md`
-   - update `PROJECT_OVERVIEW.md` with the offline NLP workflow if needed
+1. Document the exported artifact:
+   - note that `offline-nlp/model.nlp.json` is the main output
+   - if needed, mention a handoff path for downstream integration
 
-2. Optionally extend the app:
-   - add a service worker in `frontend/sw.js` for caching assets and the model file
-   - expand the offline dataset with additional disaster categories
-   - create intent-to-response mapping for all supported emergencies
+2. Keep all runtime artifacts within `offline-nlp/`:
+   - do not write or modify frontend files here
+   - only document the export location and expected JSON format
 
-3. Prepare handoff notes:
-   - note where training occurs (`offline-nlp/train.js`)
-   - note where runtime inference occurs (`frontend/app.js`)
-   - include instructions for retraining when new data is added
+3. Add an offline-NLP readme section:
+   - include training command and evaluation command
+   - describe the corpus format and validation process
+
+---
+
+## Stage 5: Handoff and Future Integration Notes
+
+1. Write a short note in `OFFLINE_NLP_PLAN.md` about next steps:
+   - how to use `offline-nlp/model.nlp.json` externally
+   - which offline-NLP files are the source of truth (`train.js`, `test.js`, `corpus.json`)
+
+2. Keep integration separate:
+   - this plan does not change frontend or backend code
+   - if integration is required later, it will consume the exported JSON artifact
+
+---
+
+## Deliverables inside `offline-nlp/`
+
+- `corpus.json` — cleaned and validated training corpus
+- `train.js` — offline training script
+- `model.nlp.json` — generated model artifact
+- `test.js` — evaluation harness for offline validation
+- `OFFLINE_NLP_PLAN.md` — structured plan and task breakdown
+- `package.json` — developer script for `npm run train`
 
 ---
 
 ## Success Criteria
 
-- A trained offline model exists at `frontend/public/model.nlp.json`.
-- The app can classify emergency queries without network access.
-- Offline responses are driven by local model inference and static content.
-- The model is evaluated against a held-out test set and documented.
-- The workflow is repeatable using `npm run train` in `offline-nlp/`.
+- The offline-NLP pipeline runs entirely inside `offline-nlp/`.
+- `npm run train` produces `offline-nlp/model.nlp.json`.
+- `offline-nlp/test.js` can load the model and classify example queries.
+- The training corpus is documented, cleaned, and held-out validation is defined.
+- No code outside `offline-nlp/` is modified during this work.
+
+---
+
+## Recommended next actions
+
+1. Review and finalize `offline-nlp/corpus.json`.
+2. Implement `offline-nlp/test.js`.
+3. Run `npm run train` and verify `offline-nlp/model.nlp.json`.
+4. Validate the model on held-out examples and iterate the corpus.
+5. Document the process in `OFFLINE_NLP_PLAN.md`.
+
+---
+
+> Note: This plan is intentionally scoped to the `offline-nlp/` folder only. Any frontend or backend integration is outside this phase.

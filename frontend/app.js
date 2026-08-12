@@ -68,19 +68,44 @@ async function handleUserIntent() {
     // Emulate network processing latency (500ms)
     setTimeout(async () => {
         if (navigator.onLine) {
-            // Placeholder pipeline before backend cloud gateway integration
-            appendMessageToUI(
-                "System is Online. This query will hit your backend gateway, query ChromaDB for contextual blocks from your manual, and generate a grounded response via Gemini 2.0 Flash.",
-                "sys",
-                "Cloud RAG Gateway Pipeline"
-            );
+            try {
+                const result = await classifyWithBackend(rawInput);
+                appendMessageToUI(
+                    `Predicted intent: ${result.intent} (score: ${Number(result.score || 0).toFixed(2)})`,
+                    'sys',
+                    'Offline Intent Classifier'
+                );
+            } catch (err) {
+                console.error('Backend classification error:', err);
+                appendMessageToUI(
+                    'Offline classifier unreachable. Falling back to local safety guidance.',
+                    'sys',
+                    'Fallback Router'
+                );
+                await executeLocalCacheFallback(rawInput);
+            }
         } else {
-            // Execute offline fallback algorithm
             await executeLocalCacheFallback(rawInput);
         }
     }, 500);
 }
-// Remove the dot-slash prefix to ensure absolute root resolution
+
+async function classifyWithBackend(userQuery) {
+    const response = await fetch('/api/classify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text: userQuery }),
+    });
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || 'Backend classification failed');
+    }
+
+    return response.json();
+}
 
 // =========================================================================
 // LAYER 5: OFFLINE BACKUP PROCESSING
