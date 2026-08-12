@@ -57,6 +57,23 @@ function appendMessageToUI(text, sender, routeTag = "") {
 // =========================================================================
 // LAYER 4: TRANSACTION EXECUTION ROUTER
 // =========================================================================
+let followUpState = null;
+
+function isNepaliText(text) {
+    return /[\u0900-\u097F]/.test(text);
+}
+
+function buildFollowUpQuery(originalText, slot, answer) {
+    const isNepali = isNepaliText(originalText);
+    if (slot === 'location') {
+        return isNepali ? `${originalText} स्थान: ${answer}` : `${originalText} at ${answer}`;
+    }
+    if (slot === 'injuries') {
+        return isNepali ? `${originalText} चोट: ${answer}` : `${originalText}. Injuries: ${answer}`;
+    }
+    return `${originalText} ${answer}`;
+}
+
 async function handleUserIntent() {
     const rawInput = queryIn.value.trim();
     if (!rawInput) return;
@@ -65,16 +82,32 @@ async function handleUserIntent() {
     appendMessageToUI(rawInput, 'usr');
     queryIn.value = '';
 
+    let queryToSend = rawInput;
+    if (followUpState) {
+        queryToSend = buildFollowUpQuery(followUpState.originalText, followUpState.slot, rawInput);
+    }
+
     // Emulate network processing latency (500ms)
     setTimeout(async () => {
         if (navigator.onLine) {
             try {
-                const result = await classifyWithBackend(rawInput);
+                const result = await classifyWithBackend(queryToSend);
+                const routeTag = result.needsFollowUp ? 'Follow-Up' : 'Offline Intent Classifier';
                 appendMessageToUI(
-                    `Predicted intent: ${result.intent} (score: ${Number(result.score || 0).toFixed(2)})`,
+                    result.response || 'I could not generate a response for that query.',
                     'sys',
-                    'Offline Intent Classifier'
+                    routeTag
                 );
+
+                if (result.needsFollowUp) {
+                    followUpState = {
+                        slot: result.followUpSlot,
+                        question: result.followUpQuestion,
+                        originalText: followUpState ? followUpState.originalText : rawInput,
+                    };
+                } else {
+                    followUpState = null;
+                }
             } catch (err) {
                 console.error('Backend classification error:', err);
                 appendMessageToUI(
@@ -105,6 +138,12 @@ async function classifyWithBackend(userQuery) {
     }
 
     return response.json();
+}
+
+function appendFollowUpHint(result) {
+    if (result.needsFollowUp && result.followUpQuestion) {
+        appendMessageToUI(result.followUpQuestion, 'sys', 'Follow-Up Question');
+    }
 }
 
 // =========================================================================
