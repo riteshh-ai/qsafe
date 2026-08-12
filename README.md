@@ -1,6 +1,6 @@
 # QSAFE
 
-QSAFE is a disaster-assistance project for Nepal that combines a lightweight frontend UI, a Node.js backend API, and offline first nlp disaster assistant
+QSAFE is a disaster-assistance project for Nepal that combines a lightweight frontend UI, a Node.js backend API, and offline first disaster response system
 
 ## Repository Structure
 
