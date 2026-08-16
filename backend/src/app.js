@@ -30,6 +30,11 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/sos', sosRoutes);
 
+// Root route to serve Frontend UI
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../frontend/index.html'));
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'QSAFE Nepal Backend Active' });
