@@ -1,18 +1,4 @@
 {
- nlp
-  "name": "qsafe-backend",
-  "version": "1.0.0",
-  "description": "Backend server for QSAFE Nepal offline intent classification",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "@nlpjs/core": "^4.26.1",
-    "@nlpjs/language-min": "^4.25.0",
-    "@nlpjs/nlp": "^4.26.1",
-    "express": "^4.18.2"
-
   "name": "qsafe-nepal-backend",
   "version": "1.0.0",
   "description": "QSAFE Nepal Backend API",
@@ -27,6 +13,5 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
-main
   }
 }

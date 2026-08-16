@@ -1,25 +1,80 @@
 {
-  "name": "QSAFE-Bilingual-Intents",
+  "name": "QSAFE-Nepal-Expanded-Corpus",
   "locale": "en",
   "data": [
     {
-      "intent": "intent.earthquake",
+      "intent": "safety.query",
       "utterances": [
-        "earthquake safety steps",
-        "bhuikampa bhanda kasari bachne",
-        "where to hide during tremor",
-        "भूकम्प आउँदा के गर्ने",
-        "safe zone inside house"
+        "What should I do during an earthquake?",
+        "How do I stay safe?",
+        "भूकम्पमा के गर्ने?",
+        "भूकम्प आउँदा सुरक्षित रहने उपाय"
       ]
     },
     {
-      "intent": "intent.landslide",
+      "intent": "emergency.report",
       "utterances": [
-        "landslide alert signs",
-        "pahiro bata kasari bachne",
-        "heavy rain mudslide risk",
-        "पहिरो सुरक्षा उपाय",
-        "sliding hills safety"
+        "My house collapsed",
+        "There is a gas leak",
+        "I need help",
+        "घर भत्कियो",
+        "मान्छे पुरिएको छ सहयोग चाहियो"
+      ]
+    },
+    {
+      "intent": "shelter.request",
+      "utterances": [
+        "Nearest shelter",
+        "Where can I stay?",
+        "नजिकको आश्रय कहाँ छ?",
+        "बस्ने सुरक्षित ठाउँ कहाँ होला?"
+      ]
+    },
+    {
+      "intent": "contact.request",
+      "utterances": [
+        "Police number",
+        "Ambulance contact",
+        "NDRRMA hotline",
+        "१०० नम्बर",
+        "दमकलको फोन नम्बर"
+      ]
+    },
+    {
+      "intent": "earthquake.info",
+      "utterances": [
+        "Was there an earthquake today?",
+        "Latest earthquake",
+        "भूकम्प आयो?",
+        "अहिलेको भूकम्पको केन्द्रविन्दु कहाँ हो?"
+      ]
+    },
+    {
+      "intent": "preparedness.query",
+      "utterances": [
+        "Emergency kit checklist",
+        "How to prepare?",
+        "भूकम्पको तयारी कसरी गर्ने?",
+        "झोला ब्याकप्याक तयार पार्ने तरिका"
+      ]
+    },
+    {
+      "intent": "afterquake.guidance",
+      "utterances": [
+        "Can I enter my house now?",
+        "What should I do after shaking stops?",
+        "अब के गर्ने?",
+        "भूकम्प थामिएपछि के गर्ने?"
+      ]
+    },
+    {
+      "intent": "unknown",
+      "utterances": [
+        "Hello",
+        "What's the weather?",
+        "Tell me a joke",
+        "नमस्ते",
+        "खाना खायौ"
       ]
     }
   ]

@@ -1,0 +1,5 @@
+# Binary model artifacts are stored here
+# Generated on first training run
+# Files:
+# - model.joblib (~1.88 MB)
+# - vectorizer.joblib (~0.27 MB)

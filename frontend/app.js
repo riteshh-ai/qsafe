@@ -1,11 +1,11 @@
-// =========================================================================
+﻿// =========================================================================
 // LAYER 0: SERVICE WORKER REGISTRATION
 // =========================================================================
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('🚀 Service Worker active:', reg.scope))
-            .catch(err => console.error('❌ Service Worker failed:', err));
+            .then(reg => console.log('≡ƒÜÇ Service Worker active:', reg.scope))
+            .catch(err => console.error('Γ¥î Service Worker failed:', err));
     });
 }
 
@@ -84,23 +84,23 @@ async function fetchLiveSeismicTelemetry() {
 
         if (data.count === 0) {
             seismicTxt.innerHTML = currentLang === 'ne'
-                ? "🟢 नेपाल क्षेत्र: विगत २४ घण्टामा कुनै भूकम्प मापन भएको छैन।"
-                : "🟢 Nepal Region: Seismic Quiet (No tremors in past 24h).";
+                ? "≡ƒƒó αñ¿αÑçαñ¬αñ╛αñ▓ αñòαÑìαñ╖αÑçαññαÑìαñ░: αñ╡αñ┐αñùαññ αÑ¿αÑ¬ αñÿαñúαÑìαñƒαñ╛αñ«αñ╛ αñòαÑüαñ¿αÑê αñ¡αÑéαñòαñ«αÑìαñ¬ αñ«αñ╛αñ¬αñ¿ αñ¡αñÅαñòαÑï αñ¢αÑêαñ¿αÑñ"
+                : "≡ƒƒó Nepal Region: Seismic Quiet (No tremors in past 24h).";
             if (seismicBanner) seismicBanner.className = "seismic-banner normal";
         } else {
             const latest = data.events[0];
             const eventTime = new Date(latest.time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             
             seismicTxt.innerHTML = currentLang === 'ne'
-                ? `🚨 <strong>भूकम्प अलर्ट:</strong> M ${latest.magnitude} | ${latest.location} (${eventTime})`
-                : `🚨 <strong>TREMOR ALERT:</strong> M ${latest.magnitude} | ${latest.location} (${eventTime})`;
+                ? `≡ƒÜ¿ <strong>αñ¡αÑéαñòαñ«αÑìαñ¬ αñàαñ▓αñ░αÑìαñƒ:</strong> M ${latest.magnitude} | ${latest.location} (${eventTime})`
+                : `≡ƒÜ¿ <strong>TREMOR ALERT:</strong> M ${latest.magnitude} | ${latest.location} (${eventTime})`;
             if (seismicBanner) seismicBanner.className = "seismic-banner active-alert";
         }
     } catch (err) {
         console.warn("Seismic Telemetry Endpoint unreachable, using offline fallback display.");
         seismicTxt.innerHTML = currentLang === 'ne'
-            ? "⚠️ भूकम्प लाइभ सर्भर विच्छेद (अफलाइन मोड active)"
-            : "⚠️ Live Seismic Feed Disconnected (Offline mode active)";
+            ? "ΓÜá∩╕Å αñ¡αÑéαñòαñ«αÑìαñ¬ αñ▓αñ╛αñçαñ¡ αñ╕αñ░αÑìαñ¡αñ░ αñ╡αñ┐αñÜαÑìαñ¢αÑçαñª (αñàαñ½αñ▓αñ╛αñçαñ¿ αñ«αÑïαñí active)"
+            : "ΓÜá∩╕Å Live Seismic Feed Disconnected (Offline mode active)";
         if (seismicBanner) seismicBanner.className = "seismic-banner offline";
     }
 }
@@ -168,30 +168,12 @@ function removeLoadingBubble(loadingId) {
 // =========================================================================
 // LAYER 4: LOCAL INTENT DISPATCHER & RAG PIPELINE (DYNAMIC ONLINE/OFFLINE FIX)
 // =========================================================================
- nlp
-let followUpState = null;
-
-function isNepaliText(text) {
-    return /[\u0900-\u097F]/.test(text);
-}
-
-function buildFollowUpQuery(originalText, slot, answer) {
-    const isNepali = isNepaliText(originalText);
-    if (slot === 'location') {
-        return isNepali ? `${originalText} स्थान: ${answer}` : `${originalText} at ${answer}`;
-    }
-    if (slot === 'injuries') {
-        return isNepali ? `${originalText} चोट: ${answer}` : `${originalText}. Injuries: ${answer}`;
-    }
-    return `${originalText} ${answer}`;
-}
-
 
 // 1. Language Code Normalizer
 function getNormalizedLang() {
     if (!langSelect) return 'en';
     const val = langSelect.value ? langSelect.value.toLowerCase() : '';
-    if (val === 'np' || val === 'ne' || val === 'नेपाली' || val.includes('nepal')) {
+    if (val === 'np' || val === 'ne' || val === 'αñ¿αÑçαñ¬αñ╛αñ▓αÑÇ' || val.includes('nepal')) {
         return 'np';
     }
     return 'en';
@@ -200,25 +182,25 @@ function getNormalizedLang() {
 // 2. Dynamic Unknown Query Handler (Offline Fallback Only)
 function getUnknownQueryResponse(lang) {
     if (lang === 'np') {
-        return `[डेटा उपलब्ध छैन]
-हाम्रो अफलाइन डेटाबेसमा यो प्रश्नको लागि कुनै जानकारी उपलब्ध छैन।
+        return `[αñíαÑçαñƒαñ╛ αñëαñ¬αñ▓αñ¼αÑìαñº αñ¢αÑêαñ¿]
+αñ╣αñ╛αñ«αÑìαñ░αÑï αñàαñ½αñ▓αñ╛αñçαñ¿ αñíαÑçαñƒαñ╛αñ¼αÑçαñ╕αñ«αñ╛ αñ»αÑï αñ¬αÑìαñ░αñ╢αÑìαñ¿αñòαÑï αñ▓αñ╛αñùαñ┐ αñòαÑüαñ¿αÑê αñ£αñ╛αñ¿αñòαñ╛αñ░αÑÇ αñëαñ¬αñ▓αñ¼αÑìαñº αñ¢αÑêαñ¿αÑñ
 
-कृपया यी उपलब्ध विषयहरूमा खोजी गर्नुहोस्:
-• भूकम्प सुरक्षा (Earthquake)
-• प्राथमिक उपचार (First Aid)
-• आपत्कालीन झोला (Emergency Kit)
-• सम्पर्क नम्बर (Emergency Hotlines)
+αñòαÑâαñ¬αñ»αñ╛ αñ»αÑÇ αñëαñ¬αñ▓αñ¼αÑìαñº αñ╡αñ┐αñ╖αñ»αñ╣αñ░αÑéαñ«αñ╛ αñûαÑïαñ£αÑÇ αñùαñ░αÑìαñ¿αÑüαñ╣αÑïαñ╕αÑì:
+ΓÇó αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ (Earthquake)
+ΓÇó αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░ (First Aid)
+ΓÇó αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛ (Emergency Kit)
+ΓÇó αñ╕αñ«αÑìαñ¬αñ░αÑìαñò αñ¿αñ«αÑìαñ¼αñ░ (Emergency Hotlines)
 
-तत्काल सहयोगका लागि: प्रहरी १०० वा NDRRMA १६६६६ मा सम्पर्क गर्नुहोस्।`;
+αññαññαÑìαñòαñ╛αñ▓ αñ╕αñ╣αñ»αÑïαñùαñòαñ╛ αñ▓αñ╛αñùαñ┐: αñ¬αÑìαñ░αñ╣αñ░αÑÇ αÑºαÑªαÑª αñ╡αñ╛ NDRRMA αÑºαÑ¼αÑ¼αÑ¼αÑ¼ αñ«αñ╛ αñ╕αñ«αÑìαñ¬αñ░αÑìαñò αñùαñ░αÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ`;
     } else {
         return `[NO DATA AVAILABLE]
 We do not have specific safety guidance for this query in our offline database.
 
 Please try asking about our supported emergency topics:
-• Earthquake Protocol (भूकम्प)
-• First Aid Guidance (प्राथमिक उपचार)
-• Emergency Kit / Go-Bag (आपत्कालीन झोला)
-• Emergency Hotlines (सम्पर्क नम्बर)
+ΓÇó Earthquake Protocol (αñ¡αÑéαñòαñ«αÑìαñ¬)
+ΓÇó First Aid Guidance (αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░)
+ΓÇó Emergency Kit / Go-Bag (αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛)
+ΓÇó Emergency Hotlines (αñ╕αñ«αÑìαñ¬αñ░αÑìαñò αñ¿αñ«αÑìαñ¼αñ░)
 
 For immediate life safety: Call Police (100) or NDRRMA (16666).`;
     }
@@ -228,64 +210,64 @@ For immediate life safety: Call Police (100) or NDRRMA (16666).`;
 const LOCAL_KNOWLEDGE_BASE = {
     en: {
         first_aid: `[FIRST AID PROTOCOL]
-• Bleeding: Apply direct, firm pressure with a clean cloth.
-• Fractures: Immobilize the limb using a splint without trying to realign the bone.
-• Burns: Flush immediately with cool, running water for 10 minutes.
-• Unconsciousness: Place in recovery position and check breathing.`,
+ΓÇó Bleeding: Apply direct, firm pressure with a clean cloth.
+ΓÇó Fractures: Immobilize the limb using a splint without trying to realign the bone.
+ΓÇó Burns: Flush immediately with cool, running water for 10 minutes.
+ΓÇó Unconsciousness: Place in recovery position and check breathing.`,
 
         earthquake: `[EARTHQUAKE SAFETY PROTOCOL]
-• INDOORS: DROP, COVER, and HOLD ON under structural beams or stable furniture. Stay clear of masonry brick walls, windows, and heavy overhead fixtures.
-• OUTDOORS: Move to an open area away from buildings, utility wires, and trees.
-• AFTER SHAKING: Expect aftershocks. Use stairs, never elevators. Check for gas leaks.`,
+ΓÇó INDOORS: DROP, COVER, and HOLD ON under structural beams or stable furniture. Stay clear of masonry brick walls, windows, and heavy overhead fixtures.
+ΓÇó OUTDOORS: Move to an open area away from buildings, utility wires, and trees.
+ΓÇó AFTER SHAKING: Expect aftershocks. Use stairs, never elevators. Check for gas leaks.`,
 
         contacts: `[EMERGENCY HOTLINES - NEPAL]
-• National Emergency Operations (NDRRMA): 16666
-• Nepal Police Control: 100
-• Armed Police Force Rescue: 1114
-• Red Cross Ambulance Central: 102
-• Fire Brigade: 101`,
+ΓÇó National Emergency Operations (NDRRMA): 16666
+ΓÇó Nepal Police Control: 100
+ΓÇó Armed Police Force Rescue: 1114
+ΓÇó Red Cross Ambulance Central: 102
+ΓÇó Fire Brigade: 101`,
 
         emergency_kit: `[EMERGENCY GO-BAG CHECKLIST]
-• Water: 3 liters/person for at least 3 days.
-• Food: Non-perishable, ready-to-eat items.
-• Medical: First-aid kit, essential prescription meds.
-• Tools: Flashlight, extra batteries, power bank, whistle, multi-tool knife.
-• Documents: Copies of citizenship, insurance, emergency cash in waterproof bag.`,
+ΓÇó Water: 3 liters/person for at least 3 days.
+ΓÇó Food: Non-perishable, ready-to-eat items.
+ΓÇó Medical: First-aid kit, essential prescription meds.
+ΓÇó Tools: Flashlight, extra batteries, power bank, whistle, multi-tool knife.
+ΓÇó Documents: Copies of citizenship, insurance, emergency cash in waterproof bag.`,
 
         fire_flood: `[FIRE & FLOOD SAFETY]
-• FIRE: Stay low to avoid smoke. Touch doors with the back of your hand before opening. If caught, Stop, Drop, and Roll.
-• FLOOD: Move immediately to higher ground. Never walk or drive through moving floodwaters (15 cm of moving water can knock you down).`
+ΓÇó FIRE: Stay low to avoid smoke. Touch doors with the back of your hand before opening. If caught, Stop, Drop, and Roll.
+ΓÇó FLOOD: Move immediately to higher ground. Never walk or drive through moving floodwaters (15 cm of moving water can knock you down).`
     },
 
     np: {
-        first_aid: `[प्राथमिक उपचार प्रणाली]
-• रगत बग्ने: सफा कपडाले सिधै बलियो थिच्नुहोस्।
-• हाड भाँचिएको: हड्डी सच्याउन नखोजी स्प्लिन्ट प्रयोग गरेर अङ्ग स्थिर राख्नुहोस्।
-• पोलेको: तुरुन्तै १० मिनेटसम्म चिसो, बगिरहेको पानीले पखाल्नुहोस्।
-• बेहोस: सुरक्षात्मक स्थिति (Recovery Position) मा राख्नुहोस् र सास फेरेको जाँच गर्नुहोस्।`,
+        first_aid: `[αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░ αñ¬αÑìαñ░αñúαñ╛αñ▓αÑÇ]
+ΓÇó αñ░αñùαññ αñ¼αñùαÑìαñ¿αÑç: αñ╕αñ½αñ╛ αñòαñ¬αñíαñ╛αñ▓αÑç αñ╕αñ┐αñºαÑê αñ¼αñ▓αñ┐αñ»αÑï αñÑαñ┐αñÜαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ
+ΓÇó αñ╣αñ╛αñí αñ¡αñ╛αñüαñÜαñ┐αñÅαñòαÑï: αñ╣αñíαÑìαñíαÑÇ αñ╕αñÜαÑìαñ»αñ╛αñëαñ¿ αñ¿αñûαÑïαñ£αÑÇ αñ╕αÑìαñ¬αÑìαñ▓αñ┐αñ¿αÑìαñƒ αñ¬αÑìαñ░αñ»αÑïαñù αñùαñ░αÑçαñ░ αñàαñÖαÑìαñù αñ╕αÑìαñÑαñ┐αñ░ αñ░αñ╛αñûαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ
+ΓÇó αñ¬αÑïαñ▓αÑçαñòαÑï: αññαÑüαñ░αÑüαñ¿αÑìαññαÑê αÑºαÑª αñ«αñ┐αñ¿αÑçαñƒαñ╕αñ«αÑìαñ« αñÜαñ┐αñ╕αÑï, αñ¼αñùαñ┐αñ░αñ╣αÑçαñòαÑï αñ¬αñ╛αñ¿αÑÇαñ▓αÑç αñ¬αñûαñ╛αñ▓αÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ
+ΓÇó αñ¼αÑçαñ╣αÑïαñ╕: αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛αññαÑìαñ«αñò αñ╕αÑìαñÑαñ┐αññαñ┐ (Recovery Position) αñ«αñ╛ αñ░αñ╛αñûαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑì αñ░ αñ╕αñ╛αñ╕ αñ½αÑçαñ░αÑçαñòαÑï αñ£αñ╛αñüαñÜ αñùαñ░αÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ`,
 
-        earthquake: `[भूकम्प सुरक्षा प्रणाली]
-• घरभित्र: बलियो टेबलमुनि झुक्नुहोस् (DROP), ओत लाग्नुहोस् (COVER), र समात्नुहोस् (HOLD ON)। झ्याल र गह्रौँ फर्निचरबाट टाढा रहनुहोस्।
-• बाहिर: भवन, बिजुलीको पोल र रुखहरूबाट टाढा खुला ठाउँमा जानुहोस्।
-• कम्पन रोकिएपछि: पराकम्पनको लागि तयार रहनुहोस्। लिफ्ट प्रयोग नगर्नुहोस्।`,
+        earthquake: `[αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ αñ¬αÑìαñ░αñúαñ╛αñ▓αÑÇ]
+ΓÇó αñÿαñ░αñ¡αñ┐αññαÑìαñ░: αñ¼αñ▓αñ┐αñ»αÑï αñƒαÑçαñ¼αñ▓αñ«αÑüαñ¿αñ┐ αñ¥αÑüαñòαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑì (DROP), αñôαññ αñ▓αñ╛αñùαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑì (COVER), αñ░ αñ╕αñ«αñ╛αññαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑì (HOLD ON)αÑñ αñ¥αÑìαñ»αñ╛αñ▓ αñ░ αñùαñ╣αÑìαñ░αÑîαñü αñ½αñ░αÑìαñ¿αñ┐αñÜαñ░αñ¼αñ╛αñƒ αñƒαñ╛αñóαñ╛ αñ░αñ╣αñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ
+ΓÇó αñ¼αñ╛αñ╣αñ┐αñ░: αñ¡αñ╡αñ¿, αñ¼αñ┐αñ£αÑüαñ▓αÑÇαñòαÑï αñ¬αÑïαñ▓ αñ░ αñ░αÑüαñûαñ╣αñ░αÑéαñ¼αñ╛αñƒ αñƒαñ╛αñóαñ╛ αñûαÑüαñ▓αñ╛ αñáαñ╛αñëαñüαñ«αñ╛ αñ£αñ╛αñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ
+ΓÇó αñòαñ«αÑìαñ¬αñ¿ αñ░αÑïαñòαñ┐αñÅαñ¬αñ¢αñ┐: αñ¬αñ░αñ╛αñòαñ«αÑìαñ¬αñ¿αñòαÑï αñ▓αñ╛αñùαñ┐ αññαñ»αñ╛αñ░ αñ░αñ╣αñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ αñ▓αñ┐αñ½αÑìαñƒ αñ¬αÑìαñ░αñ»αÑïαñù αñ¿αñùαñ░αÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ`,
 
-        contacts: `[आकस्मिक हटलाइनहरू - नेपाल]
-• राष्ट्रिय आपत्कालीन कार्य सञ्चालन केन्द्र (NDRRMA): १६६६६
-• नेपाल प्रहरी नियन्त्रण: १००
-• सशस्त्र प्रहरी बल उद्धार: १११४
-• रेडक्रस एम्बुलेन्स सेन्टर: १०२
-• दमकल (Fire): १०१`,
+        contacts: `[αñåαñòαñ╕αÑìαñ«αñ┐αñò αñ╣αñƒαñ▓αñ╛αñçαñ¿αñ╣αñ░αÑé - αñ¿αÑçαñ¬αñ╛αñ▓]
+ΓÇó αñ░αñ╛αñ╖αÑìαñƒαÑìαñ░αñ┐αñ» αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñòαñ╛αñ░αÑìαñ» αñ╕αñ₧αÑìαñÜαñ╛αñ▓αñ¿ αñòαÑçαñ¿αÑìαñªαÑìαñ░ (NDRRMA): αÑºαÑ¼αÑ¼αÑ¼αÑ¼
+ΓÇó αñ¿αÑçαñ¬αñ╛αñ▓ αñ¬αÑìαñ░αñ╣αñ░αÑÇ αñ¿αñ┐αñ»αñ¿αÑìαññαÑìαñ░αñú: αÑºαÑªαÑª
+ΓÇó αñ╕αñ╢αñ╕αÑìαññαÑìαñ░ αñ¬αÑìαñ░αñ╣αñ░αÑÇ αñ¼αñ▓ αñëαñªαÑìαñºαñ╛αñ░: αÑºαÑºαÑºαÑ¬
+ΓÇó αñ░αÑçαñíαñòαÑìαñ░αñ╕ αñÅαñ«αÑìαñ¼αÑüαñ▓αÑçαñ¿αÑìαñ╕ αñ╕αÑçαñ¿αÑìαñƒαñ░: αÑºαÑªαÑ¿
+ΓÇó αñªαñ«αñòαñ▓ (Fire): αÑºαÑªαÑº`,
 
-        emergency_kit: `[आपत्कालीन झोला (Go-Bag) सामग्री]
-• पानी: प्रतिव्यक्ति दैनिक ३ लिटर (कमसेकम ३ दिनको लागि)।
-• खाना: बिग्रिने नहुने र पकाउनु नपर्ने खानेकुरा।
-• औषधि: प्राथमिक उपचार किट र आवश्यक नियमित औषधि।
-• औजार: टर्चलाइट, पावर बैंक, सिट्टी (Whistle), चक्कु।
-• कागजात: नागरिकताको प्रतिलिपि, नगद रूपैयाँ।`,
+        emergency_kit: `[αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛ (Go-Bag) αñ╕αñ╛αñ«αñùαÑìαñ░αÑÇ]
+ΓÇó αñ¬αñ╛αñ¿αÑÇ: αñ¬αÑìαñ░αññαñ┐αñ╡αÑìαñ»αñòαÑìαññαñ┐ αñªαÑêαñ¿αñ┐αñò αÑ⌐ αñ▓αñ┐αñƒαñ░ (αñòαñ«αñ╕αÑçαñòαñ« αÑ⌐ αñªαñ┐αñ¿αñòαÑï αñ▓αñ╛αñùαñ┐)αÑñ
+ΓÇó αñûαñ╛αñ¿αñ╛: αñ¼αñ┐αñùαÑìαñ░αñ┐αñ¿αÑç αñ¿αñ╣αÑüαñ¿αÑç αñ░ αñ¬αñòαñ╛αñëαñ¿αÑü αñ¿αñ¬αñ░αÑìαñ¿αÑç αñûαñ╛αñ¿αÑçαñòαÑüαñ░αñ╛αÑñ
+ΓÇó αñöαñ╖αñºαñ┐: αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░ αñòαñ┐αñƒ αñ░ αñåαñ╡αñ╢αÑìαñ»αñò αñ¿αñ┐αñ»αñ«αñ┐αññ αñöαñ╖αñºαñ┐αÑñ
+ΓÇó αñöαñ£αñ╛αñ░: αñƒαñ░αÑìαñÜαñ▓αñ╛αñçαñƒ, αñ¬αñ╛αñ╡αñ░ αñ¼αÑêαñéαñò, αñ╕αñ┐αñƒαÑìαñƒαÑÇ (Whistle), αñÜαñòαÑìαñòαÑüαÑñ
+ΓÇó αñòαñ╛αñùαñ£αñ╛αññ: αñ¿αñ╛αñùαñ░αñ┐αñòαññαñ╛αñòαÑï αñ¬αÑìαñ░αññαñ┐αñ▓αñ┐αñ¬αñ┐, αñ¿αñùαñª αñ░αÑéαñ¬αÑêαñ»αñ╛αñüαÑñ`,
 
-        fire_flood: `[आगो र बाढी सुरक्षा]
-• आगलागी: धुवाँबाट बच्न निहुरिएर हिँड्नुहोस्। कपडामा आगो लागेमा - रोकिनुहोस्, भुइँमा सोल्टिनुहोस् (Stop, Drop, Roll)।
-• बाढी: तुरुन्तै अग्लो ठाउँमा जानुहोस्। बगिरहेको बाढीको पानीमा कहिल्यै नहिँड्नुहोस्।`
+        fire_flood: `[αñåαñùαÑï αñ░ αñ¼αñ╛αñóαÑÇ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛]
+ΓÇó αñåαñùαñ▓αñ╛αñùαÑÇ: αñºαÑüαñ╡αñ╛αñüαñ¼αñ╛αñƒ αñ¼αñÜαÑìαñ¿ αñ¿αñ┐αñ╣αÑüαñ░αñ┐αñÅαñ░ αñ╣αñ┐αñüαñíαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ αñòαñ¬αñíαñ╛αñ«αñ╛ αñåαñùαÑï αñ▓αñ╛αñùαÑçαñ«αñ╛ - αñ░αÑïαñòαñ┐αñ¿αÑüαñ╣αÑïαñ╕αÑì, αñ¡αÑüαñçαñüαñ«αñ╛ αñ╕αÑïαñ▓αÑìαñƒαñ┐αñ¿αÑüαñ╣αÑïαñ╕αÑì (Stop, Drop, Roll)αÑñ
+ΓÇó αñ¼αñ╛αñóαÑÇ: αññαÑüαñ░αÑüαñ¿αÑìαññαÑê αñàαñùαÑìαñ▓αÑï αñáαñ╛αñëαñüαñ«αñ╛ αñ£αñ╛αñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ αñ¼αñùαñ┐αñ░αñ╣αÑçαñòαÑï αñ¼αñ╛αñóαÑÇαñòαÑï αñ¬αñ╛αñ¿αÑÇαñ«αñ╛ αñòαñ╣αñ┐αñ▓αÑìαñ»αÑê αñ¿αñ╣αñ┐αñüαñíαÑìαñ¿αÑüαñ╣αÑïαñ╕αÑìαÑñ`
     }
 };
 
@@ -293,23 +275,23 @@ const LOCAL_KNOWLEDGE_BASE = {
 const INTENT_RULES = [
     {
         intent: 'first_aid',
-        keywords: ['first aid', 'aid', 'bleed', 'bleeding', 'burn', 'fracture', 'cut', 'prathamik', 'upachar', 'ragat', 'poleko', 'haad', 'प्राथमिक', 'उपचार', 'रगत', 'पोलेको', 'हाड', 'घाउ']
+        keywords: ['first aid', 'aid', 'bleed', 'bleeding', 'burn', 'fracture', 'cut', 'prathamik', 'upachar', 'ragat', 'poleko', 'haad', 'αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò', 'αñëαñ¬αñÜαñ╛αñ░', 'αñ░αñùαññ', 'αñ¬αÑïαñ▓αÑçαñòαÑï', 'αñ╣αñ╛αñí', 'αñÿαñ╛αñë']
     },
     {
         intent: 'earthquake',
-        keywords: ['earthquake', 'quake', 'tremor', 'seismic', 'bhuinkampa', 'bhukampa', 'kampan', 'shake', 'bhu', 'भूकम्प', 'कम्पन', 'निर्देशिका']
+        keywords: ['earthquake', 'quake', 'tremor', 'seismic', 'bhuinkampa', 'bhukampa', 'kampan', 'shake', 'bhu', 'αñ¡αÑéαñòαñ«αÑìαñ¬', 'αñòαñ«αÑìαñ¬αñ¿', 'αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢αñ┐αñòαñ╛']
     },
     {
         intent: 'contacts',
-        keywords: ['contact', 'number', 'phone', 'call', 'hotline', 'police', 'ambulance', 'ndrrma', 'nambar', 'samparka', 'prahari', 'सम्पर्क', 'नम्बर', 'हटलाइन', 'प्रहरी', 'एम्बुलेन्स']
+        keywords: ['contact', 'number', 'phone', 'call', 'hotline', 'police', 'ambulance', 'ndrrma', 'nambar', 'samparka', 'prahari', 'αñ╕αñ«αÑìαñ¬αñ░αÑìαñò', 'αñ¿αñ«αÑìαñ¼αñ░', 'αñ╣αñƒαñ▓αñ╛αñçαñ¿', 'αñ¬αÑìαñ░αñ╣αñ░αÑÇ', 'αñÅαñ«αÑìαñ¼αÑüαñ▓αÑçαñ¿αÑìαñ╕']
     },
     {
         intent: 'emergency_kit',
-        keywords: ['kit', 'bag', 'go bag', 'supplies', 'pack', 'jhola', 'samagri', 'आपत्कालीन', 'झोला', 'सामग्री']
+        keywords: ['kit', 'bag', 'go bag', 'supplies', 'pack', 'jhola', 'samagri', 'αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿', 'αñ¥αÑïαñ▓αñ╛', 'αñ╕αñ╛αñ«αñùαÑìαñ░αÑÇ']
     },
     {
         intent: 'fire_flood',
-        keywords: ['fire', 'flood', 'burns', 'aago', 'aagolagi', 'baadhi', 'badhi', 'damkal', 'आगो', 'आगलागी', 'बाढी', 'दमकल']
+        keywords: ['fire', 'flood', 'burns', 'aago', 'aagolagi', 'baadhi', 'badhi', 'damkal', 'αñåαñùαÑï', 'αñåαñùαñ▓αñ╛αñùαÑÇ', 'αñ¼αñ╛αñóαÑÇ', 'αñªαñ«αñòαñ▓']
     }
 ];
 
@@ -325,7 +307,6 @@ function matchUserIntent(query) {
 }
 
 // 6. Main Event Handler (Fetches from Backend when Online)
- main
 async function handleUserIntent() {
     const rawQuery = queryIn.value ? queryIn.value.trim() : "";
     if (!rawQuery) return;
@@ -336,71 +317,6 @@ async function handleUserIntent() {
     // Step A: Render User Query
     appendMessageToUI(rawQuery, 'user');
     queryIn.value = '';
-
-nlp
-    let queryToSend = rawInput;
-    if (followUpState) {
-        queryToSend = buildFollowUpQuery(followUpState.originalText, followUpState.slot, rawInput);
-    }
-
-    // Emulate network processing latency (500ms)
-    setTimeout(async () => {
-        if (navigator.onLine) {
-            try {
-                const result = await classifyWithBackend(queryToSend);
-                const routeTag = result.needsFollowUp ? 'Follow-Up' : 'Offline Intent Classifier';
-                appendMessageToUI(
-                    result.response || 'I could not generate a response for that query.',
-                    'sys',
-                    routeTag
-                );
-
-                if (result.needsFollowUp) {
-                    followUpState = {
-                        slot: result.followUpSlot,
-                        question: result.followUpQuestion,
-                        originalText: followUpState ? followUpState.originalText : rawInput,
-                    };
-                } else {
-                    followUpState = null;
-                }
-            } catch (err) {
-                console.error('Backend classification error:', err);
-                appendMessageToUI(
-                    'Offline classifier unreachable. Falling back to local safety guidance.',
-                    'sys',
-                    'Fallback Router'
-                );
-                await executeLocalCacheFallback(rawInput);
-            }
-        } else {
-            await executeLocalCacheFallback(rawInput);
-        }
-    }, 500);
-}
-
-async function classifyWithBackend(userQuery) {
-    const response = await fetch('/api/classify', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ text: userQuery }),
-    });
-
-    if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText || 'Backend classification failed');
-    }
-
-    return response.json();
-}
-
-function appendFollowUpHint(result) {
-    if (result.needsFollowUp && result.followUpQuestion) {
-        appendMessageToUI(result.followUpQuestion, 'sys', 'Follow-Up Question');
-    }
-}
 
     // Step B: Show Loading Indicator
     const loadingId = appendLoadingBubble();
@@ -425,19 +341,18 @@ function appendFollowUpHint(result) {
                 return;
             }
         } catch (err) {
-            console.warn("⚠️ Live API call failed. Falling back to offline local engine...", err);
+            console.warn("ΓÜá∩╕Å Live API call failed. Falling back to offline local engine...", err);
         }
     }
- main
 
     // Step D: Offline Fallback Engine (Used when offline or network fails)
     removeLoadingBubble(loadingId);
 
     // Handle Greetings in Offline Mode
-    const greetings = ['hello', 'hi', 'namaste', 'namaskar', 'नमस्ते', 'नमस्कार', 'hey'];
+    const greetings = ['hello', 'hi', 'namaste', 'namaskar', 'αñ¿αñ«αñ╕αÑìαññαÑç', 'αñ¿αñ«αñ╕αÑìαñòαñ╛αñ░', 'hey'];
     if (greetings.includes(rawQuery.toLowerCase())) {
         const greetingMsg = currentLang === 'np' 
-            ? "नमस्ते! म QSAFE नेपाल अफलाइन आपत्कालीन सहायक हुँ। म तपाईंलाई भूकम्प सुरक्षा, प्राथमिक उपचार वा आपत्कालीन झोला सम्बन्धी जानकारी दिन सक्छु।"
+            ? "αñ¿αñ«αñ╕αÑìαññαÑç! αñ« QSAFE αñ¿αÑçαñ¬αñ╛αñ▓ αñàαñ½αñ▓αñ╛αñçαñ¿ αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñ╕αñ╣αñ╛αñ»αñò αñ╣αÑüαñüαÑñ αñ« αññαñ¬αñ╛αñêαñéαñ▓αñ╛αñê αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛, αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░ αñ╡αñ╛ αñåαñ¬αññαÑìαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛ αñ╕αñ«αÑìαñ¼αñ¿αÑìαñºαÑÇ αñ£αñ╛αñ¿αñòαñ╛αñ░αÑÇ αñªαñ┐αñ¿ αñ╕αñòαÑìαñ¢αÑüαÑñ"
             : "Namaste! I am QSAFE Nepal's emergency assistant. How can I assist you with disaster preparedness or safety guidance today?";
         
         appendMessageToUI(greetingMsg, 'sys', `Local Storage Fallback (${currentLang.toUpperCase()})`);
@@ -481,53 +396,53 @@ async function executeLocalCacheFallback(userQuery) {
             queryLower.includes('namaste') || queryLower.includes('namaskar') || 
             queryLower.includes('hello') || queryLower.includes('hi') || 
             queryLower.includes('help') || queryLower.includes('maddat') ||
-            queryLower.includes('मद्दत') || queryLower.includes('नमस्ते') || 
-            queryLower.includes('नमस्कार')
+            queryLower.includes('αñ«αñªαÑìαñªαññ') || queryLower.includes('αñ¿αñ«αñ╕αÑìαññαÑç') || 
+            queryLower.includes('αñ¿αñ«αñ╕αÑìαñòαñ╛αñ░')
         ) {
             safetyMessage = currentLang === 'en'
                 ? "Namaste! I am QSAFE Nepal, your offline earthquake safety assistant. Ask me about emergency protocols, first aid, or supply kits."
-                : "नमस्ते! म QSAFE नेपाल अफलाइन भूकम्प सुरक्षा सहायक हुँ। तपाईं मलाई भूकम्प सुरक्षा निर्देशिका, प्राथमिक उपचार वा आपतकालीन झोलाका बारेमा सोध्न सक्नुहुन्छ।";
-            matchedIntent = currentLang === 'en' ? "Greeting / System Info" : "नमस्ते / प्रणाली जानकारी";
+                : "αñ¿αñ«αñ╕αÑìαññαÑç! αñ« QSAFE αñ¿αÑçαñ¬αñ╛αñ▓ αñàαñ½αñ▓αñ╛αñçαñ¿ αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ αñ╕αñ╣αñ╛αñ»αñò αñ╣αÑüαñüαÑñ αññαñ¬αñ╛αñêαñé αñ«αñ▓αñ╛αñê αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢αñ┐αñòαñ╛, αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░ αñ╡αñ╛ αñåαñ¬αññαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛αñòαñ╛ αñ¼αñ╛αñ░αÑçαñ«αñ╛ αñ╕αÑïαñºαÑìαñ¿ αñ╕αñòαÑìαñ¿αÑüαñ╣αÑüαñ¿αÑìαñ¢αÑñ";
+            matchedIntent = currentLang === 'en' ? "Greeting / System Info" : "αñ¿αñ«αñ╕αÑìαññαÑç / αñ¬αÑìαñ░αñúαñ╛αñ▓αÑÇ αñ£αñ╛αñ¿αñòαñ╛αñ░αÑÇ";
         } 
         else if (
             queryLower.includes('earthquake') || queryLower.includes('bhuikampa') || 
             queryLower.includes('bhukamp') || queryLower.includes('bhuikamp') || 
             queryLower.includes('shake') || queryLower.includes('tremor') || 
-            queryLower.includes('quak') || queryLower.includes('भुइँचालो') || 
-            queryLower.includes('भूकम्प') || queryLower.includes('k garne')
+            queryLower.includes('quak') || queryLower.includes('αñ¡αÑüαñçαñüαñÜαñ╛αñ▓αÑï') || 
+            queryLower.includes('αñ¡αÑéαñòαñ«αÑìαñ¬') || queryLower.includes('k garne')
         ) {
             safetyMessage = data.static_checklists.earthquake[currentLang];
-            matchedIntent = currentLang === 'en' ? "Earthquake Action Protocol" : "भूकम्प सुरक्षा निर्देशिका";
+            matchedIntent = currentLang === 'en' ? "Earthquake Action Protocol" : "αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢αñ┐αñòαñ╛";
             themeClass = "earthquake-alert";
         } 
         else if (
             queryLower.includes('first aid') || queryLower.includes('injur') || 
-            queryLower.includes('upachar') || queryLower.includes('उपचार') || 
-            queryLower.includes('चोट')
+            queryLower.includes('upachar') || queryLower.includes('αñëαñ¬αñÜαñ╛αñ░') || 
+            queryLower.includes('αñÜαÑïαñƒ')
         ) {
             safetyMessage = data.static_checklists.first_aid[currentLang];
-            matchedIntent = currentLang === 'en' ? "Earthquake First-Aid Protocol" : "भूकम्प प्राथमिक उपचार";
+            matchedIntent = currentLang === 'en' ? "Earthquake First-Aid Protocol" : "αñ¡αÑéαñòαñ«αÑìαñ¬ αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░";
         } 
         else if (
             queryLower.includes('kit') || queryLower.includes('bag') || 
             queryLower.includes('prepar') || queryLower.includes('jhola') || 
-            queryLower.includes('झोला')
+            queryLower.includes('αñ¥αÑïαñ▓αñ╛')
         ) {
             safetyMessage = data.static_checklists.kit[currentLang];
-            matchedIntent = currentLang === 'en' ? "Earthquake Emergency Kit" : "भूकम्प आपतकालीन झोला";
+            matchedIntent = currentLang === 'en' ? "Earthquake Emergency Kit" : "αñ¡αÑéαñòαñ«αÑìαñ¬ αñåαñ¬αññαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛";
         }
         else {
             safetyMessage = data.static_checklists.failsafe[currentLang];
-            matchedIntent = currentLang === 'en' ? "Offline Earthquake Fail-Safe" : "अफलाइन भूकम्प सुरक्षा निर्देशिका";
+            matchedIntent = currentLang === 'en' ? "Offline Earthquake Fail-Safe" : "αñàαñ½αñ▓αñ╛αñçαñ¿ αñ¡αÑéαñòαñ«αÑìαñ¬ αñ╕αÑüαñ░αñòαÑìαñ╖αñ╛ αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢αñ┐αñòαñ╛";
         }
 
-        const hotlineLabel = currentLang === 'en' ? "Emergency Hotlines" : "आपतकालीन हटलाइन नम्बरहरू";
+        const hotlineLabel = currentLang === 'en' ? "Emergency Hotlines" : "αñåαñ¬αññαñòαñ╛αñ▓αÑÇαñ¿ αñ╣αñƒαñ▓αñ╛αñçαñ¿ αñ¿αñ«αÑìαñ¼αñ░αñ╣αñ░αÑé";
         let output = `[CRITICAL OFF-GRID SAFETY HIGHLIGHT - ${matchedIntent.toUpperCase()}]\n${safetyMessage}\n\n${hotlineLabel}:\n`;
         
         if (data.hotlines && data.hotlines[currentLang]) {
             data.hotlines[currentLang].forEach(item => {
                 const cleanPhone = item.phone.replace(/\s+/g, '');
-                output += `• ${item.name}: <a href="tel:${cleanPhone}" class="hotline-link">${item.phone}</a>\n`;
+                output += `ΓÇó ${item.name}: <a href="tel:${cleanPhone}" class="hotline-link">${item.phone}</a>\n`;
             });
         }
         
@@ -536,7 +451,7 @@ async function executeLocalCacheFallback(userQuery) {
     } catch (err) {
         console.error("Local file extraction error:", err);
         const errMsg = currentLang === 'ne' 
-            ? "गम्भीर त्रुटि: स्थानीय भण्डारण पहुँचयोग्य छैन।" 
+            ? "αñùαñ«αÑìαñ¡αÑÇαñ░ αññαÑìαñ░αÑüαñƒαñ┐: αñ╕αÑìαñÑαñ╛αñ¿αÑÇαñ» αñ¡αñúαÑìαñíαñ╛αñ░αñú αñ¬αñ╣αÑüαñüαñÜαñ»αÑïαñùαÑìαñ» αñ¢αÑêαñ¿αÑñ" 
             : "Critical error: Local offline storage inaccessible.";
         appendMessageToUI(errMsg, "sys", "Storage Error");
     }
@@ -561,11 +476,11 @@ document.querySelectorAll('.chip-btn').forEach(chip => {
         let targetQuery = chip.getAttribute('data-query');
 
         if (chip.id === 'chip-eq') {
-            targetQuery = currentLang === 'ne' ? 'भूकम्प' : 'earthquake protocol';
+            targetQuery = currentLang === 'ne' ? 'αñ¡αÑéαñòαñ«αÑìαñ¬' : 'earthquake protocol';
         } else if (chip.id === 'chip-fa') {
-            targetQuery = currentLang === 'ne' ? 'प्राथमिक उपचार' : 'first aid';
+            targetQuery = currentLang === 'ne' ? 'αñ¬αÑìαñ░αñ╛αñÑαñ«αñ┐αñò αñëαñ¬αñÜαñ╛αñ░' : 'first aid';
         } else if (chip.id === 'chip-kit') {
-            targetQuery = currentLang === 'ne' ? 'आपतकालीन झोला' : 'emergency kit';
+            targetQuery = currentLang === 'ne' ? 'αñåαñ¬αññαñòαñ╛αñ▓αÑÇαñ¿ αñ¥αÑïαñ▓αñ╛' : 'emergency kit';
         }
 
         if (targetQuery && queryIn) {
