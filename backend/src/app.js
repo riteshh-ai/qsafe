@@ -11,11 +11,18 @@ import sosRoutes from './routes/sosRoutes.js';
 // Services
 import { fetchNepalSeismicData } from './services/usgsService.js';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
+app.use(express.static(path.resolve(__dirname, '../../frontend')));
 
 // Route Mounts
 app.use('/api/telemetry', telemetryRoutes);
