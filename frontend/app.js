@@ -1,4 +1,4 @@
-﻿// =========================================================================
+// =========================================================================
 // LAYER 0: SERVICE WORKER REGISTRATION
 // =========================================================================
 if ('serviceWorker' in navigator) {
@@ -172,11 +172,8 @@ function removeLoadingBubble(loadingId) {
 // 1. Language Code Normalizer
 function getNormalizedLang() {
     if (!langSelect) return 'en';
-    const val = langSelect.value ? langSelect.value.toLowerCase() : '';
-    if (val === 'np' || val === 'ne' || val === 'αñ¿αÑçαñ¬αñ╛αñ▓αÑÇ' || val.includes('nepal')) {
-        return 'np';
-    }
-    return 'en';
+    const val = langSelect.value ? langSelect.value.trim() : 'en';
+    return val;
 }
 
 // 2. Dynamic Unknown Query Handler (Offline Fallback Only)
@@ -311,8 +308,7 @@ async function handleUserIntent() {
     const rawQuery = queryIn.value ? queryIn.value.trim() : "";
     if (!rawQuery) return;
 
-    const currentLang = getNormalizedLang();
-    const backendLang = (currentLang === 'np') ? 'ne' : 'en';
+    const selectedLang = getNormalizedLang();
 
     // Step A: Render User Query
     appendMessageToUI(rawQuery, 'user');
@@ -327,7 +323,7 @@ async function handleUserIntent() {
             const response = await fetch(`${BACKEND_URL}/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: rawQuery, lang: backendLang })
+                body: JSON.stringify({ message: rawQuery, selected_language: selectedLang, lang: selectedLang })
             });
 
             if (response.ok) {

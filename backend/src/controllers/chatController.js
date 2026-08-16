@@ -3,13 +3,14 @@ import { generateRAGResponse } from '../services/ragService.js';
 
 export async function handleChatMessage(req, res) {
   try {
-    const { message, lang = 'en' } = req.body;
+    const { message, selected_language, selectedLang, lang } = req.body;
+    const requestedLang = selected_language || selectedLang || lang;
     
     if (!message) {
       return res.status(400).json({ error: "Message query is required." });
     }
 
-    const reply = await generateRAGResponse(message, lang);
+    const reply = await generateRAGResponse(message, requestedLang);
     
     return res.json({
       success: true,
