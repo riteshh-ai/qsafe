@@ -50,9 +50,10 @@ function getFallbackSafetyResponse(query, langState = 'en') {
     return EMERGENCY_SAFETY_RESPONSES.contacts[langState] || EMERGENCY_SAFETY_RESPONSES.contacts['en'];
   }
 
-  // If off-topic / unrelated to disaster safety, return the exact off-topic guardrail block
+  // If off-topic / unrelated to disaster safety, return a random off-topic guardrail response
   if (!isEmergencyRelated) {
-    return OFF_TOPIC_FALLBACKS[langState] || OFF_TOPIC_FALLBACKS['en'];
+    const fallbacks = OFF_TOPIC_FALLBACKS[langState] || OFF_TOPIC_FALLBACKS['en'];
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
   }
 
   // Default disaster advisory in target language
@@ -117,7 +118,8 @@ export const generateRAGResponse = async (userMessage, requestedLanguage = null)
     const isEmergencyRelated = /(earthquake|quake|tremor|bhuikampa|bhukamp|भूकम्प|कम्पन्|flood|water|baadhi|badi|बाढी|पानी|landslide|mudslide|pahiro|पहिरो|first aid|bleed|injury|burn|fracture|प्राथमिक|उपचार|रगत|घाइते|prathamik|upachar|kit|bag|supplies|jhola|झोला|सामग्री|fire|aago|आगो|आगलागी|दमकल|contact|number|phone|police|ambulance|nambar|नम्बर|प्रहरी|सम्पर्क|sos|help|madat|sahayata|मद्दत|सहयोग|बचाउ|collapse|debris|trapped|bhatkieko|भवन|भत्क|hi|hello|namaste|namaskar|hey|नमस्ते|नमस्कार)/i.test(cleanMsg);
 
     if (!isEmergencyRelated) {
-      return OFF_TOPIC_FALLBACKS[langState] || OFF_TOPIC_FALLBACKS['en'];
+      const fallbacks = OFF_TOPIC_FALLBACKS[langState] || OFF_TOPIC_FALLBACKS['en'];
+      return fallbacks[Math.floor(Math.random() * fallbacks.length)];
     }
 
     // 6. Try generating response with Gemini LLM

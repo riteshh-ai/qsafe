@@ -33,22 +33,34 @@ export const MASTER_SYSTEM_PROMPT = `You are QSAFE, an AI Emergency & Disaster S
    - NDRRMA (विपद् व्यवस्थापन): 16666`;
 
 export const OFF_TOPIC_FALLBACKS = {
-  en: `I am QSAFE, a dedicated Emergency & Disaster Safety Advisor. I can only assist with emergency topics such as:
+  en: [
+    `I am QSAFE, a dedicated Emergency & Disaster Safety Advisor. I can only assist with emergency topics such as:
 • Earthquake & Flood Safety Protocols
 • Landslide & Mudslide Safety
 • First Aid Guidance
 • Emergency Kit Checklists
 • Nepal Emergency Hotlines (Police: 100 | NDRRMA: 16666 | Ambulance: 102)`,
+    `I couldn't quite understand that in the context of an emergency. Could you clarify if you need help with an earthquake, flood, landslide, or medical emergency? For hotlines, Police is 100 and Ambulance is 102.`,
+    `My expertise is focused solely on emergency response and disaster safety in Nepal. Please let me know if you need first aid instructions, earthquake safety steps, or emergency contact numbers.`
+  ],
 
-  ne_dev: `म QSAFE, विपद् तथा आपतकालीन सुरक्षा सल्लाहकार हुँ। म केवल आपतकालीन र विपद् सम्बन्धी प्रश्नहरूको मात्र उत्तर दिन सक्छु:
+  ne_dev: [
+    `म QSAFE, विपद् तथा आपतकालीन सुरक्षा सल्लाहकार हुँ। म केवल आपतकालीन र विपद् सम्बन्धी प्रश्नहरूको मात्र उत्तर दिन सक्छु:
 • भूकम्प, बाढी र पहिरो सुरक्षा उपायहरू
 • प्राथमिक उपचार मार्गदर्शन
 • आपतकालीन हटलाइनहरू (प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६)`,
+    `माफ गर्नुहोस्, मैले त्यो बुझिनँ। के तपाईंलाई भूकम्प, बाढी, पहिरो वा प्राथमिक उपचारको बारेमा जानकारी चाहिएको हो?`,
+    `म विपद् व्यवस्थापन र आपतकालीन सुरक्षामा मात्र मद्दत गर्न सक्छु। कृपया आपतकालीन अवस्था स्पष्ट पार्नुहोस्। प्रहरी: १००, एम्बुलेन्स: १०२।`
+  ],
 
-  ne_rom: `Ma QSAFE, emergency ra disaster safety advisor hu. Ma keval emergency related sodhai ko matra uttar dina sakchu:
+  ne_rom: [
+    `Ma QSAFE, emergency ra disaster safety advisor hu. Ma keval emergency related sodhai ko matra uttar dina sakchu:
 • Bhukampa, Badi ra Pahiro bata bachne upaya
 • Prathamik Upachar (First Aid) jankari
-• Emergency Hotlines (Police: 100 | NDRRMA: 16666 | Ambulance: 102)`
+• Emergency Hotlines (Police: 100 | NDRRMA: 16666 | Ambulance: 102)`,
+    `Maile tapainko kura bujhina. Ke tapailai bhukampa, badi, pahiro va prathamik upachar ko barema jankari chahieko ho?`,
+    `Ma keval disaster ra emergency safety ma matra maddat garna sakchu. Kripaya samasya spasta parnuhos. Police: 100, Ambulance: 102.`
+  ]
 };
 
 /**
