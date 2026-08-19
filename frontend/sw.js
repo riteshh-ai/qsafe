@@ -1,9 +1,14 @@
-const CACHE_NAME = 'qsafe-nepal-v2';
+// =========================================================================
+// QSAFE Nepal Service Worker — v3
+// Bump CACHE_NAME whenever static assets change.
+// SW v3 evicts the old corrupt v2 cache on activation.
+// =========================================================================
+const CACHE_NAME = 'qsafe-nepal-v3';
 
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
-    './style.css',                  // Added missing stylesheet for offline rendering
+    './style.css',
     './app.js',
     './public/emergency_contacts.json'
 ];
@@ -11,22 +16,27 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(async (cache) => {
-            console.log('📦 Locking core UI assets into offline cache memory...');
+            console.log('📦 SW v3: Caching core UI assets...');
             try {
                 return await cache.addAll(ASSETS_TO_CACHE);
             } catch (err) {
-                console.error('❌ Cache addAll failed for some assets:', err);
+                console.error('❌ SW v3: Cache addAll partial failure:', err);
             }
         })
     );
+    // Take control immediately without waiting for old SW to die
     self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
     event.waitUntil(
+        // Evict ALL stale caches (v1, v2, etc.)
         caches.keys().then((keys) => {
             return Promise.all(
-                keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
+                keys.filter(key => key !== CACHE_NAME).map(key => {
+                    console.log(`🗑️ SW v3: Deleting stale cache: ${key}`);
+                    return caches.delete(key);
+                })
             );
         }).then(() => self.clients.claim())
     );
@@ -35,23 +45,23 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
 
-    // 1. Completely bypass external domains, API calls, POSTs, or cachebust queries
+    // ── Bypass rules: always fetch from network, never serve from cache ──
     if (
-        event.request.method !== 'GET' || 
-        url.pathname.startsWith('/api/') || 
-        url.search.includes('cachebust') ||
-        !url.origin.includes(self.location.origin) // Bypasses external URL checks like google favicon & USGS endpoints
+        event.request.method !== 'GET'                  ||
+        url.pathname.startsWith('/api/')                 ||  // API endpoints
+        url.search.includes('cachebust')                 ||  // explicit bypass
+        url.search.match(/[?&]v=/)                       ||  // versioned assets (?v=3)
+        !url.origin.includes(self.location.origin)           // external (USGS, etc.)
     ) {
-        return; // Native network handling
+        return; // Let browser handle natively — no respondWith()
     }
 
-    // 2. Cache-First Strategy for internal static UI assets
+    // ── Cache-First for internal static assets ──
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
             if (cachedResponse) {
                 return cachedResponse;
             }
-            // Let the network fetch proceed natively and propagate errors if offline
             return fetch(event.request);
         })
     );

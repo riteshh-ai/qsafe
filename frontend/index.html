@@ -6,7 +6,7 @@
     <title>QSAFE Nepal - Earthquake Emergency Assistant</title>
     <!-- External CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    <script src="app.js?v=3" defer charset="utf-8"></script>
 </head>
 <body>
 
@@ -46,7 +46,7 @@
 
         <div class="chat-log" id="chat-log">
             <div class="bubble sys">
-                Namaste. Initial interface framework initialized. Standing by for validation queries.
+                Namaste! I am QSAFE Nepal, your AI Disaster & Emergency Safety Advisor. Ask about earthquake, first aid, or flood safety.
             </div>
         </div>
         
@@ -56,24 +56,32 @@
         </div>
     </div>
 
-    <!-- Inline script to toggle Quick Chip labels dynamically on language select -->
+    <!-- Inline script to toggle Quick Chip labels and placeholders dynamically on language select -->
     <script>
         const langSelectUI = document.getElementById('lang-select');
         const chipEq = document.getElementById('chip-eq');
         const chipFa = document.getElementById('chip-fa');
         const chipKit = document.getElementById('chip-kit');
+        const queryInUI = document.getElementById('query-in');
 
         if (langSelectUI) {
             langSelectUI.addEventListener('change', (e) => {
                 const lang = e.target.value;
-                if (lang === 'ne') {
-                    chipEq.textContent = '🚨 भूकम्प निर्देशिका';
-                    chipFa.textContent = '🩹 प्राथमिक उपचार';
-                    chipKit.textContent = '🎒 आपतकालीन झोला';
+                if (lang === 'ne_dev' || lang === 'ne') {
+                    if (chipEq) { chipEq.textContent = '🚨 भूकम्प निर्देशिका'; chipEq.setAttribute('data-query', 'भूकम्प सुरक्षा'); }
+                    if (chipFa) { chipFa.textContent = '🩹 प्राथमिक उपचार'; chipFa.setAttribute('data-query', 'प्राथमिक उपचार'); }
+                    if (chipKit) { chipKit.textContent = '🎒 आपतकालीन झोला'; chipKit.setAttribute('data-query', 'आपतकालीन झोला'); }
+                    if (queryInUI) queryInUI.placeholder = 'आपत्कालीन प्रश्न सोध्नुहोस्...';
+                } else if (lang === 'ne_rom') {
+                    if (chipEq) { chipEq.textContent = '🚨 Bhukampa Protocol'; chipEq.setAttribute('data-query', 'bhukampa bata bachna'); }
+                    if (chipFa) { chipFa.textContent = '🩹 Prathamik Upachar'; chipFa.setAttribute('data-query', 'prathamik upachar'); }
+                    if (chipKit) { chipKit.textContent = '🎒 Emergency Go-Bag'; chipKit.setAttribute('data-query', 'emergency kit jhola'); }
+                    if (queryInUI) queryInUI.placeholder = 'Emergency prashna sodhnuhos...';
                 } else {
-                    chipEq.textContent = '🚨 Earthquake Protocol';
-                    chipFa.textContent = '🩹 First Aid';
-                    chipKit.textContent = '🎒 Emergency Kit';
+                    if (chipEq) { chipEq.textContent = '🚨 Earthquake Protocol'; chipEq.setAttribute('data-query', 'earthquake safety'); }
+                    if (chipFa) { chipFa.textContent = '🩹 First Aid'; chipFa.setAttribute('data-query', 'first aid guidance'); }
+                    if (chipKit) { chipKit.textContent = '🎒 Emergency Kit'; chipKit.setAttribute('data-query', 'emergency kit checklist'); }
+                    if (queryInUI) queryInUI.placeholder = 'Ask an emergency question...';
                 }
             });
         }

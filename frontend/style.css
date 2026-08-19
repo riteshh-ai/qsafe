@@ -271,11 +271,112 @@ header h1 {
 .bubble.sys strong { color: var(--primary-hover); }
 
 .meta-tag {
-    display: block;
+    display: none; /* Hide backend route metadata from user view */
+}
+
+/* Rich Emergency Protocol Card Styling */
+.protocol-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.protocol-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(45, 106, 79, 0.12);
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+    margin-bottom: 4px;
+}
+
+.protocol-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.protocol-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.protocol-bullet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-green);
+    color: #ffffff;
     font-size: 0.72rem;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.protocol-content strong {
+    color: var(--primary-hover);
+    font-weight: 700;
+}
+
+.hotline-section {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(45, 106, 79, 0.25);
+}
+
+.hotline-title {
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--text-muted);
-    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.hotline-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hotline-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    border: 1px solid rgba(45, 106, 79, 0.3);
+    color: var(--primary-green);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+.hotline-pill:hover {
+    background: var(--primary-green);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(45, 106, 79, 0.2);
+}
+
+.hotline-pill .icon {
+    font-size: 0.9rem;
 }
 
 .hotline-link {

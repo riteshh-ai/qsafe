@@ -12,10 +12,10 @@ export async function handleChatMessage(req, res) {
 
     const reply = await generateRAGResponse(message, requestedLang);
     
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
     return res.json({
       success: true,
-      response: reply,
-      route: "Live Telemetry + ChromaDB + Gemini 2.0 Flash RAG"
+      response: reply
     });
   } catch (error) {
     console.error("Chat Controller Error:", error);
