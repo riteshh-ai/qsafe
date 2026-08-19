@@ -135,6 +135,17 @@ def benchmark_command(args):
     return 0
 
 
+def serve_command(args):
+    """Start the FastAPI HTTP microservice."""
+    import uvicorn
+    print("\n" + "="*70)
+    print(f"🚀 QSafe Offline NLU - FastAPI Server (port {args.port})")
+    print("="*70)
+    
+    # Run uvicorn server
+    uvicorn.run("src.api:app", host=args.host, port=args.port, reload=args.reload)
+    return 0
+
 
 def main():
     """
@@ -144,6 +155,7 @@ def main():
         python -m src.main train           # Train model on dataset
         python -m src.main test            # Test inference with samples
         python -m src.main benchmark       # Benchmark latency
+        python -m src.main serve           # Start FastAPI microservice
         python -m src.main --help          # Show help
     """
     parser = argparse.ArgumentParser(
@@ -165,6 +177,13 @@ def main():
     benchmark_parser.add_argument('--iterations', type=int, default=1000, help='Number of iterations per sample (default: 1000)')
     benchmark_parser.add_argument('--stress-test', action='store_true', help='Run a long stress test')
     benchmark_parser.set_defaults(func=benchmark_command)
+
+    # Serve subcommand
+    serve_parser = subparsers.add_parser('serve', help='Start the FastAPI HTTP microservice')
+    serve_parser.add_argument('--host', type=str, default='127.0.0.1', help='Host to bind server to (default: 127.0.0.1)')
+    serve_parser.add_argument('--port', type=int, default=8000, help='Port to run server on (default: 8000)')
+    serve_parser.add_argument('--reload', action='store_true', help='Enable auto-reload on code change')
+    serve_parser.set_defaults(func=serve_command)
     
     args = parser.parse_args()
     

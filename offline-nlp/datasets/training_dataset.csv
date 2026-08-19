@@ -3672,3 +3672,1479 @@ bihana dekhi mero mama bata khabar xaina,family_member_missing,validation
 धेरैधन्यवाद,goodbye_thanks,train
 भक्तपुर मा घर भत्कियो,building_collapse_report,train
 we just felt an earthquake in Bhaktapur,earthquake_occurring_report,validation
+gaunj ana akidaina road band cha,road_blockage_report,train
+सी पी आर कसरी गरन्े,first_aid_query,train
+ok thanks bye is m ajaanchu,goodbye_thanks,train
+ok thnks bye is ma jaanchu,goodbye_thanks,train
+bridge collapsde nearr Bhaktapur,road_blockage_report,train
+how doi evcuate safely,evacuation_guidance_query,train
+koi vne help gara na,sos_help_request,train
+aftershock kati smama rahanxa,aftershock_information_query,train
+cannotr each Lalitpur road is clsoed,road_blockage_report,train
+भग्नावशेष खसेर टाउकोमाच ोट लाग्यो,injury_report,train
+आमालाई एम्बुलेन्स चाहियो छिटो,medical_emergency_request,train
+यो घरमा बस्न सुरक्षित छ कि छैन ैह,building_damage_check,train
+buildnig aliakti tilt bhayo danger chaki,building_damage_check,train
+strongtremor bhukmpa jasto,earthquake_occurring_report,train
+entire building came downi n Gorkha,building_collapse_report,train
+बुबा ला ईसुरक्षित फेला परेकोछ,family_reunification_status,train
+chta khasyobhukampa ma,building_collapse_report,train
+aago chittai failira xa bazaa rma,fire_incident_report,train
+एकदमध्नयवाद,goodbye_thanks,train
+एकदमधन्यवाद,goodbye_thanks,train
+ahile k garnu praxa,status_check_general,train
+ghar baliraxa fire briagde chai,fire_incident_report,train
+काठमाडौं कोलागि पराकम्प चेतावीन,aftershock_information_query,train
+no powerfor two dys now,power_outage_report,train
+घर भत्किएर भित्रफ सियौं छिटो,trapped_debris_report,train
+चबाउनुहोस्???,sos_help_request,train
+बचाउनुहोस्???,sos_help_request,train
+hmro ghar najik gas leakbhayo,gas_leak_report,train
+दिदी र बालबालिकाका लागि आश्रय चाहियो है,shelter_request,train
+mero aama safe cha vanera status update grana mna xa,family_reunification_status,train
+waht,fallback_unclear,train
+wht,fallback_unclear,train
+no clen water available ehre,food_water_request,train
+hello dik cha khabar,greeting,train
+bridge collpsed near Jajakot,road_blockage_report,train
+भवनबाट निकासा गर्ने चणरहरू,evacuation_guidance_query,train
+pcrkasari garne,first_aid_query,train
+ftershock kati samma rahanxa asap,aftershock_information_query,train
+पर्खालले थिचेको छ हल्लन सक्दिन,trapped_debris_report,train
+ग्यास चुहियो छिोट,gas_leak_report,train
+strong gassmell xa buliding ma,gas_leak_report,train
+घर बलिरहेको छ दमलकचाहियो,fire_incident_report,train
+our house is unsafe need hselter,shelter_request,train
+अहिलकेो अवस्था केहो,status_check_general,train
+the house isshakingb adly,earthquake_occurring_report,train
+ललितपुर नजिकप हिरोले सडक बन्द भयो हजुर,road_blockage_report,train
+bhkuampa pachicrack aayo,building_damage_check,train
+nearest openg round for evacuation,safe_location_query,train
+my grndfater is injured badly,injury_report,train
+building safe cha ki kaasarit haha pauney,building_damage_check,train
+my grndmohter is stuck under the roof,trapped_debris_report,train
+म र दाजुथ ुनिएकाछौं,trapped_debris_report,train
+o bey,goodbye_thanks,train
+घरमा भूकम्प तयारीको उत्तम अभ्यास के हो प्लिज,preparedness_tips_query,train
+आपतकालीन सम्पर्क नम्बरहरूको सूच ीहजुर,emergency_contact_request,train
+ok ybe,goodbye_thanks,train
+ok by,goodbye_thanks,train
+aago chittai failria xa hamro area ma,fire_incident_report,train
+ago chittai failira xa hamro area ma,fire_incident_report,train
+please rescue m emalai help chai,sos_help_request,train
+plese rescue me malai help chai,sos_help_request,train
+pprecciate it,goodbye_thanks,train
+आाम को लागि खाद्यान्न चाहियो,food_water_request,train
+मला ईतुरुन्तै के गर्ने भनेर भन्नुहोस् हजुर,status_check_general,train
+भूकम्पपछि भवनको सुरक्षा जाँच कसले गर्छ,building_damage_check,train
+tourist polic ko number dinuhos,emergency_contact_request,train
+मरेो घरमा चिरा परेको छ सुरक्षित छ कि छैन,building_damage_check,train
+मेरो घरमा चिरा परेको छ सुरक्षित छ कि छैन,building_damage_check,train
+aaog chittai failira xa school najikma,fire_incident_report,train
+fire broke out after the earhtquake,fire_incident_report,train
+fire broke out fter the earthquake,fire_incident_report,train
+म र हजरुआमा थुनिएकाछौं,trapped_debris_report,train
+my grandfatheri s nuconscious,medical_emergency_request,train
+help pls m dheraai fright ma xu,sos_help_request,train
+शुभ प्भरात???,greeting,train
+relief cmp m mero bhai bhetiyo,family_reunification_status,train
+is aonther earhtquake coming,aftershock_information_query,train
+mero didisnga abhi reunite bhayo,family_reunification_status,train
+i ned elp,sos_help_request,train
+mergency help neeedd,sos_help_request,train
+घर भत्किएर भित्र फसियौं,trapped_debris_report,train
+hwo to regisetr a found family member,family_reunification_status,train
+abhi gahr bhitra jana milxaa ki,building_damage_check,train
+bhi ghar bhitra jana milxaa ki,building_damage_check,train
+दिदी लडेरढाडमाचोट लाग्यो,injury_report,train
+ाकठमाडौं नजिक ग्यास चुहावट भयो!!,gas_leak_report,train
+हजुरबुबा लडेरढाडमा चोट लाग्यो,injury_report,train
+ghar upra bhatkiyo???,building_collapse_report,train
+mero saathi pinned under debris mlaai help hcai,trapped_debris_report,train
+fire alert near amrket,fire_incident_report,train
+my rgandfather is unconscious,medical_emergency_request,train
+wll khaseko le mero didi la thichyo,trapped_debris_report,train
+Kthmanduu ma fire lagyo,fire_incident_report,train
+ok got itd hanyabad bahini,goodbye_thanks,train
+brikc khasekole lagyo,injury_report,train
+गोर्खा नजिकको पुलभतक्ियो,road_blockage_report,train
+छत खसेर बुबा थनुिनुभयो है,trapped_debris_report,train
+नजिकैको सुरक्षित भेल ाहुने ठाउँ!!,safe_location_query,train
+rod bloccked by landslide near Gorkha,road_blockage_report,train
+धन्यवदा दाई,goodbye_thanks,train
+where shoul di go for safety,safe_location_query,train
+cracks appeaare dafter the quake,building_damage_check,train
+afteshcok aaunxa ki,aftershock_information_query,train
+fteshock aaunxa ki,aftershock_information_query,train
+mym otheris stuck under the roof,trapped_debris_report,train
+my mothris stuck under the roof,trapped_debris_report,train
+cha tkhasyo bhukampa ma pls,building_collapse_report,train
+जाजरकोट मा सम्पूर्ण वभन ढल्यो हजुर,building_collapse_report,train
+mero buwa ko phone lagdaina buhkampa deekhi,family_member_missing,train
+earthquakbehayo hamro area ma,earthquake_occurring_report,train
+दिदी लाई छातीमाद ुखाइ भइरहेकोछ,medical_emergency_request,train
+mero aama safe cha vanear status update garna man xa,family_reunification_status,train
+ym father is injured badly???,injury_report,train
+my sister collapsed adn no twaking up,medical_emergency_request,train
+yo bhukampa sanga erlated xaina,fallback_unclear,train
+yo bhukmpa sanga related xaina,fallback_unclear,train
+njikai ko apartment bhatkiyo now,building_collapse_report,train
+गोर्खा मा आगो लागकेो छ हजुर,fire_incident_report,train
+buhkampa pachi mero bhai lai bhettauna sakina pls,family_member_missing,train
+ok gt it dhaynabad bahini,goodbye_thanks,train
+कठामाडौं मा घर भत्कियो,building_collapse_report,train
+काठमाडौं मा घर भत्कियो,building_collapse_report,train
+नजिकैको अपार्टमेन्ट भत्कियो,building_collapse_report,train
+frie briagde ko contact number,emergency_contact_request,train
+बालबालिकालाई भकूम्प अभ्यासको लागि कसरी तयार पार्ने छिटो,preparedness_tips_query,train
+बालबालिकालाई भूकम्प अभ्यासको लागि कसरी तयार पार्ने छिटो,preparedness_tips_query,train
+my grandomther has a deep wonud,injury_report,train
+need foo dsupplies for familly,food_water_request,train
+najik k oassebmly point kaha cha,safe_location_query,train
+बेहोस भएको मान्छेलाई कसरी मद्दतग र्ने है,first_aid_query,train
+उद्धारका लागि नजिैकको खुल्ला ठाउँ हजुर,safe_location_query,train
+ghar bahtkiyo hamro area ma pls,building_collapse_report,train
+सडक चिरा परेर जान कसिँदैन,road_blockage_report,train
+hye SQAFE,greeting,train
+hed injury from falling debris,injury_report,train
+घाउमापट्ट ीकसरी बाँध्ने,first_aid_query,train
+hep,sos_help_request,train
+need rattoin for my mother,food_water_request,train
+भूकम्पपछि दाजु लाई भेट्टाउन सकिएको छैन,family_member_missing,train
+tourist polic koo number dinu hos,emergency_contact_request,train
+my daughter is traapped under debirs,trapped_debris_report,train
+do we need to evacuate immeidately,evacuation_guidance_query,train
+mero bhi sanga contacttutyo,family_member_missing,train
+relief cmp ma mero bhai bhetiyo,family_reunification_status,train
+mero bbhai ghar aaunu bhako xaina ahile smama,family_member_missing,train
+mero bbhi ghar aaunu bhako xaina ahile samma,family_member_missing,train
+wll ma crack dekhiyo,building_damage_check,train
+mauusam kastoc ha,fallback_unclear,train
+muusam kasto cha,fallback_unclear,train
+first id for burns,first_aid_query,train
+mlaai nikalnu hos thuniyeko xu,trapped_debris_report,train
+wht should i do right now,status_check_general,train
+मेरो रपिवारको सदस्य सुरक्षित भेटियो,family_reunification_status,train
+विपद रिपोर्टिङ हटलाइन,emergency_contact_request,train
+mlai kaha jana safe hunccha,safe_location_query,train
+सुप्रभात,greeting,train
+सडकमा पर्ाखलभत्कियो,building_collapse_report,train
+हजुरआमा को बेपत्ता व्यक्ति रिपोर्ट ्पलिज,family_member_missing,train
+हजुरआमा को बेपत्ता व्यक्ति रिपोर्ट प्लिज,family_member_missing,train
+cn anyone help,sos_help_request,train
+he yapp!!!,greeting,train
+joke bhhannas aknu huncha,fallback_unclear,train
+bhukmapa gayo Pokhara ma,earthquake_occurring_report,train
+need tents fro the night,shelter_request,train
+भान्सामाग ्यास धेरै चुहिँदैछ है,gas_leak_report,train
+building liaktitilt bhayo danger cha ki,building_damage_check,train
+Kathmandu anjikk gas leak bhayo,gas_leak_report,train
+hey bhuju k cha,greeting,train
+my sistr did not come home yet,family_member_missing,train
+सफाखानेापनी तुरुन्तै चाहियो,food_water_request,train
+mero bhi safe cha vanera status update garna manxa,family_reunification_status,train
+mero bhi laiambulance chai urgent,medical_emergency_request,train
+mero bhi ghar aaunu bhako xaina ahile samma,family_member_missing,train
+ehlp garnuna plz,sos_help_request,train
+takns,goodbye_thanks,train
+कति पराक्मप आउने अपेक्षाछ,aftershock_information_query,train
+hamro aream afire lagyo,fire_incident_report,train
+my grndmother collapsed an dnot waking up,medical_emergency_request,train
+mero aama safe cha vanera status update ganraman xa,family_reunification_status,train
+mero ama safe cha vanera status update garnaman xa,family_reunification_status,train
+medical eemrgecny cha help garnu,medical_emergency_request,train
+medicl emergecny cha help garnu,medical_emergency_request,train
+emergency supplis kti choti check garne,preparedness_tips_query,train
+trpped under rubble,trapped_debris_report,train
+wnt to update status that my brother is safe,family_reunification_status,train
+घरमा भूकम्प तयारीको उत्तमअ भ्यास के हो,preparedness_tips_query,train
+mausam kastcoha,fallback_unclear,train
+पहिरोले एकमातर् सडक बन्द भयो,road_blockage_report,train
+पहिरोले एकमात्र सडक बन्द भयो,road_blockage_report,train
+भक्तपुरमा आगो छिट्टै फैलिदँैछ,fire_incident_report,train
+काठमाडौं नजिकको पुल भत्कियो,road_blockage_report,train
+नमस्ते बहिीन!!,greeting,train
+नमस्ते बहिनी!!,greeting,train
+पराकम्प कति शक्ितशाली हुन्छ छिटो,aftershock_information_query,train
+wall khaseko le mero bai lait hichyo,trapped_debris_report,train
+wll khaseko le mero bai lai thichyo,trapped_debris_report,train
+पोखरा मा बिजुलीक ोतार खसेकोछ,power_outage_report,train
+ags stove cause fire,fire_incident_report,train
+hb hai kasto cha,greeting,train
+काठमाडौं मा जोडदार धकक्ा महसुस भयो,earthquake_occurring_report,train
+123456 pls,fallback_unclear,train
+जाजरकोट मा बिजलुी गएकोछ,power_outage_report,train
+जाजरकोट मा बिजुली गएकोछ,power_outage_report,train
+भक्तपुर को लागि पराकम्प चेतावनी!!,aftershock_information_query,train
+what is the ambulance nubmer,emergency_contact_request,train
+saefst wy to leave the building,evacuation_guidance_query,train
+लठ िक छ बाई,goodbye_thanks,train
+gas leak enar Gorkha,gas_leak_report,train
+yo bhukampa sanga realted xaina urgent pls,fallback_unclear,train
+searching for my grandfathe rin Bhaktapur,family_member_missing,train
+hamro ghar nusaafe xa shelter chai,shelter_request,train
+ghar bhtkiyo Kathmand uma,building_collapse_report,train
+घरभरि ग्यासको गन्ध छ प्लिज,gas_leak_report,train
+wnt to upddate status that my grandmother is safe,family_reunification_status,train
+भत्किएको घरभित्र फसेको ुछ!!,trapped_debris_report,train
+पोखरा मा बिजलुीको तार खसेको छ,power_outage_report,train
+काठमाडौं नजिक पहिरोले सडक ब्नदभयो,road_blockage_report,train
+where is the designated saf ezone in Jajarkot,safe_location_query,train
+दाजु अझै रघआउनुभएको छैन,family_member_missing,train
+bhukampa report garn aman xa ahmro area ma,earthquake_occurring_report,train
+bhukmpa report garna man xa ahmro area ma,earthquake_occurring_report,train
+stuck nuder  collapsed wall,trapped_debris_report,train
+विस्थापितहरूलाई बस्ने ठाउँ चाहिन्छ,shelter_request,train
+ghr collapse bhayo hami bhitra fasyou,trapped_debris_report,train
+hmro area ko lagi aftershock warning!!!,aftershock_information_query,train
+ga leak near Lailtpur,gas_leak_report,train
+someone afinted need medical help,medical_emergency_request,train
+someone finted need medical help,medical_emergency_request,train
+helpp,sos_help_request,train
+raati basna tent chai,shelter_request,train
+dispalced nede a place to stay,shelter_request,train
+नमस्ते बुवा,greeting,train
+mero ama lai safely locate garya,family_reunification_status,train
+भक्तपुर नजिककैोघरमा आगो लागेको छ,fire_incident_report,train
+गरो्खा मा आगो छिट्टैफैलिँदैछ,fire_incident_report,train
+नेपाल रेडक्सरको हेल्पलाइन नम्बर!!,emergency_contact_request,train
+mero buw ko phone lagdaina bhukampaa dekhi,family_member_missing,train
+my fther is uconscious,medical_emergency_request,train
+भक्तपुर नजिक हपिरोले सडकबन्द भयो,road_blockage_report,train
+buildign mafire xa hamro area najik,fire_incident_report,train
+relief camp ma mero iddi bhetiyo,family_reunification_status,train
+rod block bhayo landslide le hamro area najik help,road_blockage_report,train
+भ्कतपुर मा जोडदारधक्का महसुस भयो,earthquake_occurring_report,train
+lhp me,sos_help_request,train
+सहयोग चाहियो,sos_help_request,train
+पोखर ामा घर भत्कियो,building_collapse_report,train
+काठमाडौं मा बिजुलीको तार खसेको छ,power_outage_report,train
+ललितपुर माज ोडदार धक्का महसुस भयो,earthquake_occurring_report,train
+our houes collapsed completely,building_collapse_report,train
+our house collpsed completely,building_collapse_report,train
+fire spreeding fast in Lalitpur,fire_incident_report,train
+आमा लाई छातीमा दुखाइ भइरहेकोछ,medical_emergency_request,train
+भूकम्पदेखिह जुरबुबा बेपत्ता हुनुभएकोछ,family_member_missing,train
+building on ifre near Gorkha,fire_incident_report,train
+should i expect moret remorstonight,aftershock_information_query,train
+hello jisanchai hunuuhncha,greeting,train
+temporary sheltre kaha paunxa,shelter_request,train
+ghar bhaktiyo gaun ma,building_collapse_report,train
+फर्िनचरलाई खस्नबाट कसरी सुरक्षित गर्ने,preparedness_tips_query,train
+के हामी तुरुन्तैनिकासा गर्नुपर्छ,evacuation_guidance_query,train
+how to tret a cut wound,first_aid_query,train
+के म अिहलेघरभित्र फर्कन सक्छु,building_damage_check,train
+power outagein Laliptur,power_outage_report,train
+धन्यवादहुजर,goodbye_thanks,train
+धन्यवादहजुर,goodbye_thanks,train
+भूकम्पपछि आगलागी भयो,fire_incident_report,train
+bhukampa report garna mman xa mero ghar njaik ma,earthquake_occurring_report,train
+there is a firei n Pokhara,fire_incident_report,train
+दिदी बेहोस हुनुभय ोहै,medical_emergency_request,train
+serching for my grandfather inBhaktapur,family_member_missing,train
+cannot reach Katmhandu road is closed,road_blockage_report,train
+need ration for my isster plz,food_water_request,train
+myg randmother is unconscious pls,medical_emergency_request,train
+bhukmpa report garna man xa Pokhara ma,earthquake_occurring_report,train
+सए ओएस,sos_help_request,train
+एस ओएस,sos_help_request,train
+bhukampa pcahi  kgarne,status_check_general,train
+smoke coming from the hosue now,fire_incident_report,train
+my brother hs a deepwound,injury_report,train
+gas stove le aago lgaoy,fire_incident_report,train
+sfe place near me,safe_location_query,train
+नम्सतेजी,greeting,train
+नमस्तेजी,greeting,train
+अहिले कुन चरण पालना गर्ने???,status_check_general,train
+my granfather is unconscoius,medical_emergency_request,train
+दमकलको सम्पर्क नम्बर छिटो,emergency_contact_request,train
+which open area is saf teo gather,safe_location_query,train
+bhukampa report garna man xa Gorkha ma aspa,earthquake_occurring_report,train
+mlai bachau pleae,sos_help_request,train
+brick khasekol e lagyo asap,injury_report,train
+काठमाडौंमा मस्पूर्ण भवन ढल्यो,building_collapse_report,train
+काठमाडौंमा सम्पूर्ण भवन ढल्यो,building_collapse_report,train
+h,greeting,train
+बिहानदखेि दिदी बाट कुनै खबर छैन,family_member_missing,train
+hmro area ma safe zone kaha cha pls,safe_location_query,train
+छ तखसेर हजुरआमा थुनिनुभयो,trapped_debris_report,train
+everythign is sahking,earthquake_occurring_report,train
+mero didi pinnedu nder debris malai help chi,trapped_debris_report,train
+भूकम्पदेखि हजरुबुबा बेपत्ता हुनुभएको छ,family_member_missing,train
+ूभकम्पगयो,earthquake_occurring_report,train
+हअिले मैले के कदम चाल्ने प्लिज,status_check_general,train
+अहिले मैले के कदम चाल्ने प्लिज,status_check_general,train
+mero buwa la ichest ma dukhekox a,medical_emergency_request,train
+mero bhai laib adly injury bhayo plz,injury_report,train
+mero bhi lai badly injury bhayo plz,injury_report,train
+bab yformula ra pani cahi,food_water_request,train
+bb yformula ra pani chai,food_water_request,train
+mreo buwa unconscoius bhayo,medical_emergency_request,train
+mreo buw unconscious bhayo,medical_emergency_request,train
+काठमाडौं को लागि निकासा योनजा,evacuation_guidance_query,train
+काठमाडौं को लागि निकासा योजना,evacuation_guidance_query,train
+छतखसेर हजुरबबुा थुनिनुभयो,trapped_debris_report,train
+भक्तपुर मा सम्पूर्ण भवन ढल्योह जुर,building_collapse_report,train
+no house to sty need shelter urgently,shelter_request,train
+rsecue chai xa ma thuniyekoxu,trapped_debris_report,train
+wht to do after an earthquake,status_check_general,train
+first id for a broken arm,first_aid_query,train
+hamro area ko lagi eavcuation plan,evacuation_guidance_query,train
+hmro area ko lagi evacuation plan,evacuation_guidance_query,train
+mreo aama sanga abhi reunite bhayo plz,family_reunification_status,train
+ehy there now,greeting,train
+how ofte nsholud i check emergency supplies,preparedness_tips_query,train
+गोर्खा मा भूक्मप गयो,earthquake_occurring_report,train
+गोर्खा मा भूकम्प गयो,earthquake_occurring_report,train
+arkobhukamap aaunxa ki,aftershock_information_query,train
+erthquake hit Pokhara just now,earthquake_occurring_report,train
+आमा र बालबालिकाका लागि आश्रय चाहियो,shelter_request,train
+मनस्ते जी है,greeting,train
+bhukampa pacih k garne,status_check_general,train
+आज राति थप धक्का आउन सक्छ कि हजुर,aftershock_information_query,train
+fire psreading fast inP okhara,fire_incident_report,train
+धन्यवादब हिनी,goodbye_thanks,train
+gharbhatkioy gaun ma,building_collapse_report,train
+tapai kati umer ok hunuhuncha help,fallback_unclear,train
+cn you sing a song urgent pls,fallback_unclear,train
+ubilding safe cha ki kasari thaha pauney,building_damage_check,train
+my grandfathre did not come home yet,family_member_missing,train
+dos ths thing work,fallback_unclear,train
+mero mama ko phone lagdaina bhkuampa dekhi???,family_member_missing,train
+brigde collapsed near Gorkha!!!,road_blockage_report,train
+mero ama pinned under debris malia help chai,trapped_debris_report,train
+my father phone not racahble since quake,family_member_missing,train
+पराकम्पपछि घरभित्र सुत्न सुरक्षित छ कि,aftershock_information_query,train
+भूकम्पपछि चिरा देखा पर्यो,building_damage_check,train
+power linesd own in Kathmandu,power_outage_report,train
+धन्यबा दहै छिटो,goodbye_thanks,train
+needr ation for myfather,food_water_request,train
+हजुरबुबा लाई गम्भीर चोटलागेको छ,injury_report,train
+गीत गउान सक्छौ,fallback_unclear,train
+mero bhai lai ambulanec chai urgent,medical_emergency_request,train
+bhukampako jhatka aaile feel bahyo,earthquake_occurring_report,train
+bhukmpako jhatka aaile feel bhayo,earthquake_occurring_report,train
+नजिकैको सुरक्षित ठाउँ हकाँ छ है,safe_location_query,train
+where is the nearestrelie fcamp,shelter_request,train
+ठिक छ नध्यवाद है,goodbye_thanks,train
+kitchen maa ago lagyo bhukampa ko bela,fire_incident_report,train
+gana gauna skanu huncha,fallback_unclear,train
+acnnot move stuck under conccrete malai,trapped_debris_report,train
+iwll there be aftershocks???,aftershock_information_query,train
+earthquake inn Pokhraa,earthquake_occurring_report,train
+"trapped, please send rerscue",trapped_debris_report,train
+mero bhai dberismuni thuniyo,trapped_debris_report,train
+hlello,greeting,train
+hlllo,greeting,train
+आदाब हजुर,greeting,train
+power lines down in Lalitpu?r??,power_outage_report,train
+भूकम्पपछ िछोरी लाई भेट्टाउन सकिएको छैन,family_member_missing,train
+"trapped, lpease send rescue",trapped_debris_report,train
+thanks yesto helfpul huncha,goodbye_thanks,train
+missing person repotr for my brother???,family_member_missing,train
+बुबा को लागि खाद्यान्न चाहियो प्लिज,food_water_request,train
+Kthmandu jana sakidaina road band cha asap,road_blockage_report,train
+found my fther at the relief camp pls,family_reunification_status,train
+my brother collapsed and not waking up,medical_emergency_request,train
+my brother collpsed and nto waking up,medical_emergency_request,train
+भक्तपुर माआगो िछट्टै फैलिँदैछ,fire_incident_report,train
+have no theard from my brother since morning plz,family_member_missing,train
+hve not heard from my brother since morning plz,family_member_missing,train
+गोर्खा नजिक ग्यास चुहावट भयो,gas_leak_report,train
+lost contact wit hmy mother,family_member_missing,train
+lost contct with my mother,family_member_missing,train
+mero saath unconscious bhaoy,medical_emergency_request,train
+found my mother at teh relief camp,family_reunification_status,train
+strong gs smell ni the building,gas_leak_report,train
+frsit aid for a broken arm,first_aid_query,train
+so ssos heelp,sos_help_request,train
+rescuek o lagi kaha phone garne???,emergency_contact_request,train
+criticl patient needs ambulancee now,medical_emergency_request,train
+गोर्खा मा जोडदार धक्का महसुस भयो,earthquake_occurring_report,train
+गोर्खा माघ र भत्कियो!!,building_collapse_report,train
+गोर्खा मा घर भत्कियो!!,building_collapse_report,train
+my father is injured baldy,injury_report,train
+thre re cracks in the wall,building_damage_check,train
+sf eplace kaha cha,safe_location_query,train
+उद्धारकालागि कहाँ फोन गर्ने,emergency_contact_request,train
+mero didi pinned under debris malai hel pchhai,trapped_debris_report,train
+lost ocntact with my brother help,family_member_missing,train
+mymother is missing since the erthquake,family_member_missing,train
+bihana dekhi mero didi btaa khabra xaina,family_member_missing,train
+tahnnk u so much,goodbye_thanks,train
+उद्ाधरकालागि नजिकैको खुल्ला ठाउँ,safe_location_query,train
+उद्धारकालागि नजिकैको खुल्ला ठाउँ,safe_location_query,train
+bhchhiyeko haat ko first aid k ho,first_aid_query,train
+nearest open ground ofr veacuation,safe_location_query,train
+दाजु लाई सुरक्षितफ ेलापरेको छ,family_reunification_status,train
+दाजु लाई सुरक्षित फेलापरेको छ,family_reunification_status,train
+evacuationplna for Gorkha,evacuation_guidance_query,train
+mero mama snaga contact tutyo,family_member_missing,train
+my fathe rhsa a deep wound,injury_report,train
+awll m acrack dekhiyo,building_damage_check,train
+thank u dai maali thaha bhayo,goodbye_thanks,train
+ुशभसाँझ,greeting,train
+शुभसाँझ,greeting,train
+मआा सँग सम्पर्क टुटेको छ,family_member_missing,train
+आमा सँग सम्पर्क टुटेको छ,family_member_missing,train
+rescue ko lgi kaha phone garne,emergency_contact_request,train
+my house hs cracks is it sae,building_damage_check,train
+dherai raaat bagira xa medic cahi xa,medical_emergency_request,train
+mero ghar ma cracka ayo saf echa ki,building_damage_check,train
+yha saaf pani xaina,food_water_request,train
+सहयोग हजुर,sos_help_request,train
+kitchen ma aago lagyo bhukammpa ok bela,fire_incident_report,train
+हजुरबुबाको बेपत्ता व्यक्ति रिोपर्ट,family_member_missing,train
+हजुरबुबाको बेपत्ता व्यक्ति रिपोर्ट,family_member_missing,train
+आमासुकर्षित हुनुहुन्छ भनेर स्थिति अपडेट गर्न चाहन्छु,family_reunification_status,train
+merobahi lai safely locate garya,family_reunification_status,train
+merosathi lai ambulance chai urgent,medical_emergency_request,train
+tell me what tod o immeidately,status_check_general,train
+tell me wht to do immeidately,status_check_general,train
+kun khulla thua safe cha gather garna pls,safe_location_query,train
+kitchen mag as dhreai chuhira xa,gas_leak_report,train
+thanks yestohelpfu lhuncha,goodbye_thanks,train
+cannot find my mother after the qauke help,family_member_missing,train
+aftershock kati strong uhncha,aftershock_information_query,train
+my rgandmother needs mabulance urgently,medical_emergency_request,train
+helpm e right now now,sos_help_request,train
+सहयोग रग्नु न,sos_help_request,train
+malai kahaajna safe huncha,safe_location_query,train
+gun najik kko pul bhatkiyo,road_blockage_report,train
+एकदम धन्यवादह जुर,goodbye_thanks,train
+sprin bhayeko khutta ko lagi k garne,first_aid_query,train
+i need help now lpz,sos_help_request,train
+दाुज र बालबालिकाकालागि आश्रय चाहियो,shelter_request,train
+ध्नयवादबहिनी,goodbye_thanks,train
+hve nnot heard from my mother since morning,family_member_missing,train
+bbay formula ra pani chai,food_water_request,train
+bby formula ra pani chai,food_water_request,train
+immedite help chai ax,sos_help_request,train
+immedite help chi xa,sos_help_request,train
+khnaa ra pani sakiyo,food_water_request,train
+"dhanyaabd, that helped a lot",goodbye_thanks,train
+no house to stay need shelterrugently,shelter_request,train
+mero aama pinned unerd ebris malai help chai,trapped_debris_report,train
+mero ama pinned uner debris malai help chai,trapped_debris_report,train
+मलाई तुरुन्तै के गर्ने भनेर भन्नुहोस्,status_check_general,train
+temporra yshelter kaha paunxa,shelter_request,train
+temporr yshelter kaha paunxa,shelter_request,train
+bhukampagayoP okhara ma,earthquake_occurring_report,train
+bhukmpagayo Pokhara ma,earthquake_occurring_report,train
+हा्मरो घर पूर्ण रूपमाभत्कियो,building_collapse_report,train
+my brothersi injured badly,injury_report,train
+thnaksbro,goodbye_thanks,train
+thnksbro,goodbye_thanks,train
+burned my hnd slightly,injury_report,train
+हजुरबुबाबहेोस हुनुभयो,medical_emergency_request,train
+जाजरकोट जानसिकँदैन सडक बन्द छ,road_blockage_report,train
+जाजरकोट जानसकिँदैन सडक बन्द छ,road_blockage_report,train
+जाजरकोट मा तोकिएको सुरक्षित क्षेत्र कहाँ छ,safe_location_query,train
+bhukampa gayo hamr oraea ma,earthquake_occurring_report,train
+भवनबाट निकाास गर्ने चरणहरू!!,evacuation_guidance_query,train
+h?i??,greeting,train
+jhtka mahsu sbhayo 5 minute agadi,earthquake_occurring_report,train
+mero sathi lai badly injury bhayo,injury_report,train
+building bata bahira niisknae safest tarika,evacuation_guidance_query,train
+राहत शिविरमा हजुरआमाभेिटयो,family_reunification_status,train
+aftershock update pleaes,aftershock_information_query,train
+mero sathi pinned under debris malai ehlp chai,trapped_debris_report,train
+mero sthi pinned under debris malai help chai,trapped_debris_report,train
+हेल्लो हजुर,greeting,train
+ghar bata dhwua airaxa asap,fire_incident_report,train
+acnnot find my son after thequake,family_member_missing,train
+इँटा खसेर ला्गयो!!,injury_report,train
+rod crackd cannot pass,road_blockage_report,train
+criticl patient needs ambulance now,medical_emergency_request,train
+want to update stauts that my siser is safe,family_reunification_status,train
+wnt to update status that my siser is safe,family_reunification_status,train
+tapai k k garna saknu hunncah,fallback_unclear,train
+bleeding from hed,injury_report,train
+mero bhai lai chest ma duhkeko xa,medical_emergency_request,train
+where is the designted safe zone in Lalitpur???,safe_location_query,train
+ghr baliraxa fire brigade chhai,fire_incident_report,train
+बुबा को लागि खादय्ान्न चाहियो???,food_water_request,train
+mysister collapesd and not waking up,medical_emergency_request,train
+सफा खानेपानीतुरुन्तै चाहियो,food_water_request,train
+निकासाको मार्गके हो,evacuation_guidance_query,train
+hii tapia ko naam  kho,greeting,train
+मलाई थाहा छैन के ग्रने है,status_check_general,train
+najikai ko apartmentbhaktiyo,building_collapse_report,train
+njikai ko apartmentbhatkiyo,building_collapse_report,train
+खुट्टामा घाउ भएर रगतब गिरहेको छ???,injury_report,train
+electtrical firel agyo,fire_incident_report,train
+big bhukmmpa jasto lagyo,earthquake_occurring_report,train
+राहत शिविरमाबुबा भेटिोय,family_reunification_status,train
+राहत शिविरमाबुबा भेटियो,family_reunification_status,train
+tourist police ko number dinu ohs,emergency_contact_request,train
+tourist polic ko number dinu hos,emergency_contact_request,train
+दाजु भग्नावशेषमुनिथुनिनुभयो,trapped_debris_report,train
+आज राति थप धक्का आउनसक्छ कि,aftershock_information_query,train
+budo budi snga kasari evacuaet garne,evacuation_guidance_query,train
+अनि!!,fallback_unclear,train
+wha tccan you do,fallback_unclear,train
+waht plz,fallback_unclear,train
+building bata evacuat egarnesteps,evacuation_guidance_query,train
+ाटउकोबाटरगत बगिरहेको छ,injury_report,train
+mero ama bbuwa ra kids ko lagi shelter chai,shelter_request,train
+hl!!!,greeting,train
+aagoc hittai failira xa hamro area ma pls,fire_incident_report,train
+ago chittai failira xa hamro area ma pls,fire_incident_report,train
+thnks thats' all,goodbye_thanks,train
+bhchiyeko haat ko first aid k ho,first_aid_query,train
+धन्यवाद ुबवा छिटो,goodbye_thanks,train
+my motherc ollapsed and not waking up,medical_emergency_request,train
+ललितपुर नजिकैको घरम ाआगो लागेको छ,fire_incident_report,train
+evacuatio nplan for Pokhara plz,evacuation_guidance_query,train
+k oh yo bot,fallback_unclear,train
+दाजु लडेरढाडमा चोट लाग्यो,injury_report,train
+cannot reach Pokhararoad is cloesd,road_blockage_report,train
+wha'ts your favorite food plz,fallback_unclear,train
+mero bhi lai badly innjury bhayo,injury_report,train
+बुबा लडेरढडामा चोट लाग्यो!!,injury_report,train
+परिवारको लागि खाद्य सामग्री चाहिोय!!,food_water_request,train
+परिवारको लागि खाद्य सामग्री चाहियो!!,food_water_request,train
+mero aama ghar aauun bhako xaina ahile samma,family_member_missing,train
+छोरी को बेपत्ता व्यक्ति रिपोरट्,family_member_missing,train
+छोरी को बेपत्ता व्यक्ति रिपोर्ट,family_member_missing,train
+builidng collapsed in Pokhara,building_collapse_report,train
+राष्ट्रिय आपतकाीलन कार्य केन्द्रको नम्बर,emergency_contact_request,train
+राष्ट्रिय आपतकालीन कार्य केन्द्रको नम्बर,emergency_contact_request,train
+my grandmother is stuc kunder the roof,trapped_debris_report,train
+my grndmother is stuck under the roof,trapped_debris_report,train
+mero buwa lai aambulance cahi urgent,medical_emergency_request,train
+जाजरकोट माआगो लाेगको छ,fire_incident_report,train
+evacuation ko route kh o,evacuation_guidance_query,train
+meero didi ko phone lagdaina bhukamap dekhi,family_member_missing,train
+malaii pillar le thichyo cannot moev,trapped_debris_report,train
+mlaii pillar le thichyo cannot move,trapped_debris_report,train
+mydaughter is trapped under debris,trapped_debris_report,train
+mydughter is trapped under debris,trapped_debris_report,train
+पराकम्पकोजानकारीद िनुहोस्,aftershock_information_query,train
+my father ismissnig since the earthquake,family_member_missing,train
+अहिले मैले ककेदम चाल्ने,status_check_general,train
+what actions shouldi take onw,status_check_general,train
+ललितपुर नजिकपहिरोले सडक बन्द भयो,road_blockage_report,train
+helo,greeting,train
+hlo,greeting,train
+हजुरआमा लडेरढाडमा चोट लगा्यो छिटो,injury_report,train
+हजुरआमा लडेरढाडमा चोट लाग्यो छिटो,injury_report,train
+घर धेैर हल्लियो छिटो,earthquake_occurring_report,train
+गोर्खा मा बिजुलीको तार खसकेो छ!!,power_outage_report,train
+any reilef cmap nearby,shelter_request,train
+yha saaf panix aina,food_water_request,train
+mero didi safe cha vanea status update garna mna xa,family_reunification_status,train
+eveything is hsaking,earthquake_occurring_report,train
+mbulance ko number  kho,emergency_contact_request,train
+mero saathi lai ambulnace chai urgent,medical_emergency_request,train
+mero sathi lai ambulance chai urgent,medical_emergency_request,train
+दिदी भग्नावशेषमुनि थुनिनुभयो,trapped_debris_report,train
+need help psl,sos_help_request,train
+ned help pls,sos_help_request,train
+आपतकालीन सामान कति पटक जाँच्ने???,preparedness_tips_query,train
+bhuakmpa gayo Kathmandu ma,earthquake_occurring_report,train
+पहिरोले एकमात्र सडक बन्द भयो प्लजि,road_blockage_report,train
+नजिकैको सुर्कषित भेला हुने ठाउँ,safe_location_query,train
+हजुरबुबा लाई गहिरो घाउछ ,injury_report,train
+ारहत शिविरमा बुबा भेटियो है,family_reunification_status,train
+राहत शिविरमा बुबा भेटियो है,family_reunification_status,train
+i nede help now,sos_help_request,train
+highway blocked due t odebris,road_blockage_report,train
+cracks appeared fater the quake help,building_damage_check,train
+gaun jana skidaina orad band cha,road_blockage_report,train
+मआा बेहोस हुनुभयो,medical_emergency_request,train
+आपतकालीन सम्पर्क नम्बरहरूको सूची,emergency_contact_request,train
+गोर्खा मा घर भत्कियो प्लिज,building_collapse_report,train
+found my grndmother at hte relief camp,family_reunification_status,train
+mero buw debris muni thuniyo,trapped_debris_report,train
+जाजरकोट मा भूकम्प गोय,earthquake_occurring_report,train
+धन्यवा दबहिनी छिटो,goodbye_thanks,train
+धन्यवाद बहिनी छिटो,goodbye_thanks,train
+derbis le highway band bayo,road_blockage_report,train
+mero bhi unconscious bhayo,medical_emergency_request,train
+entire building came down ni Jajarkot,building_collapse_report,train
+िहजोदेखि खानाछैन,food_water_request,train
+ललितपुर मा आगो छिट्टै फैलँिदैछ छिटो,fire_incident_report,train
+छोरा अझै घर आउनुभएको छैन!!,family_member_missing,train
+behosh bhako manxe lai ksaari elp garne,first_aid_query,train
+hllo di k cha khabar,greeting,train
+relief cmap najik cha ki pls,shelter_request,train
+relief cmp najik cha ki pls,shelter_request,train
+mlai bahcau please,sos_help_request,train
+how to hlp choking person,first_aid_query,train
+k garne avnera guide garnuhos,status_check_general,train
+k grne vanera guide garnuhos,status_check_general,train
+hey bot ka  halkhabar,greeting,train
+आमा बेहोसहुनुभयो,medical_emergency_request,train
+फर्निचरलाई खस्नबाट कसरी सुकर्षित गर्ने छिटो,preparedness_tips_query,train
+फर्निचरलाई खस्नबाट कसरी सुरक्षित गर्ने छिटो,preparedness_tips_query,train
+hamro ghar najiikg as leak bhayo,gas_leak_report,train
+hmro ghar najiik gas leak bhayo,gas_leak_report,train
+नजिकैको सुरक्षित ठाउँक हाँ छ हजुर,safe_location_query,train
+संरचना भत्कियोमानिसहूर भित्रै हुन सक्छन्,building_collapse_report,train
+thank you so much forhelpnig,goodbye_thanks,train
+काठमाडौं जान सकिदँैन सडक बन्द छ,road_blockage_report,train
+stuck cn't get out,trapped_debris_report,train
+koi vane help gar ana urgent pls,sos_help_request,train
+my sisterhs a deep wound,injury_report,train
+cpr steps plese,first_aid_query,train
+olst contact withmy mother,family_member_missing,train
+गोर्खा निजकैको घरमा आगो लागेको छ प्लिज,fire_incident_report,train
+गोर्खा नजिकैको घरमा आगो लागेको छ प्लिज,fire_incident_report,train
+हाम्रो घर असुरक्षित छ आश्रय चाहियो प्लिज,shelter_request,train
+mero aamma lai safely locate garya,family_reunification_status,train
+mero amma lai safely locate garya,family_reunification_status,train
+ग्यास चुल्होले आगो लाग्यो,fire_incident_report,train
+अहिले मैले के गर्ुनपर्छ!!,status_check_general,train
+के रपाकम्प आउनेछ,aftershock_information_query,train
+के पराकम्प आउनेछ,aftershock_information_query,train
+there are cracks in tehwall,building_damage_check,train
+earthuqake in Gorkha,earthquake_occurring_report,train
+गोर्खा मा घर भत्कियो,building_collapse_report,train
+bhina dekhi mero buwa bata khabar xaina,family_member_missing,train
+bhukampa ko jhakta aaile feel bhayo,earthquake_occurring_report,train
+bhukmpa ko jhatka aaile feel bhayo,earthquake_occurring_report,train
+aago chittaia ilira xa Kathmandu ma,fire_incident_report,train
+ago chittai ailira xa Kathmandu ma,fire_incident_report,train
+जाजरकोट मा जोडदार धक्का महसुस भयो छिटो,earthquake_occurring_report,train
+kitchen caugh tfire durin quake,fire_incident_report,train
+hy QSFAE,greeting,train
+reathquake,earthquake_occurring_report,train
+mero didi li badly injury bhayo,injury_report,train
+relie fcamp ma mero didi bhhetiyo,family_reunification_status,train
+wall bhatkioy roadma,building_collapse_report,train
+wll bhatkiyo roadma,building_collapse_report,train
+wll ma crack dekhiyo now,building_damage_check,train
+पोखरा मा बिजुलीग एको छ,power_outage_report,train
+पोखरा मा बिजुली गएको छ,power_outage_report,train
+ghar bata dhuwa airaxa onw,fire_incident_report,train
+कक  क छिटो,fallback_unclear,train
+ग्यास चुहावट भयो सल्लाह दिनुहोस् छिटो,gas_leak_report,train
+roadd amaged after earthquake,road_blockage_report,train
+भर्खरै भूक्मप आयो,earthquake_occurring_report,train
+हेल्लो हजुर हजरु,greeting,train
+हेल्लो हजुर हजुर,greeting,train
+redc ross ko helpline number asap,emergency_contact_request,train
+cannot reach Jajarkot roaids closed,road_blockage_report,train
+pani ko supply band bhayo panic hai,food_water_request,train
+दाजु सुरक्षित हुनुहुन् छभनेर स्थिति अपडेट गर्न चाहन्छु है,family_reunification_status,train
+strong gas smell in the building,gas_leak_report,train
+strong gs smell in the building,gas_leak_report,train
+building m fire xa bazaar najik pls,fire_incident_report,train
+भूकम्प भर्खरै आएको ह!ो!,earthquake_occurring_report,train
+relie fcamp ma mero buwabhetiyo,family_reunification_status,train
+2 dn idekhi bijuli xaina,power_outage_report,train
+wneed help,sos_help_request,train
+mero bhai lai depe woound xa,injury_report,train
+mero bhi lai deep woound xa,injury_report,train
+mainr oad ban dcha,road_blockage_report,train
+emergency conatct numbers list,emergency_contact_request,train
+help pls m dherai frihgt ma xu,sos_help_request,train
+next steps kh o bhannu hos,status_check_general,train
+missing person report for my mother,family_member_missing,train
+missing prson report for my mother,family_member_missing,train
+बाई???,goodbye_thanks,train
+power lines dow nin Bhaktaupr,power_outage_report,train
+bridge colalpsed near Pokhara,road_blockage_report,train
+भक्तपुर मा सम्ूपर्ण भवन ढल्यो छिटो,building_collapse_report,train
+building collapsed in Ktahmandu,building_collapse_report,train
+buied under rubble,trapped_debris_report,train
+polekothau ko ifrst aid,first_aid_query,train
+बुबा सुरक्षित हुनुहुन्छ भनेर स्थिति अपडेट गर्न चाहन्छु,family_reunification_status,train
+earthquaek hit Kathmandu justnow,earthquake_occurring_report,train
+erthquake hit Kathmandu justnow,earthquake_occurring_report,train
+mero ama kophone lagdaina bhukampa dekhi,family_member_missing,train
+furnituer lai khasnu bata kasari secure garne,preparedness_tips_query,train
+howstrong will aftershcoks be,aftershock_information_query,train
+howstrong will ftershocks be,aftershock_information_query,train
+bhukmpa pachi mero mama lai bhettaunasakina,family_member_missing,train
+first id kit items needed pls,first_aid_query,train
+stuck cn'tget out,trapped_debris_report,train
+गोर्खा नजिक ग्यासच ुहावट भयो!!,gas_leak_report,train
+ललितपुरमा आोग लागेको छ,fire_incident_report,train
+जाजरकोटमा बिजलुी गएको छ,power_outage_report,train
+power outage cha hamro raea ma,power_outage_report,train
+safe place kaha xa near Bhakatpur plz,safe_location_query,train
+sfe place kaha xa near Bhaktapur plz,safe_location_query,train
+khana ra apn sakiyo,food_water_request,train
+mero bha ibhukampa pachi missing hunuhuncha now,family_member_missing,train
+how mny aftershocks re expected,aftershock_information_query,train
+बिुजली कहिले आउँछ है,power_outage_report,train
+fire lertnear market,fire_incident_report,train
+searching fo rmy grandfather inLalitpur,family_member_missing,train
+काठमाडौं को लागि निकासा योजना छिटो,evacuation_guidance_query,train
+mero aama sagna abhi reunite bhayo,family_reunification_status,train
+shoul we evcuate now,evacuation_guidance_query,train
+first id forburns,first_aid_query,train
+नमस्कार,greeting,train
+what steps should if ollow now asap,status_check_general,train
+worried about gas laek in aapartment,gas_leak_report,train
+kitchen cught fire during quake,fire_incident_report,train
+road bolck bhayo landslide le Kathmandu najik???,road_blockage_report,train
+wall khaseko le mero saathi lai thichoy,trapped_debris_report,train
+earhtquake in Bhaktpaur,earthquake_occurring_report,train
+पानीको आपरू्ति बन्द भयो पानी चाहियो हजुर,food_water_request,train
+अर्ोक चरणहरू भन्नुहोस्,status_check_general,train
+wnt to update status that my brother is safe asap,family_reunification_status,train
+my sister is nuconscious,medical_emergency_request,train
+ेक छ त!!,greeting,train
+के छ त!!,greeting,train
+taauko bata raagat abgira xa,injury_report,train
+pura building dhalyo hamro area am,building_collapse_report,train
+hmmm,fallback_unclear,train
+hmmm,fallback_unclear,train
+buildign on fire near Kathmandu plz,fire_incident_report,train
+दाजु लडेरढाडमा चोटलाग्यो,injury_report,train
+ghau ma bandage kasari garne,first_aid_query,train
+ghu ma bandage ksaari garne,first_aid_query,train
+mero buwal ai safely locate garya,family_reunification_status,train
+thank you so much ofr helping,goodbye_thanks,train
+घरमा ग्यास चुाहवट भयो,gas_leak_report,train
+ललितपुर नजिक ग्यास चुहावट भयो,gas_leak_report,train
+need food supplies for family,food_water_request,train
+need food supplies for fmily,food_water_request,train
+बाल हेल्पलइाननम्बर,emergency_contact_request,train
+बाल हेल्पलाइननम्बर,emergency_contact_request,train
+just tsting123,fallback_unclear,train
+buidling safe cha kikasari thaha pauney,building_damage_check,train
+scholo buildingpartially collapsed,building_collapse_report,train
+आमा लाई सुरक्षित फलेा परेको छ है,family_reunification_status,train
+अहिले हजुरुबबा सँग भेट भयो है,family_reunification_status,train
+भूकम्पको लागि गो-ब्याग कसरी तयार पार्न ेप्लिज,preparedness_tips_query,train
+my brother has been located safely hepl,family_reunification_status,train
+my brother hs been located safely help,family_reunification_status,train
+electricity cut off in our rea asap,power_outage_report,train
+earthquake hit Grokha 5 minutes ago help,earthquake_occurring_report,train
+we just felt n earthquake in GGorkha,earthquake_occurring_report,train
+kitchen gas leakingb adly,gas_leak_report,train
+घर बलिरहेको छ दमक लचाहियो,fire_incident_report,train
+घर बलिरहेको छ दमकल चाहियो,fire_incident_report,train
+mero bhisafe cha vanera status update garna man xa,family_reunification_status,train
+भूकम्पआयो,earthquake_occurring_report,train
+ललितपुर मा बिजुलीको तार खसेको छ,power_outage_report,train
+पराकम्पको जानकारी दिनुोहस्,aftershock_information_query,train
+पराकम्पको जानकारी दिनुहोस्,aftershock_information_query,train
+भूकम्पपछि हजुरबुबा लाई भेट्टाउन सकिएको छैन,family_member_missing,train
+ललितपुर माआगो लागकेो छ,fire_incident_report,train
+aftershokc warning for Bhaktapur help,aftershock_information_query,train
+ftershock warning for Bhaktapur help,aftershock_information_query,train
+taauko abtaraagat bagira xa,injury_report,train
+sombody help,sos_help_request,train
+malai pillar lethihcyo cannot move,trapped_debris_report,train
+अहिले आमा सँगभ ेटभयो,family_reunification_status,train
+पोखरा मा बिजुलीकोत ार खसेको छ???,power_outage_report,train
+Kthmandu najik gas leak bhayo,gas_leak_report,train
+gas leak bhayo ghra ma,gas_leak_report,train
+ghr bhitra farkkana milxa ki,building_damage_check,train
+shelter needde for my fahter and kids,shelter_request,train
+पोलेको ठाउँको लागि प्राथमिक उपचार है,first_aid_query,train
+there is  fire in Pokhara pls,fire_incident_report,train
+आमासँग सम्रप्क टुटेको छ,family_member_missing,train
+टाउकोबाट रगत बगिहरेको छ प्लिज,injury_report,train
+safest way to leave the buliding pls,evacuation_guidance_query,train
+have not headr from my grandfahter since morning,family_member_missing,train
+need artion for my broter,food_water_request,train
+भवन अलिकति ढल्किएोक छ खतरा छ कि हजुर,building_damage_check,train
+मद्दत गर्नुहोस् है प्लिज,sos_help_request,train
+wall khaseko le mreo didi la ithichyo,trapped_debris_report,train
+"dhanyabad, that hepeda  lot",goodbye_thanks,train
+my grandmother having hcest pain,medical_emergency_request,train
+mero ghar maehlp chai xa,sos_help_request,train
+हाम्रोक्षेत्रमा बिजुली कटौती भयो,power_outage_report,train
+अहँ,fallback_unclear,train
+earthquake preparedness ko tips din uhos,preparedness_tips_query,train
+भक्तपुर मा घर भत्िकयो!!,building_collapse_report,train
+म र आमाथुनिएक ाछौं,trapped_debris_report,train
+w need help,sos_help_request,train
+sas pherna sakeko xxaina kio,medical_emergency_request,train
+हले्लो हजुर है,greeting,train
+ahile ko istuation kk ho,status_check_general,train
+earthquaek in Lalitpur,earthquake_occurring_report,train
+परिवारको भेला हुने ठाउँ कसरी योनजाबनाउने,preparedness_tips_query,train
+natiional emergency operation center number,emergency_contact_request,train
+cyldiner bata gas chuhi raxa,gas_leak_report,train
+काठमाडौं मा बजिुली गएको छ,power_outage_report,train
+पराकम्पकति समयसमम् रहन्छ,aftershock_information_query,train
+srtong ttremor felt just now,earthquake_occurring_report,train
+hamro area ma bijuil katti bhayo,power_outage_report,train
+hbukampa pachi mero aama lai bhettauna sakna,family_member_missing,train
+nmaste can you help me,greeting,train
+thnksyesto helpful huncha,goodbye_thanks,train
+ललितपुर मा दिदी लाई खोजिरहेकोछ ु!!,family_member_missing,train
+my mother fell nd hurt back,injury_report,train
+hell ppls,sos_help_request,train
+बबुाको बेपत्ता व्यक्ति रिपोर्ट,family_member_missing,train
+Kthmandu maambulance patau na,medical_emergency_request,train
+bhukampa aay obhi,earthquake_occurring_report,train
+need drinkingwter,food_water_request,train
+mero bha ighar aaunu bhako xaina ahile samma,family_member_missing,train
+पोखरानजिकको ुपल भत्कियो,road_blockage_report,train
+नजिैक कुनै राहत शिविर छकि,shelter_request,train
+दिदी लाई गहिरो घाउ छ,injury_report,train
+जहुरनमस्ते,greeting,train
+good vening!!!,greeting,train
+building bata evacuate garnes teps,evacuation_guidance_query,train
+building bta evacuate garne steps,evacuation_guidance_query,train
+परिवारको लागि खाद् यसामग्री चाहियो,food_water_request,train
+परिवारको लागि खाद्य सामग्री चाहियो,food_water_request,train
+hmro area ma power line khasekocha,power_outage_report,train
+the main roadis blocekd,road_blockage_report,train
+अिहले हजुरआमा सँग भेट भयो छिटो,family_reunification_status,train
+धनय्वाददाई,goodbye_thanks,train
+अहिले मैले केग्रने,status_check_general,train
+plesae ehlp me,sos_help_request,train
+malai khaaa jana safe huncha,safe_location_query,train
+bhukapma pachi mero aama lai bhettauna sakina,family_member_missing,train
+mero bhai lai badly injury bhyao,injury_report,train
+merro buwa lai sfaely locate garya,family_reunification_status,train
+safe evacuatoinp oint near me,safe_location_query,train
+sfe evacuationp oint near me,safe_location_query,train
+बिहानदेिख दिदी बाट कुनै खबर छैन प्लिज,family_member_missing,train
+emergency supplies kati choti check ganre now,preparedness_tips_query,train
+found mmy mother t the relief camp,family_reunification_status,train
+hamro areaam bijuli katti bhayo,power_outage_report,train
+njikai ko safe zonee kaha cha,safe_location_query,train
+पोखरामा बिजुली गएोक छ,power_outage_report,train
+दिदी लडेरढाडमा चोट लाग्यो,injury_report,train
+aKthmandu najik ko pul bhatkiyo plz,road_blockage_report,train
+yo ghr ma basna safe cha ki xaina,building_damage_check,train
+wall collapsed onteh street,building_collapse_report,train
+coo lthaanks,goodbye_thanks,train
+how to prpeare kids for earthquake drills,preparedness_tips_query,train
+plese help garnu bhai,sos_help_request,train
+my grandmother fell and hurt bcak,injury_report,train
+process to report a family member foudn,family_reunification_status,train
+process to report  family member found,family_reunification_status,train
+आमा र बालबािलकाका लागि आश्रय चाहियो छिटो,shelter_request,train
+ghr bhitra farkana milxa ki,building_damage_check,train
+sos mlai help chai urgent pls,sos_help_request,train
+shelter neededf or my brother and kids,shelter_request,train
+गोर्खा नजिकको पुल भत्कियो है,road_blockage_report,train
+धन्यवादबुवा,goodbye_thanks,train
+123456,fallback_unclear,train
+हजुरबुबाभ ग्नावशेषमुनि थुनिनुभयो,trapped_debris_report,train
+medcial help needed urgently now,medical_emergency_request,train
+mero bhaliai deep wound xa,injury_report,train
+mero mama ko phonel agdaina bhukampa dekhi,family_member_missing,train
+purabuilding dhalyo gaun am,building_collapse_report,train
+वृद्धवृद्धाहरूसँग कसरी निकासा गर्ने छिटो,evacuation_guidance_query,train
+fire brgiade contatc number,emergency_contact_request,train
+bzaar ma fire lagyo,fire_incident_report,train
+hamroo area ma power line khaseok cha,power_outage_report,train
+bihna dekhi mero aama bata khabar xaina,family_member_missing,train
+राहत शिविरमा हजुरबुबा भेिटयो प्लिज,family_reunification_status,train
+hlp help,sos_help_request,train
+पोखरा मा आगो लाेगको छ छिटो,fire_incident_report,train
+mero hbai lai deep wound xa,injury_report,train
+mero bhi lai deep wound xa,injury_report,train
+my son is stuck under the roof,trapped_debris_report,train
+yahsaaaf pani xaina,food_water_request,train
+ओके धन्यवाद!!,goodbye_thanks,train
+aaja rati arko jhatka aaunx aki,aftershock_information_query,train
+म र दिदी थुनिएका छौं,trapped_debris_report,train
+ghar hallyo bhukampa jast onow,earthquake_occurring_report,train
+ghr hallyo bhukampa jasto now,earthquake_occurring_report,train
+bleedingf rom had,injury_report,train
+bhukampa pachi emro mama laibhettauna sakina,family_member_missing,train
+nede ration for my mother,food_water_request,train
+need rtion for my mother,food_water_request,train
+sheletr needd for my sister and kids,shelter_request,train
+bhukampa dekhi bijuli axia,power_outage_report,train
+ago lagyo bhukampa pachi pls,fire_incident_report,train
+wll khaseko le mero buwalai thichyo,trapped_debris_report,train
+डाक्टर तुरुन्तै चाहिय ोप्लिज,medical_emergency_request,train
+गोर्खा को लागि पराकम्प चेातवनी,aftershock_information_query,train
+pani ko supply ban dbhayo pani chai asap,food_water_request,train
+my mother has been locateds afely,family_reunification_status,train
+found my brother t the relief cap,family_reunification_status,train
+टाउकोबाट रगत बगिरेहको छ,injury_report,train
+टाउकोबाट रगत बगिरहेको छ,injury_report,train
+fmily ko lagi food supply cahi,food_water_request,train
+want to updatestatus thatm y sister is safe,family_reunification_status,train
+विस्थापितहरूलाई बस्नेठाँउ चाहिन्छ,shelter_request,train
+need clean drinking waetr urgenlty,food_water_request,train
+भकूम्पपछि भवनको सुरक्षाजाँच कसले गर्छ,building_damage_check,train
+भूकम्पपछि भवनको सुरक्षाजाँच कसले गर्छ,building_damage_check,train
+pleaesh elp me,sos_help_request,train
+plees help me,sos_help_request,train
+aftershock warning for Pokhraa,aftershock_information_query,train
+ftershock warning for Pokhara,aftershock_information_query,train
+where is the designted safe zonein Pokhara,safe_location_query,train
+power lines down in oGrka,power_outage_report,train
+behosh bhako mnxe lai kasrai help garne,first_aid_query,train
+Kathmandu ko lagi aftershock warnnig,aftershock_information_query,train
+entier building came down in Kathmandu,building_collapse_report,train
+haat bhacihyo help chai???,injury_report,train
+hat bhachiyo help chai???,injury_report,train
+my sister hving chest pain,medical_emergency_request,train
+please soemone heelp,sos_help_request,train
+एम्बुलेन्सको नम्बर केहो,emergency_contact_request,train
+भूकम्पदेखि हजुरबुबा बेपत्ता हुनुभएको छ हुजर,family_member_missing,train
+गीतगाउन सक्छौ,fallback_unclear,train
+power outage cha hamro aera ma???,power_outage_report,train
+process to report  family member found,family_reunification_status,train
+मुख्य सडक बनद्छ,road_blockage_report,train
+mero bhi unconscious hbayo,medical_emergency_request,train
+गोर्खानजिकैको घरमा आगो लागेको छ,fire_incident_report,train
+my fathe fell and uhrt back,injury_report,train
+my fthe fell and hurt back,injury_report,train
+गोर्खा जान सकँिदैन सडक बन्द छ छिटो,road_blockage_report,train
+छत खेसर छोरा थुनिनुभयो,trapped_debris_report,train
+whee should i og for safety,safe_location_query,train
+hamro ghar unsafexa sheletr chai,shelter_request,train
+मलाई थाहा ैछनके गर्ने,status_check_general,train
+steps to evcuate the buillding,evacuation_guidance_query,train
+khutta ma cho tlagyo running blea,injury_report,train
+khutt ma cho tlagyo running bela,injury_report,train
+reeleif camp ma mero bhai bhetiyo,family_reunification_status,train
+how do i know if my buildign is safe help,building_damage_check,train
+mero mma sanga coontact tutyo,family_member_missing,train
+njikai ko sfae zone kaha cha,safe_location_query,train
+सडकमा पर्खाल भत्कियो छटिो,building_collapse_report,train
+छोरा भग्नाशवेषमुनि थुनिनुभयो,trapped_debris_report,train
+छोरा भग्नावशेषमुनि थुनिनुभयो,trapped_debris_report,train
+ठिकै  छछोड्नुहोस् प्लिज,goodbye_thanks,train
+broken rma need help,injury_report,train
+भेटिएको परिवार सदस्य कसरी दर्ता गर्ने,family_reunification_status,train
+मौसम कस्तो छ,fallback_unclear,train
+buildig bata bahira nsikane safest tarika,evacuation_guidance_query,train
+rod bloccked by landslide near Jajarkot,road_blockage_report,train
+have not heard from my father sinc emorning,family_member_missing,train
+mero saathi bhkuampa pachi missing hunuhuncha plz,family_member_missing,train
+प्राथमिक उपचार किटमा के चाहनि्छ हजुर,first_aid_query,train
+bhetieko fmily member lai kasari register garne,family_reunification_status,train
+bihana dekhi mero bhai bata hkabar xaina,family_member_missing,train
+cnnot move stuck underconcrete malai,trapped_debris_report,train
+my mother has a de pwound,injury_report,train
+asdf ugrent pls,fallback_unclear,train
+छोरभाग्नावशेषमुनि थुनिनुभयो,trapped_debris_report,train
+भवनबाटब ाहिर निस्कने सबैभन्दा सुरक्षित तरिका,evacuation_guidance_query,train
+want to update status that my grandfathre is safe,family_reunification_status,train
+wnt to update status that my grandfather is safe,family_reunification_status,train
+wall hkaseko le mero saathi lai thiichyo,trapped_debris_report,train
+wll khaseko le mero saathi lai thiichyo,trapped_debris_report,train
+my hous ehsa cracks is it safe,building_damage_check,train
+heelph elp,sos_help_request,train
+wht steps sshould i follow now,status_check_general,train
+relief cpm najik cha ki,shelter_request,train
+भक्तपुर को लगाि पराकम्प चेतावनी छिटो,aftershock_information_query,train
+भक्तपुर को लागि पराकम्प चेतावनी छिटो,aftershock_information_query,train
+काठमाडौं मा तोकिएको सुरक्षित क्षेतर् कहाँ छ!!,safe_location_query,train
+shoul dwe evacuate now plz,evacuation_guidance_query,train
+immeediate help hcai xa,sos_help_request,train
+building ma frie xa school najik najik,fire_incident_report,train
+furniturelai khasnu bata kasar isecure garne,preparedness_tips_query,train
+mero bhai debris munithuinyo,trapped_debris_report,train
+power outge in Pokhara,power_outage_report,train
+सुरक्षित ूरपमा कसरी निकासा गर्ने???,evacuation_guidance_query,train
+need shelter for myy fmily,shelter_request,train
+हजुरआमा लाई छातीमा दुखाइ भइरहेको छ है,medical_emergency_request,train
+hamro ghar usnafe xa shelterc hai,shelter_request,train
+cannot reach Gorkha road i sclosed,road_blockage_report,train
+gana guana sakn uhuncha,fallback_unclear,train
+हजुरबुबा को बेपत्ता व्यक्ति रिपोर्ट,family_member_missing,train
+ग्यासचुहावट भयो सल्लाह दिनुहसो्,gas_leak_report,train
+Kthmandu ma safe zone kahha cha,safe_location_query,train
+road block bhayo landslide le hamro aaera najik,road_blockage_report,train
+mero saathi lai deep woun dxa asap,injury_report,train
+mero ghr lai earthuake safe kasari banaune,preparedness_tips_query,train
+Kathmandu najik gas elakbhayo,gas_leak_report,train
+small ifrein the kitchen,fire_incident_report,train
+yaha mas afe zon ekaha cha,safe_location_query,train
+ko icha help garne,sos_help_request,train
+नजिकैकोराहत शवििर कहाँ छ,shelter_request,train
+नजिकैकोराहत शिविर कहाँ छ,shelter_request,train
+school building hlf bhatikyo,building_collapse_report,train
+नजिकैको खाद्य वितरण सथ्ल प्लिज,food_water_request,train
+जकोभन,fallback_unclear,train
+erthquake hit Kathmandu just now,earthquake_occurring_report,train
+wll collapsed on the street,building_collapse_report,train
+my mother is missing since the aearthquake,family_member_missing,train
+fire broke out afterthe earthqauke,fire_incident_report,train
+my grandmotehr has been located safely,family_reunification_status,train
+छत खसेर दिदी थुनिनभुयो है,trapped_debris_report,train
+hiik help garna saknu hunxa,greeting,train
+hey bhauuj k cha asap,greeting,train
+bijulii khile aaunxa,power_outage_report,train
+no electricity since the eartqhuake,power_outage_report,train
+ललितपुरम ा बिजुलीको तार खसेकोछ,power_outage_report,train
+gs ko smell airaxa bhukampa pachi,gas_leak_report,train
+khutta ma chot lagyo running bela onw,injury_report,train
+khutt ma chot lagyo running bela now,injury_report,train
+काठमाडौं मा जोडदार ध्कका महसुस भयो???,earthquake_occurring_report,train
+where is the designnated saef zone in Kathmandu,safe_location_query,train
+where is the designnted safe zone in Kathmandu,safe_location_query,train
+ebhosh bhako manxe laikasari help garne,first_aid_query,train
+आपतकलाीन किटमा के के हुनुपर्छ छिटो,preparedness_tips_query,train
+दिदी लाई मए्बुलेन्स चाहियोछिटो,medical_emergency_request,train
+हेल्लो,greeting,train
+बुबा लाई सुरक्षित फेला परेको छ,family_reunification_status,train
+छिटोनकिाल्नुहोस् थुनिएको छु,trapped_debris_report,train
+छिटोनिकाल्नुहोस् थुनिएको छु,trapped_debris_report,train
+my sisetr hving chest pain,medical_emergency_request,train
+gas lea knearBhaktapur,gas_leak_report,train
+gs leak nearBhaktapur,gas_leak_report,train
+मर्केकोखुट्टाको लागि के गर्ने,first_aid_query,train
+गोर्खानजिकप हिरोले सडक बन्द भयो,road_blockage_report,train
+thnnx,goodbye_thanks,train
+help chainchama daari xu,sos_help_request,train
+के रपाकम्प आउने छ,aftershock_information_query,train
+सडकमा परख्ाल भत्कियो,building_collapse_report,train
+safe place kaha xa nera Jajarkot,safe_location_query,train
+बुबा लाई गम्भीर चोट लागेको छ हुजर,injury_report,train
+भूकम्पपछि दाजु लाई भेट्टाउनसकिएको छैन,family_member_missing,train
+road blockde by landslide near Pokhara,road_blockage_report,train
+hh,fallback_unclear,train
+trppe dunder rubble,trapped_debris_report,train
+hoow to hel psomeone who fainted,first_aid_query,train
+म र दिदी थुनिएाक छौं???,trapped_debris_report,train
+भक्तपुरम ा बिजुली गएको छ,power_outage_report,train
+serching for my brother in Kathmandu urgent pls,family_member_missing,train
+sos mai help chai,sos_help_request,train
+kun kuhlla thau safe cha gather garna!!!,safe_location_query,train
+ललितपुर को लागि निकासा योजना प्लिज,evacuation_guidance_query,train
+गय्ास चुल्होलेआगो लाग्यो,fire_incident_report,train
+evacuation ko instructions diun hos???,evacuation_guidance_query,train
+mero didi snga abhi reunite bhhayo,family_reunification_status,train
+bhuakmpa aayo,earthquake_occurring_report,train
+bhukmpa aayo,earthquake_occurring_report,train
+mero ghar ma ambulancce patua na,medical_emergency_request,train
+ेकहो यो,fallback_unclear,train
+bridge clolapsednear Jajarkot,road_blockage_report,train
+bridge collpsednear Jajarkot,road_blockage_report,train
+सहयोग चाहिय?ो??,sos_help_request,train
+cylinder bta gaschuhi raxa,gas_leak_report,train
+found my afmily member safe,family_reunification_status,train
+evcuation pla nfor Gorkha,evacuation_guidance_query,train
+धनय्बाद है,goodbye_thanks,train
+bhukampa pachi mero iddi lai bhettauna skaina,family_member_missing,train
+ललितपुर मा दिदी लाई खोजिरहेोक छु,family_member_missing,train
+ललितपुर मा तोकिएकोसुरक्षित क्षेत्र कहाँ छ,safe_location_query,train
+pleaseresceu me malai help chai,sos_help_request,train
+building batae vacuate garne steps now,evacuation_guidance_query,train
+गोर्खा मा ोतकिएको सुरक्षित क्षेत्र कहाँ छ!!,safe_location_query,train
+गोर्खा मा तोकिएको सुरक्षित क्षेत्र कहाँ छ!!,safe_location_query,train
+kio cha help garen,sos_help_request,train
+धेरै रगत बगिरहेको छ मेडकि चाहियो है,medical_emergency_request,train
+ललितपुर को लागि निकासा योजना हुजर,evacuation_guidance_query,train
+ललितपुर को लागि निकासा योजना हजुर,evacuation_guidance_query,train
+काठमाडौं को लागि पराकम्प चेातवनी,aftershock_information_query,train
+ahilek  agrne ma,status_check_general,train
+hllo there,greeting,train
+यो घरमा बस्न ुसरक्षित छ कि छैन हजुर,building_damage_check,train
+mero aama lai chest ma dukhkeo xa plz,medical_emergency_request,train
+mero ama lai chest ma dukheko xa plz,medical_emergency_request,train
+bhukmpa report garna man xa mero ghar najik ma,earthquake_occurring_report,train
+घाउ भएको ठउाँमा कसरी उपचार गर्ने है,first_aid_query,train
+mero ghar lia earthquak esafe kasari banaune,preparedness_tips_query,train
+tent cmp ko location chai,shelter_request,train
+भूकम्पपछिआलगागी भयो,fire_incident_report,train
+भूकम्पपछिआगलागी भयो,fire_incident_report,train
+बिजुलीकोतारबाट आगो लगा्यो,fire_incident_report,train
+भक्तपुर मा आगो छिटट्ै फैलिँदैछ,fire_incident_report,train
+my fther phone not reachable since quake,family_member_missing,train
+दाजुअझै घर आउनुभएको छैन,family_member_missing,train
+दाजु को लागि खाद्यान्न चाहयिो,food_water_request,train
+evacuation planfor Bhaktaupr,evacuation_guidance_query,train
+have not heard rfom my father since morning???,family_member_missing,train
+hve not heard from my father since morning???,family_member_missing,train
+गय्ासचुहियो,gas_leak_report,train
+ग्यासचुहियो,gas_leak_report,train
+safe plcae kaha xa near Lalitpur pls,safe_location_query,train
+kitchen ma aagoa gyo bhukampa ko bela,fire_incident_report,train
+apartment bloc kcollapsed nearby,building_collapse_report,train
+ललितपुर मा आमा लाई खोजिरहेको छु प्लिज,family_member_missing,train
+is it safet o stay in this house,building_damage_check,train
+evacuation koroute k oh,evacuation_guidance_query,train
+ftershock katistrong huncha,aftershock_information_query,train
+जारजकोट नजिकैको घरमा आगो लागेको छ,fire_incident_report,train
+taauko bata raagat bagira xa,injury_report,train
+hey bot k x ahalkhabar,greeting,train
+any reliefc amp naerby,shelter_request,train
+काठमाडौं नजिकैको घरमा आगो लागेक ोछ???,fire_incident_report,train
+काठमाडौं नजिकैको घरमा आगो लागेको छ???,fire_incident_report,train
+myson is trapped under debris,trapped_debris_report,train
+myson is trpped under debris,trapped_debris_report,train
+searching for my sister i nKathmandu!!!,family_member_missing,train
+hlp hellp,sos_help_request,train
+यति नैहो धनय्वाद,goodbye_thanks,train
+यति नैहो धन्यवाद,goodbye_thanks,train
+हजुरआमा भग्नावशेषमुनि थुनिनुभयो,trapped_debris_report,train
+हजुरआमा लडेरढाडमा चोटलाग्यो,injury_report,train
+विपद िरपोर्टिङहटलाइन,emergency_contact_request,train
+hamro area ko lagi evacutaion plan???,evacuation_guidance_query,train
+hmro area ko lagi evacuation plan???,evacuation_guidance_query,train
+is my partmnt structurally safe now,building_damage_check,train
+evacuatino ko instructions dinu hos,evacuation_guidance_query,train
+evcuation ko instructions dinu hos,evacuation_guidance_query,train
+entre building cme down in Bhaktapur,building_collapse_report,train
+no clena water available here,food_water_request,train
+no clen water available here,food_water_request,train
+bihana dekih mero didi bata khbaar xaina,family_member_missing,train
+soss oshelp,sos_help_request,train
+this is not related to eeatrhquake,fallback_unclear,train
+नजिकैक ोराहत शिविर कहाँ छ छिटो,shelter_request,train
+safe place kaha chaa sap,safe_location_query,train
+sfe place kaha cha asap,safe_location_query,train
+my fathe ris trapped underdebris,trapped_debris_report,train
+तिमीले के के गर्न स्कछौ???,fallback_unclear,train
+mero khutt ma chotlagyo,injury_report,train
+जाजरकोट मा घरभत्कियो,building_collapse_report,train
+मद्दत गर्नुहोस् है,sos_help_request,train
+good fternoon,greeting,train
+Kathmandu kolagia ftershock warning,aftershock_information_query,train
+fires preading fast in Kathmandu!!!,fire_incident_report,train
+आमा सुरक्षित हुनुहुन्छ भनेर स्थिति अपडेटगर्न चाहन्छु,family_reunification_status,train
+dheri raagat bagira xa meic chai xa,medical_emergency_request,train
+burned myahnd slightly,injury_report,train
+hy htere,greeting,train
+hostel m ambulance patau na urgent pls,medical_emergency_request,train
+mero buw alai badly injuyr bhayo,injury_report,train
+धन्यबादैह,goodbye_thanks,train
+धन्यबादहै,goodbye_thanks,train
+food distribution point najikcha ik,food_water_request,train
+hleo,greeting,train
+आमा लाई एम्बुलेन्स ाचहियो छिटो???,medical_emergency_request,train
+घर पूर्ण रूपम ाभत्कियो,building_collapse_report,train
+mero didi lai dee pwound xa,injury_report,train
+उद्धार टोली चाहियो थुनिएको छु हजुर,trapped_debris_report,train
+emergency helpeneded,sos_help_request,train
+we re stuck inside walls collapsed,trapped_debris_report,train
+hlpp me,sos_help_request,train
+पोखरा मा बिजुली गएको छ हजुर,power_outage_report,train
+should i r-enter the building,building_damage_check,train
+अहिले आमा सँग भेट भयो,family_reunification_status,train
+निकासाको मार्ग के हो प्लिज,evacuation_guidance_query,train
+how ofetn shuold i check emergency supplies,preparedness_tips_query,train
+kitchen ma gaa sdherai chuhira xa,gas_leak_report,train
+merolai help hcaincha,sos_help_request,train
+meroli help chaincha,sos_help_request,train
+cracks appeared afte rthe quake,building_damage_check,train
+bihana dkehi mero bhaibata khabar xaina,family_member_missing,train
+wallk haseko le mero buwa lai thichyo,trapped_debris_report,train
+wllk haseko le mero buwa lai thichyo,trapped_debris_report,train
+bridge collapsed near Lalitpur aspa,road_blockage_report,train
+evcuation ko instrcutions dinu hos,evacuation_guidance_query,train
+हजुरबुबा भग्नावेशषमुनि थुनिनुभयो???,trapped_debris_report,train
+tapai kati umer koh unuhuncha,fallback_unclear,train
+tpai kati umer ko hunuhuncha,fallback_unclear,train
+bhukmpa gayo mero ghar njaik ma,earthquake_occurring_report,train
+tst,fallback_unclear,train
+ghr collapse bhayo hamib hitra fasyou,trapped_debris_report,train
+हजुरबुबा लडेरढाडमाचोट लाग्यो,injury_report,train
+mero buwa lai badly inujry bayo,injury_report,train
+aago chittai failira xa cshool najik ma,fire_incident_report,train
+tnhx,goodbye_thanks,train
+yha ma safe zone kaha cha now,safe_location_query,train
+safe place near em,safe_location_query,train
+there is  fire in Lalitpur,fire_incident_report,train
+where can we atke sheltter safely,safe_location_query,train
+उद्धार टोली चाहियो थुनिएको ुछ है,trapped_debris_report,train
+भूकम्पदेखि छोरी को फोन लाग्दैन!!,family_member_missing,train
+gas leak in teh house pls,gas_leak_report,train
+हअिले बुबा सँगभेट भयो,family_reunification_status,train
+school area ma ambulance paatuna,medical_emergency_request,train
+school rea ma ambulance patauna,medical_emergency_request,train
+पोखरा माघर भत्कियो,building_collapse_report,train
+हजुरआमाको बेपत्ता व्यक्ति िरपोर्ट,family_member_missing,train
+पानीको आपूर्ति बन्द भयो पनाी चाहियो!!,food_water_request,train
+mero ama buwa ra kids ko lagi shelter chai,shelter_request,train
+kitchen gs leakingg badly,gas_leak_report,train
+smell of gsa after earthqauke,gas_leak_report,train
+mero ghar ma hlep chai xa,sos_help_request,train
+भूकम्प अघि के के तयार राख्ने!!,preparedness_tips_query,train
+food dsitribution point najik cha ki now,food_water_request,train
+mero ama buwa ra ids ko lagi shelter chai,shelter_request,train
+bhukampa report garna mna xa Kathmandu a,earthquake_occurring_report,train
+my mother is trapped udner debris,trapped_debris_report,train
+my mother is trpped under debris,trapped_debris_report,train
+भूकम्पकोल ागि गो-ब्याग कसरी तयार पार्ने,preparedness_tips_query,train
+my grndfather collapsed and not waking up,medical_emergency_request,train
+need ambulance ta Gorkha now,medical_emergency_request,train
+khnara pani sakiyo,food_water_request,train
+fire spredng fast in Jajarkot,fire_incident_report,train
+earthquake hit Pokharaj st now,earthquake_occurring_report,train
+mero bhi safe cha vanera status update garna man xa,family_reunification_status,train
+जाजरकोट नजिकको पुल भत्कियो हजुर,road_blockage_report,train
+मर  छोरी थुनिएका छौं!!,trapped_debris_report,train
+गोर्खा मा आग ोलागेको छ,fire_incident_report,train
+hlelo sir,greeting,train
+merobuwa lia badly injury bhayo,injury_report,train
+बुबा र बालबालिकाका ालगि आश्रय चाहियो,shelter_request,train
+अहिले भूकम्प गयो???,earthquake_occurring_report,train
+hi are  uworking offline asap,greeting,train
+hi re u working offline asap,greeting,train
+mero buwa sanga bahi reunitebhayo,family_reunification_status,train
+mero buw sanga abhi reunitebhayo,family_reunification_status,train
+मद्दत गर्नुहसो् है???,sos_help_request,train
+मद्दत गर्नुहोस् है???,sos_help_request,train
+ghr ekdamm hallyo earthquake ho ki k ho,earthquake_occurring_report,train
+जनिकैको खाद्य वितरणस्थल,food_water_request,train
+rod blocked by landslide near Pokhara now,road_blockage_report,train
+ghar hallyo bhukamp ajasto,earthquake_occurring_report,train
+buildingo n fire nea Gorkha,fire_incident_report,train
+जाजरकोट नजिक पहिरोले सडक बन्द भोय,road_blockage_report,train
+जाजरकोट नजिक पहिरोले सडक बन्द भयो,road_blockage_report,train
+is it sef to stay in this house,building_damage_check,train
+mero didi li badly injjury bhayo,injury_report,train
+how do i evcuate safely,evacuation_guidance_query,train
+parmtent block collapsed nearby,building_collapse_report,train
+यहाँ सफा पानी उपलब् धछैन,food_water_request,train
+पराकम्प कति शक्तिशाली हनु्छ,aftershock_information_query,train
+nyonethere help,sos_help_request,train
+merobhi sanga abhi reunite bhayo,family_reunification_status,train
+road blocked by landslid nearB haktapur,road_blockage_report,train
+अर्को भूकम्प आनउे छ कि प्लिज,aftershock_information_query,train
+building bta evacuate gane steps,evacuation_guidance_query,train
+hiii,greeting,train
+भवन अलिकति ढल्किएको छ खतरा छ कि,building_damage_check,train
+when will opwer berestored,power_outage_report,train
+ok bye t ahdanyabad,goodbye_thanks,train
+ok bye t dhanyabad,goodbye_thanks,train
+कोही सास फेर्न सकिरहेक ोछैन हजुर,medical_emergency_request,train
+भूकम्प अघिक े के तयार राख्ने,preparedness_tips_query,train
+worried bout gas leak in apartment,gas_leak_report,train
+erthquake in Gorka,earthquake_occurring_report,train
+landsllide blocking the olny road out,road_blockage_report,train
+आमा लाई छातीमा दुखाइ भइरहेोक छ प्लिज,medical_emergency_request,train
+mssive shaking right now,earthquake_occurring_report,train
+मलाई बचाउनुहोस्,sos_help_request,train
+दिदी लाई सुरक्षित फेला परेकोछ,family_reunification_status,train
+पोखराम ातोकिएको सुरक्षित क्षेत्र कहाँ छ,safe_location_query,train
+पोखरा मातोकिएको सुरक्षित क्षेत्र कहाँ छ,safe_location_query,train
+हजुरआमा सुरक्षित हुनुहुन्छ भनेर स्थिति अपडेट गर्नचाहन्छु,family_reunification_status,train
+पोखरा म ाआगो लागेको छ है,fire_incident_report,train
+पोखरा मा आगो लागेको छ है,fire_incident_report,train
+भेटिएको परिवार सदस्य कसरी दर्ता गर्ने???,family_reunification_status,train
+abzara ma fire lagyo,fire_incident_report,train
+my motehr is stuck under the roof,trapped_debris_report,train
+बहिनी नमस्ते िछटो,greeting,train
+hii k hel pgarna saknu hunxa,greeting,train
+छत खसेर हजुरआमा थुनिनुभयो हजुर,trapped_debris_report,train
+found my brothe rat the relief camp,family_reunification_status,train
+ग्यासको पाइप भाँचयिोभूकम्पमा,gas_leak_report,train
+ग्यासको पाइप भाँचियोभूकम्पमा,gas_leak_report,train
+fire brigade contatc number,emergency_contact_request,train
+asdkjsad,fallback_unclear,train
+sdkjasd,fallback_unclear,train
+plese rescue me mlai help chai,sos_help_request,train
+do w eneed to evacuateimmediately,evacuation_guidance_query,train
+do we need to evcuateimmediately,evacuation_guidance_query,train
+धन्यवाद दा!ई!,goodbye_thanks,train
+ksari safely evacuate garne,evacuation_guidance_query,train
+anjikko relief camp kaha cha,shelter_request,train
+njikko relief camp kaha cha,shelter_request,train
+how to secure furniture fro mfalling asap,preparedness_tips_query,train
+ok thnks bye is ma jaanchhu,goodbye_thanks,train
+ललितपुर जान सकिँदैनसडक बन्द छ,road_blockage_report,train
+sos maali help chai,sos_help_request,train
+good aftneroon,greeting,train
+नमस्ेत बहिनी,greeting,train
+landslide blocking teh only rooad out,road_blockage_report,train
+lndslide blocking the only rooad out,road_blockage_report,train
+दाजुलईा छातीमा दुखाइ भइरहेको छ,medical_emergency_request,train
+घाउभएको ठाउँमा कसरी उपचार गर्ने,first_aid_query,train
+hi malai chahiy ohelp,greeting,train
+hi mlai chahiyo help,greeting,train
+मेडिकल इमर्जेन्सी छ मद्दत गर्नुहोस् हजुर,medical_emergency_request,train
+wnt to update status that my sister is safe,family_reunification_status,train
+gana gauna aknu hunhca,fallback_unclear,train
+जाजरकोट मा भूकम्प गोय???,earthquake_occurring_report,train
+जाजरकोट मा भूकम्प गयो???,earthquake_occurring_report,train
+mero sathi unconsciuos bhayo,medical_emergency_request,train
+whereis the neraest safe zone,safe_location_query,train
+ahile k grun parxa,status_check_general,train
+मदद्तगर है,sos_help_request,train
+bhukmpa report garna man xa hamro area ma,earthquake_occurring_report,train
+rescue chi x ma thuniyeko xu,trapped_debris_report,train
+entire building came donw i nGorkha,building_collapse_report,train
+५ मिनेट अगाडि भूकम्प आयो!!,earthquake_occurring_report,train
+घरबाट धुवाँआइरेहको छ,fire_incident_report,train
+which open area is safe to agther,safe_location_query,train
+which open rea is safe to gather,safe_location_query,train
+खाना र पाीन सकियो है,food_water_request,train
+sfe place kaha xa near Pokhara,safe_location_query,train
+ok ogt it thanks,goodbye_thanks,train
+eletcricity cut off in our area,power_outage_report,train
+malaip illar le thichyo cannot move,trapped_debris_report,train
+mlai pillar le thichyo cannot move,trapped_debris_report,train
+sfeplace kaha xa near Gorkha,safe_location_query,train
+मलाई थाहा छैन के गर्ने,status_check_general,train
+पोखरा को लागि पराकमप् चेतावनी हजुर,aftershock_information_query,train
+पोखरा को लागि पराकम्प चेतावनी हजुर,aftershock_information_query,train
+fire spreding fast in Kathmandu,fire_incident_report,train
+सहयोग गर्नु ोहला,sos_help_request,train
+bihana dekhi mero aama bat akhabar aina,family_member_missing,train
+पोखरानजिक ग्यास चुहावट भयो,gas_leak_report,train
+mero ali helpchaincha,sos_help_request,train
+blha blah blah,fallback_unclear,train
+thnks rbo,goodbye_thanks,train
+pleases omeone help,sos_help_request,train
+plese someone help,sos_help_request,train
+hey QSAEF,greeting,train
+हजुरआमा सँग सम्रप्क टुटेको छ???,family_member_missing,train
+हजुरआमा सँग सम्पर्क टुटेको छ???,family_member_missing,train
+road blocked by ladnslid enear Gorkha,road_blockage_report,train
+rod blocked by ladnslide near Gorkha,road_blockage_report,train
+ph me,sos_help_request,train
+hey re youthe earthquake bot,greeting,train
+हजुरबुाब लाई गहिरोघाउ छ,injury_report,train
+"namatse bot,are u online",greeting,train
+"nmaste bot,are u online",greeting,train
+अहिले बुबासँग भेट भोय,family_reunification_status,train
+earthquake gob ag kasari prepare garne,preparedness_tips_query,train
+आपतकाली नसम्पर्क नम्बरहरूको सूची???,emergency_contact_request,train
+njik ko assembly point kaha cha asap,safe_location_query,train
+meroo iddi sanga abhi reunite bhayo,family_reunification_status,train
+my mother is stukcunder the roof,trapped_debris_report,train
+school building half bhtakiyo,building_collapse_report,train
+mero buw lai safey locate garya,family_reunification_status,train
+पोखरा मा जोडदारध क्का महसुस भयो,earthquake_occurring_report,train
+पोखरा मा जोडदार धक्का महसुस भयो,earthquake_occurring_report,train
+सहयोगको लािग धन्यवाद,goodbye_thanks,train
+hello j isanchai hunuhunccha,greeting,train
+hello ji snchai hunuhunccha,greeting,train
+how ot bandage a wound proprely,first_aid_query,train
+mer oaaam debris muni thuniyo,trapped_debris_report,train
+धेरै रगत बगिरहेको छ मेडिक चाहियो,medical_emergency_request,train
+earthqukae inLalitpur,earthquake_occurring_report,train
+दिदी लाई एम्बुलने्स चाहियो छिटो,medical_emergency_request,train
+दिदी लाई एम्बुलेन्स चाहियो छिटो,medical_emergency_request,train
+good veening,greeting,train
+gs ko smell airaxa bhukmapa pachi,gas_leak_report,train
+हजुरबुबा लाईएम्बुलेन्स चाहिोय छिटो,medical_emergency_request,train
+child helplinen umber,emergency_contact_request,train
+hamro area ko algi evacuatoin plan,evacuation_guidance_query,train
+भक्तपुर जान सकिँदैन सडक बन्दछ  प्लिज,road_blockage_report,train
+एस ओ सए,sos_help_request,train
+ehlp me right now,sos_help_request,train
+छोरी अझै रघ आउनुभएको छैन!!,family_member_missing,train
+hile ko situation k ho,status_check_general,train
+doctor chai xa abhi ani,medical_emergency_request,train
+ho wto plana family emergency meeting point,preparedness_tips_query,train
+how to plna family emergency meeting point,preparedness_tips_query,train
+अहिले आमा सँग भेट भयो???,family_reunification_status,train
+अहलिेको अवस्थाके हो,status_check_general,train
+13456,fallback_unclear,train
+earthquake in oPkhara,earthquake_occurring_report,train
+erthquake in Pokhara,earthquake_occurring_report,train
+mero family ra kids ko lagis helter chai,shelter_request,train
+ललितपुर कोल ागि निकासा योजना,evacuation_guidance_query,train
+hlepp,sos_help_request,train
+hijo edkhi khana xaiina,food_water_request,train
+भक्तपुरमा बिजुली गएको छ,power_outage_report,train
+mero sathi debris munni thuniyo,trapped_debris_report,train
+ाकठमाडौं माआगो लागेको छ,fire_incident_report,train
+mero bhi pinned under debris malai help chai help,trapped_debris_report,train
+जाजरकोट मा तोकिएको सुरक्षित क्षेत्र कहाँछ,safe_location_query,train
+म डराएको छु मद्दत गर्नुहोस्,sos_help_request,train
+hey bhuju kcha,greeting,train
+सी पी आर कसरी गर्ने छिटो,first_aid_query,train
+आमा लाई छातीमाद ुखाइ भइरहेको छ,medical_emergency_request,train
+थाहा ैछन हजुर,fallback_unclear,train
+भान्सामा सानो आगो लगाेकोछ,fire_incident_report,train
+भान्सामा सानो आगो लागेकोछ,fire_incident_report,train
+sos oss help pls,sos_help_request,train
+my daughter is stuck udner the roof,trapped_debris_report,train
+mero didi ghar aaunu bhako xiana ahile samma,family_member_missing,train
+हजुरलाईनमसक्ार,greeting,train
+ललितपुर मा एम्बुलेन्स चाहियो???,medical_emergency_request,train
+ghar ekdam hallyo earthquake hokik  ho,earthquake_occurring_report,train
+ghr ekdam hallyo earthquake hoki k ho,earthquake_occurring_report,train
+अहिले दिदी सँग भेटभयो,family_reunification_status,train
+पोखरा नजिक पहिरोले सडक बनद् भयो छिटो,road_blockage_report,train
+पोखरा नजिक पहिरोले सडक बन्द भयो छिटो,road_blockage_report,train
+heyre you the earthquake bot,greeting,train
+mero didi sanga abhi ruenite bhayo,family_reunification_status,train
+के  छहाल,greeting,train
+ललितपुर नजकिैको घरमा आगोलागेको छ,fire_incident_report,train
+मुख्य सडक नब्द छ,road_blockage_report,train
+हजुरआमा ँसग सम्पर्क टुटेको छ,family_member_missing,train
+ehy there,greeting,train
+cut on my leg beleding now,injury_report,train
+mero bhi sanga abhi reunite bhayo,family_reunification_status,train
+hmro area najik ko pul bhatkiyo,road_blockage_report,train
+ललितपुर मा सम्पूर्ण भवन ढल्यो हजुर,building_collapse_report,train
+njik ko assembly point kaaha cha,safe_location_query,train
+मेरो परिवराको लागि आश्रय चाहियो???,shelter_request,train
+ntional emergency peration center number,emergency_contact_request,train
+gs lea kbhayo ghar ma,gas_leak_report,train
+cannot reach Pokhar aroadi s closed,road_blockage_report,train
+cnnot reach Pokhara roadi s closed,road_blockage_report,train
+road blcokked by landslide near Jajarkot,road_blockage_report,train
+gretings,greeting,train
+just testnig 1223,fallback_unclear,train
+दजाु लाई छातीमा दुखाइ भइरहेको छ!!,medical_emergency_request,train
+दाजु लाई छातीमा दुखाइ भइरहेको छ!!,medical_emergency_request,train
+namaset ma euta prashna sodhna chahanchu,greeting,train
+thank sbro ekdamramro jankari,goodbye_thanks,train
+mucha ppreciated,goodbye_thanks,train
+much ppreciated,goodbye_thanks,train
+rod cracked cannotpass,road_blockage_report,train
+our house is unsafeneed shetler,shelter_request,train
+हजुरआमा को बेपत्ता व्यक्ति रिोपर्ट,family_member_missing,train
+काठमाडौं नजिक पहिरोले सडकबन्द भयो,road_blockage_report,train
+haa tma minor cho txa,injury_report,train
+mero hbai pinned unde debris malai help chai,trapped_debris_report,train
+bhukampa pachi cracka ayo pls,building_damage_check,train
+bhukmpa pachi crack aayo pls,building_damage_check,train
+ranodm tye gardai xu,fallback_unclear,train
+पोखरा निजकैको घरमा आगो लागेको छ,fire_incident_report,train
+rndom text here,fallback_unclear,train
+building on fire near oPkhara,fire_incident_report,train
+building on fire ner Pokhara,fire_incident_report,train
+जाजरकोट मा जोडदार धक्का महुसस भयो,earthquake_occurring_report,train
+"namaste bot, are u olnine",greeting,train
+ललितपरु मा एम्बुलेन्स चाहियो,medical_emergency_request,train
+bhukampar eport garna man xa Kathmandu ma,earthquake_occurring_report,train
+ground shknig very hard,earthquake_occurring_report,train
+उद्धारका लागि कहाँ फनो गर्ने,emergency_contact_request,train
+cnnot fin my brother after the quake,family_member_missing,train
+my father needs ambulance urgentyl,medical_emergency_request,train
+my fther needs ambulance urgently,medical_emergency_request,train
+how to prepre kids foor earthquake drills,preparedness_tips_query,train
+अहिले कुन चरण पालनागर्ने,status_check_general,train
+mero bwua sagna abhi reunite bhayo,family_reunification_status,train
+mero bwu sanga abhi reunite bhayo,family_reunification_status,train
+के छ हाल हजुर,greeting,train
+merodidi sfe cha vanera status update garna man xa,family_reunification_status,train
+gaun jana sakidaina road band cah,road_blockage_report,train
+अहिले नै मद्दत चाहियो,sos_help_request,train
+need rtion for myb rother,food_water_request,train
+buildin ma frie xa bazaar najik,fire_incident_report,train
+power outage chaKatmhandu ma,power_outage_report,train
+malai bacahu pelase,sos_help_request,train
+भवन अलिकतिढल्किएको छ खरता छ कि,building_damage_check,train
+भूकम्पदेखि बुबा कोफोन लाग्दैन,family_member_missing,train
+म डराकएो छु मद्दत गर्नुहोस्???,sos_help_request,train
+आमा रब ालबालिकाका लागि आश्रय चाहियो???,shelter_request,train
+आमा र बालबालिकाका लागि आश्रय चाहियो???,shelter_request,train
+help me lps im scared plz,sos_help_request,train
+bhukampa gayo hamro arae ma,earthquake_occurring_report,train
+nmaste now,greeting,train
+the house has completelyc ollapsed,building_collapse_report,train
+hostelam ambulance patau na,medical_emergency_request,train
+के गर्ने भेनरमलाई मार्गदर्शन गर्नुहोस्,status_check_general,train
+hamro ghar najik gas leak bahyo,gas_leak_report,train
+pinned under debris,trapped_debris_report,train
+pinnd under debris,trapped_debris_report,train
+दुई दिनदेखि बिजुली छैन प्लजि,power_outage_report,train
+काठमाडौंजान सिकँदैन सडक बन्द छ,road_blockage_report,train
+काठमाडौंजान सकिँदैन सडक बन्द छ,road_blockage_report,train
+wll khaseko le mero bhai lai thichyo,trapped_debris_report,train
+"sturcture collapsed, people may be inside",building_collapse_report,train
+Kthmandu najik ko pulbhatkiyo,road_blockage_report,train
+my house has cracks is ti safe,building_damage_check,train
+my house hs cracks is it safe,building_damage_check,train
+सहयोगको लािग धन्यवाद प्लिज,goodbye_thanks,train
+whn will power be restored,power_outage_report,train
+national emregency operation center number,emergency_contact_request,train
+emro bai lai ambulance chai urgent,medical_emergency_request,train
+बुबा लडेराढडमा चोट लाग्यो,injury_report,train
+hkana ra pani sakiyo help,food_water_request,train
+what's hte weatherl ike,fallback_unclear,train
+भूकम्प गयो,earthquake_occurring_report,train
+mero buwa debrimsuni thuniyo,trapped_debris_report,train
+कोही छ सहयोगग र्नुहोस् है,sos_help_request,train
+reunited with my gndmother now,family_reunification_status,train
+भक्तपुर मा घर भत्कियो,building_collapse_report,train

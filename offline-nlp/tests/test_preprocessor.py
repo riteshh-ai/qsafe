@@ -26,7 +26,8 @@ def test_clean_empty_and_none():
     assert TextPreprocessor.clean("    ") == ""
 
 def test_clean_emojis():
-    # Emojis should be stripped out
-    assert TextPreprocessor.clean("help 🚨 😭") == "help"
-    assert TextPreprocessor.clean("🚨🚨🚨") == ""
+    # Emojis should be translated to semantic text
+    assert TextPreprocessor.clean("help 🚨") == "help emergency"
+    assert TextPreprocessor.clean("🚨🚨🚨") == "emergency emergency emergency"
+    assert TextPreprocessor.clean("🔥") == "fire"
 

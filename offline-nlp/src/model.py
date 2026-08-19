@@ -56,7 +56,7 @@ class ModelTrainer:
         if not dataset_path.exists():
             raise FileNotFoundError(f"Dataset not found: {dataset_path}")
         
-        df = pd.read_csv(dataset_path)
+        df = pd.read_csv(dataset_path, encoding='utf-8')
         
         # Validate required columns
         required_cols = ['text', 'intent', 'split']

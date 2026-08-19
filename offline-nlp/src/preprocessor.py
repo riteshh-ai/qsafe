@@ -19,10 +19,27 @@ class TextPreprocessor:
     - Removes noise punctuation while retaining word boundaries
     """
     
+    EMOJI_MAP = {
+        "🚨": " emergency ",
+        "🚑": " ambulance ",
+        "🔥": " fire ",
+        "🩸": " bleeding ",
+        "🤕": " injury ",
+        "🏥": " hospital ",
+        "🆘": " help ",
+        "🌊": " flood ",
+        "🏚": " collapse ",
+        "⚠️": " warning ",
+        "💊": " medicine ",
+        "🌍": " earthquake ",
+        "🌋": " earthquake ",
+        "🌊": " flood "
+    }
+
     @staticmethod
     def clean(text: Optional[str]) -> str:
         """
-        Normalize text input: lowercase, strip whitespace, remove noise.
+        Normalize text input: map emojis, lowercase, strip whitespace, remove noise.
         
         Args:
             text: Raw input text (can be None or non-string)
@@ -36,6 +53,14 @@ class TextPreprocessor:
         
         if not text.strip():
             return ""
+            
+        import unicodedata
+        text = unicodedata.normalize('NFC', text)
+            
+        # Convert emergency emojis to semantic text before stripping
+        for emoji_char, semantic_text in TextPreprocessor.EMOJI_MAP.items():
+            if emoji_char in text:
+                text = text.replace(emoji_char, semantic_text)
         
         # Convert to lowercase
         text = text.lower()
