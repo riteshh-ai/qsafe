@@ -1,0 +1,156 @@
+[
+  {
+    "sample_id": "val_007",
+    "query": "मद्दत चाहियो! मेरो घर भत्कियो र मान्छे पुरिएका छन्!",
+    "script_type": "np_devanagari",
+    "expected_intent": "trapped_debris_report",
+    "predicted_intent": "building_collapse_report",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'trapped_debris_report', got 'building_collapse_report'",
+    "latencies_ms": {
+      "intent": 4.32,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_009",
+    "query": "तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "medical_emergency_request",
+    "predicted_intent": "injury_report",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'medical_emergency_request', got 'injury_report'",
+    "latencies_ms": {
+      "intent": 3.43,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_020",
+    "query": "खाना खायौ? के गर्दै छौ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "fallback_unclear",
+    "predicted_intent": "status_check_general",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'fallback_unclear', got 'status_check_general'",
+    "latencies_ms": {
+      "intent": 3.58,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_022",
+    "query": "🆘 🚑 🔥",
+    "script_type": "en",
+    "expected_intent": "sos_help_request",
+    "predicted_intent": "medical_emergency_request",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'sos_help_request', got 'medical_emergency_request'",
+    "latencies_ms": {
+      "intent": 5.57,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_024",
+    "query": "How do I perform CPR on an unconscious earthquake victim?",
+    "script_type": "en",
+    "expected_intent": "first_aid_query",
+    "predicted_intent": "medical_emergency_request",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'first_aid_query', got 'medical_emergency_request'",
+    "latencies_ms": {
+      "intent": 4.31,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_028",
+    "query": "What are the historical major earthquakes recorded in Nepal and their magnitudes?",
+    "script_type": "en",
+    "expected_intent": "earthquake_info",
+    "predicted_intent": "fallback_unclear",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'earthquake_info', got 'fallback_unclear'",
+    "latencies_ms": {
+      "intent": 5.61,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_029",
+    "query": "What are the standard operating procedures recommended by NDRRMA for building safety?",
+    "script_type": "en",
+    "expected_intent": "building_damage_check",
+    "predicted_intent": "fallback_unclear",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'building_damage_check', got 'fallback_unclear'",
+    "latencies_ms": {
+      "intent": 6.85,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_030",
+    "query": "नजिकको सुरक्षित आश्रयस्थल कहाँ छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "shelter_request",
+    "predicted_intent": "safe_location_query",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'shelter_request', got 'safe_location_query'",
+    "latencies_ms": {
+      "intent": 5.29,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_036",
+    "query": "विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "earthquake_info",
+    "predicted_intent": "earthquake_occurring_report",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'earthquake_info', got 'earthquake_occurring_report'",
+    "latencies_ms": {
+      "intent": 4.46,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_037",
+    "query": "safe place kaha cha shelter chaincha family ko lagi",
+    "script_type": "np_romanized",
+    "expected_intent": "shelter_request",
+    "predicted_intent": "safe_location_query",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'shelter_request', got 'safe_location_query'",
+    "latencies_ms": {
+      "intent": 4.02,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  },
+  {
+    "sample_id": "val_040",
+    "query": "ahile k garne ma pachi bhukampa thamiye pachi",
+    "script_type": "np_romanized",
+    "expected_intent": "aftershock_information_query",
+    "predicted_intent": "status_check_general",
+    "failure_category": "ROUTING_FAILURE",
+    "failure_reason": "Intent misclassified: Expected 'aftershock_information_query', got 'status_check_general'",
+    "latencies_ms": {
+      "intent": 4.85,
+      "retrieval": 0.0,
+      "generation": 0.0
+    }
+  }
+]

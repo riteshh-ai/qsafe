@@ -1,0 +1,362 @@
+[
+  {
+    "id": "eval_001",
+    "query": "Help! My house collapsed in Kathmandu and 3 people are trapped under debris!",
+    "script_type": "en",
+    "expected_intent": "trapped_debris_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Emergency rescue teams dispatched. Please stay clear of unstable structures."
+  },
+  {
+    "id": "eval_002",
+    "query": "Need an ambulance immediately, someone is bleeding heavily and unconscious",
+    "script_type": "en",
+    "expected_intent": "medical_emergency_request",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Call Nepal Ambulance Hotline 102 immediately. Keep victim warm and still."
+  },
+  {
+    "id": "eval_003",
+    "query": "Earthquake happening right now! Ground is shaking violently!",
+    "script_type": "en",
+    "expected_intent": "earthquake_occurring_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "DROP, COVER, and HOLD ON! Protect your head under sturdy furniture."
+  },
+  {
+    "id": "eval_004",
+    "query": "Fire broke out after the earthquake near Patan",
+    "script_type": "en",
+    "expected_intent": "fire_incident_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Fire brigade hotline is 101. Evacuate upwind from smoke immediately."
+  },
+  {
+    "id": "eval_005",
+    "query": "Smell a strong gas leak in our kitchen after the tremors",
+    "script_type": "en",
+    "expected_intent": "gas_leak_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Do not operate light switches. Shut main valve and evacuate immediately."
+  },
+  {
+    "id": "eval_006",
+    "query": "Where is the nearest safe open ground or shelter area?",
+    "script_type": "en",
+    "expected_intent": "safe_location_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_1", "PROcessed_manual.csv_5"],
+    "ground_truth_answer": "Open grounds like Tudikhel and designated local school grounds are open safe assembly points."
+  },
+  {
+    "id": "eval_007",
+    "query": "My mother has been missing since the earthquake in Bhaktapur",
+    "script_type": "en",
+    "expected_intent": "family_member_missing",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Missing person report registered with NDRRMA emergency portal."
+  },
+  {
+    "id": "eval_008",
+    "query": "How do I perform CPR on an unconscious earthquake victim?",
+    "script_type": "en",
+    "expected_intent": "first_aid_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_12"],
+    "ground_truth_answer": "Push hard and fast in the center of the chest at 100-120 compressions per minute."
+  },
+  {
+    "id": "eval_009",
+    "query": "What items should I include in an earthquake go-bag kit?",
+    "script_type": "en",
+    "expected_intent": "preparedness_tips_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_2"],
+    "ground_truth_answer": "Include drinking water, non-perishable food, flashlight, first aid kit, whistle, and copies of IDs."
+  },
+  {
+    "id": "eval_010",
+    "query": "What is the official phone number for Nepal Police emergency?",
+    "script_type": "en",
+    "expected_intent": "emergency_contact_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_0"],
+    "ground_truth_answer": "Nepal Police emergency hotline number is 100."
+  },
+  {
+    "id": "eval_011",
+    "query": "मद्दत चाहियो! मेरो घर भत्कियो र मान्छे पुरिएका छन्!",
+    "script_type": "np_devanagari",
+    "expected_intent": "trapped_debris_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "उद्धार टोलीलाई खबर गरिएको छ। कृपया सुरक्षित स्थानमा बस्नुहोस्।"
+  },
+  {
+    "id": "eval_012",
+    "query": "काठमाडौंमा ठूलो भूकम्प आयो, घरहरू हल्लिरहेका छन्",
+    "script_type": "np_devanagari",
+    "expected_intent": "earthquake_occurring_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "झुक्नुहोस्, ओत लिनुहोस्, र समात्नुहोस्! टाउकोको सुरक्षा गर्नुहोस्।"
+  },
+  {
+    "id": "eval_013",
+    "query": "तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "medical_emergency_request",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "आपतकालीन एम्बुलेन्स सेवा (१०२) मा तुरुन्त सम्पर्क गर्नुहोस्।"
+  },
+  {
+    "id": "eval_014",
+    "query": "नजिकको सुरक्षित आश्रयस्थल कहाँ छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "shelter_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_5"],
+    "ground_truth_answer": "नजिकैका खुला मैदान र टुँडिखेल जस्ता सुरक्षित आश्रयस्थलहरू खुला छन्।"
+  },
+  {
+    "id": "eval_015",
+    "query": "भूकम्प पछि घरमा आगो लाग्यो दमकल बोलाउनुहोस्",
+    "script_type": "np_devanagari",
+    "expected_intent": "fire_incident_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "दमकलको नम्बर १०१ हो। धुवाँबाट टाढा खुला ठाउँमा जानुहोस्।"
+  },
+  {
+    "id": "eval_016",
+    "query": "मेरो आमा भूकम्प पछि बेपत्ता हुनुभएको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "family_member_missing",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "बेपत्ता व्यक्तिको विवरण आपत्कालीन दर्ता प्रणालीमा समावेश गरिएको छ।"
+  },
+  {
+    "id": "eval_017",
+    "query": "रगत बग्न रोक्न प्राथमिक उपचार कसरी गर्ने?",
+    "script_type": "np_devanagari",
+    "expected_intent": "first_aid_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_10"],
+    "ground_truth_answer": "सफा कपडाले घाउमा सिधा थिचेर रगत बग्न रोक्नुहोस्।"
+  },
+  {
+    "id": "eval_018",
+    "query": "रेडक्रस र सशस्त्र प्रहरीको आपतकालीन नम्बर के हो?",
+    "script_type": "np_devanagari",
+    "expected_intent": "emergency_contact_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_2"],
+    "ground_truth_answer": "नेपाल रेडक्रस: ०१-४२७०६५०, सशस्त्र प्रहरी आपत्कालीन नम्बर: १११४।"
+  },
+  {
+    "id": "eval_019",
+    "query": "पहिराले गर्दा सडक पूर्ण रूपमा बन्द भएको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "road_blockage_report",
+    "requires_rag": true,
+    "expected_chunk_ids": ["History_processed_dataser2.csv_4"],
+    "ground_truth_answer": "सडक अवरुद्ध भएको रिपोर्ट नेपाल प्रहरी राजमार्ग सुरक्षा टोलीलाई पठाइएको छ।"
+  },
+  {
+    "id": "eval_020",
+    "query": "के अझै पराकम्पहरू आउने सम्भावना छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "aftershock_information_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_nepal_seismicity.csv_1"],
+    "ground_truth_answer": "मुख्य भूकम्प पछि पराकम्पहरू आउन सक्छन्। सतर्क रहनुहोस्।"
+  },
+  {
+    "id": "eval_021",
+    "query": "ghar bhatkiyo malai bachau please sos",
+    "script_type": "np_romanized",
+    "expected_intent": "sos_help_request",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "High priority rescue alert broadcasted. Stay calm and preserve energy."
+  },
+  {
+    "id": "eval_022",
+    "query": "ambulance chaincha 2 jana ghaite chhan",
+    "script_type": "np_romanized",
+    "expected_intent": "medical_emergency_request",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Ambulance dispatched for 2 injured victims."
+  },
+  {
+    "id": "eval_023",
+    "query": "bhukampa aayo ghar halliyo ktm ma",
+    "script_type": "np_romanized",
+    "expected_intent": "earthquake_occurring_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Earthquake reported in Kathmandu. Take safety cover immediately."
+  },
+  {
+    "id": "eval_024",
+    "query": "gas leak bhayo aago lagla jasto cha",
+    "script_type": "np_romanized",
+    "expected_intent": "gas_leak_report",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Gas leak hazard flagged. Turn off main valve and move outdoors."
+  },
+  {
+    "id": "eval_025",
+    "query": "safe place kaha cha shelter chaincha family ko lagi",
+    "script_type": "np_romanized",
+    "expected_intent": "shelter_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_5"],
+    "ground_truth_answer": "Nearest designated safe open grounds are marked at local open spaces."
+  },
+  {
+    "id": "eval_026",
+    "query": "mero didi missing hunuhuncha bhukampa pachi",
+    "script_type": "np_romanized",
+    "expected_intent": "family_member_missing",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Missing person case logged with emergency search registry."
+  },
+  {
+    "id": "eval_027",
+    "query": "khutta ma chot lagyo first aid kasari garne",
+    "script_type": "np_romanized",
+    "expected_intent": "first_aid_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_10"],
+    "ground_truth_answer": "Apply direct pressure with clean cloth and keep leg elevated."
+  },
+  {
+    "id": "eval_028",
+    "query": "police number and emergency contact number k ho",
+    "script_type": "np_romanized",
+    "expected_intent": "emergency_contact_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_0"],
+    "ground_truth_answer": "Police Hotline: 100, Fire Brigade: 101, Ambulance: 102."
+  },
+  {
+    "id": "eval_029",
+    "query": "What emergency contact numbers are available for earthquake relief in Nepal?",
+    "script_type": "en",
+    "expected_intent": "emergency_contact_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_0"],
+    "ground_truth_answer": "National emergency numbers include Police 100, Ambulance 102, and NDRRMA Helpline 1149."
+  },
+  {
+    "id": "eval_030",
+    "query": "What are the historical major earthquakes recorded in Nepal and their magnitudes?",
+    "script_type": "en",
+    "expected_intent": "earthquake_info",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_nepal_seismicity.csv_0", "History_processed_dataser2.csv_1"],
+    "ground_truth_answer": "Major earthquakes include 1934 Bihar-Nepal earthquake (8.0 M) and 2015 Gorkha earthquake (7.8 M)."
+  },
+  {
+    "id": "eval_031",
+    "query": "What are the standard operating procedures recommended by NDRRMA for building safety?",
+    "script_type": "en",
+    "expected_intent": "building_damage_check",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_3"],
+    "ground_truth_answer": "Check for deep diagonal cracks on load-bearing walls before re-entering."
+  },
+  {
+    "id": "eval_032",
+    "query": "नेपालका प्रमुख आपतकालीन सम्पर्क नम्बरहरू र हटलाइन सेवाहरू के के हुन्?",
+    "script_type": "np_devanagari",
+    "expected_intent": "emergency_contact_request",
+    "requires_rag": true,
+    "expected_chunk_ids": ["National_Emergency_Contacts.csv_0"],
+    "ground_truth_answer": "नेपाल प्रहरी (१००), एम्बुलेन्स (१०२), दमकल (१०१), एनडिआरआरएमए हटलाइन (११४९)।"
+  },
+  {
+    "id": "eval_033",
+    "query": "विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "earthquake_info",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_nepal_seismicity.csv_0"],
+    "ground_truth_answer": "नेपालमा १९९० वि.सं. (८.० म्याग्निच्युड) र २०७२ वि.सं. (७.८ म्याग्निच्युड) का विनाशकारी भूकम्प आएका थिए।"
+  },
+  {
+    "id": "eval_034",
+    "query": "Hello, good morning! How are you doing today?",
+    "script_type": "en",
+    "expected_intent": "greeting",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Hello! I am QSAFE Nepal AI assistant. How can I help you stay safe today?"
+  },
+  {
+    "id": "eval_035",
+    "query": "Thank you so much for your help! Goodbye.",
+    "script_type": "en",
+    "expected_intent": "goodbye_thanks",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "You are very welcome! Stay safe and keep emergency contacts ready."
+  },
+  {
+    "id": "eval_036",
+    "query": "What is the weather forecast for Pokhara tomorrow?",
+    "script_type": "en",
+    "expected_intent": "fallback_unclear",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "I am specialized in earthquake safety and disaster relief assistance."
+  },
+  {
+    "id": "eval_037",
+    "query": "खाना खायौ? के गर्दै छौ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "fallback_unclear",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "म भूकम्प सुरक्षा र आपतकालीन सहायता सहायक हुँ।"
+  },
+  {
+    "id": "eval_038",
+    "query": "random gibberish test string 12345 xyz",
+    "script_type": "en",
+    "expected_intent": "fallback_unclear",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Query unclear. Please state if you need immediate emergency help."
+  },
+  {
+    "id": "eval_039",
+    "query": "🆘 🚑 🔥",
+    "script_type": "en",
+    "expected_intent": "sos_help_request",
+    "requires_rag": false,
+    "expected_chunk_ids": [],
+    "ground_truth_answer": "Emergency signal detected. Police (100) and Ambulance (102) alerted."
+  },
+  {
+    "id": "eval_040",
+    "query": "ahile k garne ma pachi bhukampa thamiye pachi",
+    "script_type": "np_romanized",
+    "expected_intent": "aftershock_information_query",
+    "requires_rag": true,
+    "expected_chunk_ids": ["PROcessed_manual.csv_1"],
+    "ground_truth_answer": "Move to open area outside. Avoid damaged buildings and watch for aftershocks."
+  }
+]

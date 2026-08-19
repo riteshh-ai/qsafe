@@ -1,0 +1,402 @@
+[
+  {
+    "sample_id": "val_001",
+    "query": "Help! My house collapsed in Kathmandu and 3 people are trapped under debris!",
+    "script_type": "en",
+    "expected_intent": "trapped_debris_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 77.91,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_002",
+    "query": "Need an ambulance immediately, someone is bleeding heavily and unconscious",
+    "script_type": "en",
+    "expected_intent": "medical_emergency_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": true,
+    "latency_ms": 14.31,
+    "live_response_snippet": "[FIRST AID PROTOCOL]\n• **BLEEDING**: Apply direct, firm pressure with a clean cloth.\n• **BURNS**: Cool with clean running water for 10-15 minutes. Do ..."
+  },
+  {
+    "sample_id": "val_003",
+    "query": "Earthquake happening right now! Ground is shaking violently!",
+    "script_type": "en",
+    "expected_intent": "earthquake_occurring_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": true,
+    "latency_ms": 13.06,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_004",
+    "query": "Fire broke out after the earthquake near Patan",
+    "script_type": "en",
+    "expected_intent": "fire_incident_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 14.93,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_005",
+    "query": "Smell a strong gas leak in our kitchen after the tremors",
+    "script_type": "en",
+    "expected_intent": "gas_leak_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 14.87,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_006",
+    "query": "My mother has been missing since the earthquake in Bhaktapur",
+    "script_type": "en",
+    "expected_intent": "family_member_missing",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 12.08,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_007",
+    "query": "मद्दत चाहियो! मेरो घर भत्कियो र मान्छे पुरिएका छन्!",
+    "script_type": "np_devanagari",
+    "expected_intent": "trapped_debris_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 15.24,
+    "live_response_snippet": "[भूकम्प सुरक्षा निर्देशिका]\n• **घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)**: घुँडा टेकेर बलियो टेबुलमुनि जानुहोस्, टाउको र गर्दन छोप्नुहोस्, कम्प..."
+  },
+  {
+    "sample_id": "val_008",
+    "query": "काठमाडौंमा ठूलो भूकम्प आयो, घरहरू हल्लिरहेका छन्",
+    "script_type": "np_devanagari",
+    "expected_intent": "earthquake_occurring_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": true,
+    "latency_ms": 12.19,
+    "live_response_snippet": "[भूकम्प सुरक्षा निर्देशिका]\n• **घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)**: घुँडा टेकेर बलियो टेबुलमुनि जानुहोस्, टाउको र गर्दन छोप्नुहोस्, कम्प..."
+  },
+  {
+    "sample_id": "val_009",
+    "query": "तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "medical_emergency_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": true,
+    "latency_ms": 11.13,
+    "live_response_snippet": "म विपद् व्यवस्थापन र आपतकालीन सुरक्षामा मात्र मद्दत गर्न सक्छु। कृपया आपतकालीन अवस्था स्पष्ट पार्नुहोस्। प्रहरी: १००, एम्बुलेन्स: १०२।"
+  },
+  {
+    "sample_id": "val_010",
+    "query": "भूकम्प पछि घरमा आगो लाग्यो दमकल बोलाउनुहोस्",
+    "script_type": "np_devanagari",
+    "expected_intent": "fire_incident_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 10.97,
+    "live_response_snippet": "[भूकम्प सुरक्षा निर्देशिका]\n• **घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)**: घुँडा टेकेर बलियो टेबुलमुनि जानुहोस्, टाउको र गर्दन छोप्नुहोस्, कम्प..."
+  },
+  {
+    "sample_id": "val_011",
+    "query": "मेरो आमा भूकम्प पछि बेपत्ता हुनुभएको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "family_member_missing",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 25.34,
+    "live_response_snippet": "[भूकम्प सुरक्षा निर्देशिका]\n• **घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)**: घुँडा टेकेर बलियो टेबुलमुनि जानुहोस्, टाउको र गर्दन छोप्नुहोस्, कम्प..."
+  },
+  {
+    "sample_id": "val_012",
+    "query": "ghar bhatkiyo malai bachau please sos",
+    "script_type": "np_romanized",
+    "expected_intent": "sos_help_request",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 31.4,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_013",
+    "query": "ambulance chaincha 2 jana ghaite chhan",
+    "script_type": "np_romanized",
+    "expected_intent": "medical_emergency_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": true,
+    "latency_ms": 11.07,
+    "live_response_snippet": "[NEPAL EMERGENCY HOTLINES]\n• **Nepal Police (नेपाल प्रहरी)**: 100\n• **Armed Police Force (APF)**: 1114\n• **Ambulance (एम्बुलेन्स)**: 102\n• **NDRRMA (व..."
+  },
+  {
+    "sample_id": "val_014",
+    "query": "bhukampa aayo ghar halliyo ktm ma",
+    "script_type": "np_romanized",
+    "expected_intent": "earthquake_occurring_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": true,
+    "latency_ms": 9.69,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_015",
+    "query": "gas leak bhayo aago lagla jasto cha",
+    "script_type": "np_romanized",
+    "expected_intent": "gas_leak_report",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 10.17,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_016",
+    "query": "mero didi missing hunuhuncha bhukampa pachi",
+    "script_type": "np_romanized",
+    "expected_intent": "family_member_missing",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 9.81,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_017",
+    "query": "Hello, good morning! How are you doing today?",
+    "script_type": "en",
+    "expected_intent": "greeting",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 33.97,
+    "live_response_snippet": "I couldn't quite understand that in the context of an emergency. Could you clarify if you need help with an earthquake, flood, landslide, or medical e..."
+  },
+  {
+    "sample_id": "val_018",
+    "query": "Thank you so much for your help! Goodbye.",
+    "script_type": "en",
+    "expected_intent": "goodbye_thanks",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 10.09,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_019",
+    "query": "What is the weather forecast for Pokhara tomorrow?",
+    "script_type": "en",
+    "expected_intent": "fallback_unclear",
+    "predicted_intent": "fallback_unclear",
+    "is_correct": true,
+    "latency_ms": 10.89,
+    "live_response_snippet": "My expertise is focused solely on emergency response and disaster safety in Nepal. Please let me know if you need first aid instructions, earthquake s..."
+  },
+  {
+    "sample_id": "val_020",
+    "query": "खाना खायौ? के गर्दै छौ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "fallback_unclear",
+    "predicted_intent": "fallback_unclear",
+    "is_correct": true,
+    "latency_ms": 26.76,
+    "live_response_snippet": "माफ गर्नुहोस्, मैले त्यो बुझिनँ। के तपाईंलाई भूकम्प, बाढी, पहिरो वा प्राथमिक उपचारको बारेमा जानकारी चाहिएको हो?"
+  },
+  {
+    "sample_id": "val_021",
+    "query": "random gibberish test string 12345 xyz",
+    "script_type": "en",
+    "expected_intent": "fallback_unclear",
+    "predicted_intent": "fallback_unclear",
+    "is_correct": true,
+    "latency_ms": 11.46,
+    "live_response_snippet": "My expertise is focused solely on emergency response and disaster safety in Nepal. Please let me know if you need first aid instructions, earthquake s..."
+  },
+  {
+    "sample_id": "val_022",
+    "query": "🆘 🚑 🔥",
+    "script_type": "en",
+    "expected_intent": "sos_help_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 14.95,
+    "live_response_snippet": "I couldn't quite understand that in the context of an emergency. Could you clarify if you need help with an earthquake, flood, landslide, or medical e..."
+  },
+  {
+    "sample_id": "val_023",
+    "query": "Where is the nearest safe open ground or shelter area?",
+    "script_type": "en",
+    "expected_intent": "safe_location_query",
+    "predicted_intent": "safe_location_query",
+    "is_correct": true,
+    "latency_ms": 10.17,
+    "live_response_snippet": "My expertise is focused solely on emergency response and disaster safety in Nepal. Please let me know if you need first aid instructions, earthquake s..."
+  },
+  {
+    "sample_id": "val_024",
+    "query": "How do I perform CPR on an unconscious earthquake victim?",
+    "script_type": "en",
+    "expected_intent": "first_aid_query",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 31.74,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_025",
+    "query": "What items should I include in an earthquake go-bag kit?",
+    "script_type": "en",
+    "expected_intent": "preparedness_tips_query",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 9.75,
+    "live_response_snippet": "[EARTHQUAKE SAFETY PROTOCOL]\n• **DROP, COVER, HOLD ON**: Drop to hands and knees, cover head/neck under sturdy furniture, hold on until shaking stops...."
+  },
+  {
+    "sample_id": "val_026",
+    "query": "What is the official phone number for Nepal Police emergency?",
+    "script_type": "en",
+    "expected_intent": "emergency_contact_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 14.11,
+    "live_response_snippet": "[NEPAL EMERGENCY HOTLINES]\n• **Nepal Police**: 100\n• **Armed Police Force (APF)**: 1114\n• **Ambulance**: 102\n• **NDRRMA (Vipad Byabasthapan)**: 16666"
+  },
+  {
+    "sample_id": "val_027",
+    "query": "What emergency contact numbers are available for earthquake relief in Nepal?",
+    "script_type": "en",
+    "expected_intent": "emergency_contact_request",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 17.98,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_028",
+    "query": "What are the historical major earthquakes recorded in Nepal and their magnitudes?",
+    "script_type": "en",
+    "expected_intent": "earthquake_info",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 11.17,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  },
+  {
+    "sample_id": "val_029",
+    "query": "What are the standard operating procedures recommended by NDRRMA for building safety?",
+    "script_type": "en",
+    "expected_intent": "building_damage_check",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 9.76,
+    "live_response_snippet": "I couldn't quite understand that in the context of an emergency. Could you clarify if you need help with an earthquake, flood, landslide, or medical e..."
+  },
+  {
+    "sample_id": "val_030",
+    "query": "नजिकको सुरक्षित आश्रयस्थल कहाँ छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "shelter_request",
+    "predicted_intent": "shelter_request",
+    "is_correct": true,
+    "latency_ms": 27.51,
+    "live_response_snippet": "म QSAFE, विपद् तथा आपतकालीन सुरक्षा सल्लाहकार हुँ। म केवल आपतकालीन र विपद् सम्बन्धी प्रश्नहरूको मात्र उत्तर दिन सक्छु:\n• भूकम्प, बाढी र पहिरो सुरक्षा ..."
+  },
+  {
+    "sample_id": "val_031",
+    "query": "रगत बग्न रोक्न प्राथमिक उपचार कसरी गर्ने?",
+    "script_type": "np_devanagari",
+    "expected_intent": "first_aid_query",
+    "predicted_intent": "first_aid_query",
+    "is_correct": true,
+    "latency_ms": 10.86,
+    "live_response_snippet": "[प्राथमिक उपचार मार्गदर्शन]\n• **रक्तस्राव**: सफा कपडाले सिधै बलियो थिच्नुहोस्।\n• **पोलेको**: बग्ने चिसो पानीले १०-१५ मिनेटसम्म पखाल्नुहोस्। फोका नफोड्..."
+  },
+  {
+    "sample_id": "val_032",
+    "query": "रेडक्रस र सशस्त्र प्रहरीको आपतकालीन नम्बर के हो?",
+    "script_type": "np_devanagari",
+    "expected_intent": "emergency_contact_request",
+    "predicted_intent": "emergency_contact_request",
+    "is_correct": true,
+    "latency_ms": 10.32,
+    "live_response_snippet": "[नेपाल आपत्कालीन हटलाइनहरू]\n• **नेपाल प्रहरी**: १००\n• **सशस्त्र प्रहरी बल (APF)**: १११४\n• **एम्बुलेन्स (रेडक्रस)**: १०२\n• **NDRRMA (विपद् व्यवस्थापन)*..."
+  },
+  {
+    "sample_id": "val_033",
+    "query": "पहिराले गर्दा सडक पूर्ण रूपमा बन्द भएको छ",
+    "script_type": "np_devanagari",
+    "expected_intent": "road_blockage_report",
+    "predicted_intent": "road_blockage_report",
+    "is_correct": true,
+    "latency_ms": 34.98,
+    "live_response_snippet": "म विपद् व्यवस्थापन र आपतकालीन सुरक्षामा मात्र मद्दत गर्न सक्छु। कृपया आपतकालीन अवस्था स्पष्ट पार्नुहोस्। प्रहरी: १००, एम्बुलेन्स: १०२।"
+  },
+  {
+    "sample_id": "val_034",
+    "query": "के अझै पराकम्पहरू आउने सम्भावना छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "aftershock_information_query",
+    "predicted_intent": "aftershock_information_query",
+    "is_correct": true,
+    "latency_ms": 10.09,
+    "live_response_snippet": "म विपद् व्यवस्थापन र आपतकालीन सुरक्षामा मात्र मद्दत गर्न सक्छु। कृपया आपतकालीन अवस्था स्पष्ट पार्नुहोस्। प्रहरी: १००, एम्बुलेन्स: १०२।"
+  },
+  {
+    "sample_id": "val_035",
+    "query": "नेपालका प्रमुख आपतकालीन सम्पर्क नम्बरहरू र हटलाइन सेवाहरू के के हुन्?",
+    "script_type": "np_devanagari",
+    "expected_intent": "emergency_contact_request",
+    "predicted_intent": "emergency_contact_request",
+    "is_correct": true,
+    "latency_ms": 12.25,
+    "live_response_snippet": "[नेपाल आपत्कालीन हटलाइनहरू]\n• **नेपाल प्रहरी**: १००\n• **सशस्त्र प्रहरी बल (APF)**: १११४\n• **एम्बुलेन्स (रेडक्रस)**: १०२\n• **NDRRMA (विपद् व्यवस्थापन)*..."
+  },
+  {
+    "sample_id": "val_036",
+    "query": "विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?",
+    "script_type": "np_devanagari",
+    "expected_intent": "earthquake_info",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 10.95,
+    "live_response_snippet": "[भूकम्प सुरक्षा निर्देशिका]\n• **घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)**: घुँडा टेकेर बलियो टेबुलमुनि जानुहोस्, टाउको र गर्दन छोप्नुहोस्, कम्प..."
+  },
+  {
+    "sample_id": "val_037",
+    "query": "safe place kaha cha shelter chaincha family ko lagi",
+    "script_type": "np_romanized",
+    "expected_intent": "shelter_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 24.72,
+    "live_response_snippet": "I couldn't quite understand that in the context of an emergency. Could you clarify if you need help with an earthquake, flood, landslide, or medical e..."
+  },
+  {
+    "sample_id": "val_038",
+    "query": "khutta ma chot lagyo first aid kasari garne",
+    "script_type": "np_romanized",
+    "expected_intent": "first_aid_query",
+    "predicted_intent": "first_aid_query",
+    "is_correct": true,
+    "latency_ms": 28.84,
+    "live_response_snippet": "[PRATHAMIK UPACHAR (FIRST AID) JANKARI]\n• **RAGAT BAGDAI**: Safa kapada le sidhai baliyo thicnuhos.\n• **POLEKO**: Bagne chiso pani le 10-15 min pakhal..."
+  },
+  {
+    "sample_id": "val_039",
+    "query": "police number and emergency contact number k ho",
+    "script_type": "np_romanized",
+    "expected_intent": "emergency_contact_request",
+    "predicted_intent": "medical_emergency_request",
+    "is_correct": false,
+    "latency_ms": 9.51,
+    "live_response_snippet": "[NEPAL EMERGENCY HOTLINES]\n• **Nepal Police (नेपाल प्रहरी)**: 100\n• **Armed Police Force (APF)**: 1114\n• **Ambulance (एम्बुलेन्स)**: 102\n• **NDRRMA (व..."
+  },
+  {
+    "sample_id": "val_040",
+    "query": "ahile k garne ma pachi bhukampa thamiye pachi",
+    "script_type": "np_romanized",
+    "expected_intent": "aftershock_information_query",
+    "predicted_intent": "earthquake_occurring_report",
+    "is_correct": false,
+    "latency_ms": 9.96,
+    "live_response_snippet": "[BHUKAMPA SAFETY PROTOCOL]\n• **GHUNDA TEKA, OT LAGA, SAMATA (DROP, COVER, HOLD ON)**: Ghunda teker baliyo table muni januhos, tauko ra gardan chopnuho..."
+  }
+]
