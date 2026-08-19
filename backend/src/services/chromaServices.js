@@ -1,16 +1,23 @@
 // src/services/chromaService.js
 
 /**
- * Placeholder query function for ChromaDB vector store.
- * Returns a fallback string while ChromaDB embeddings are not yet populated.
+ * Queries the Python ChromaDB microservice for relevant context.
  */
 export const queryChromaCollection = async (userMessage) => {
   try {
-    // When ChromaDB is fully configured later:
-    // const results = await collection.query({ queryTexts: [userMessage], nResults: 2 });
-    // return results.documents.flat().join('\n---\n');
+    const response = await fetch('http://localhost:8001/retrieve', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: userMessage })
+    });
 
-    return "No additional static safety documents retrieved.";
+    if (response.ok) {
+      const data = await response.json();
+      return data.context || "No additional static safety documents retrieved.";
+    } else {
+      console.warn("ChromaDB Query Warning: Microservice returned status", response.status);
+      return "No additional static safety documents retrieved.";
+    }
   } catch (error) {
     console.warn("ChromaDB Query Warning:", error.message);
     return "No additional static safety documents retrieved.";
