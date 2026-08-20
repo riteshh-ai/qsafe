@@ -482,3 +482,29 @@ my uncle,medical_emergency_request,en
 फुपू,medical_emergency_request,ne
 मामा,family_member_missing,ne
 मामा,medical_emergency_request,ne
+shelter chaincha,shelter_request,
+historical earthquake,earthquake_info,
+past earthquake,earthquake_info,
+perform cpr,first_aid_query,
+go-bag,preparedness_tips_query,
+go bag,preparedness_tips_query,
+historical major earthquakes,earthquake_info,
+building safety,building_damage_check,
+मान्छे पुरिएका छन्,trapped_debris_report,
+भूकम्पहरूको इतिहास,earthquake_info,
+मान्छे पुरिएका,trapped_debris_report,ne
+पुरिएका छन्,trapped_debris_report,ne
+help ambulance fire,sos_help_request,en
+help fire ambulance,sos_help_request,en
+standard operating procedures ndrrma building safety,building_damage_check,en
+ndrrma building safety,building_damage_check,en
+sop ndrrma building,building_damage_check,en
+नजिकको सुरक्षित आश्रयस्थल कहाँ छ,shelter_request,ne
+आश्रयस्थल कहाँ छ,shelter_request,ne
+आश्रयस्थल,shelter_request,ne
+सुरक्षित आश्रयस्थल,shelter_request,ne
+shelter chaincha family ko lagi,shelter_request,ne_rom
+safe place kaha cha shelter,shelter_request,ne_rom
+ahile k garne pachi bhukampa thamiye pachi,aftershock_information_query,ne_rom
+bhukampa thamiye pachi k garne,aftershock_information_query,ne_rom
+pachi bhukampa thamiye,aftershock_information_query,ne_rom

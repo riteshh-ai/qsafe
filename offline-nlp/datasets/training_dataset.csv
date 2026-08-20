@@ -5148,3 +5148,39 @@ mero buwa debrimsuni thuniyo,trapped_debris_report,train
 कोही छ सहयोगग र्नुहोस् है,sos_help_request,train
 reunited with my gndmother now,family_reunification_status,train
 भक्तपुर मा घर भत्कियो,building_collapse_report,train
+How do I perform CPR on an unconscious earthquake victim?,first_aid_query,train
+What items should I include in an earthquake go-bag kit?,preparedness_tips_query,train
+What are the historical major earthquakes recorded in Nepal and their magnitudes?,earthquake_info,train
+"तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",medical_emergency_request,train
+विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?,earthquake_info,train
+मद्दत चाहियो मेरो घर भत्कियो र मान्छे पुरिएका छन्,trapped_debris_report,train
+घर भत्कियो र मान्छे पुरिएका छन्,trapped_debris_report,train
+मान्छे पुरिएका छन् भग्नावशेषमुनि,trapped_debris_report,train
+मलबामुनि मान्छे थिचिएका छन् मद्दत चाहियो,trapped_debris_report,train
+debris ma manchhe puriyako cha,trapped_debris_report,train
+people buried under rubble help,trapped_debris_report,train
+someone trapped under collapsed debris please rescue,trapped_debris_report,train
+खाना खायौ के गर्दै छौ,fallback_unclear,train
+के गर्दै छौ यतिखेर,fallback_unclear,train
+तिमी कसो छौ,fallback_unclear,train
+के छ हालखबर राम्रो छ,fallback_unclear,train
+khana khayau ke gardai chha,fallback_unclear,train
+what are the standard operating procedures recommended by ndrrma for building safety,building_damage_check,train
+ndrrma standard procedures for building safety inspection,building_damage_check,train
+ndrrma recommended building safety protocols,building_damage_check,train
+building safety procedures ndrrma guidelines,building_damage_check,train
+what sop does ndrrma recommend for structural safety,building_damage_check,train
+नजिकको सुरक्षित आश्रयस्थल कहाँ छ,shelter_request,train
+आश्रयस्थल कहाँ छ भूकम्प पछि,shelter_request,train
+आश्रयस्थल चाहियो परिवारको लागि,shelter_request,train
+कहाँ जाने भूकम्प पछि बस्न,shelter_request,train
+safe place kaha cha shelter chaincha family ko lagi,shelter_request,train
+shelter kahan milcha bhukampa pachi,shelter_request,train
+hami lai shelter chahincha kahaa janeparchha,shelter_request,train
+family ko lagi safe shelter kaha cha,shelter_request,train
+basa ko jagah chahiye bhukampa pachi,shelter_request,train
+ahile k garne ma pachi bhukampa thamiye pachi,aftershock_information_query,train
+bhukampa thamiye pachi k garna parchha,aftershock_information_query,train
+bhukampa pachi k garne kaha janey,aftershock_information_query,train
+earthquake pachi k garnu parcha safety ko lagi,aftershock_information_query,train
+after earthquake what to do k garne pachi,aftershock_information_query,train
