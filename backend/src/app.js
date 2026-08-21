@@ -21,6 +21,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use('/api/telemetry', telemetryRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/hazards', reportRoutes);
 app.use('/api/sos', sosRoutes);
 
 // Health check endpoint

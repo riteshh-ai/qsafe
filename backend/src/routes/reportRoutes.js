@@ -1,22 +1,23 @@
-// src/routes/reportRoutes.js
 import express from 'express';
+import {
+    syncReports,
+    getActiveHazards,
+    getAdminClusters,
+    verifyHazard
+} from '../controllers/reportController.js';
 
 const router = express.Router();
 
-// POST /api/reports - Submit a hazard or damage report
-router.post('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: 'Community report endpoint active.',
-  });
-});
+// Synchronize offline reports from client queue
+router.post('/sync', syncReports);
 
-// GET /api/reports - Fetch submitted reports
-router.get('/', (req, res) => {
-  res.status(200).json({
-    success: true,
-    reports: [],
-  });
-});
+// Fetch active verified hazards for Leaflet map overlay
+router.get('/active', getActiveHazards);
+
+// Admin: Get all hazard clusters
+router.get('/admin/clusters', getAdminClusters);
+
+// Admin: Approve or dismiss a hazard cluster
+router.post('/admin/verify', verifyHazard);
 
 export default router;

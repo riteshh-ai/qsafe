@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QSAFE Nepal - Earthquake Emergency Assistant</title>
-    <!-- External CSS Stylesheet -->
+    <title>QSAFE Nepal</title>
+    
+    <!-- Silence favicon 404 -->
+    <link rel="icon" href="data:,">
+
+    <!-- 1. Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+    
+    <!-- 2. Leaflet CSS (CDN) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 
-    <!-- Blurred Nature Background Overlay -->
-    <div class="bg-overlay"></div>
-
-    <!-- Main Floating Glass Terminal -->
     <div class="chat-wrapper">
+        <!-- Header -->
         <header>
             <h1>QSAFE Nepal</h1>
             <div class="header-controls">
@@ -22,7 +25,6 @@
                     <option value="en">EN</option>
                     <option value="ne">नेपाली</option>
                 </select>
-                
                 <div id="telemetry-badge" class="badge online">
                     <span class="dot"></span>
                     <span id="telemetry-txt">Online</span>
@@ -30,52 +32,75 @@
             </div>
         </header>
 
-        <!-- LIVE USGS SEISMIC TELEMETRY BANNER -->
-        <div id="seismic-banner" class="seismic-banner">
-            <span class="seismic-icon">📡</span>
-            <span id="seismic-txt">Checking live USGS seismic feed...</span>
+        <!-- Seismic Banner -->
+        <div id="seismic-banner" class="seismic-banner normal">
+            <span id="seismic-icon">📡</span>
+            <span id="seismic-txt">Loading seismic telemetry...</span>
         </div>
 
-        <!-- Earthquake Focused Quick Chips (Bilingual Targetable) -->
+        <!-- Quick Action Chips -->
         <div class="quick-chips">
-            <button class="chip-btn" id="chip-eq" data-query="bhuikampa">🚨 Earthquake Protocol</button>
-            <button class="chip-btn" id="chip-fa" data-query="first aid">🩹 First Aid</button>
-            <button class="chip-btn" id="chip-kit" data-query="emergency kit">🎒 Emergency Kit</button>
+            <button class="chip-btn" id="chip-eq">🚨 Earthquake Protocol</button>
+            <button class="chip-btn" id="chip-fa">💊 First Aid</button>
+            <button class="chip-btn" id="chip-kit">🎒 Emergency Kit</button>
+            <button class="chip-btn hazard-btn" id="chip-report" onclick="openReportModal()">⚠️ Report Hazard</button>
         </div>
 
-        <div class="chat-log" id="chat-log">
+        <!-- FLOATING TOP-RIGHT MAP WIDGET -->
+        <div id="map-widget" class="map-widget">
+            <div class="map-header">
+                <span>Live Seismic Map</span>
+                <button id="map-toggle-btn" title="Expand Map">🗖</button>
+            </div>
+            <div id="map"></div>
+        </div>
+
+        <!-- Chat Log Area -->
+        <div id="chat-log" class="chat-log">
             <div class="bubble sys">
                 Namaste. Initial interface framework initialized. Standing by for validation queries.
             </div>
         </div>
 
+        <!-- Input Bar -->
         <div class="input-bar">
             <input type="text" id="query-in" placeholder="Ask an emergency question..." autocomplete="off">
             <button id="dispatch-btn">Send</button>
         </div>
     </div>
 
-    <!-- Inline script to toggle Quick Chip labels dynamically on language select -->
-    <script>
-        const langSelectUI = document.getElementById('lang-select');
-        const chipEq = document.getElementById('chip-eq');
-        const chipFa = document.getElementById('chip-fa');
-        const chipKit = document.getElementById('chip-kit');
+    <!-- HAZARD REPORTING MODAL -->
+    <div id="report-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>🚨 Report Hazard / क्षति वा बाटो अवरोध</h3>
+                <button class="modal-close-btn" onclick="closeReportModal()">&times;</button>
+            </div>
 
-        if (langSelectUI) {
-            langSelectUI.addEventListener('change', (e) => {
-                const lang = e.target.value;
-                if (lang === 'ne') {
-                    chipEq.textContent = '🚨 भूकम्प निर्देशिका';
-                    chipFa.textContent = '🩹 प्राथमिक उपचार';
-                    chipKit.textContent = '🎒 आपतकालीन झोला';
-                } else {
-                    chipEq.textContent = '🚨 Earthquake Protocol';
-                    chipFa.textContent = '🩹 First Aid';
-                    chipKit.textContent = '🎒 Emergency Kit';
-                }
-            });
-        }
-    </script>
+            <div class="modal-body">
+                <label for="report-type">Hazard Type / प्रकार:</label>
+                <select id="report-type" class="form-control">
+                    <option value="road_block">🚧 Road Closure / बाटो बन्द</option>
+                    <option value="structural_damage">🏚️ Structural Damage / भवन क्षति</option>
+                    <option value="landslide">🪨 Landslide / पहिरो</option>
+                    <option value="other_hazard">⚠️ Other Danger / अन्य खतरा</option>
+                </select>
+
+                <label for="report-desc">Description / विवरण:</label>
+                <textarea id="report-desc" class="form-control" rows="3" placeholder="Describe the hazard (e.g. wall collapse, road blocked by landslide)..."></textarea>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeReportModal()">Cancel / रद्द गर्नुहोस्</button>
+                <button class="btn btn-danger" onclick="submitModalReport()">Submit / पठाउनुहोस्</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript Library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app.js"></script>
 </body>
 </html>
