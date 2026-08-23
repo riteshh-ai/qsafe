@@ -74,11 +74,11 @@ self.addEventListener('fetch', (event) => {
 
     // Bypass non-GET requests or backend API calls
     if (
-        event.request.method !== 'GET' || 
-        url.pathname.startsWith('/api/') || 
+        event.request.method !== 'GET' ||
+        url.pathname.startsWith('/api/') ||
         url.search.includes('cachebust')
     ) {
-        return; 
+        return;
     }
 
     // A. Dynamic Map Tile Caching Strategy
@@ -92,8 +92,8 @@ self.addEventListener('fetch', (event) => {
                         if (networkResponse && networkResponse.ok) {
                             cache.put(event.request, networkResponse.clone());
                         }
-                    }).catch(() => {});
-                    
+                    }).catch(() => { });
+
                     return cachedResponse;
                 }
 
@@ -115,7 +115,7 @@ self.addEventListener('fetch', (event) => {
     const isAllowedExternal = allowedHosts.some(host => url.hostname.includes(host));
 
     if (!url.origin.includes(self.location.origin) && !isAllowedExternal) {
-        return; 
+        return;
     }
 
     // C. Cache-First Strategy for Internal UI Shell & Static Assets

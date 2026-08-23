@@ -59,7 +59,7 @@ function initializeMap() {
         zoomControl: false,
         attributionControl: false
     }).setView([27.7172, 85.3240], 13);
-    
+
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
     // Leaflet Tile Layer (With OSM Fallback)
@@ -175,7 +175,7 @@ function latLngToTileXY(lat, lng, zoom) {
 
 async function downloadOfflineMapRegion(centerLat, centerLng, radiusKm = 10) {
     const TILE_CACHE_NAME = 'qsafe-map-tiles-v1';
-    
+
     if (downloadPromptElement) {
         downloadPromptElement.innerHTML = `
             <div style="font-weight:bold; margin-bottom:4px;">⏳ Downloading 10 km Offline Map...</div>
@@ -409,8 +409,8 @@ function startLiveLocationTracking() {
                     updateRadarHUD(userLat, userLng, currentTargetZone);
                 }
 
-                const distanceMoved = lastRoutedCoords 
-                    ? getDistanceFromLatLonInKm(lastRoutedCoords.lat, lastRoutedCoords.lng, userLat, userLng) 
+                const distanceMoved = lastRoutedCoords
+                    ? getDistanceFromLatLonInKm(lastRoutedCoords.lat, lastRoutedCoords.lng, userLat, userLng)
                     : Infinity;
 
                 if (!lastRoutedCoords || distanceMoved > 0.015) {
@@ -441,7 +441,7 @@ async function routeToPoint(destLat, destLng) {
     try {
         const res = await fetch(osrmUrl);
         const data = await res.json();
-        
+
         if (data.routes && data.routes.length > 0) {
             const coords = data.routes[0].geometry.coordinates.map(c => [c[1], c[0]]);
             routingLine = L.polyline(coords, { color: '#2563eb', weight: 6, opacity: 0.85 }).addTo(map);
@@ -462,7 +462,7 @@ async function routeToSelectedZone(zone) {
 
     currentTargetZone = zone;
     updateRadarHUD(userLat, userLng, zone);
-    
+
     // Utilize the hazard-aware unified router
     await routeToPoint(zone.lat, zone.lng);
 
@@ -470,7 +470,7 @@ async function routeToSelectedZone(zone) {
     const msg = currentLang === 'नेपाली' || currentLang === 'np' || currentLang === 'ne'
         ? `📍 **चयनित मार्गनिर्देशन:** तपाईंले छान्नु भएको सुरक्षित खुला चौर **${zone.name}** तर्फ जाने बाटो नक्सामा देखाइएको छ।`
         : `📍 **Selected Navigation:** Road path to your chosen safe area **${zone.name}** is now displayed on the map.`;
-    
+
     appendMessageToUI(msg, 'sys', 'QSAFE Manual Route Selector');
 }
 
@@ -530,10 +530,10 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     const R = 6371;
     const dLat = (lat2 - lat1) * (Math.PI / 180);
     const dLon = (lon2 - lon1) * (Math.PI / 180);
-    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * 
-              Math.sin(dLon/2) * Math.sin(dLon/2);
-    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))); 
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 }
 
 // =========================================================================
@@ -588,7 +588,7 @@ async function syncPendingReports() {
         const store = tx.objectStore(STORE_REPORTS);
         const index = store.index('synced');
         const req = index.getAll(0);
-        
+
         req.onsuccess = async () => {
             const unsynced = req.result;
             if (!unsynced || unsynced.length === 0) return;
@@ -633,8 +633,8 @@ function renderVerifiedHazards(hazards) {
         let iconSymbol = '⚠️';
         let label = 'Hazard Zone / खतरा क्षेत्र';
 
-        if (hazard.type === 'road_block') { iconSymbol = '🚧'; label = 'Road Closed / बाटो बन्द'; } 
-        else if (hazard.type === 'structural_damage') { iconSymbol = '🏚️'; label = 'Structural Damage / भवन क्षति'; } 
+        if (hazard.type === 'road_block') { iconSymbol = '🚧'; label = 'Road Closed / बाटो बन्द'; }
+        else if (hazard.type === 'structural_damage') { iconSymbol = '🏚️'; label = 'Structural Damage / भवन क्षति'; }
         else if (hazard.type === 'landslide') { iconSymbol = '🪨'; label = 'Landslide / पहिरो'; }
 
         L.marker([hazard.lat, hazard.lng], {
@@ -676,10 +676,10 @@ function closeReportModal() {
 function submitModalReport() {
     const typeSelect = document.getElementById('report-type');
     const descInput = document.getElementById('report-desc');
-    
+
     const type = typeSelect ? typeSelect.value : 'other_hazard';
     const desc = descInput ? descInput.value.trim() : '';
-    
+
     if (!desc) {
         alert("Please provide a description / विवरण लेख्नुहोस्");
         return;
@@ -901,7 +901,7 @@ async function handleUserIntent() {
 
     const greetings = ['hello', 'hi', 'namaste', 'namaskar', 'नमस्ते', 'नमस्कार', 'hey'];
     if (greetings.includes(rawQuery.toLowerCase())) {
-        const greetingMsg = currentLang === 'np' 
+        const greetingMsg = currentLang === 'np'
             ? "नमस्ते! म QSAFE नेपाल अफलाइन आपत्कालीन सहायक हुँ। म तपाईंलाई भूकम्प सुरक्षा, प्राथमिक उपचार वा आपत्कालीन झोला सम्बन्धी जानकारी दिन सक्छु।"
             : "Namaste! I am QSAFE Nepal's emergency assistant. How can I assist you with disaster preparedness or safety guidance today?";
         appendMessageToUI(greetingMsg, 'sys', `Local Storage Fallback (${currentLang.toUpperCase()})`);
@@ -951,7 +951,7 @@ document.querySelectorAll('.chip-btn').forEach(chip => {
             handleUserIntent();
         }
     });
-}); 
+});
 
 // Ensure Map Initializations run cleanly on load
 if (document.readyState === 'loading') {
