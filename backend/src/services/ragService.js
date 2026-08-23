@@ -11,6 +11,86 @@ import {
 } from '../prompts.js';
 
 /**
+ * Intent-to-Response Mapping Table.
+ *
+ * Exported (and hoisted to module scope) so the response-routing regression
+ * suite can assert its invariants directly — a mapping table that no test can
+ * see is how `preparedness_tips_query` silently pointed at the earthquake card.
+ *
+ * Intents deliberately absent from this table fall through to the clarification
+ * path rather than being forced into the nearest disaster card. See
+ * UNMAPPED_BY_DESIGN below.
+ */
+export const INTENT_RESPONSE_MAP = {
+  // Greetings
+  'greeting': 'greetings',
+
+  // Critical SOS / Trapped
+  // Only an explicit trapped/debris report gets the trapped_sos card. A bare
+  // "help"/"emergency" (sos_help_request) is an unqualified distress signal —
+  // answering it with "tap on pipes, conserve oxygen, do not shout" invents a
+  // buried-alive scenario and gives advice that is wrong for a caller who is
+  // not trapped. Route it to hotlines, which is actionable without fabricating.
+  'trapped_debris_report': 'trapped_sos',
+  'sos_help_request': 'contacts',
+
+  // Fire
+  'fire_incident_report': 'fire',
+  'gas_leak_report': 'fire',
+
+  // Building Collapse / Structural Damage
+  'building_collapse_report': 'building_collapse',
+  'building_damage_check': 'building_collapse',
+
+  // Earthquake
+  'earthquake_occurring_report': 'earthquake',
+  'aftershock_information_query': 'earthquake',
+
+  // Landslide
+  'road_blockage_report': 'landslide',
+
+  // Medical / First Aid
+  'first_aid_query': 'first_aid',
+  'medical_emergency_request': 'first_aid',
+  'injury_report': 'first_aid',
+
+  // Shelter, Safe Location & Relief Supplies
+  'shelter_request': 'shelter',
+  'safe_location_query': 'shelter',
+  'evacuation_guidance_query': 'shelter',
+  // food_water_request is an active request for relief NOW, not a packing
+  // list. The shelter card carries relief-camp and Red Cross registration.
+  'food_water_request': 'shelter',
+
+  // Emergency Kit / Preparedness (Go-Bag checklist)
+  'preparedness_tips_query': 'emergency_kit',
+
+  // Missing Persons → contacts (closest available)
+  'family_member_missing': 'contacts',
+  'family_reunification_status': 'contacts',
+
+  // Emergency Contacts
+  'emergency_contact_request': 'contacts',
+  'power_outage_report': 'contacts',
+};
+
+/**
+ * Taxonomy intents intentionally left out of INTENT_RESPONSE_MAP.
+ *
+ * `status_check_general` ("what should I do", "what is the current situation")
+ * carries no disaster of its own. Pointing it at any specific protocol card
+ * would be exactly the false-certainty failure this table exists to prevent, so
+ * it falls through to the clarification fallback instead.
+ *
+ * `fallback_unclear` and `goodbye_thanks` are handled explicitly below.
+ */
+export const UNMAPPED_BY_DESIGN = new Set([
+  'status_check_general',
+  'fallback_unclear',
+  'goodbye_thanks',
+]);
+
+/**
  * Intelligent Rule-Based Fallback Safety Engine
  * Maps NLP classified intents to structured safety protocol responses.
  * Used when Gemini API is unconfigured, off-topic, or offline.
@@ -19,59 +99,6 @@ function getFallbackSafetyResponse(query, langState = 'en', nlpResult = null) {
   // If we have a successful NLP microservice classification (not offline fallback)
   if (nlpResult && nlpResult.source !== 'offline_fallback') {
     const intent = nlpResult.intent;
-
-    // Intent-to-Response Mapping Table (all 25 NLP intents covered)
-    const INTENT_RESPONSE_MAP = {
-      // Greetings
-      'greeting': 'greetings',
-
-      // Critical SOS / Trapped
-      'trapped_debris_report': 'trapped_sos',
-      'sos_help_request': 'trapped_sos',
-
-      // Fire
-      'fire_incident_report': 'fire',
-      'gas_leak_report': 'fire',
-
-      // Building Collapse / Structural Damage
-      'building_collapse_report': 'building_collapse',
-      'building_damage_check': 'building_collapse',
-
-      // Earthquake
-      'earthquake_occurring_report': 'earthquake',
-      'aftershock_information_query': 'earthquake',
-      'preparedness_tips_query': 'earthquake',
-
-      // Landslide
-      'landslide_hazard_query': 'landslide',
-      'landslide_occurring_report': 'landslide',
-      'road_blockage_report': 'landslide',
-
-      // Flood
-      'flood_occurring_report': 'flood',
-      'river_level_query': 'flood',
-
-      // Medical / First Aid
-      'first_aid_query': 'first_aid',
-      'medical_emergency_request': 'first_aid',
-      'injury_report': 'first_aid',
-
-      // Shelter & Safe Location
-      'shelter_request': 'shelter',
-      'safe_location_query': 'shelter',
-      'evacuation_guidance_query': 'shelter',
-
-      // Emergency Kit / Supplies
-      'food_water_request': 'emergency_kit',
-
-      // Missing Persons → contacts (closest available)
-      'family_member_missing': 'contacts',
-      'family_reunification_status': 'contacts',
-
-      // Emergency Contacts
-      'emergency_contact_request': 'contacts',
-      'power_outage_report': 'contacts',
-    };
 
     // Lookup the mapped response category
     const responseCategory = INTENT_RESPONSE_MAP[intent];
@@ -190,13 +217,27 @@ export const generateRAGResponse = async (userMessage, requestedLanguage = null)
       languageDirective = `CRITICAL LANGUAGE REQUIREMENT: You MUST respond EXCLUSIVELY in ENGLISH. Do not output Devanagari script.`;
     }
 
-    // Check off-topic check: Must be related to safety or emergency
+    // 6b. Off-topic gate.
+    //
+    // The intent taxonomy IS the domain definition: 24 of the 25 trained intents
+    // are in-domain emergency intents, and `fallback_unclear` is the one the
+    // model uses to say "this is not an emergency query". So when the offline NLP
+    // microservice actually answered, its verdict is the authoritative one.
+    //
+    // Previously this branch re-derived topicality from the keyword regex below
+    // and ANDed it with the classifier, which silently vetoed correctly
+    // classified intents whose vocabulary simply is not in the regex — e.g.
+    // power_outage_report ("no electricity since morning", 0.98),
+    // safe_location_query ("where is the nearest safe zone", 0.98),
+    // shelter_request, evacuation_guidance_query, aftershock_information_query,
+    // building_damage_check, and Devanagari preparedness ("आपतकालीन किट", 1.00)
+    // all returned the off-topic card. The regex is kept only for the degraded
+    // path, where the microservice is unreachable and we have nothing better.
     let isEmergencyRelated = false;
     if (nlpResult.source === 'offline_fallback') {
       isEmergencyRelated = /(earthquake|quake|tremor|bhuikampa|bhukamp|भूकम्प|कम्पन्|flood|water|baadhi|badi|बाढी|पानी|landslide|mudslide|pahiro|पहिरो|first aid|bleed|injury|burn|fracture|प्राथमिक|उपचार|रगत|घाइते|prathamik|upachar|kit|bag|supplies|jhola|झोला|सामग्री|fire|aago|आगो|आगलागी|दमकल|contact|number|phone|police|ambulance|nambar|नम्बर|प्रहरी|सम्पर्क|sos|help|madat|sahayata|मद्दत|सहयोग|बचाउ|collapse|debris|trapped|bhatkieko|भवन|भत्क|hi|hello|namaste|namaskar|hey|नमस्ते|नमस्कार)/i.test(cleanMsg);
     } else {
-      const hasEmergencyKeywords = /(earthquake|quake|tremor|bhuikampa|bhukamp|भूकम्प|कम्पन्|flood|water|baadhi|badi|बाढी|पानी|landslide|mudslide|pahiro|पहिरो|first aid|bleed|injury|burn|fracture|प्राथमिक|उपचार|रगत|घाइते|prathamik|upachar|kit|bag|supplies|jhola|झोला|सामग्री|fire|aago|आगो|आगलागी|दमकल|contact|number|phone|police|ambulance|nambar|नम्बर|प्रहरी|सम्पर्क|sos|help|madat|sahayata|मद्दत|सहयोग|बचाउ|collapse|debris|trapped|bhatkieko|भवन|भत्क|hi|hello|namaste|namaskar|hey|नमस्ते|नमस्कार)/i.test(cleanMsg);
-      isEmergencyRelated = hasEmergencyKeywords && nlpResult.intent !== 'fallback_unclear';
+      isEmergencyRelated = nlpResult.intent !== 'fallback_unclear';
     }
 
     if (!isEmergencyRelated) {

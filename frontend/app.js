@@ -431,7 +431,11 @@ const INTENT_RULES = [
     { intent: 'greeting', keywords: ['hi', 'hello', 'namaste', 'namaskar', 'hey', 'नमस्ते', 'नमस्कार'] },
     { intent: 'goodbye_thanks', keywords: ['bye', 'thank you', 'thanks', 'dhanyabad', 'धन्यवाद', 'बिदा'] },
     { intent: 'sos_help_request', keywords: ['help', 'help me', 'sos', 'bachau', 'मलाई बचाउ', 'मद्दत', 'madat', 'sahayata'] },
-    { intent: 'earthquake_occurring_report', keywords: ['earthquake now', 'bhukampa aayo', 'घर हल्लियो', 'bhuikampa', 'shake', 'भूकम्प', 'कम्पन्'] },
+    // Preparedness is matched before the generic earthquake rule so that
+    // "earthquake go bag" resolves to the Go-Bag checklist rather than to
+    // Drop-Cover-Hold-On, matching keywords.csv on the backend.
+    { intent: 'preparedness_tips_query', keywords: ['how to prepare', 'गो-ब्याग कसरी', 'emergency kit ma k k', 'emergency kit', 'go bag', 'go-bag', 'preparedness', 'prepare', 'आपतकालीन किट'] },
+    { intent: 'earthquake_occurring_report', keywords: ['earthquake', 'earthquake now', 'bhukampa aayo', 'घर हल्लियो', 'bhuikampa', 'bhukampa', 'shake', 'भूकम्प', 'कम्पन्'] },
     { intent: 'trapped_debris_report', keywords: ['trapped', 'under rubble', 'under debris', 'pinned', 'buried', 'crushed', 'stuck inside', 'पर्खालमुनि', 'थुनिएँ', 'थुनिएको', 'च्यापिएको', 'भग्नावशेष', 'thuniyo', 'thunieko', 'chyapieko', 'debris muni'] },
     { intent: 'medical_emergency_request', keywords: ['need an ambulance', 'एम्बुलेन्स चाहियो', 'ambulance chaincha', 'unconscious', 'not breathing', 'heart attack', 'बेहोस'] },
     { intent: 'injury_report', keywords: ['i am injured', 'मलाई चोट लागेको छ', 'khutta ma chot', 'घाउ', 'चोट'] },
@@ -450,15 +454,36 @@ const INTENT_RULES = [
     { intent: 'emergency_contact_request', keywords: ['contact', 'number', 'phone', 'hotline', 'police number', 'ambulance number', 'सम्पर्क', 'नम्बर', 'हटलाइन'] },
     { intent: 'power_outage_report', keywords: ['power outage', 'बिजुली गएको छ', 'power cut', 'no electricity', 'line gayo'] },
     { intent: 'road_blockage_report', keywords: ['road blocked', 'सडक बन्द', 'road block bhayo', 'bato banda'] },
-    { intent: 'preparedness_tips_query', keywords: ['how to prepare', 'गो-ब्याग कसरी', 'emergency kit ma k k', 'go bag', 'prepare'] },
     { intent: 'status_check_general', keywords: ['what should i do', 'अहिले मैले के गर्नुपर्छ', 'ahile k garne', 'what now'] },
     { intent: 'fallback_unclear', keywords: [] }
 ];
 
+// Latin keywords must match on word boundaries. Plain substring matching made
+// the 2-character 'hi' in the greeting rule swallow real distress reports:
+// "my child is trapped", "this building is shaking" and "which way to evacuate"
+// all matched greeting (c-hi-ld / t-hi-s / w-hi-ch) and, because greeting is
+// first in INTENT_RULES, returned "Namaste! How can I assist you?" offline.
+// Devanagari keeps containment matching — JS \b is ASCII-only and would never
+// fire around Devanagari codepoints.
+const LATIN_KEYWORD = /^[a-z0-9\s'-]+$/;
+
+function keywordMatches(haystack, keyword) {
+    const k = keyword.toLowerCase().trim();
+    if (!k) return false;
+    if (!LATIN_KEYWORD.test(k)) return haystack.includes(k);
+    const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Allow a trailing plural so "tent" still matches "we need tents" and
+    // "contact" matches "contacts". Only for keywords of 4+ characters: with a
+    // shorter cutoff the greeting rule's 'hi' would grow to 'his' and start
+    // hijacking "his house collapsed".
+    const plural = k.length >= 4 ? 's?' : '';
+    return new RegExp(`(?<![a-z0-9])${escaped}${plural}(?![a-z0-9])`, 'i').test(haystack);
+}
+
 function matchLocalIntent(query) {
     const q = query.toLowerCase().trim();
     for (const rule of INTENT_RULES) {
-        if (rule.keywords.some(keyword => q.includes(keyword.toLowerCase()))) {
+        if (rule.keywords.some(keyword => keywordMatches(q, keyword))) {
             return rule.intent;
         }
     }
