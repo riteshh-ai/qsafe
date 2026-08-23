@@ -1,9 +1,9 @@
 // =========================================================================
-// QSAFE Nepal Service Worker — v3
+// QSAFE Nepal Service Worker — v4
 // Bump CACHE_NAME whenever static assets change.
-// SW v3 evicts the old corrupt v2 cache on activation.
+// SW v4 evicts the old corrupt v3 cache on activation.
 // =========================================================================
-const CACHE_NAME = 'qsafe-nepal-v3';
+const CACHE_NAME = 'qsafe-nepal-v4';
 
 const ASSETS_TO_CACHE = [
     './',

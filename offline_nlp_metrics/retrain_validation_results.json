@@ -1,0 +1,37 @@
+{
+  "original_validation_size": 746,
+  "new_validation_size": 1030,
+  "training_metrics": {
+    "accuracy": 0.9932038834951457,
+    "precision": 0.9941787842907698,
+    "recall": 0.9920257589201689,
+    "f1": 0.9928949982576792,
+    "num_samples_train": 4119,
+    "num_samples_val": 1030,
+    "num_features": 15000
+  },
+  "evaluation_metrics": {
+    "total_samples": 1030,
+    "correct_predictions": 1023,
+    " errors": 7,
+    "accuracy": 0.9932038834951457,
+    "precision_macro": 0.9936077481840193,
+    "recall_macro": 0.9921185232986476,
+    "f1_macro": 0.9925175211606985
+  },
+  "comparison": {
+    "original_accuracy": 0.9973190348525469,
+    "new_accuracy": 0.9932038834951457,
+    "accuracy_diff": -0.004115151357401259,
+    "original_precision": 0.9972413793103447,
+    "new_precision": 0.9936077481840193,
+    "precision_diff": -0.0036336311263254206,
+    "original_recall": 0.9970389610389612,
+    "new_recall": 0.9921185232986476,
+    "recall_diff": -0.004920437740313588,
+    "original_f1": 0.9970614858683615,
+    "new_f1": 0.9925175211606985,
+    "f1_diff": -0.004543964707663051
+  },
+  "conclusion": "STABLE"
+}

@@ -1,0 +1,1104 @@
+text,intent
+hello,greeting
+namaste,greeting
+hey there,greeting
+good evening,greeting
+hi bhai,greeting
+namaste k cha,greeting
+hi there,greeting
+namaste qsafe,greeting
+namaste i need information,greeting
+hi qsafe nepal,greeting
+hello please respond,greeting
+namaste tapaii,greeting
+hello assistance,greeting
+namaste support,greeting
+namaste bhukampa,greeting
+namaste tapaii k cha,greeting
+namaste dhanyabad,greeting
+hello available,greeting
+namaste online,greeting
+hi responding,greeting
+hey standing by,greeting
+hi available now,greeting
+namaste yeta chan,greeting
+hey can assist,greeting
+namaste sahayata garna sakincha,greeting
+hi need info,greeting
+hello need information,greeting
+hello have query,greeting
+hi want to ask,greeting
+hello want to know,greeting
+hey curious,greeting
+hi interested,greeting
+hello concerned,greeting
+hi scared,greeting
+hello afraid,greeting
+namaste dara,greeting
+hello critical,greeting
+namaste kritik,greeting
+hello right now,greeting
+hello quickly,greeting
+namaste jaldi,greeting
+hi fast,greeting
+dhanyabad,goodbye_thanks
+thanks a lot,goodbye_thanks
+dhanyabad dherai,goodbye_thanks
+thank you very much,goodbye_thanks
+dhanyabad sahayata ko lagi,goodbye_thanks
+thanks for everything,goodbye_thanks
+dhanyabad tapaimko sahayata ko lagi,goodbye_thanks
+dhanyawaad sahayata ko lagi,goodbye_thanks
+dhanyabad jankari ko lagi,goodbye_thanks
+thank you for listening,goodbye_thanks
+bye,goodbye_thanks
+good bye,goodbye_thanks
+bye bye,goodbye_thanks
+bye qsafe,goodbye_thanks
+goodbye now,goodbye_thanks
+bye now,goodbye_thanks
+goodbye for now,goodbye_thanks
+bye for now,goodbye_thanks
+goodbye see you,goodbye_thanks
+bye see you,goodbye_thanks
+goodbye take care,goodbye_thanks
+bye take care,goodbye_thanks
+goodbye be safe,goodbye_thanks
+bye be safe,goodbye_thanks
+ok bye,goodbye_thanks
+okay bye,goodbye_thanks
+ok bye bye,goodbye_thanks
+okay bye bye,goodbye_thanks
+ok thank you bye,goodbye_thanks
+okay thank you bye,goodbye_thanks
+that's it bye,goodbye_thanks
+that's it goodbye,goodbye_thanks
+dhanyawaad sahayata ko lagi please,goodbye_thanks
+goodbye take care qsafe,goodbye_thanks
+help ok thank you bye,goodbye_thanks
+help dhanyabad,goodbye_thanks
+thanks for everything qsafe,goodbye_thanks
+goodbye see you qsafe,goodbye_thanks
+dhanyabad tapaimko sahayata ko lagi help,goodbye_thanks
+dhanyabad sahayata ko lagi please,goodbye_thanks
+qsafe that's it bye,goodbye_thanks
+dhanyabad dherai urgent,goodbye_thanks
+thank you very much now,goodbye_thanks
+okay bye bye now,goodbye_thanks
+help,sos_help_request
+help me,sos_help_request
+help please,sos_help_request
+help pls,sos_help_request
+sos,sos_help_request
+please help me,sos_help_request
+malai bachau please,sos_help_request
+malai sahayata chaincha,sos_help_request
+malai help chaincha,sos_help_request
+rescue me,sos_help_request
+please save me,sos_help_request
+please rescue me,sos_help_request
+save me please,sos_help_request
+rescue me now,sos_help_request
+sos sos,sos_help_request
+sos sos sos,sos_help_request
+help help,sos_help_request
+help help help,sos_help_request
+someone help me,sos_help_request
+everybody help me,sos_help_request
+please someone help me,sos_help_request
+sos rescue me,sos_help_request
+someone save me,sos_help_request
+anyone save me,sos_help_request
+everybody save me,sos_help_request
+please someone save me,sos_help_request
+everybody rescue me,sos_help_request
+nepal sos help me,sos_help_request
+everybody rescue me now,sos_help_request
+qsafe malai help chaincha,sos_help_request
+please help me now,sos_help_request
+rescue me now please,sos_help_request
+help help help qsafe,sos_help_request
+nepal please save me,sos_help_request
+sos save me qsafe,sos_help_request
+someone help me please,sos_help_request
+qsafe someone rescue me,sos_help_request
+malai help chaincha nepal,sos_help_request
+nepal malai sahayata chaincha,sos_help_request
+anyone save me now,sos_help_request
+emergency malai sahayata chaincha,sos_help_request
+sos rescue me help,sos_help_request
+help please someone save me,sos_help_request
+please help help help,sos_help_request
+earthquake now,earthquake_occurring_report
+earthquake happening now,earthquake_occurring_report
+earthquake occurring,earthquake_occurring_report
+bhukampa chal raha hai,earthquake_occurring_report
+घर हल्लियो,earthquake_occurring_report
+भूकम्प आयो,earthquake_occurring_report
+भूकम्प चल रहा है,earthquake_occurring_report
+ground moving,earthquake_occurring_report
+earthquake started,earthquake_occurring_report
+earthquake began,earthquake_occurring_report
+earthquake just started,earthquake_occurring_report
+bhukampa suru bhayo,earthquake_occurring_report
+bhukampa shuru hua,earthquake_occurring_report
+bhukampa mehsoos hua,earthquake_occurring_report
+major earthquake,earthquake_occurring_report
+bhukampa kathin,earthquake_occurring_report
+bhukampa gambhir,earthquake_occurring_report
+bhukampa sakht,earthquake_occurring_report
+light earthquake,earthquake_occurring_report
+small earthquake,earthquake_occurring_report
+minor earthquake,earthquake_occurring_report
+earthquake magnitude,earthquake_occurring_report
+bhukampa magnitude,earthquake_occurring_report
+bhukampa kitna bada,earthquake_occurring_report
+bhukampa kitna kathin,earthquake_occurring_report
+earthquake duration,earthquake_occurring_report
+how long earthquake,earthquake_occurring_report
+earthquake how long,earthquake_occurring_report
+earthquake stopped,earthquake_occurring_report
+earthquake ended,earthquake_occurring_report
+earthquake finished,earthquake_occurring_report
+bhukampa ruk gaya,earthquake_occurring_report
+aftershock coming,earthquake_occurring_report
+earthquake again,earthquake_occurring_report
+bhukampa phir,earthquake_occurring_report
+earthquake magnitude please,earthquake_occurring_report
+help earthquake began,earthquake_occurring_report
+bhukampa aayo cha nepal,earthquake_occurring_report
+qsafe bhukampa suru bhayo,earthquake_occurring_report
+घर हल्लियो urgent,earthquake_occurring_report
+earthquake intensity emergency,earthquake_occurring_report
+help major earthquake,earthquake_occurring_report
+emergency earthquake happening now,earthquake_occurring_report
+emergency earth shaking,earthquake_occurring_report
+qsafe earthquake over,earthquake_occurring_report
+qsafe bhukampa kathin,earthquake_occurring_report
+bhukampa sakht urgent,earthquake_occurring_report
+bhukampa suru bhayo help,earthquake_occurring_report
+pinned under wall,trapped_debris_report
+पर्खालमुनि थुनिएँ,trapped_debris_report
+इमारतमुनि दबिएको,trapped_debris_report
+debris muni thuniyo,trapped_debris_report
+bhagnaveshesh muni fasko,trapped_debris_report
+imarat muni dabieko,trapped_debris_report
+can't get out,trapped_debris_report
+trapped inside,trapped_debris_report
+buried alive,trapped_debris_report
+बाहिर निस्कन सक्दिन,trapped_debris_report
+यहाँ फसेको,trapped_debris_report
+निस्कन सकिन,trapped_debris_report
+भित्रै फसेको,trapped_debris_report
+bahar niskna sakdina,trapped_debris_report
+bhitrai fasko,trapped_debris_report
+jivit dabieko,trapped_debris_report
+stuck under collapsed building,trapped_debris_report
+need rescue,trapped_debris_report
+malai uttaro,trapped_debris_report
+bachau malai,trapped_debris_report
+uttaro malai,trapped_debris_report
+trapped in earthquake,trapped_debris_report
+buried in rubble,trapped_debris_report
+भग्नावशेषले थुनिएको,trapped_debris_report
+bhukamppachi fasko,trapped_debris_report
+malinma dabieko,trapped_debris_report
+तत्काल सहायता,trapped_debris_report
+tatkal bachav chaincha,trapped_debris_report
+aapatkalin nikasi,trapped_debris_report
+tatkal sahayata,trapped_debris_report
+children stuck,trapped_debris_report
+परिवार फसेको,trapped_debris_report
+बच्चा फसेको,trapped_debris_report
+वृद्ध दबिएका,trapped_debris_report
+help bachau malai,trapped_debris_report
+help bahar niskna sakdina,trapped_debris_report
+बच्चा फसेको emergency,trapped_debris_report
+help भित्रै फसेको,trapped_debris_report
+इमारतमुनि दबिएको please,trapped_debris_report
+qsafe debris muni thuniyo,trapped_debris_report
+help children stuck,trapped_debris_report
+bhitrai fasko qsafe,trapped_debris_report
+trapped inside please,trapped_debris_report
+stuck under collapsed building emergency,trapped_debris_report
+need ambulance,medical_emergency_request
+call ambulance,medical_emergency_request
+ambulance please,medical_emergency_request
+emergency medical,medical_emergency_request
+एम्बुलेन्स चाहियो,medical_emergency_request
+एम्बुलेन्स बोलाउ,medical_emergency_request
+आपतकालीन चिकित्सा,medical_emergency_request
+ambulance chaincha,medical_emergency_request
+ambulance kripaya,medical_emergency_request
+hospital needed,medical_emergency_request
+अस्पताल चाहिन्छ,medical_emergency_request
+aspatal chaincha,medical_emergency_request
+tatkal chikitsa sahayata,medical_emergency_request
+not breathing,medical_emergency_request
+person collapsed,medical_emergency_request
+बेहोश व्यक्ति,medical_emergency_request
+सास फेर्न नसक्ने,medical_emergency_request
+व्यक्ति ढलेको,medical_emergency_request
+behosh vyakti,medical_emergency_request
+sas pherna nasakne,medical_emergency_request
+nadi nabhaeko,medical_emergency_request
+heart attack,medical_emergency_request
+heart failure,medical_emergency_request
+हृदयाघात,medical_emergency_request
+हृदय रोकिएको,medical_emergency_request
+severe bleeding,medical_emergency_request
+गम्भीर रगत बग्दै,medical_emergency_request
+भारी रगत बग्दै,medical_emergency_request
+रगत रोक्नु पर्छ,medical_emergency_request
+bhari ragat bagdai,medical_emergency_request
+bone sticking out,medical_emergency_request
+had bahar niskieko,medical_emergency_request
+nepal ambulance chaincha,medical_emergency_request
+एम्बुलेन्स चाहियो nepal,medical_emergency_request
+emergency vyakti dhaleko,medical_emergency_request
+bone sticking out please,medical_emergency_request
+गम्भीर रगत बग्दै please,medical_emergency_request
+रगत रोक्नु पर्छ now,medical_emergency_request
+please tatkal chikitsa sahayata,medical_emergency_request
+fracture nepal,medical_emergency_request
+building on fire,fire_incident_report
+house burning,fire_incident_report
+आगो,fire_incident_report
+imaratma aago,fire_incident_report
+ghar baldai,fire_incident_report
+smell smoke,fire_incident_report
+धुवाँको गन्ध,fire_incident_report
+jwala dekincha,fire_incident_report
+need fire brigade,fire_incident_report
+fire truck needed,fire_incident_report
+अग्निशमन बोलाउ,fire_incident_report
+अग्निशमन गाडी,fire_incident_report
+agnishman bolau,fire_incident_report
+agnishman gadi,fire_incident_report
+people trapped in fire,fire_incident_report
+can't escape fire,fire_incident_report
+आगोबाट बाहिर निस्कन सकिदैन,fire_incident_report
+आगोले निस्कने बाट रोक्यो,fire_incident_report
+agoma faskaka manis,fire_incident_report
+agobata bahar niskna sakidaina,fire_incident_report
+agole niskne bata rokyo,fire_incident_report
+ग्यास विस्फोट,fire_incident_report
+gas visphot,fire_incident_report
+qsafe gas aapatkala,fire_incident_report
+ग्यासको गन्ध please,fire_incident_report
+imaratma aago urgent,fire_incident_report
+please need fire brigade,fire_incident_report
+smell gas help,fire_incident_report
+धुवाँको गन्ध urgent,fire_incident_report
+agoma faskaka manis qsafe,fire_incident_report
+help smell gas,fire_incident_report
+आगोबाट बाहिर निस्कन सकिदैन qsafe,fire_incident_report
+agole niskne bata rokyo now,fire_incident_report
+help ग्यासको गन्ध,fire_incident_report
+gas leak emergency,fire_incident_report
+see fire emergency,fire_incident_report
+emergency fire truck needed,fire_incident_report
+agnishman bolau now,fire_incident_report
+gas odor,gas_leak_report
+rotten egg smell,gas_leak_report
+gas odor strong,gas_leak_report
+ग्यासको गन्ध बलियो,gas_leak_report
+सल्फरको गन्ध,gas_leak_report
+ग्यास गन्ध बलियो,gas_leak_report
+anda ko gandh,gas_leak_report
+sulfur ko gandh,gas_leak_report
+gas hissing,gas_leak_report
+leaking sound,gas_leak_report
+lik awaz,gas_leak_report
+gas awaz,gas_leak_report
+gas line damaged,gas_leak_report
+gas cylinder leak,gas_leak_report
+एलपीजी लिक,gas_leak_report
+evacuate immediately,gas_leak_report
+gas danger zone,gas_leak_report
+safe distance,gas_leak_report
+सुरक्षित दुरी,gas_leak_report
+kshetr chodnu,gas_leak_report
+emergency rotten egg smell,gas_leak_report
+please gas odor strong,gas_leak_report
+ग्यास गन्ध बलियो help,gas_leak_report
+nepal evacuate immediately,gas_leak_report
+ग्यास हिसिसिङ emergency,gas_leak_report
+help rotten egg smell,gas_leak_report
+turuntai nisknu please,gas_leak_report
+gas gandh help,gas_leak_report
+qsafe lpg leak,gas_leak_report
+emergency gas leak,gas_leak_report
+help तुरुन्तै निस्कनु,gas_leak_report
+nepal ग्यास गन्ध बलियो,gas_leak_report
+please gas ko gandh,gas_leak_report
+सल्फरको गन्ध emergency,gas_leak_report
+rotten egg smell qsafe,gas_leak_report
+anda ko gandh please,gas_leak_report
+emergency एलपीजी लिक,gas_leak_report
+nepal ग्यासको गन्ध बलियो,gas_leak_report
+इमारत ढली,building_collapse_report
+संरचना ढली,building_collapse_report
+ghar dhalyo,building_collapse_report
+sanrachana dhali,building_collapse_report
+bhavan dhalyo,building_collapse_report
+multi-story collapse,building_collapse_report
+apartment collapse,building_collapse_report
+commercial building collapse,building_collapse_report
+बहुमञ्जिला ढली,building_collapse_report
+अपार्टमेन्ट ढल्यो,building_collapse_report
+व्यावसायिक इमारत ढली,building_collapse_report
+bahumanjila dhali,building_collapse_report
+apartment dhalyo,building_collapse_report
+karyalaya bhavan dhalyo,building_collapse_report
+people trapped inside,building_collapse_report
+residents trapped,building_collapse_report
+people buried,building_collapse_report
+भित्र फसेका मानिस,building_collapse_report
+अधिवासी फसेका,building_collapse_report
+मानिस दबिएका,building_collapse_report
+bhitra faskaka manis,building_collapse_report
+basinda faskaka,building_collapse_report
+adhivasi faskaka,building_collapse_report
+manis dabieka,building_collapse_report
+concrete chunks,building_collapse_report
+मलिनको ढेर,building_collapse_report
+स्टील बाँकिएको,building_collapse_report
+malin ko dher,building_collapse_report
+concrete tukra,building_collapse_report
+huge noise,building_collapse_report
+ठूलो आवाज,building_collapse_report
+भवन आवाज,building_collapse_report
+इमारत ध्वनि,building_collapse_report
+qsafe apartment dhalyo,building_collapse_report
+manis dabieka qsafe,building_collapse_report
+help people buried,building_collapse_report
+nepal इमारत ढली,building_collapse_report
+help ghar dhalyo,building_collapse_report
+karyalaya bhavan dhalyo emergency,building_collapse_report
+nepal karyalaya bhavan dhalyo,building_collapse_report
+emergency apartment collapse,building_collapse_report
+संरचना ढली now,building_collapse_report
+help huge noise,building_collapse_report
+qsafe sanrachana dhali,building_collapse_report
+structural integrity,building_damage_check
+मेरो घर सुरक्षित छ,building_damage_check
+mero ghar surakshit cha,building_damage_check
+sanrachanatmak akhanda,building_damage_check
+kshati mulyankan,building_damage_check
+cracks in walls,building_damage_check
+आधार क्षति,building_damage_check
+संरचनात्मक फुट,building_damage_check
+adhar kshati,building_damage_check
+sanrachanatmak phut,building_damage_check
+safe to enter,building_damage_check
+building stable,building_damage_check
+भित्र जान सुरक्षित,building_damage_check
+इमारत स्थिर,building_damage_check
+structural engineer,building_damage_check
+building evaluation,building_damage_check
+safety certification,building_damage_check
+इमारत मूल्यांकन,building_damage_check
+सुरक्षा प्रमाणीकरण,building_damage_check
+engineer mulyankan,building_damage_check
+suraksha pramanikaran,building_damage_check
+इमारत मूल्यांकन nepal,building_damage_check
+qsafe suraksha pramanikaran,building_damage_check
+qsafe sanrachanatmak akhanda,building_damage_check
+safe to enter nepal,building_damage_check
+structural integrity nepal,building_damage_check
+इमारत स्थिर please,building_damage_check
+cracks in walls nepal,building_damage_check
+cracks in walls urgent,building_damage_check
+please adhar kshati,building_damage_check
+qsafe मेरो घर सुरक्षित छ,building_damage_check
+आधार क्षति now,building_damage_check
+please structural engineer,building_damage_check
+building evaluation urgent,building_damage_check
+sanrachanatmak phut qsafe,building_damage_check
+help building evaluation,building_damage_check
+emergency suraksha pramanikaran,building_damage_check
+cracks in walls now,building_damage_check
+nepal इमारत मूल्यांकन,building_damage_check
+adhar kshati emergency,building_damage_check
+building stable now,building_damage_check
+help संरचनात्मक फुट,building_damage_check
+mero ghar surakshit cha please,building_damage_check
+emergency building stable,building_damage_check
+emergency safe to enter,building_damage_check
+nepal suraksha pramanikaran,building_damage_check
+kshati mulyankan emergency,building_damage_check
+aftershocks coming,aftershock_information_query
+more earthquakes expected,aftershock_information_query
+when will aftershocks stop,aftershock_information_query
+aftershock duration,aftershock_information_query
+पश्चभूकम्प आउँदैछ,aftershock_information_query
+थप भूकम्प अपेक्षा,aftershock_information_query
+पश्चभूकम्प अवधि,aftershock_information_query
+thap bhukamp apeksha,aftershock_information_query
+pashbhukamp avadhi,aftershock_information_query
+aftershock magnitude,aftershock_information_query
+how strong aftershocks,aftershock_information_query
+aftershock intensity,aftershock_information_query
+पश्चभूकम्प कति बलियो,aftershock_information_query
+पश्चभूकम्प तीव्रता,aftershock_information_query
+pashbhukamp magnitude,aftershock_information_query
+pashbhukamp kati baliyo,aftershock_information_query
+aftershock pattern,aftershock_information_query
+पश्चभूकम्प समय,aftershock_information_query
+arko pashbhukamp kahile,aftershock_information_query
+pashbhukamp aavritti,aftershock_information_query
+stay safe during aftershocks,aftershock_information_query
+aftershock drill,aftershock_information_query
+पश्चभूकम्प अभ्यास,aftershock_information_query
+pashbhukamp suraksha,aftershock_information_query
+pashbhukamp abhyas,aftershock_information_query
+please stay safe during aftershocks,aftershock_information_query
+please aftershocks coming,aftershock_information_query
+पश्चभूकम्प आकार please,aftershock_information_query
+qsafe aftershock pattern,aftershock_information_query
+help how strong aftershocks,aftershock_information_query
+emergency बस्नु ढाक्नु पकड्नु,aftershock_information_query
+aftershock drill now,aftershock_information_query
+थप भूकम्प अपेक्षा nepal,aftershock_information_query
+emergency aftershock intensity,aftershock_information_query
+पश्चभूकम्प तीव्रता please,aftershock_information_query
+aftershock intensity help,aftershock_information_query
+aftershock drill nepal,aftershock_information_query
+पश्चभूकम्प आउँदैछ help,aftershock_information_query
+aftershock magnitude qsafe,aftershock_information_query
+nepal aftershocks coming,aftershock_information_query
+aftershock pattern please,aftershock_information_query
+qsafe pashbhukamp avadhi,aftershock_information_query
+पश्चभूकम्प अवधि help,aftershock_information_query
+help arko pashbhukamp kahile,aftershock_information_query
+nepal basna dhaknu pakdnu,aftershock_information_query
+aftershock intensity nepal,aftershock_information_query
+earthquake preparedness,preparedness_tips_query
+safety tips,preparedness_tips_query
+आपद तयारी,preparedness_tips_query
+आपतकालीन किट,preparedness_tips_query
+सुरक्षा टिप्स,preparedness_tips_query
+bhukamp tayari,preparedness_tips_query
+emergency supplies,preparedness_tips_query
+first aid kit,preparedness_tips_query
+खाना पानी भण्डारण,preparedness_tips_query
+प्राथमिक उपचार किट,preparedness_tips_query
+khana pani bhandaran,preparedness_tips_query
+prathamik upchar kit,preparedness_tips_query
+family emergency plan,preparedness_tips_query
+contact information,preparedness_tips_query
+परिवार आपतकालीन योजना,preparedness_tips_query
+सम्पर्क जानकारी,preparedness_tips_query
+सुरक्षा प्रक्रिया,preparedness_tips_query
+bhukamp abhyas,preparedness_tips_query
+aapatkalin pratikriya,preparedness_tips_query
+खाना पानी भण्डारण help,preparedness_tips_query
+प्राथमिक उपचार किट please,preparedness_tips_query
+खाना पानी भण्डारण now,preparedness_tips_query
+first aid kit urgent,preparedness_tips_query
+bhukamp abhyas please,preparedness_tips_query
+contact information now,preparedness_tips_query
+contact information urgent,preparedness_tips_query
+please prathamik upchar kit,preparedness_tips_query
+family emergency plan nepal,preparedness_tips_query
+help contact information,preparedness_tips_query
+aapatkalin pratikriya qsafe,preparedness_tips_query
+first aid kit help,preparedness_tips_query
+please first aid kit,preparedness_tips_query
+emergency khana pani bhandaran,preparedness_tips_query
+meeting point qsafe,preparedness_tips_query
+nepal भेटथलो,preparedness_tips_query
+bhukamp tayari emergency,preparedness_tips_query
+meeting point emergency,preparedness_tips_query
+bhukamp tayari nepal,preparedness_tips_query
+please safety tips,preparedness_tips_query
+family emergency plan now,preparedness_tips_query
+please family emergency plan,preparedness_tips_query
+please contact information,preparedness_tips_query
+आपद तयारी help,preparedness_tips_query
+safe exit path,evacuation_guidance_query
+escape route,evacuation_guidance_query
+निकासी मार्ग,evacuation_guidance_query
+सुरक्षित निस्कने मार्ग,evacuation_guidance_query
+बाहिर निस्कने मार्ग,evacuation_guidance_query
+nikasi marg,evacuation_guidance_query
+निकासी केन्द्र,evacuation_guidance_query
+सुरक्षित क्षेत्र स्थान,evacuation_guidance_query
+nikasi kendra,evacuation_guidance_query
+evacuation procedures,evacuation_guidance_query
+evacuation drill,evacuation_guidance_query
+aapatkalin yojana,evacuation_guidance_query
+nikasi abhyas,evacuation_guidance_query
+leave now,evacuation_guidance_query
+immediate evacuation,evacuation_guidance_query
+निकासी समय,evacuation_guidance_query
+अहिले निस्कनु,evacuation_guidance_query
+nikasi samay,evacuation_guidance_query
+safe exit path qsafe,evacuation_guidance_query
+ashray sthan please,evacuation_guidance_query
+safe exit path please,evacuation_guidance_query
+safe exit path emergency,evacuation_guidance_query
+nikasi marg help,evacuation_guidance_query
+qsafe निकासी केन्द्र,evacuation_guidance_query
+leave now emergency,evacuation_guidance_query
+turuntai nisknu qsafe,evacuation_guidance_query
+qsafe बाहिर निस्कने मार्ग,evacuation_guidance_query
+nepal safe exit path,evacuation_guidance_query
+भेटथलो emergency,evacuation_guidance_query
+nepal तुरुन्तै निस्कनु,evacuation_guidance_query
+evacuation procedures urgent,evacuation_guidance_query
+nikasi samay please,evacuation_guidance_query
+निकासी मार्ग emergency,evacuation_guidance_query
+तुरुन्तै निस्कनु emergency,evacuation_guidance_query
+aapatkalin yojana urgent,evacuation_guidance_query
+अहिले निस्कनु now,evacuation_guidance_query
+help निकासी मार्ग,evacuation_guidance_query
+निकासी समय now,evacuation_guidance_query
+evacuation drill now,evacuation_guidance_query
+सुरक्षित क्षेत्र स्थान emergency,evacuation_guidance_query
+qsafe aapatkalin yojana,evacuation_guidance_query
+evacuation drill nepal,evacuation_guidance_query
+safe location,safe_location_query
+where is safe,safe_location_query
+safe place,safe_location_query
+कहाँ सुरक्षित,safe_location_query
+सुरक्षित ठाउँ,safe_location_query
+surakshit sthan,safe_location_query
+surakshit thau,safe_location_query
+suraksha kshetr,safe_location_query
+खुला स्थान सुरक्षा,safe_location_query
+जमिन सुरक्षा,safe_location_query
+khula sthan suraksha,safe_location_query
+jamin suraksha,safe_location_query
+building safety,safe_location_query
+inside building,safe_location_query
+इमारत बाहिर,safe_location_query
+imarat bahar,safe_location_query
+away from hazards,safe_location_query
+risk areas,safe_location_query
+hazardous locations,safe_location_query
+खतराबाट टाढा,safe_location_query
+खतरनाक स्थान,safe_location_query
+khatrabata tada,safe_location_query
+jokhim kshetr,safe_location_query
+khatranak sthan,safe_location_query
+please कहाँ सुरक्षित,safe_location_query
+इमारत सुरक्षा please,safe_location_query
+emergency hazardous locations,safe_location_query
+building safety now,safe_location_query
+where is safe help,safe_location_query
+इमारत बाहिर please,safe_location_query
+खुला स्थान सुरक्षा now,safe_location_query
+risk areas qsafe,safe_location_query
+help safe location,safe_location_query
+inside building help,safe_location_query
+qsafe imarat bahar,safe_location_query
+जोखिम क्षेत्र emergency,safe_location_query
+jamin suraksha help,safe_location_query
+help imarat bahar,safe_location_query
+park suraksha urgent,safe_location_query
+help khatranak sthan,safe_location_query
+khatrabata tada help,safe_location_query
+please खेत सुरक्षा,safe_location_query
+खुला स्थान सुरक्षा please,safe_location_query
+khatranak sthan help,safe_location_query
+please suraksha kshetr,safe_location_query
+safe location qsafe,safe_location_query
+need shelter,shelter_request
+emergency housing,shelter_request
+आश्रय चाहिन्छ,shelter_request
+आश्रय आवश्यक,shelter_request
+आपतकालीन आवास,shelter_request
+अस्थायी आवास,shelter_request
+ashray awashyak,shelter_request
+aapatkalin awas,shelter_request
+where is shelter,shelter_request
+नजिकै आश्रय,shelter_request
+स्थानीय आश्रय,shelter_request
+sthaniya ashray,shelter_request
+shelter capacity,shelter_request
+accommodation available,shelter_request
+आश्रय क्षमता,shelter_request
+बस्ने स्थान उपलब्ध,shelter_request
+khali sthan,shelter_request
+medical services,shelter_request
+sanitation facilities,shelter_request
+ashray suvidha,shelter_request
+chikitsa seva,shelter_request
+sarsaphai suvidha,shelter_request
+नजिकै आश्रय qsafe,shelter_request
+need shelter emergency,shelter_request
+नजिकै आश्रय help,shelter_request
+आश्रय चाहिन्छ urgent,shelter_request
+आश्रय आवश्यक please,shelter_request
+help अस्थायी आवास,shelter_request
+qsafe medical services,shelter_request
+sanitation facilities please,shelter_request
+khali sthan urgent,shelter_request
+please आश्रय क्षमता,shelter_request
+sanitation facilities qsafe,shelter_request
+qsafe आपतकालीन आवास,shelter_request
+emergency where is shelter,shelter_request
+please where is shelter,shelter_request
+aapatkalin awas please,shelter_request
+need shelter urgent,shelter_request
+आश्रय क्षमता qsafe,shelter_request
+medical services help,shelter_request
+ashray suvidha nepal,shelter_request
+आश्रय सुविधा emergency,shelter_request
+shelter location urgent,shelter_request
+need food,food_water_request
+need water,food_water_request
+खाना चाहिन्छ,food_water_request
+तिर्खा लागेको,food_water_request
+pani chaincha,food_water_request
+bhok lageko,food_water_request
+tirkha lageko,food_water_request
+water distribution,food_water_request
+पानी वितरण,food_water_request
+राहत आपूर्ति,food_water_request
+दहायता वितरण,food_water_request
+pani vitran,food_water_request
+emergency food,food_water_request
+rations,food_water_request
+आपतकालीन खाना,food_water_request
+जीवित रहने किट,food_water_request
+राशन,food_water_request
+aapatkalin pani,food_water_request
+drinking water,food_water_request
+safe water,food_water_request
+water purification,food_water_request
+piune pani,food_water_request
+surakshit pani,food_water_request
+pani shuddhikaran,food_water_request
+nepal pani chaincha,food_water_request
+पानी वितरण nepal,food_water_request
+दहायता वितरण emergency,food_water_request
+pani shuddhikaran nepal,food_water_request
+राहत आपूर्ति help,food_water_request
+तिर्खा लागेको help,food_water_request
+help पानी वितरण,food_water_request
+rations qsafe,food_water_request
+khana vitran emergency,food_water_request
+clean water emergency,food_water_request
+पानी वितरण emergency,food_water_request
+tirkha lageko help,food_water_request
+emergency aapatkalin pani,food_water_request
+nepal आपतकालीन खाना,food_water_request
+drinking water urgent,food_water_request
+जीवित रहने किट now,food_water_request
+emergency khana vitran,food_water_request
+bhok lageko now,food_water_request
+emergency need food,food_water_request
+emergency राशन,food_water_request
+family missing,family_member_missing
+family lost,family_member_missing
+परिवार हराएका,family_member_missing
+परिवार फेला पार,family_member_missing
+परिवार गुम,family_member_missing
+parivar haraeka,family_member_missing
+priyajan haraeka,family_member_missing
+parivar fela par,family_member_missing
+parivar gum,family_member_missing
+haraeko vyakti,family_member_missing
+haraeko manis,family_member_missing
+haraeko report,family_member_missing
+haraeko vyakti report,family_member_missing
+haraeko manis report,family_member_missing
+last contact,family_member_missing
+last communication,family_member_missing
+अन्तिम पटक कहाँ देखियो,family_member_missing
+अन्तिम सम्पर्क,family_member_missing
+antim patak dekieko sthan,family_member_missing
+antim patak kahan dekiyo,family_member_missing
+antim sampark,family_member_missing
+family reunion,family_member_missing
+locate family,family_member_missing
+family search,family_member_missing
+परिवार पुनर्मिलन,family_member_missing
+परिवार पत्ता लगाउनु,family_member_missing
+parivar fela parnu,family_member_missing
+parivar patta lagaunu,family_member_missing
+parivar khoj,family_member_missing
+nepal parivar haraeka,family_member_missing
+emergency loved one missing,family_member_missing
+qsafe last contact,family_member_missing
+please parivar fela par,family_member_missing
+परिवार गुम help,family_member_missing
+emergency परिवार गुम,family_member_missing
+please antim patak kahan dekiyo,family_member_missing
+haraeko report qsafe,family_member_missing
+हराएको मानिस urgent,family_member_missing
+priyajan haraeka urgent,family_member_missing
+help last contact,family_member_missing
+parivar haraeka nepal,family_member_missing
+परिवार पत्ता लगाउनु urgent,family_member_missing
+nepal haraeko manis,family_member_missing
+help locate family,family_member_missing
+please family missing,family_member_missing
+please antim sampark,family_member_missing
+family status,family_reunification_status
+where is family,family_reunification_status
+परिवार कहाँ छ,family_reunification_status
+पुनर्मिलन केन्द्र,family_reunification_status
+परिवार भेटथलो,family_reunification_status
+parivar beththalo,family_reunification_status
+punarmilan sthan,family_reunification_status
+family found,family_reunification_status
+located family,family_reunification_status
+परिवार फेला पारियो,family_reunification_status
+परिवार पत्ता लाग्यो,family_reunification_status
+parivar fela pariyo,family_reunification_status
+parivar patta lagyo,family_reunification_status
+parivar jivit,family_reunification_status
+search status,family_reunification_status
+search progress,family_reunification_status
+update on search,family_reunification_status
+खोज स्थिति,family_reunification_status
+खोज अपडेट,family_reunification_status
+khoj sthiti,family_reunification_status
+khoj pragati,family_reunification_status
+khoj update,family_reunification_status
+punarmilan sthan now,family_reunification_status
+qsafe parivar jivit,family_reunification_status
+nepal परिवार पत्ता लाग्यो,family_reunification_status
+gathering point emergency,family_reunification_status
+family found please,family_reunification_status
+nepal parivar patta lagyo,family_reunification_status
+पुनर्मिलन केन्द्र now,family_reunification_status
+update on search qsafe,family_reunification_status
+emergency located family,family_reunification_status
+परिवार कहाँ छ nepal,family_reunification_status
+parivar beththalo nepal,family_reunification_status
+खोज अपडेट nepal,family_reunification_status
+emergency punarmilan kendra,family_reunification_status
+nepal parivar khoji,family_reunification_status
+emergency gathering point,family_reunification_status
+nepal खोज अपडेट,family_reunification_status
+खोज स्थिति qsafe,family_reunification_status
+please family location,family_reunification_status
+hurt,injury_report
+casualty,injury_report
+घाइते,injury_report
+चोटपट,injury_report
+घायेको,injury_report
+minor injury,injury_report
+light injury,injury_report
+सानो घाउ,injury_report
+सानो पीडा,injury_report
+serious injury,injury_report
+critical condition,injury_report
+gambhir avastha,injury_report
+open wound,injury_report
+laceration,injury_report
+रगत बग्दै,injury_report
+खुला घाउ,injury_report
+चीर,injury_report
+ragat bagdai,injury_report
+khula ghau,injury_report
+bone injury,injury_report
+skeletal injury,injury_report
+हाड चोट,injury_report
+कंकाल चोट,injury_report
+kankal chot,injury_report
+head injury,injury_report
+concussion,injury_report
+skull fracture,injury_report
+टाउकोमा चोट,injury_report
+मस्तिष्क झड्का,injury_report
+खोपडी फ्र्याक्चर,injury_report
+tauko ma chot,injury_report
+mastishka jhadka,injury_report
+chemical burn,injury_report
+electrical burn,injury_report
+rasayanik jalan,injury_report
+हाड भाँचिएको emergency,injury_report
+broken bone emergency,injury_report
+गम्भीर चोट help,injury_report
+please had chot,injury_report
+nepal kankal chot,injury_report
+emergency bleeding,injury_report
+emergency treatment,first_aid_query
+आपतकालीन उपचार,first_aid_query
+चोट उपचार,first_aid_query
+prathamik upchar,first_aid_query
+aapatkalin upchar,first_aid_query
+chikitsa madat,first_aid_query
+cpr instructions,first_aid_query
+cpr steps,first_aid_query
+सीपीआर चरण,first_aid_query
+सीपीआर मार्गदर्शन,first_aid_query
+cpr charan,first_aid_query
+cardiopulmonary punarjivan,first_aid_query
+bleeding control,first_aid_query
+bandage application,first_aid_query
+ragat rokne,first_aid_query
+burn treatment,first_aid_query
+thermal injury,first_aid_query
+जलन उपचार,first_aid_query
+ताप्क्रिय चोट,first_aid_query
+jalan prathamik upchar,first_aid_query
+broken bone treatment,first_aid_query
+splint application,first_aid_query
+immobilization,first_aid_query
+फ्र्याक्चर हेरचाह,first_aid_query
+हाड भाँचिएको उपचार,first_aid_query
+स्प्लिन्ट लगाउने,first_aid_query
+अस्थिरता,first_aid_query
+fracture herachah,first_aid_query
+splint lagane,first_aid_query
+asthirata,first_aid_query
+choking relief,first_aid_query
+airway clearance,first_aid_query
+choking first aid,first_aid_query
+हाइमलिच मनुभर,first_aid_query
+dam rahat,first_aid_query
+dam prathamik upchar,first_aid_query
+shock management,first_aid_query
+झड्का उपचार,first_aid_query
+झड्का व्यवस्थापन,first_aid_query
+jhadka upchar,first_aid_query
+aapatkalin upchar help,first_aid_query
+स्प्लिन्ट लगाउने qsafe,first_aid_query
+thermal injury please,first_aid_query
+broken bone treatment nepal,first_aid_query
+shock management now,first_aid_query
+please shock management,first_aid_query
+please splint application,first_aid_query
+emergency treatment emergency,first_aid_query
+emergency number,emergency_contact_request
+helpline number,emergency_contact_request
+hotline number,emergency_contact_request
+emergency contact,emergency_contact_request
+आपतकालीन नम्बर,emergency_contact_request
+आपतकालीन सम्पर्क,emergency_contact_request
+call police,emergency_contact_request
+प्रहरी आपतकाल,emergency_contact_request
+प्रहरी सहायता,emergency_contact_request
+prahari bolau,emergency_contact_request
+prahari sahayata,emergency_contact_request
+hospital contact,emergency_contact_request
+health services,emergency_contact_request
+chikitsa aapatkal,emergency_contact_request
+fire services,emergency_contact_request
+अग्निशमन,emergency_contact_request
+आगो सेवा,emergency_contact_request
+aago aapatkal,emergency_contact_request
+aago seva,emergency_contact_request
+disaster response,emergency_contact_request
+आपतकालीन सेवा,emergency_contact_request
+बचाव सेवा,emergency_contact_request
+राहत सेवा,emergency_contact_request
+aapad pratikriya,emergency_contact_request
+official contact,emergency_contact_request
+प्राधिकरण सम्पर्क,emergency_contact_request
+सरकारी सेवा,emergency_contact_request
+sarkari helpline,emergency_contact_request
+adhikarik sampark,emergency_contact_request
+pradhikaran sampark,emergency_contact_request
+sarkari seva,emergency_contact_request
+emergency management,emergency_contact_request
+disaster management,emergency_contact_request
+एनडीआरआरएमए सम्पर्क,emergency_contact_request
+आपद प्राधिकरण,emergency_contact_request
+आपद व्यवस्थापन,emergency_contact_request
+ndrrma sampark,emergency_contact_request
+aapatkalin vyavasthapan,emergency_contact_request
+aapad vyavasthapan,emergency_contact_request
+आपद प्राधिकरण qsafe,emergency_contact_request
+aago aapatkal please,emergency_contact_request
+please आपद व्यवस्थापन,emergency_contact_request
+emergency प्रहरी नम्बर,emergency_contact_request
+emergency ndrrma sampark,emergency_contact_request
+emergency management now,emergency_contact_request
+power outage,power_outage_report
+electricity gone,power_outage_report
+no power,power_outage_report
+विद्युत विद्युत गयो,power_outage_report
+विद्युत बन्द,power_outage_report
+vidyut vidyut gayo,power_outage_report
+vidyut banda,power_outage_report
+electricity failure,power_outage_report
+power failure,power_outage_report
+power cut,power_outage_report
+विद्युत कट,power_outage_report
+vidyut bipalta,power_outage_report
+grid bipalta,power_outage_report
+vidyut kat,power_outage_report
+city power gone,power_outage_report
+kshetr blackout,power_outage_report
+chimeki vidyut banda,power_outage_report
+kshetriya vidyut banda,power_outage_report
+power restoration,power_outage_report
+when power back,power_outage_report
+electricity return,power_outage_report
+विद्युत कहिले आउँछ,power_outage_report
+विद्युत फर्कन्छ,power_outage_report
+vidyut kahile aucha,power_outage_report
+backup power,power_outage_report
+alternative power,power_outage_report
+आपतकालीन विद्युत,power_outage_report
+जेनेरेटर चाहिन्छ,power_outage_report
+ब्याकअप विद्युत,power_outage_report
+वैकल्पिक विद्युत,power_outage_report
+aapatkalin vidyut,power_outage_report
+power line damage,power_outage_report
+विद्युतीय खतरा,power_outage_report
+विद्युत लाइन क्षति,power_outage_report
+tar khaseka,power_outage_report
+nepal tar khaseka,power_outage_report
+nepal विद्युतीय खतरा,power_outage_report
+when power back qsafe,power_outage_report
+backup power nepal,power_outage_report
+qsafe blackout,power_outage_report
+help chimeki vidyut banda,power_outage_report
+power cut help,power_outage_report
+chimeki vidyut banda emergency,power_outage_report
+emergency vidyut vidyut gayo,power_outage_report
+gali avaruddh,road_blockage_report
+landslide blocked,road_blockage_report
+पहिरोले अवरुद्ध,road_blockage_report
+सडकमा भग्नावशेष,road_blockage_report
+चट्टान खस्ने,road_blockage_report
+माटो खस्ने,road_blockage_report
+pahirole avaruddh,road_blockage_report
+chattan khase,road_blockage_report
+bridge collapse,road_blockage_report
+bridge damaged,road_blockage_report
+crossing blocked,road_blockage_report
+पुल ढल्यो,road_blockage_report
+पुल असुरक्षित,road_blockage_report
+पार हुन अवरुद्ध,road_blockage_report
+pul dhalyo,road_blockage_report
+pul asurakshit,road_blockage_report
+par hun avaruddh,road_blockage_report
+traffic jam,road_blockage_report
+sadak banda,road_blockage_report
+vaikalpik marg chaincha,road_blockage_report
+emergency route,road_blockage_report
+rescue route blocked,road_blockage_report
+पहुँच अवरुद्ध,road_blockage_report
+बचाव मार्ग अवरुद्ध,road_blockage_report
+aapatkalin marg,road_blockage_report
+ambulance avaruddh,road_blockage_report
+clearing operation,road_blockage_report
+road clearing,road_blockage_report
+debris removal,road_blockage_report
+highway reopening,road_blockage_report
+सफाई अभियान,road_blockage_report
+भग्नावशेश हटाउने,road_blockage_report
+राजमार्ग पुनः खुल्ने,road_blockage_report
+safai abhiyan,road_blockage_report
+bhagnaveshesh hataune,road_blockage_report
+rajamarg punah khulne,road_blockage_report
+detour available,road_blockage_report
+वैकल्पिक पथ,road_blockage_report
+vaikalpik marg uplabdha,road_blockage_report
+vaikalpik path,road_blockage_report
+madhyamik sadak,road_blockage_report
+emergency road closed,road_blockage_report
+landslide blocked please,road_blockage_report
+emergency vaikalpik marg chaincha,road_blockage_report
+sadak safai urgent,road_blockage_report
+nepal माटो खस्ने,road_blockage_report
+landslide blocked nepal,road_blockage_report
+debris removal emergency,road_blockage_report
+current situation,status_check_general
+वर्तमान स्थिति,status_check_general
+के भइरहेको छ,status_check_general
+स्थिति अपडेट,status_check_general
+नवीनतम समाचार,status_check_general
+vartaman sthiti,status_check_general
+emergency status,status_check_general
+आपद स्थिति,status_check_general
+संकट अपडेट,status_check_general
+स्थिति रिपोर्ट,status_check_general
+aapatkalin sthiti,status_check_general
+sankat update,status_check_general
+sthiti report,status_check_general
+area condition,status_check_general
+local status,status_check_general
+neighborhood status,status_check_general
+क्षेत्र अवस्था,status_check_general
+sthaniya sthiti,status_check_general
+chimeki sthiti,status_check_general
+risk assessment,status_check_general
+खतरा स्तर,status_check_general
+suraksha sthiti,status_check_general
+ke surakshit cha,status_check_general
+khatra star,status_check_general
+jokhim mulyankan,status_check_general
+weather condition,status_check_general
+wind status,status_check_general
+temperature,status_check_general
+तापक्रम,status_check_general
+weather avastha,status_check_general
+phone working,status_check_general
+internet status,status_check_general
+network available,status_check_general
+फोन काम गर्दै,status_check_general
+sanchar sthiti,status_check_general
+internet sthiti,status_check_general
+network uplabdha,status_check_general
+resource availability,status_check_general
+help available,status_check_general
+स्रोत उपलब्धता,status_check_general
+मद्दत उपलब्ध,status_check_general
+सेवा चालू,status_check_general
+timeline update,status_check_general
+duration estimate,status_check_general
+समयरेखा अपडेट,status_check_general
+अवधि अनुमान,status_check_general
+बाँकी समय,status_check_general
+kahile antya huncha,status_check_general
+avadhi anuman,status_check_general
+baki samay,status_check_general
+don't understand,fallback_unclear
+not sure,fallback_unclear
+बुझ्न सकिदैन,fallback_unclear
+अनिश्चित,fallback_unclear
+aspashta anurodh,fallback_unclear
+bujhna sakidaina,fallback_unclear
+what do you mean,fallback_unclear
+clarify please,fallback_unclear
+explain more,fallback_unclear
+need more details,fallback_unclear
+स्पष्ट पार्नुहोस्,fallback_unclear
+थप विवरण चाहिन्छ,fallback_unclear
+tapai ke bhannuhuncha,fallback_unclear
+thap vyakhya,fallback_unclear
+thap bibaran chaincha,fallback_unclear
+not clear,fallback_unclear
+फेरि भन्नुहोस्,fallback_unclear
+स्पष्ट छैन,fallback_unclear
+bujhna sakin,fallback_unclear
+unclear text,fallback_unclear
+typo error,fallback_unclear
+अस्पष्ट पाठ,fallback_unclear
+sandeshama galti,fallback_unclear
+translation problem,fallback_unclear
+not in nepali,fallback_unclear
+not in english,fallback_unclear
+भाषा समस्या,fallback_unclear
+नेपालीमा छैन,fallback_unclear
+अंग्रेजीमा छैन,fallback_unclear
+anuvad samasya,fallback_unclear
+nepalima chaina,fallback_unclear
+irrelevant,fallback_unclear
+अप्रासंगिक,fallback_unclear
+bishya bahira,fallback_unclear
+sambandhit chaina,fallback_unclear
+random input,fallback_unclear
+gibberish,fallback_unclear
+meaningless,fallback_unclear
+बकवास,fallback_unclear
+अर्थहीन,fallback_unclear
+bakwas,fallback_unclear
+arthhin,fallback_unclear
+arthvihin,fallback_unclear
+test message,fallback_unclear
+checking system,fallback_unclear
+परीक्षण सन्देश,fallback_unclear
+pranali janch,fallback_unclear
+testing bot,fallback_unclear

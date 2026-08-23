@@ -1,0 +1,9 @@
+{
+  "final_train_accuracy": 0.9997728821258233,
+  "final_val_accuracy": 0.9986595174262735,
+  "final_train_loss": 0.08101007907501752,
+  "final_val_loss": 0.13827650590016435,
+  "best_val_accuracy": 0.9986595174262735,
+  "accuracy_gap": 0.0011133646995498125,
+  "total_samples_evaluated": 4403
+}

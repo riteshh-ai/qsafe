@@ -128,7 +128,7 @@ if (langSelect) {
 // =========================================================================
 // LAYER 3: UI VIEWPORT RENDERER & FORMATTERS (CLEAN CARD PARSER)
 // =========================================================================
-function formatMessageContent(rawText) {
+function formatMessageContent(rawText, isUrgent = false) {
     if (!rawText) return "";
 
     let clean = rawText.trim();
@@ -141,14 +141,19 @@ function formatMessageContent(rawText) {
 
         // Choose appropriate icon for header
         let icon = "🛡️";
-        if (/earthquake|bhukampa|भूकम्प/i.test(headerTitle)) icon = "🚨";
-        else if (/first aid|upachar|उपचार/i.test(headerTitle)) icon = "🩹";
+        if (/trapped|थुनिएको|थुनिएँ|debris|बचाउ/i.test(headerTitle)) icon = "🚨";
+        else if (/earthquake|bhukampa|भूकम्प/i.test(headerTitle)) icon = "🚨";
+        else if (/first aid|upachar|उपचार|रगत|bleeding|burn|fracture/i.test(headerTitle)) icon = "🩹";
         else if (/landslide|pahiro|पहिरो/i.test(headerTitle)) icon = "⛰️";
         else if (/flood|badi|बाढी/i.test(headerTitle)) icon = "🌊";
-        else if (/hotline|contact|सम्पर्क/i.test(headerTitle)) icon = "📞";
+        else if (/fire|aago|आगो|आगलागी/i.test(headerTitle)) icon = "🔥";
+        else if (/hotline|contact|सम्पर्क|phone/i.test(headerTitle)) icon = "📞";
         else if (/kit|bag|झोला/i.test(headerTitle)) icon = "🎒";
+        else if (/assembly|safe|सुरक्षित/i.test(headerTitle)) icon = "📍";
 
-        let cardHtml = `<div class="protocol-card">`;
+        const urgentClass = (isUrgent || /trapped|थुनिएको|थुनिएँ|bleeding|रगत|आगो|आगलागी|emergency/i.test(headerTitle)) ? "urgent-card" : "";
+
+        let cardHtml = `<div class="protocol-card ${urgentClass}">`;
         cardHtml += `<div class="protocol-header"><span class="icon">${icon}</span> <span>${headerTitle}</span></div>`;
 
         // Split body lines
@@ -158,7 +163,7 @@ function formatMessageContent(rawText) {
         let hotlineLine = null;
 
         lines.forEach(line => {
-            if (line.includes('16666') || line.includes('100') || line.includes('102') || line.includes('1114')) {
+            if (line.includes('16666') || line.includes('100') || line.includes('102') || line.includes('1114') || line.includes('101')) {
                 hotlineLine = line;
             } else if (line.startsWith('•') || line.startsWith('-') || line.startsWith('*')) {
                 const bulletText = line.replace(/^[•\-*]\s*/, '');
@@ -184,15 +189,17 @@ function formatMessageContent(rawText) {
             cardHtml += `</ul>`;
         }
 
-        if (hotlineLine) {
+        if (hotlineLine || urgentClass) {
+            const dialUrgent = urgentClass ? "urgent-dial" : "";
             cardHtml += `
                 <div class="hotline-section">
-                    <div class="hotline-title">Emergency Hotlines (Nepal)</div>
+                    <div class="hotline-title">🚨 Emergency Hotlines (Nepal)</div>
                     <div class="hotline-pill-grid">
-                        <a href="tel:100" class="hotline-pill"><span class="icon">👮</span> Police: 100</a>
-                        <a href="tel:102" class="hotline-pill"><span class="icon">🚑</span> Ambulance: 102</a>
+                        <a href="tel:100" class="hotline-pill ${dialUrgent}"><span class="icon">👮</span> Police: 100</a>
+                        <a href="tel:102" class="hotline-pill ${dialUrgent}"><span class="icon">🚑</span> Ambulance: 102</a>
                         <a href="tel:16666" class="hotline-pill"><span class="icon">🏢</span> NDRRMA: 16666</a>
                         <a href="tel:1114" class="hotline-pill"><span class="icon">🚨</span> APF: 1114</a>
+                        <a href="tel:101" class="hotline-pill"><span class="icon">🚒</span> Fire: 101</a>
                     </div>
                 </div>`;
         }
@@ -209,23 +216,21 @@ function formatMessageContent(rawText) {
 
 function parseInlineMarkdown(text) {
     if (!text) return "";
-    // Parse Markdown bold syntax **text** -> <strong>text</strong>
     let out = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     return out;
 }
 
-function appendMessageToUI(text, sender, customClass = "", elementId = "") {
+function appendMessageToUI(text, sender, customClass = "", elementId = "", isUrgent = false) {
     if (!chatLog) return;
 
     const bubble = document.createElement('div');
     if (elementId) bubble.id = elementId;
     
     bubble.className = `bubble ${sender} ${customClass}`.trim();
-    bubble.innerHTML = formatMessageContent(text);
+    bubble.innerHTML = formatMessageContent(text, isUrgent);
 
     chatLog.appendChild(bubble);
 
-    // Keep chat container scrollable and clean
     while (chatLog.children.length > 40) {
         chatLog.removeChild(chatLog.firstChild);
     }
@@ -249,133 +254,236 @@ function removeLoadingBubble(loadingId) {
     if (el) el.remove();
 }
 
+function showSyncToast(message) {
+    const existing = document.querySelector('.sync-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'sync-toast';
+    toast.innerHTML = `<span>🔄</span> <span>${message}</span>`;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        toast.style.transition = 'opacity 0.3s ease';
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
+}
+
 // =========================================================================
-// LAYER 4: LOCAL KNOWLEDGE BASE & OFFLINE ENGINE
+// LAYER 4: LOCAL KNOWLEDGE BASE & OFFLINE NLU ENGINE
 // =========================================================================
 function getNormalizedLang() {
     if (!langSelect) return 'en';
     return langSelect.value ? langSelect.value.trim() : 'en';
 }
 
+function detectUrgency(query) {
+    const q = query.toLowerCase();
+    const urgentKeywords = [
+        'trapped', 'collapse', 'bury', 'buried', 'bleeding', 'blood', 'heart', 'unconscious',
+        'help me', 'sos', 'dying', 'crushed', 'fire', 'burning', 'blast',
+        'थुनिएँ', 'थुनिएको', 'च्यापिएको', 'रगत', 'बेहोस', 'मद्दत', 'बचाउ', 'आगो', 'आगलागी', 'भत्कियो', 'पर्खाल',
+        'thuniyo', 'thunieko', 'chyapieko', 'ragat', 'madat', 'sahayata', 'bachau', 'aago', 'aagolagi', 'bhatkio', 'bhatkieko'
+    ];
+    return urgentKeywords.some(kw => q.includes(kw));
+}
+
 const LOCAL_KNOWLEDGE_BASE = {
     en: {
-        first_aid: `[FIRST AID EMERGENCY PROTOCOL]
-• **BLEEDING**: Apply direct, firm pressure with a clean cloth.
-• **BURNS**: Flush immediately with cool, running water for 10–15 minutes. Do not break blisters.
-• **FRACTURES**: Immobilize the limb using a splint without trying to realign the bone.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
+        trapped_debris_report: `[CRITICAL SOS: TRAPPED UNDER DEBRIS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Stay calm and minimize movement to avoid kicking up dust.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Cover mouth with clothing. Tap on pipes or walls rhythmically—do not shout continuously.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100 | APF Rescue: 1114`,
 
-        earthquake: `[EARTHQUAKE SAFETY PROTOCOL]
-• **DROP, COVER, HOLD ON**: Drop to hands and knees under sturdy furniture, cover head/neck, hold on until shaking stops.
-• **STAY CLEAR**: Move away from windows, heavy furniture, and unreinforced masonry walls.
-• **OUTDOORS**: Move to an open area away from power lines, trees, and tall buildings.
-• **AFTER SHAKING**: Expect aftershocks. Use stairs, never elevators.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
+        earthquake_occurring_report: `[EARTHQUAKE SAFETY PROTOCOL]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: DROP, COVER, and HOLD ON under a sturdy desk or table.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Stay away from windows, glass, and unreinforced walls.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100 | NDRRMA: 16666`,
 
-        contacts: `[EMERGENCY HOTLINES - NEPAL]
-• **Nepal Police Control**: 100
-• **Red Cross Ambulance**: 102
-• **NDRRMA Disaster Helpline**: 16666
-• **Armed Police Force (APF)**: 1114
-• **Fire Brigade**: 101`,
+        medical_emergency_request: `[MEDICAL EMERGENCY]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Ensure the area is safe before approaching the victim.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: If unconscious and not breathing, begin CPR immediately.
+3. 📞 **EMERGENCY HOTLINE CALL**: Ambulance: 102 | Police: 100`,
 
-        emergency_kit: `[EMERGENCY GO-BAG CHECKLIST]
-• **Water & Food**: 3 liters water per person and 3-day dry food supply.
-• **First Aid Kit**: Bandages, antiseptic, essential prescription medicines.
-• **Light & Tools**: Flashlight, extra batteries, power bank, whistle.
-• **Documents**: Copies of citizenship/IDs sealed in a waterproof pouch.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
+        injury_report: `[INJURY REPORT]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Move the injured person to a safe area away from hazards.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Apply direct pressure to bleeding. Do not move suspected fractures.
+3. 📞 **EMERGENCY HOTLINE CALL**: Ambulance: 102`,
 
-        landslide: `[LANDSLIDE SAFETY PROTOCOL]
-• **INDOORS**: Move to the highest floor away from the slope. Cover under heavy furniture.
-• **OUTDOORS**: Run immediately to elevated, stable ground away from gullies and rivers.
-• **DRIVING**: Watch for falling debris and road cracks. Never cross active mudflows.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`
+        fire_incident_report: `[FIRE SAFETY & EVACUATION]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Evacuate immediately. Crawl low under smoke.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: If clothes catch fire: STOP, DROP, and ROLL.
+3. 📞 **EMERGENCY HOTLINE CALL**: Fire Brigade: 101 | Police: 100`,
+
+        gas_leak_report: `[GAS LEAK PROTOCOL]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Do not use any electrical switches, matches, or phones inside.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Open all windows and evacuate the building immediately.
+3. 📞 **EMERGENCY HOTLINE CALL**: Fire Brigade: 101 | Police: 100`,
+
+        building_collapse_report: `[BUILDING COLLAPSE PROTOCOL]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Evacuate if safe; do not re-enter the building.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Check yourself and others for injuries. Apply first aid.
+3. 📞 **EMERGENCY HOTLINE CALL**: APF: 1114 | Police: 100`,
+
+        building_damage_check: `[BUILDING DAMAGE CHECK]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Stay outside if you see deep diagonal cracks or tilting.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Turn off gas and electricity at the main switch.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        
+        safe_location_query: `[EMERGENCY ASSEMBLY POINTS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Move to open spaces (parks, school grounds).
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Avoid narrow alleys, tall walls, and power lines.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100`,
+
+        first_aid_query: `[FIRST AID EMERGENCY PROTOCOL]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Ensure scene safety.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Bleeding: Direct pressure. Burns: Cool water for 15 mins.
+3. 📞 **EMERGENCY HOTLINE CALL**: Ambulance: 102`,
+
+        sos_help_request: `[EMERGENCY SOS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Identify your immediate threat (fire, collapse, flood).
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Take cover or evacuate to a safe zone.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100 | Ambulance: 102`,
+
+        greeting: `[GREETING]
+Namaste! I am QSAFE, your emergency safety advisor. How can I assist you with earthquake, first aid, or disaster guidance today?`,
+        goodbye_thanks: `[CLOSING]
+Stay safe. Remember, in an emergency dial 100 for Police or 102 for Ambulance.`,
+        shelter_request: `[SHELTER REQUEST]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Move to designated safe zones.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Contact local authorities for relief camp info.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        evacuation_guidance_query: `[EVACUATION GUIDANCE]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Follow marked evacuation routes.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Grab your go-bag and leave immediately.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100`,
+        family_member_missing: `[MISSING PERSON]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Ensure your own safety first.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Note down the last known location of the missing person.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100`,
+        family_reunification_status: `[FAMILY REUNIFICATION]
+We are glad you are safe. Please update local volunteers or authorities about your status.`,
+        food_water_request: `[RELIEF SUPPLIES]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Only consume sealed/boiled water.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Register at local relief camps.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        aftershock_information_query: `[AFTERSHOCKS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Expect aftershocks. Do not re-enter damaged buildings.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Drop, Cover, Hold on during shaking.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        emergency_contact_request: `[EMERGENCY HOTLINES]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Dial appropriate number.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Police: 100, Ambulance: 102.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666 | APF: 1114 | Fire: 101`,
+        power_outage_report: `[POWER OUTAGE]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Stay away from downed power lines.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Use flashlights, not candles.
+3. 📞 **EMERGENCY HOTLINE CALL**: NEA/Police: 100`,
+        road_blockage_report: `[ROAD BLOCKAGE]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Do not attempt to cross landslides or floods.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Turn around and find a safe open area.
+3. 📞 **EMERGENCY HOTLINE CALL**: Traffic Police: 103 | Police: 100`,
+        preparedness_tips_query: `[PREPAREDNESS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Prepare a Go-Bag (Water, Food, Meds).
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Identify safe spots in your home.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        status_check_general: `[STATUS CHECK]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Assess your surroundings for danger.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Follow official instructions from authorities.
+3. 📞 **EMERGENCY HOTLINE CALL**: NDRRMA: 16666`,
+        fallback_unclear: `[EMERGENCY SAFETY ADVISORY]
+I am specialized solely in disaster and emergency safety in Nepal.
+
+Immediate assistance: Police: 100 | Ambulance: 102 | NDRRMA: 16666`
     },
-
     ne_dev: {
-        first_aid: `[प्राथमिक उपचार निर्देशिका]
-• **रक्तस्राव**: सफा कपडाले सिधै बलियोसँग थिच्नुहोस्।
-• **पोलेको**: बगिरहेको चिसो पानीले १०–१५ मिनेट पखाल्नुहोस्। फोका नफोड्नुहोस्।
-• **हड्डी भाँचिएको**: काम्रो वा स्प्लिन्ट प्रयोग गरी अङ्ग अचल बनाउनुहोस्।
-• **आपत्कालीन नम्बर**: प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६`,
-
-        earthquake: `[भूकम्प सुरक्षा निर्देशिका]
-• **घुँडा टेक, ओत लाग, समात**: बलियो टेबुलमुनि जानुहोस्, टाउको छोप्नुहोस् र कम्पन नरोकिउन्जेल समात्नुहोस्।
-• **टाढा रहनुहोस्**: झ्याल, अग्ला फर्निचर र गाह्रोबाट टाढा बस्नुहोस्।
-• **बाहिर भएमा**: भवन, पोल र रूखबाट टाढा खुला ठाउँमा जानुहोस्।
-• **कम्पन रोकिएपछि**: पराकम्पनको लागि तयार रहनुहोस्। लिफ्ट प्रयोग नगर्नुहोस्।
-• **आपत्कालीन नम्बर**: प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६`,
-
-        contacts: `[नेपाल आपत्कालीन हटलाइनहरू]
-• **नेपाल प्रहरी**: १००
-• **रेडक्रस एम्बुलेन्स**: १०२
-• **विपद् व्यवस्थापन (NDRRMA)**: १६६६६
-• **सशस्त्र प्रहरी बल (APF)**: १११४
-• **दमकल (Fire Brigade)**: १०१`,
-
-        emergency_kit: `[आपतकालीन झोला (Go-Bag) चेकलिस्ट]
-• **पानी र खाना**: प्रतिव्यक्ति ३ लिटर पानी र ३ दिनलाई पुग्ने सुख्खा खानेकुरा।
-• **प्राथमिक उपचार**: ब्यान्डेज, एन्टिसेप्टिक र आवश्यक औषधिहरू।
-• **उपकरण**: टर्चलाइट, अतिरिक्त ब्याट्री, पावर बैंक, सिट्ठी।
-• **कागजात**: नागरिकताको प्रतिलिपि र केही नगद वाटरप्रूफ ब्यागमा।
-• **आपत्कालीन नम्बर**: प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६`,
-
-        landslide: `[पहिरो सुरक्षा निर्देशिका]
-• **घरभित्र भएमा**: डाँडाभन्दा टाढाको माथिल्लो तलामा जानुहोस्।
-• **बाहिर भएमा**: भीर, खोल्सा र नदी किनारबाट तुरुन्तै अग्लो ठाउँमा जानुहोस्।
-• **गाडी चलाउँदा**: ढुङ्गा खस्ने जोखिम र बाटोका दरार ध्यान दिनुहोस्।
-• **आपत्कालीन नम्बर**: प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६`
+        trapped_debris_report: `[अति जरुरी SOS: भग्नावशेषमुनि थुनिएको]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: शान्त रहनुहोस्। धुलो नउडोस् भनेर धेरै नहल्लिने प्रयास गर्नुहोस्।
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: कपडाले नाक-मुख छोप्नुहोस्। पाइप वा पर्खालमा ढुङ्गाले ठोकेर ध्वनि संकेत दिनुहोस्।
+3. 📞 **EMERGENCY HOTLINE CALL**: सशस्त्र प्रहरी: १११४ | प्रहरी: १००`,
+        earthquake_occurring_report: `[भूकम्प सुरक्षा निर्देशिका]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: घुँडा टेक, ओत लाग, समात (DROP, COVER, HOLD ON)।
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: झ्याल, सिसा र कमजोर गाह्रोबाट टाढा बस्नुहोस्।
+3. 📞 **EMERGENCY HOTLINE CALL**: प्रहरी: १०० | NDRRMA: १६६६६`,
+        sos_help_request: `[आपत्कालीन मद्दत]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: आफ्नो वरपरको खतरा (आगो, बाढी, पहिरो) पहिचान गर्नुहोस्।
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: सुरक्षित स्थानमा जानुहोस्।
+3. 📞 **EMERGENCY HOTLINE CALL**: प्रहरी: १०० | एम्बुलेन्स: १०२`
     },
-
     ne_rom: {
-        first_aid: `[PRATHAMIK UPACHAR PROTOCOL]
-• **RAGAT BAGDAI**: Safa kapada le sidhai baliyo thicnuhos.
-• **POLEKO**: Chiso bagne pani le 10-15 min pakhalnuhos. Foka nafodnuhos.
-• **HAAD BHATKIEKO**: Splint prayog gari anga nahalai rakhnuhos.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
-
-        earthquake: `[BHUKAMPA SAFETY PROTOCOL]
-• **DROP, COVER, HOLD ON**: Baliyo table muni ghunda teker tauko chopnuhos, kampan narokiunjel samatnuhos.
-• **TADHA RAHNUHOS**: Jhyal, aglo furniture ra garo bata tadha rahnuhos.
-• **BAHIRA BHAEMA**: Bhavan, bijuli ko pole ra rukh bata tadha khula thaun ma januhos.
-• **AFTER SHAKING**: Parakampan ko lagi tayar rahnuhos. Lift prayog nagarnuhos.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
-
-        contacts: `[NEPAL EMERGENCY HOTLINES]
-• **Nepal Police**: 100
-• **Red Cross Ambulance**: 102
-• **NDRRMA (Disaster Helpline)**: 16666
-• **Armed Police Force (APF)**: 1114
-• **Fire Brigade**: 101`,
-
-        emergency_kit: `[EMERGENCY GO-BAG CHECKLIST]
-• **Pani ra Khana**: Ek jana ko lagi 3 liter pani ra 3 din pugne dry food.
-• **Prathamik Upachar**: Bandage, antiseptic, niyamit aushadhi.
-• **Tools**: Flashlight, extra battery, power bank, whistle.
-• **Documents**: Nagarikta copy ra cash plastic pouch ma.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`,
-
-        landslide: `[PAHIRO SAFETY PROTOCOL]
-• **BHITRA BHAEMA**: Dhalan bata tadha mathillo tala ma januhos.
-• **BAHIRA BHAEMA**: Bhir ra khola kinara bata aglo thaun ma januhos.
-• **GAADI CHALAUNDA**: Dhunga khasne jokhima ra bato ko crack heri chalaunuhos.
-• **EMERGENCY CALL**: Police: 100 | Ambulance: 102 | NDRRMA: 16666`
+        trapped_debris_report: `[URGENT SOS: DEBRIS MUNI THUNIYO]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Shanta rahnuhos. Dhulo bata bachna dherai nahallinuhos.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Kapada le naak-mukh chopnuhos. Pipe ma thokera aawaj nikalnuhos.
+3. 📞 **EMERGENCY HOTLINE CALL**: APF: 1114 | Police: 100`,
+        earthquake_occurring_report: `[BHUKAMPA SAFETY PROTOCOL]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Baliyo table muni ghunda teker tauko chopnuhos (DROP, COVER, HOLD ON).
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Jhyal ra kamjor garo bata tadha rahnuhos.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100 | NDRRMA: 16666`,
+        sos_help_request: `[EMERGENCY SOS]
+1. 🛑 **IMMEDIATE HAZARD ACTION**: Aafno warapara ko khatara (aago, badi) heri surakshit thaun khojnuhos.
+2. 🩹 **IMMEDIATE LIFE-SAVING ACTION**: Turuntai khula thaun ma januhos.
+3. 📞 **EMERGENCY HOTLINE CALL**: Police: 100 | Ambulance: 102`
     }
 };
 
 const INTENT_RULES = [
-    { intent: 'first_aid', keywords: ['first aid', 'bleed', 'bleeding', 'burn', 'fracture', 'cut', 'prathamik', 'upachar', 'ragat', 'poleko', 'प्राथमिक', 'उपचार', 'रगत', 'पोलेको', 'घाइते'] },
-    { intent: 'earthquake', keywords: ['earthquake', 'quake', 'tremor', 'seismic', 'bhuikampa', 'bhukamp', 'shake', 'भूकम्प', 'कम्पन्', 'हल्लियो'] },
-    { intent: 'contacts', keywords: ['contact', 'number', 'phone', 'hotline', 'police', 'ambulance', 'ndrrma', 'prahari', 'सम्पर्क', 'नम्बर', 'हटलाइन', 'प्रहरी', 'एम्बुलेन्स'] },
-    { intent: 'emergency_kit', keywords: ['kit', 'bag', 'go bag', 'supplies', 'jhola', 'samagri', 'झोला', 'सामग्री'] },
-    { intent: 'landslide', keywords: ['landslide', 'mudslide', 'pahiro', 'पहिरो', 'पहिरो आयो'] }
+    { intent: 'greeting', keywords: ['hi', 'hello', 'namaste', 'namaskar', 'hey', 'नमस्ते', 'नमस्कार'] },
+    { intent: 'goodbye_thanks', keywords: ['bye', 'thank you', 'thanks', 'dhanyabad', 'धन्यवाद', 'बिदा'] },
+    { intent: 'sos_help_request', keywords: ['help', 'help me', 'sos', 'bachau', 'मलाई बचाउ', 'मद्दत', 'madat', 'sahayata'] },
+    // Preparedness is matched before the generic earthquake rule so that
+    // "earthquake go bag" resolves to the Go-Bag checklist rather than to
+    // Drop-Cover-Hold-On, matching keywords.csv on the backend.
+    { intent: 'preparedness_tips_query', keywords: ['how to prepare', 'गो-ब्याग कसरी', 'emergency kit ma k k', 'emergency kit', 'go bag', 'go-bag', 'preparedness', 'prepare', 'आपतकालीन किट'] },
+    { intent: 'earthquake_occurring_report', keywords: ['earthquake', 'earthquake now', 'bhukampa aayo', 'घर हल्लियो', 'bhuikampa', 'bhukampa', 'shake', 'भूकम्प', 'कम्पन्'] },
+    { intent: 'trapped_debris_report', keywords: ['trapped', 'under rubble', 'under debris', 'pinned', 'buried', 'crushed', 'stuck inside', 'पर्खालमुनि', 'थुनिएँ', 'थुनिएको', 'च्यापिएको', 'भग्नावशेष', 'thuniyo', 'thunieko', 'chyapieko', 'debris muni'] },
+    { intent: 'medical_emergency_request', keywords: ['need an ambulance', 'एम्बुलेन्स चाहियो', 'ambulance chaincha', 'unconscious', 'not breathing', 'heart attack', 'बेहोस'] },
+    { intent: 'injury_report', keywords: ['i am injured', 'मलाई चोट लागेको छ', 'khutta ma chot', 'घाउ', 'चोट'] },
+    { intent: 'fire_incident_report', keywords: ['fire', 'burning', 'smoke', 'fire brigade', 'आगो', 'आगलागी', 'धुवाँ', 'दमकल', 'aago', 'aagolagi', 'damkal'] },
+    { intent: 'gas_leak_report', keywords: ['gas leak', 'ग्यास चुहियो', 'gas smell', 'smell gas'] },
+    { intent: 'building_collapse_report', keywords: ['building collapsed', 'घर भत्कियो', 'ghar bhatkiyo', 'roof collapsed', 'भवन भत्कियो'] },
+    { intent: 'building_damage_check', keywords: ['house has cracks', 'चिरा परेको छ', 'crack aayo', 'is my house safe', 'दरार'] },
+    { intent: 'safe_location_query', keywords: ['safe location', 'assembly point', 'open space', 'open ground', 'कहाँ जाने', 'सुरक्षित ठाउँ', 'भेला हुने ठाउँ', 'surakshit thaun', 'khula thaun'] },
+    { intent: 'shelter_request', keywords: ['need shelter', 'आश्रय चाहियो', 'shelter chaincha', 'tent', 'camp'] },
+    { intent: 'evacuation_guidance_query', keywords: ['how to evacuate', 'निकासाको मार्ग', 'kasari safely evacuate'] },
+    { intent: 'family_member_missing', keywords: ['missing', 'बेपत्ता', ' हराएको', 'haraeko', 'bepatta'] },
+    { intent: 'family_reunification_status', keywords: ['found my family', 'सुरक्षित भेटियो', 'safe bhetiyo', 'found safe'] },
+    { intent: 'food_water_request', keywords: ['drinking water', 'खानेपानी चाहियो', 'khane pani', 'food', 'ration', 'खाना'] },
+    { intent: 'first_aid_query', keywords: ['how to stop bleeding', 'रगत बग्न रोक्ने उपाय', 'cpr kasari', 'how to treat', 'first aid', 'प्राथमिक उपचार'] },
+    { intent: 'aftershock_information_query', keywords: ['aftershocks', 'पराकम्प', 'aftershock aaunxa', 'more shaking'] },
+    { intent: 'emergency_contact_request', keywords: ['contact', 'number', 'phone', 'hotline', 'police number', 'ambulance number', 'सम्पर्क', 'नम्बर', 'हटलाइन'] },
+    { intent: 'power_outage_report', keywords: ['power outage', 'बिजुली गएको छ', 'power cut', 'no electricity', 'line gayo'] },
+    { intent: 'road_blockage_report', keywords: ['road blocked', 'सडक बन्द', 'road block bhayo', 'bato banda'] },
+    { intent: 'status_check_general', keywords: ['what should i do', 'अहिले मैले के गर्नुपर्छ', 'ahile k garne', 'what now'] },
+    { intent: 'fallback_unclear', keywords: [] }
 ];
+
+// Latin keywords must match on word boundaries. Plain substring matching made
+// the 2-character 'hi' in the greeting rule swallow real distress reports:
+// "my child is trapped", "this building is shaking" and "which way to evacuate"
+// all matched greeting (c-hi-ld / t-hi-s / w-hi-ch) and, because greeting is
+// first in INTENT_RULES, returned "Namaste! How can I assist you?" offline.
+// Devanagari keeps containment matching — JS \b is ASCII-only and would never
+// fire around Devanagari codepoints.
+const LATIN_KEYWORD = /^[a-z0-9\s'-]+$/;
+
+function keywordMatches(haystack, keyword) {
+    const k = keyword.toLowerCase().trim();
+    if (!k) return false;
+    if (!LATIN_KEYWORD.test(k)) return haystack.includes(k);
+    const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Allow a trailing plural so "tent" still matches "we need tents" and
+    // "contact" matches "contacts". Only for keywords of 4+ characters: with a
+    // shorter cutoff the greeting rule's 'hi' would grow to 'his' and start
+    // hijacking "his house collapsed".
+    const plural = k.length >= 4 ? 's?' : '';
+    return new RegExp(`(?<![a-z0-9])${escaped}${plural}(?![a-z0-9])`, 'i').test(haystack);
+}
 
 function matchLocalIntent(query) {
     const q = query.toLowerCase().trim();
     for (const rule of INTENT_RULES) {
-        if (rule.keywords.some(keyword => q.includes(keyword.toLowerCase()))) {
+        if (rule.keywords.some(keyword => keywordMatches(q, keyword))) {
             return rule.intent;
         }
     }
@@ -383,13 +491,92 @@ function matchLocalIntent(query) {
 }
 
 // =========================================================================
-// LAYER 5: MAIN DISPATCH HANDLER (ONLINE RAG -> OFFLINE NLU FALLBACK)
+// LAYER 5: OFFLINE SOS OUTBOX QUEUE & AUTO-SYNC
+// =========================================================================
+const OFFLINE_QUEUE_KEY = 'qsafe_offline_sos_queue';
+
+function getOfflineQueue() {
+    try {
+        const stored = localStorage.getItem(OFFLINE_QUEUE_KEY);
+        return stored ? JSON.parse(stored) : [];
+    } catch (e) {
+        return [];
+    }
+}
+
+function queueOfflineReport(report) {
+    try {
+        const queue = getOfflineQueue();
+        let coords = null;
+        
+        function _saveReport() {
+            queue.push({
+                id: `sos-${Date.now()}`,
+                text: report.text,
+                lang: report.lang,
+                timestamp: new Date().toISOString(),
+                isUrgent: report.isUrgent,
+                coords: coords
+            });
+            localStorage.setItem(OFFLINE_QUEUE_KEY, JSON.stringify(queue));
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => { 
+                    coords = { lat: pos.coords.latitude, lng: pos.coords.longitude }; 
+                    _saveReport();
+                },
+                (err) => { 
+                    console.warn("GPS unavailable:", err); 
+                    _saveReport(); 
+                },
+                { timeout: 5000 }
+            );
+        } else {
+            _saveReport();
+        }
+    } catch (e) {
+        console.warn("Could not save offline SOS queue:", e);
+    }
+}
+
+async function syncOfflineReports() {
+    const queue = getOfflineQueue();
+    if (!queue || queue.length === 0) return;
+
+    try {
+        const count = queue.length;
+        const res = await fetch(`${BACKEND_URL}/api/emergency/sync`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ reports: queue })
+        });
+        
+        if (res.ok) {
+            localStorage.removeItem(OFFLINE_QUEUE_KEY);
+            showSyncToast(`${count} offline emergency report(s) synced with dispatch!`);
+        } else {
+            console.warn("Backend rejected sync:", res.status);
+        }
+    } catch (e) {
+        console.warn("Failed to flush offline queue:", e);
+    }
+}
+
+window.addEventListener('online', () => {
+    syncOfflineReports();
+});
+
+// =========================================================================
+// LAYER 6: MAIN DISPATCH HANDLER (ONLINE RAG -> OFFLINE NLU FALLBACK)
 // =========================================================================
 async function handleUserIntent() {
     const rawQuery = queryIn.value ? queryIn.value.trim() : "";
     if (!rawQuery) return;
 
     const selectedLang = getNormalizedLang();
+    const isUrgent = detectUrgency(rawQuery);
 
     // Step A: Render User Query
     appendMessageToUI(rawQuery, 'usr');
@@ -398,7 +585,7 @@ async function handleUserIntent() {
     // Step B: Show Loading Indicator
     const loadingId = appendLoadingBubble();
 
-    // Step C: If Online, Fetch Directly from Live API
+    // Step C: If Online, Fetch Directly from Live Backend API
     if (isSystemOnline) {
         try {
             const data = await safeFetchJson(`${BACKEND_URL}/api/chat`, {
@@ -408,7 +595,7 @@ async function handleUserIntent() {
             });
 
             removeLoadingBubble(loadingId);
-            appendMessageToUI(data.response || data.reply, 'sys');
+            appendMessageToUI(data.response || data.reply, 'sys', '', '', isUrgent);
             return;
         } catch (err) {
             console.warn("⚠️ Live API call failed. Falling back to local offline engine...", err);
@@ -418,6 +605,11 @@ async function handleUserIntent() {
     // Step D: Offline Local Knowledge Base Fallback
     removeLoadingBubble(loadingId);
 
+    // If urgent distress call during offline mode, store in offline outbox for automatic sync
+    if (isUrgent) {
+        queueOfflineReport({ text: rawQuery, lang: selectedLang, isUrgent: true });
+    }
+
     // Greetings check
     const greetings = ['hello', 'hi', 'namaste', 'namaskar', 'नमस्ते', 'नमस्कार', 'hey'];
     if (greetings.includes(rawQuery.toLowerCase())) {
@@ -426,27 +618,29 @@ async function handleUserIntent() {
             : (selectedLang === 'ne_rom'
                 ? "Namaste! Ma QSAFE, tapainko emergency safety advisor hu. Bhukampa, pahiro va first aid bare sodhnuhos."
                 : "Namaste! I am QSAFE, your emergency safety advisor. How can I assist you with earthquake, first aid, or disaster guidance today?");
-        appendMessageToUI(greetingMsg, 'sys');
+        appendMessageToUI(greetingMsg, 'sys', '', '', false);
         return;
     }
 
     const detectedIntent = matchLocalIntent(rawQuery);
     const langDict = LOCAL_KNOWLEDGE_BASE[selectedLang] || LOCAL_KNOWLEDGE_BASE['en'];
 
-    if (detectedIntent && langDict[detectedIntent]) {
-        appendMessageToUI(langDict[detectedIntent], 'sys');
+    const responseCard = detectedIntent ? (langDict[detectedIntent] || LOCAL_KNOWLEDGE_BASE['en'][detectedIntent]) : null;
+    if (responseCard) {
+        appendMessageToUI(responseCard, 'sys', '', '', isUrgent);
+        
     } else {
         const unknownMsg = selectedLang === 'ne_dev'
             ? `[विपद् सुरक्षा निर्देशिका]\nम केवल आपत्कालीन सुरक्षा (भूकम्प, पहिरो, प्राथमिक उपचार, आपतकालीन झोला) मा मद्दत गर्न सक्छु।\n\nतत्काल मद्दतको लागि: प्रहरी: १०० | एम्बुलेन्स: १०२ | NDRRMA: १६६६६`
             : (selectedLang === 'ne_rom'
                 ? `[EMERGENCY SAFETY ADVISORY]\nMa keval disaster ra emergency safety ma matra maddat garna sakchu.\n\nEmergency Call: Police: 100 | Ambulance: 102 | NDRRMA: 16666`
                 : `[EMERGENCY SAFETY ADVISORY]\nI am specialized solely in disaster and emergency safety in Nepal.\n\nImmediate assistance: Police: 100 | Ambulance: 102 | NDRRMA: 16666`);
-        appendMessageToUI(unknownMsg, 'sys');
+        appendMessageToUI(unknownMsg, 'sys', '', '', isUrgent);
     }
 }
 
 // =========================================================================
-// LAYER 6: EVENT LISTENERS & QUICK CHIPS
+// LAYER 7: EVENT LISTENERS & QUICK CHIPS
 // =========================================================================
 if (dispatchBtn) {
     dispatchBtn.addEventListener('click', handleUserIntent);
@@ -471,3 +665,4 @@ document.querySelectorAll('.chip-btn').forEach(btn => {
         }
     });
 });
+

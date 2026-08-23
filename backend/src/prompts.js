@@ -103,6 +103,111 @@ export function detectLanguageState(text, selectedLanguage = null) {
  * Categorized Disaster Protocol Responses by Language State
  */
 export const EMERGENCY_SAFETY_RESPONSES = {
+  trapped_sos: {
+    en: `[CRITICAL SOS: TRAPPED UNDER DEBRIS]
+• **PROTECT AIRWAY**: Cover your nose and mouth with a cloth to avoid inhaling concrete dust.
+• **SIGNAL ACOUSTICALLY**: Tap rhythmically on metal pipes or walls using a stone. Do not yell continuously to conserve oxygen.
+• **NO OPEN FLAMES**: Never light matches or lighters due to ruptured gas lines.
+• **STAY STILL**: Minimize movement to avoid further collapse. Conserve energy.
+• **RESCUE HOTLINE**: APF: 1114 | Police: 100 | NDRRMA: 16666 | Ambulance: 102`,
+
+    ne_dev: `[अति जरुरी SOS: भग्नावशेष वा पर्खालमुनि थुनिएको]
+• **श्वासप्रश्वास जोगाउनुहोस्**: धुलो फोक्सोमा पस्न नदिन कपडाले नाक-मुख छोप्नुहोस्।
+• **ध्वनि संकेत दिनुहोस्**: लगातार नकराउनुहोस्। ढुङ्गा वा धातुले पाइप/पर्खालमा ठोकेर आवाज निकाल्नुहोस्।
+• **आगो नबाल्नुहोस्**: ग्यास चुहावट हुन सक्ने भएकाले सलाई वा लाइटर नबाल्नुहोस्।
+• **उद्धार हटलाइन**: सशस्त्र प्रहरी: १११४ | प्रहरी: १०० | NDRRMA: १६६६६ | एम्बुलेन्स: १०२`,
+
+    ne_rom: `[URGENT SOS: DEBRIS MUNI THUNIYO]
+• **SHWAS JOGAUNUHOS**: Dhulo bata bachna kapada le naak ra mukh chopnuhos.
+• **AWAAJ DIYERA SANKET**: Dhunga le pipe va dhunga ma thoki awaaj nikalnuhos. Nirantar nakaraunuhos.
+• **AAGO NABALNUHOS**: Gas leak huna sakne bhayeko le salai va lighter prayog nagarnuhos.
+• **RESCUE HOTLINE**: APF: 1114 | Police: 100 | NDRRMA: 16666 | Ambulance: 102`
+  },
+
+  fire: {
+    en: `[FIRE SAFETY & EVACUATION PROTOCOL]
+• **EVACUATE**: Get out immediately. Crawl low under smoke where the air is cleaner.
+• **FEEL DOORS**: Touch door handles with the back of your hand; if hot, do not open.
+• **STOP, DROP, ROLL**: If clothing catches fire, drop immediately to the ground and roll.
+• **NO ELEVATOR**: Use stairs only. Never use elevators during a fire.
+• **FIRE BRIGADE**: Fire: 101 | Police: 100 | APF: 1114`,
+
+    ne_dev: `[आगलागी सुरक्षा निर्देशिका]
+• **तुरुन्त बाहिर निस्कनुहोस्**: धुवाँ भएको ठाउँमा भुइँतिर निहुरिएर बाहिर निस्कनुहोस्।
+• **ढोका जाँच गर्नुहोस्**: ढोका खोल्नुअघि पछाडिको हातले छाम्नुहोस्, तातो भए नखोल्नुहोस्।
+• **कपडामा आगो लागेमा**: तुरुन्तै भुइँमा लडेर गुड्नुहोस्।
+• **दमकल बोलाउनुहोस्**: दमकल: १०१ | प्रहरी: १०० | सशस्त्र प्रहरी: १११४`,
+
+    ne_rom: `[AAGOLAGI SAFETY PROTOCOL]
+• **BAHIRA NISKANUHOS**: Dhuwan bhayeko thau ma bhuin tira ghasrier bahira niskanuhos.
+• **DHOKA CHECK**: Dhoka kholnu aghi pachhadi ko hat le chamnuhos, tato bhaye nakhol nuhos.
+• **KAPADA MA AAGO LAGEMA**: Turuntai bhuin ma ladera gudnuhos.
+• **DAMKAL DIAL**: Fire: 101 | Police: 100 | APF: 1114`
+  },
+
+  building_collapse: {
+    en: `[BUILDING DAMAGE & COLLAPSE PROTOCOL]
+• **EVACUATE SAFELY**: If the building shows deep diagonal wall cracks, evacuate immediately using stairs.
+• **UTILITIES OFF**: Shut off main gas cylinder valves and electric power switches.
+• **STAY OUT**: Do not re-enter damaged buildings until inspected by structural engineers.
+• **HOTLINES**: Police: 100 | NDRRMA: 16666 | APF: 1114`,
+
+    ne_dev: `[भवन क्षति तथा भत्किएको अवस्था]
+• **बाहिर निस्कनुहोस्**: पर्खालमा ठूला दरार देखिएमा तुरुन्त भर्‍याङमार्फत बाहिर निस्कनुहोस्।
+• **ग्यास र बिजुली बन्द**: ग्यास सिलिन्डर र मुख्य बिजुली स्विच बन्द गर्नुहोस्।
+• **भित्र नपस्नुहोस्**: प्राविधिक जाँच नभएसम्म क्षतिग्रस्त घरभित्र फेरि नपस्नुहोस्।
+• **आपत्कालीन नम्बर**: प्रहरी: १०० | NDRRMA: १६६६६`,
+
+    ne_rom: `[BHATKIEKO BHAVAN PROTOCOL]
+• **BAHIRA NISKANUHOS**: Thulo crack dekhema bharyang bata bahira niskanuhos.
+• **GAS RA POWER OFF**: Gas cylinder ra main power switch band garnuhos.
+• **BHITRA NAPAS NUHOS**: Prabidhik jaanch nabhaye samma chhatigrasta ghar bhitra napas nuhos.
+• **EMERGENCY CALL**: Police: 100 | NDRRMA: 16666 | APF: 1114`
+  },
+
+  emergency_kit: {
+    en: `[EMERGENCY GO-BAG CHECKLIST]
+• **Water & Food**: 3 liters water per person and 3-day dry nutrient food supply.
+• **Medical Kit**: Antiseptic, bandages, gauze, essential prescription drugs.
+• **Tools & Power**: Flashlight, extra batteries, charged power bank, whistle.
+• **Vital Docs**: Photocopies of citizenship/passports and cash in waterproof pouch.
+• **EMERGENCY CALL**: Police: 100 | NDRRMA: 16666`,
+
+    ne_dev: `[आपतकालीन झोला (Go-Bag) चेकलिस्ट]
+• **पानी र खाना**: प्रतिव्यक्ति ३ लिटर पानी र ३ दिनलाई पुग्ने सुख्खा खानेकुरा।
+• **प्राथमिक उपचार**: ब्यान्डेज, गज, एन्टिसेप्टिक र नियमित खाने औषधिहरू।
+• **उपकरण**: टर्चलाइट, अतिरिक्त ब्याट्री, पावर बैंक, सिट्ठी र डोरी।
+• **कागजात**: नागरिकता, लालपुर्जाको प्रतिलिपि र केही नगद वाटरप्रूफ थैलीमा।
+• **आपत्कालीन नम्बर**: प्रहरी: १०० | NDRRMA: १६६६६`,
+
+    ne_rom: `[EMERGENCY GO-BAG CHECKLIST]
+• **Pani ra Khana**: Ek jana ko lagi 3 liter pani ra 3 din pugne dry food.
+• **Prathamik Upachar**: Bandage, antiseptic, niyamit aushadhi.
+• **Tools**: Flashlight, extra battery, power bank, whistle.
+• **Documents**: Nagarikta copy ra cash plastic pouch ma.
+• **EMERGENCY CALL**: Police: 100 | NDRRMA: 16666`
+  },
+
+  shelter: {
+    en: `[EMERGENCY ASSEMBLY POINTS & SHELTERS]
+• **OPEN SPACES**: Open school grounds, public parks, Tudikhel/Khula Manch, sports stadiums.
+• **AVOID**: Narrow alleys, electrical transformers, overhead cables, tall unreinforced masonry walls.
+• **COORDINATION**: Register with local community volunteers and Red Cross posts.
+• **EMERGENCY CALL**: Police: 100 | NDRRMA: 16666`,
+
+    ne_dev: `[आपत्कालीन भेला हुने सुरक्षित ठाउँहरू]
+• **खुला स्थान**: खुला चौर, स्कुलको खेलमैदान, खुलामञ्च, टुँडिखेल वा पार्क।
+• **बच्नुपर्ने ठाउँ**: साँघुरा गल्ली, ट्रान्सफर्मर, बिजुलीका पोल र अग्ला पर्खालहरू।
+• **समन्वय**: स्थानीय स्वयंसेवक र रेडक्रस पोस्टमा दर्ता गर्नुहोस्।
+• **आपत्कालीन नम्बर**: प्रहरी: १०० | NDRRMA: १६६६६`,
+
+    ne_rom: `[SURAKSHIT ASSEMBLY POINTS]
+• **KHULA THAUN**: School ground, Tudikhel, Khula Manch va park.
+• **BACHNU PARNE**: Saghuro galli, transformer, pole ra garo.
+• **SAMANWAYA**: Sthaniya swayamsewak ra Red Cross post ma darta garnuhos.
+• **EMERGENCY CALL**: Police: 100 | NDRRMA: 16666`
+  },
+
   landslide: {
     en: `[LANDSLIDE & MUDSLIDE PROTOCOL]
 • **INSIDE**: Move to the top floor or far side of the building away from the slope. Cover under heavy furniture.
@@ -188,19 +293,25 @@ export const EMERGENCY_SAFETY_RESPONSES = {
 • **Nepal Police (नेपाल प्रहरी)**: 100
 • **Armed Police Force (APF)**: 1114
 • **Ambulance (एम्बुलेन्स)**: 102
-• **NDRRMA (विपद् व्यवस्थापन)**: 16666`,
+• **NDRRMA (विपद् व्यवस्थापन)**: 16666
+• **Fire Brigade (दमकल)**: 101
+• **Natural Disaster Reporting**: 1149`,
 
     ne_dev: `[नेपाल आपत्कालीन हटलाइनहरू]
 • **नेपाल प्रहरी**: १००
 • **सशस्त्र प्रहरी बल (APF)**: १११४
 • **एम्बुलेन्स (रेडक्रस)**: १०२
-• **NDRRMA (विपद् व्यवस्थापन)**: १६६६६`,
+• **NDRRMA (विपद् व्यवस्थापन)**: १६६६६
+• **दमकल (Fire Brigade)**: १०१
+• **विपद् रिपोर्टिङ लाइन**: ११४९`,
 
     ne_rom: `[NEPAL EMERGENCY HOTLINES]
 • **Nepal Police**: 100
 • **Armed Police Force (APF)**: 1114
 • **Ambulance**: 102
-• **NDRRMA (Vipad Byabasthapan)**: 16666`
+• **NDRRMA (Vipad Byabasthapan)**: 16666
+• **Fire Brigade**: 101
+• **Vipad Reporting Line**: 1149`
   },
 
   greetings: {

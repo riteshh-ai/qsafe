@@ -49,6 +49,7 @@ class IntentEngine:
         
         # Load keyword dictionary
         self.keywords_dict = self._load_keywords()
+        self.phrase_rules = self._build_phrase_rules()
         
         # Load ML artifacts
         self.vectorizer, self.model = ModelTrainer.load_model(project_root)
@@ -78,6 +79,174 @@ class IntentEngine:
         
         print(f"Loaded {len(keywords_dict)} keywords from 'keywords.csv'")
         return keywords_dict
+
+    def _build_phrase_rules(self) -> list:
+        """
+        Build ordered high-signal phrase rules for real-world field queries.
+
+        Exact keyword matching is intentionally strict. These phrase rules catch
+        longer messages that contain an unambiguous emergency phrase while
+        avoiding broad tokens like "help" that can be ambiguous in greetings.
+        """
+        rules = [
+            ("emergency_contact_request", [
+                "ambulance number", "police number", "fire brigade number",
+                "emergency contact", "helpline number", "rescue number",
+                "hotline", "phone number for", "number for ambulance",
+                "number for police", "number for fire",
+                "aapatkalin sampark", "call police", "prahari aapatkal",
+                "prahari bolau", "prahari sahayata", "health services",
+                "chikitsa aapatkal", "aspatal sampark", "swasthya seva",
+            ]),
+            ("first_aid_query", [
+                "first aid", "cpr", "resuscitation", "bandage", "treat burn",
+                "sprain treatment", "choking help", "cpr instructions",
+                "cpr steps", "how to stop bleeding", "stop bleeding",
+                "emergency treatment", "prathamik upchar", "aapatkalin upchar",
+                "chikitsa madat", "cardiopulmonary", "punarjivan",
+                "ragat rokna", "ragat rokne", "ghau herachah", "patti lagane",
+            ]),
+            ("medical_emergency_request", [
+                "need ambulance", "call ambulance", "ambulance please",
+                "medical emergency", "doctor needed", "hospital needed",
+                "urgent medical help", "unconscious person", "not breathing",
+                "no pulse", "heart attack", "chest pain", "cardiac arrest",
+                "severe bleeding", "heavy bleeding", "blood loss",
+            ]),
+            ("gas_leak_report", [
+                "gas leak", "gas smell", "smell gas", "smell of gas",
+                "cylinder leaking", "gas pipe broke", "leaking gas",
+                "gas cylinder", "gas emergency", "gas explosion",
+            ]),
+            ("fire_incident_report", [
+                "house burning", "building on fire", "on fire", "fire emergency",
+                "flames visible", "smoke coming out", "smell smoke", "see fire",
+                "need fire brigade", "call fire department", "fire truck needed",
+                "firefighters help", "burning building", "fire blocking exit",
+            ]),
+            ("trapped_debris_report", [
+                "trapped under debris", "stuck under rubble", "buried under building",
+                "pinned under wall", "cant move", "can't move", "stuck here",
+                "cant get out", "can't get out", "trapped inside", "buried alive",
+                "stuck under collapsed building", "need rescue", "emergency extraction",
+                "family trapped", "children stuck", "elderly buried",
+                "multiple people trapped", "fasko", "dabieko", "thunieko",
+                "people buried", "bhitra faskaka manis", "basinda faskaka",
+                "adhivasi faskaka", "manis dabieka",
+            ]),
+            ("road_blockage_report", [
+                "road blocked", "highway blocked", "bridge collapsed", "road cracked",
+                "road damaged", "road closed", "blocked road", "blocked highway",
+                "landslide", "mudslide", "alternate route", "route blocked",
+                "sadak avaruddh", "rajamarg banda", "gali avaruddh",
+                "marg avaruddh", "rockfall", "pahirole avaruddh",
+                "sadakama bhagnaveshesh", "chattan khase", "mato khase",
+                "pul kshatigrast",
+            ]),
+            ("power_outage_report", [
+                "power outage", "no electricity", "electricity cut off",
+                "power lines down", "power line down", "power restored",
+                "blackout", "grid failure", "electricity gone", "no power",
+                "vidyut chaina", "vidyut banda", "bijuli chaina", "bijuli gayo",
+                "vidyut bipalta", "grid bipalta", "vidyut kat",
+                "vidyut punarsthan", "vidyut",
+            ]),
+            ("building_collapse_report", [
+                "building collapsed", "house collapsed", "roof caved in",
+                "wall collapsed", "structure collapsed", "apartment collapsed",
+                "building fell", "house fell", "roof fell", "wall fell",
+                "imarat dhali", "sanrachana dhali", "bahumanjila dhali",
+                "vyavasayik imarat dhali", "concrete chunks", "steel bent",
+            ]),
+            ("building_damage_check", [
+                "cracks in wall", "structural damage", "building tilted",
+                "safety inspection", "cracks appeared", "structural integrity",
+                "damage assessment", "foundation damage", "wall damage",
+                "is my house safe", "is my building safe", "safe to reenter",
+                "safe to re enter", "safe to re-enter", "ghar surakshit",
+                "imarat suraksha", "sanrachanatmak",
+                "building inspection needed", "bhitrama phut", "adhar kshati",
+                "imarat nirikshan", "can go inside", "structure sound",
+                "imarat sthir",
+            ]),
+            ("family_reunification_status", [
+                "found safe", "reunited", "located safely", "family reunification",
+                "report found person", "person found", "family found",
+                "parivar fela", "fela par", "status update family",
+                "where is family", "parivar sthiti", "parivar surakshit",
+                "parivar sthan", "reunification center", "reunion location",
+                "gathering point", "punarmilan kendra", "parivar beththalo",
+                "punarmilan sthan",
+            ]),
+            ("family_member_missing", [
+                "missing person", "missing family", "cant find family",
+                "can't find family", "cannot find family", "lost contact",
+                "not reachable", "did not come home", "lost person",
+                "family missing", "parivar haraeka", "priyajan haraeka",
+                "parivar gum", "harayeko manis",
+                "family lost", "haraeko vyakti", "haraeko manis",
+                "fela parna sakidaina", "parivar khoji",
+                "last seen location", "last communication",
+            ]),
+            ("evacuation_guidance_query", [
+                "evacuate", "evacuation route", "evacuation plan",
+                "evacuation instructions", "leave the building safely",
+                "exit route", "safe exit", "how to evacuate",
+            ]),
+            ("safe_location_query", [
+                "safe place", "safe zone", "evacuation point", "open ground",
+                "assembly point", "nearest safe zone", "where to go for safety",
+                "where should i go", "safe area",
+            ]),
+            ("shelter_request", [
+                "temporary shelter", "relief camp", "tent camp", "need tents",
+                "place to stay", "displaced", "need shelter",
+            ]),
+            ("food_water_request", [
+                "drinking water", "food supplies", "clean water", "food distribution",
+                "baby formula", "no food", "need food", "need water", "ration",
+            ]),
+            ("preparedness_tips_query", [
+                "earthquake go bag", "emergency kit", "secure furniture",
+                "preparedness tips", "earthquake drill", "family meeting point",
+                "go bag", "prepare for earthquake", "safety drill",
+                "disaster readiness", "safety tips", "aapad tayari",
+                "aapatkalin kit", "suraksha tips", "flashlight batteries",
+                "aapatkalin apurti", "torch battery", "meeting point",
+                "parivar aapatkalin yojana", "sanchar yojana",
+                "drop cover hold on", "safety procedure",
+            ]),
+            ("aftershock_information_query", [
+                "aftershock", "aftershocks", "more tremors", "another earthquake",
+                "second earthquake", "earthquake again", "aftershock warning",
+                "aftershock update",
+            ]),
+            ("status_check_general", [
+                "current situation", "whats happening", "what's happening",
+                "status update", "latest news", "disaster status",
+                "emergency status", "crisis update", "situation report",
+                "area condition", "local status", "neighborhood status",
+                "community situation", "safety status", "is it safe",
+                "danger level", "risk assessment", "weather condition",
+                "rain status", "wind status", "communication status",
+                "internet status", "network available", "resource availability",
+                "help available", "supplies status", "services running",
+                "general information", "need details", "want to know",
+                "seeking information", "vartaman sthiti", "sthiti update",
+                "nabintam samachar", "sankat update",
+            ]),
+            ("injury_report", [
+                "injured", "injury", "casualty", "bleeding", "broken arm",
+                "head injury", "wound", "sprained ankle", "burned hand",
+                "hurt", "gaite", "chotpat", "ghayeko",
+                "critical condition", "sano ghau", "sano pida",
+                "thulo ghau", "gambhir avastha", "laceration",
+            ]),
+        ]
+        return [
+            (intent, [self.preprocessor.clean(phrase) for phrase in phrases])
+            for intent, phrases in rules
+        ]
     
     def predict(self, text: str) -> Dict:
         """
@@ -98,6 +267,13 @@ class IntentEngine:
             }
         """
         start_time = time.time()
+        
+        # Normalize non-string/None input before it reaches raw-text helpers below.
+        # TextPreprocessor.clean() already tolerates None/non-str, but _detect_urgency()
+        # and _extract_entities() operate on the raw text and previously crashed
+        # (TypeError) on None or non-str input (e.g. a JSON null body from the caller).
+        if text is None or not isinstance(text, str):
+            text = ""
         
         # Preprocess input
         cleaned_text = self.preprocessor.clean(text)
@@ -125,8 +301,18 @@ class IntentEngine:
             result["recommended_action"] = self._get_quick_actions(result["intent"])
             result["latency_ms"] = round((time.time() - start_time) * 1000, 2)
             return result
+
+        # Tier 1b: High-signal phrase matching inside longer field messages.
+        phrase_intent = self._match_phrase_rule(cleaned_text)
+        if phrase_intent:
+            result["intent"] = phrase_intent
+            result["confidence"] = 0.98
+            result["source"] = "keyword"
+            result["recommended_action"] = self._get_quick_actions(result["intent"])
+            result["latency_ms"] = round((time.time() - start_time) * 1000, 2)
+            return result
             
-        # Tier 1b: Fuzzy keyword matching for severe typos (cutoff=0.85)
+        # Tier 1c: Fuzzy keyword matching for severe typos (cutoff=0.85)
         import difflib
         close_matches = difflib.get_close_matches(cleaned_text, self.keywords_dict.keys(), n=1, cutoff=0.85)
         if close_matches:
@@ -163,6 +349,27 @@ class IntentEngine:
             result["error"] = str(e)
             result["latency_ms"] = round((time.time() - start_time) * 1000, 2)
             return result
+
+    def _match_phrase_rule(self, cleaned_text: str) -> Optional[str]:
+        """Return the first ordered phrase-rule intent matched in cleaned_text."""
+        if not cleaned_text:
+            return None
+
+        for intent, phrases in self.phrase_rules:
+            for phrase in phrases:
+                if phrase and self._contains_phrase(cleaned_text, phrase):
+                    return intent
+        return None
+
+    @staticmethod
+    def _contains_phrase(cleaned_text: str, phrase: str) -> bool:
+        """Match Latin phrases on token boundaries and script phrases by containment."""
+        import re
+
+        if re.fullmatch(r"[a-z0-9 ]+", phrase):
+            pattern = rf"(?<![a-z0-9]){re.escape(phrase)}(?![a-z0-9])"
+            return re.search(pattern, cleaned_text) is not None
+        return phrase in cleaned_text
             
     def _detect_urgency(self, raw_text: str, cleaned_text: str) -> str:
         """Heuristic urgency detection based on punctuation and strong keywords."""
