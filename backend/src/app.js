@@ -49,6 +49,7 @@ app.use(express.static(path.resolve(__dirname, '../../frontend'), {
 app.use('/api/telemetry', telemetryRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/hazards', reportRoutes);
 app.use('/api/sos', sosRoutes);
 
 // Root route to serve Frontend UI

@@ -1,26 +1,20 @@
-/* 
-=========================================
-  Q-SAFE NEPAL: LIGHT GREEN GLASSMORPHISM
-=========================================
-*/
+/* =========================================
+   Q-SAFE NEPAL: LIGHT GREEN GLASSMORPHISM
+========================================= */
 
 :root {
-    /* Soft Light Green Glass Palette */
     --bg-overlay: rgba(235, 245, 240, 0.45);
     --card-bg: rgba(255, 255, 255, 0.82);
     --card-border: rgba(45, 106, 79, 0.25);
     
-    /* Emergency & Accent Colors */
     --primary-green: #2d6a4f;
     --primary-hover: #1b4332;
     --accent-amber: #d97706;
     --alert-red: #dc2626;
     
-    /* Typography High-Contrast Colors */
     --text-main: #1c2d24;
     --text-muted: #52796f;
     
-    /* Chat Bubbles */
     --bubble-sys: #e8f5e9;
     --bubble-usr: #ffffff;
     --bubble-border: rgba(45, 106, 79, 0.15);
@@ -44,7 +38,7 @@ body {
     overflow: hidden;
 }
 
-/* Background Overlay for Soft Depth & Blur */
+/* Background Overlay */
 .bg-overlay {
     position: fixed;
     top: 0;
@@ -61,13 +55,12 @@ body {
 .chat-wrapper {
     position: relative;
     z-index: 1;
-    width: 92%;
-    max-width: 720px;
-    height: 85vh;
-    max-height: 850px;
-    min-height: 520px;
+    width: 96vw;
+    max-width: 1300px;
+    height: 95vh;
+    max-height: 98vh;
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 16px;
     border: 1px solid var(--card-border);
     box-shadow: 0 15px 35px rgba(27, 67, 50, 0.15);
     display: flex;
@@ -75,13 +68,13 @@ body {
     overflow: hidden;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    transition: all 0.3s ease;
 }
 
 /* Header Area */
 header {
+    flex-shrink: 0;
     background: rgba(255, 255, 255, 0.9);
-    padding: 16px 20px;
+    padding: 14px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,8 +138,9 @@ header h1 {
 }
 .badge.offline .dot { background: #ef4444; }
 
-/* Live USGS Seismic Banner */
+/* Seismic Banner */
 .seismic-banner {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -179,11 +173,12 @@ header h1 {
     50% { background: rgba(252, 165, 165, 0.95); }
 }
 
-/* Quick Action Chips Bar */
+/* Quick Action Chips */
 .quick-chips {
+    flex-shrink: 0;
     display: flex;
     gap: 8px;
-    padding: 12px 16px;
+    padding: 10px 16px;
     background: rgba(240, 247, 244, 0.6);
     overflow-x: auto;
     border-bottom: 1px solid var(--card-border);
@@ -197,9 +192,9 @@ header h1 {
     border: 1px solid var(--card-border);
     color: var(--primary-green);
     font-weight: 600;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
     transition: all 0.2s ease;
@@ -210,15 +205,162 @@ header h1 {
     color: #ffffff;
 }
 
+/* =========================================
+   FLOATING TOP-RIGHT MAP WIDGET STYLES
+========================================= */
+.map-widget {
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    width: 210px;
+    height: 150px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 2px solid var(--primary-green);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.map-widget .leaflet-control-attribution {
+    display: none !important;
+}
+
+.map-header {
+    background: var(--primary-green);
+    color: white;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.map-header button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#map {
+    width: 100%;
+    flex: 1;
+    z-index: 1;
+}
+
+/* =========================================
+   MAXIMIZED WINDOW MAP STYLING (SAFE FULL-SCREEN)
+========================================= */
+.map-widget.maximized {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    z-index: 99999 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+.map-widget.maximized .map-header {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    background: #1e293b !important; 
+    color: #f8fafc !important;
+    height: 52px !important;
+    padding: 0 24px !important; 
+    font-size: 1rem !important;
+    font-weight: 600;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+}
+
+.map-widget.maximized .map-header button,
+.map-widget.maximized .map-header a,
+.map-widget.maximized .map-header [id*="toggle"],
+.map-widget.maximized .map-header [class*="toggle"],
+.map-widget.maximized .map-header [class*="close"] {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    border: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 6px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    transition: background 0.2s;
+}
+
+.map-widget.maximized .map-header button:hover,
+.map-widget.maximized .map-header a:hover,
+.map-widget.maximized .map-header [id*="toggle"]:hover,
+.map-widget.maximized .map-header [class*="toggle"]:hover,
+.map-widget.maximized .map-header [class*="close"]:hover {
+    background: #dc2626 !important; 
+    color: #ffffff !important;
+}
+
+.map-widget.maximized #map {
+    flex: 1 !important;
+    width: 100% !important;
+    height: calc(100vh - 52px) !important;
+}
+
 /* Chat Log Area */
 .chat-log {
     flex: 1;
-    padding: 24px;
+    min-height: 0;
+    padding: 20px;
     overflow-y: auto;
-    scroll-behavior: smooth; /* Enables smooth auto-scroll to bottom */
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    position: relative;
+    z-index: 2;
+    background: rgba(250, 253, 251, 0.5);
 }
 
 .chat-log::-webkit-scrollbar { width: 6px; }
@@ -228,12 +370,12 @@ header h1 {
     border-radius: 4px;
 }
 
-/* Chat Bubbles Base */
+/* Chat Bubbles */
 .bubble {
     max-width: 82%;
     padding: 14px 18px;
     border-radius: 16px;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     position: relative;
     white-space: pre-wrap;
@@ -257,18 +399,8 @@ header h1 {
     border-bottom-left-radius: 4px;
 }
 
-/* Markdown Formatting Inside System Bubbles */
 .bubble.sys p { margin: 0 0 8px 0; }
 .bubble.sys p:last-child { margin-bottom: 0; }
-
-.bubble.sys ul, 
-.bubble.sys ol {
-    margin: 6px 0;
-    padding-left: 20px;
-}
-
-.bubble.sys li { margin-bottom: 4px; }
-.bubble.sys strong { color: var(--primary-hover); }
 
 .meta-tag {
     display: none; /* Hide backend route metadata from user view */
@@ -405,15 +537,9 @@ header h1 {
     background: #dc2626;
 }
 
-.hotline-link {
-    color: var(--primary-green);
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 1px dashed var(--primary-green);
-}
-
 /* Input Bar */
 .input-bar {
+    flex-shrink: 0;
     padding: 16px 20px;
     background: rgba(255, 255, 255, 0.9);
     border-top: 1px solid var(--card-border);
@@ -423,12 +549,12 @@ header h1 {
 
 #query-in {
     flex: 1;
-    padding: 14px 18px;
+    padding: 12px 18px;
     background: #ffffff;
     border: 1px solid var(--card-border);
     border-radius: 12px;
     color: var(--text-main);
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
@@ -444,9 +570,9 @@ header h1 {
     background: var(--primary-green);
     color: #ffffff;
     border: none;
-    padding: 0 24px;
+    padding: 0 22px;
     border-radius: 12px;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
@@ -479,25 +605,136 @@ header h1 {
     to { opacity: 1; transform: translate(-50%, 0); }
 }
 
-/* Mobile Viewport Optimizations */
-@media (max-width: 600px) {
-    body { padding: 0; }
+/* Hazard Chip & Modal */
+.chip-btn.hazard-btn {
+    background: rgba(211, 47, 47, 0.15);
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    font-weight: 600;
+}
 
+.chip-btn.hazard-btn:hover {
+    background: #d32f2f;
+    color: #ffffff;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeInModal 0.2s ease-out;
+}
+
+.modal-card {
+    background: #1e1e24;
+    color: #f1f1f1;
+    width: 90%;
+    max-width: 440px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ff5252;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close-btn:hover { color: #fff; }
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-body label {
+    font-size: 0.85rem;
+    color: #bbb;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    background: #2a2a32;
+    border: 1px solid #3a3a46;
+    border-radius: 6px;
+    padding: 10px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff5252;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 8px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease;
+}
+
+.btn-secondary { background: #3a3a46; color: #ccc; }
+.btn-secondary:hover { background: #4a4a58; color: #fff; }
+.btn-danger { background: #d32f2f; color: #fff; }
+.btn-danger:hover { background: #b71c1c; }
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
     .chat-wrapper {
         width: 100vw;
         height: 100vh;
-        height: 100dvh; /* dynamic height for mobile address bars */
-        max-height: 100dvh;
         border-radius: 0;
         border: none;
     }
-
-    .chat-log { padding: 16px; }
-
-    .bubble {
-        max-width: 88%;
-        font-size: 0.95rem;
-    }
-
+    .bubble { max-width: 88%; font-size: 0.92rem; }
     .input-bar { padding: 12px 14px; }
 }

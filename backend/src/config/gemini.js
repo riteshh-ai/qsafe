@@ -1,3 +1,4 @@
+// src/config/gemini.js
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import dotenv from 'dotenv';
 
@@ -12,6 +13,11 @@ export const googleAIModel = (options = {}) => {
   const genAI = new GoogleGenerativeAI(apiKey);
   return genAI.getGenerativeModel({
     model: "gemini-2.0-flash",
+    generationConfig: {
+      temperature: 0.2,
+      maxOutputTokens: 250,
+      topP: 0.8,
+    },
     ...options,
   });
-};
+};
