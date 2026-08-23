@@ -12,6 +12,7 @@ import {
 
 /**
  * Intelligent Rule-Based Fallback Safety Engine
+ * Maps NLP classified intents to structured safety protocol responses.
  * Used when Gemini API is unconfigured, off-topic, or offline.
  */
 function getFallbackSafetyResponse(query, langState = 'en', nlpResult = null) {
@@ -19,50 +20,66 @@ function getFallbackSafetyResponse(query, langState = 'en', nlpResult = null) {
   if (nlpResult && nlpResult.source !== 'offline_fallback') {
     const intent = nlpResult.intent;
 
-    if (intent === 'greeting') {
-      return EMERGENCY_SAFETY_RESPONSES.greetings[langState] || EMERGENCY_SAFETY_RESPONSES.greetings['en'];
-    }
+    // Intent-to-Response Mapping Table (all 25 NLP intents covered)
+    const INTENT_RESPONSE_MAP = {
+      // Greetings
+      'greeting': 'greetings',
 
-    if (
-      intent === 'landslide_hazard_query' || 
-      intent === 'landslide_occurring_report' || 
-      intent === 'road_blockage_report'
-    ) {
-      return EMERGENCY_SAFETY_RESPONSES.landslide[langState] || EMERGENCY_SAFETY_RESPONSES.landslide['en'];
-    }
+      // Critical SOS / Trapped
+      'trapped_debris_report': 'trapped_sos',
+      'sos_help_request': 'trapped_sos',
 
-    if (
-      intent === 'flood_occurring_report' || 
-      intent === 'river_level_query'
-    ) {
-      return EMERGENCY_SAFETY_RESPONSES.flood[langState] || EMERGENCY_SAFETY_RESPONSES.flood['en'];
-    }
+      // Fire
+      'fire_incident_report': 'fire',
+      'gas_leak_report': 'fire',
 
-    if (
-      intent === 'earthquake_occurring_report' || 
-      intent === 'aftershock_information_query' || 
-      intent === 'building_collapse_report' || 
-      intent === 'building_damage_check' ||
-      intent === 'safe_location_query' ||
-      intent === 'preparedness_tips_query'
-    ) {
-      return EMERGENCY_SAFETY_RESPONSES.earthquake[langState] || EMERGENCY_SAFETY_RESPONSES.earthquake['en'];
-    }
+      // Building Collapse / Structural Damage
+      'building_collapse_report': 'building_collapse',
+      'building_damage_check': 'building_collapse',
 
-    if (
-      intent === 'first_aid_query' || 
-      intent === 'medical_emergency_request' || 
-      intent === 'injury_report'
-    ) {
-      return EMERGENCY_SAFETY_RESPONSES.first_aid[langState] || EMERGENCY_SAFETY_RESPONSES.first_aid['en'];
-    }
+      // Earthquake
+      'earthquake_occurring_report': 'earthquake',
+      'aftershock_information_query': 'earthquake',
+      'preparedness_tips_query': 'earthquake',
 
-    if (
-      intent === 'emergency_contact_request' || 
-      intent === 'sos_help_request' ||
-      intent === 'trapped_debris_report'
-    ) {
-      return EMERGENCY_SAFETY_RESPONSES.contacts[langState] || EMERGENCY_SAFETY_RESPONSES.contacts['en'];
+      // Landslide
+      'landslide_hazard_query': 'landslide',
+      'landslide_occurring_report': 'landslide',
+      'road_blockage_report': 'landslide',
+
+      // Flood
+      'flood_occurring_report': 'flood',
+      'river_level_query': 'flood',
+
+      // Medical / First Aid
+      'first_aid_query': 'first_aid',
+      'medical_emergency_request': 'first_aid',
+      'injury_report': 'first_aid',
+
+      // Shelter & Safe Location
+      'shelter_request': 'shelter',
+      'safe_location_query': 'shelter',
+      'evacuation_guidance_query': 'shelter',
+
+      // Emergency Kit / Supplies
+      'food_water_request': 'emergency_kit',
+
+      // Missing Persons → contacts (closest available)
+      'family_member_missing': 'contacts',
+      'family_reunification_status': 'contacts',
+
+      // Emergency Contacts
+      'emergency_contact_request': 'contacts',
+      'power_outage_report': 'contacts',
+    };
+
+    // Lookup the mapped response category
+    const responseCategory = INTENT_RESPONSE_MAP[intent];
+    if (responseCategory) {
+      const responses = EMERGENCY_SAFETY_RESPONSES[responseCategory];
+      if (responses) {
+        return responses[langState] || responses['en'];
+      }
     }
 
     if (intent === 'fallback_unclear' || intent === 'goodbye_thanks') {

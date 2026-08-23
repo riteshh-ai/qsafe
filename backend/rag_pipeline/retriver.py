@@ -65,16 +65,36 @@ def generate_embedding(text):
                 raise e
     raise RuntimeError("All configured API keys are rate-limited. Please try again later.")
 
-def get_relevant_context(user_query, top_k=3):
+def get_relevant_context(user_query, top_k=3, max_distance=0.45):
     """
     Main function for backend integration.
-    Converts query to vector, searches ChromaDB, and returns retrieved text snippets.
+    Converts query to vector, searches ChromaDB, and returns retrieved text snippets
+    that strictly pass the distance/similarity threshold.
     """
-    query_vector = generate_embedding(user_query)
-    results = collection.query(
-        query_embeddings=[query_vector],
-        n_results=top_k
-    )
-    
-    docs = results['documents'][0]
-    return "\n---\n".join(docs)
+    try:
+        query_vector = generate_embedding(user_query)
+        results = collection.query(
+            query_embeddings=[query_vector],
+            n_results=top_k
+        )
+        
+        docs = results.get('documents', [[]])[0]
+        distances = results.get('distances', [[]])[0] if 'distances' in results and results['distances'] else []
+        
+        filtered_docs = []
+        for i, doc in enumerate(docs):
+            # If distance is provided, enforce strict threshold
+            if distances and i < len(distances):
+                dist = distances[i]
+                if dist <= max_distance:
+                    filtered_docs.append(doc)
+            else:
+                filtered_docs.append(doc)
+        
+        if not filtered_docs:
+            return ""
+            
+        return "\n---\n".join(filtered_docs)
+    except Exception as e:
+        print(f"[Retriever] Context retrieval error: {e}")
+        return ""

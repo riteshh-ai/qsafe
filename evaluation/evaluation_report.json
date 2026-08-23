@@ -1,0 +1,242 @@
+{
+  "timestamp": "2026-08-21 03:55:43",
+  "validation_dataset": {
+    "samples": 746,
+    "intents": 25
+  },
+  "real_world_dataset": {
+    "generated_samples": 2500,
+    "queries_per_intent": 100,
+    "intents": 25
+  },
+  "performance_metrics": {
+    "overall_accuracy": 0.4168,
+    "total_samples": 2500,
+    "correct_predictions": 1042,
+    "total_errors": 1458,
+    "per_intent_metrics": {
+      "greeting": {
+        "accuracy": 0.9,
+        "total": 100,
+        "correct": 90,
+        "errors": 10
+      },
+      "goodbye_thanks": {
+        "accuracy": 0.86,
+        "total": 100,
+        "correct": 86,
+        "errors": 14
+      },
+      "sos_help_request": {
+        "accuracy": 0.84,
+        "total": 100,
+        "correct": 84,
+        "errors": 16
+      },
+      "earthquake_occurring_report": {
+        "accuracy": 0.89,
+        "total": 100,
+        "correct": 89,
+        "errors": 11
+      },
+      "trapped_debris_report": {
+        "accuracy": 0.35,
+        "total": 100,
+        "correct": 35,
+        "errors": 65
+      },
+      "medical_emergency_request": {
+        "accuracy": 0.32,
+        "total": 100,
+        "correct": 32,
+        "errors": 68
+      },
+      "fire_incident_report": {
+        "accuracy": 0.37,
+        "total": 100,
+        "correct": 37,
+        "errors": 63
+      },
+      "gas_leak_report": {
+        "accuracy": 0.59,
+        "total": 100,
+        "correct": 59,
+        "errors": 41
+      },
+      "building_collapse_report": {
+        "accuracy": 0.26,
+        "total": 100,
+        "correct": 26,
+        "errors": 74
+      },
+      "building_damage_check": {
+        "accuracy": 0.13,
+        "total": 100,
+        "correct": 13,
+        "errors": 87
+      },
+      "aftershock_information_query": {
+        "accuracy": 0.31,
+        "total": 100,
+        "correct": 31,
+        "errors": 69
+      },
+      "preparedness_tips_query": {
+        "accuracy": 0.22,
+        "total": 100,
+        "correct": 22,
+        "errors": 78
+      },
+      "evacuation_guidance_query": {
+        "accuracy": 0.24,
+        "total": 100,
+        "correct": 24,
+        "errors": 76
+      },
+      "safe_location_query": {
+        "accuracy": 0.44,
+        "total": 100,
+        "correct": 44,
+        "errors": 56
+      },
+      "shelter_request": {
+        "accuracy": 0.42,
+        "total": 100,
+        "correct": 42,
+        "errors": 58
+      },
+      "food_water_request": {
+        "accuracy": 0.48,
+        "total": 100,
+        "correct": 48,
+        "errors": 52
+      },
+      "family_member_missing": {
+        "accuracy": 0.18,
+        "total": 100,
+        "correct": 18,
+        "errors": 82
+      },
+      "family_reunification_status": {
+        "accuracy": 0.36,
+        "total": 100,
+        "correct": 36,
+        "errors": 64
+      },
+      "injury_report": {
+        "accuracy": 0.37,
+        "total": 100,
+        "correct": 37,
+        "errors": 63
+      },
+      "first_aid_query": {
+        "accuracy": 0.18,
+        "total": 100,
+        "correct": 18,
+        "errors": 82
+      },
+      "emergency_contact_request": {
+        "accuracy": 0.22,
+        "total": 100,
+        "correct": 22,
+        "errors": 78
+      },
+      "power_outage_report": {
+        "accuracy": 0.27,
+        "total": 100,
+        "correct": 27,
+        "errors": 73
+      },
+      "road_blockage_report": {
+        "accuracy": 0.28,
+        "total": 100,
+        "correct": 28,
+        "errors": 72
+      },
+      "status_check_general": {
+        "accuracy": 0.04,
+        "total": 100,
+        "correct": 4,
+        "errors": 96
+      },
+      "fallback_unclear": {
+        "accuracy": 0.9,
+        "total": 100,
+        "correct": 90,
+        "errors": 10
+      }
+    },
+    "source_analysis": {
+      "keyword": {
+        "accuracy": 0.8876404494382022,
+        "total": 89
+      },
+      "ml": {
+        "accuracy": 0.5993006993006993,
+        "total": 1430
+      },
+      "fallback": {
+        "accuracy": 0.08148148148148149,
+        "total": 945
+      },
+      "keyword_fuzzy": {
+        "accuracy": 0.8055555555555556,
+        "total": 36
+      }
+    }
+  },
+  "worst_performing_intents": [
+    [
+      "status_check_general",
+      0.04,
+      96
+    ],
+    [
+      "building_damage_check",
+      0.13,
+      87
+    ],
+    [
+      "family_member_missing",
+      0.18,
+      82
+    ],
+    [
+      "first_aid_query",
+      0.18,
+      82
+    ],
+    [
+      "preparedness_tips_query",
+      0.22,
+      78
+    ]
+  ],
+  "best_performing_intents": [
+    [
+      "greeting",
+      0.9,
+      10
+    ],
+    [
+      "fallback_unclear",
+      0.9,
+      10
+    ],
+    [
+      "earthquake_occurring_report",
+      0.89,
+      11
+    ],
+    [
+      "goodbye_thanks",
+      0.86,
+      14
+    ],
+    [
+      "sos_help_request",
+      0.84,
+      16
+    ]
+  ]
+}
