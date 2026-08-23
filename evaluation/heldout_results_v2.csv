@@ -1,0 +1,1104 @@
+text,intent,predicted_intent,confidence,source,is_correct
+hello,greeting,greeting,1.0,keyword,True
+namaste,greeting,greeting,1.0,keyword,True
+hey there,greeting,greeting,0.9863,ml,True
+good evening,greeting,greeting,1.0,keyword,True
+hi bhai,greeting,greeting,0.7999,ml,True
+namaste k cha,greeting,greeting,0.9916,ml,True
+hi there,greeting,greeting,0.989,ml,True
+namaste qsafe,greeting,greeting,0.9657,ml,True
+namaste i need information,greeting,greeting,0.728,ml,True
+hi qsafe nepal,greeting,greeting,0.5537,ml,True
+hello please respond,greeting,greeting,0.6861,ml,True
+namaste tapaii,greeting,greeting,0.99,ml,True
+hello assistance,greeting,greeting,0.9161,ml,True
+namaste support,greeting,greeting,0.975,ml,True
+namaste bhukampa,greeting,greeting,0.6971,ml,True
+namaste tapaii k cha,greeting,greeting,0.9934,ml,True
+namaste dhanyabad,greeting,greeting,0.6085,ml,True
+hello available,greeting,greeting,0.5557,ml,True
+namaste online,greeting,greeting,0.9823,ml,True
+hi responding,greeting,greeting,0.9458,ml,True
+hey standing by,greeting,greeting,0.8226,ml,True
+hi available now,greeting,greeting,0.5232,ml,True
+namaste yeta chan,greeting,greeting,0.9832,ml,True
+hey can assist,greeting,greeting,0.8403,ml,True
+namaste sahayata garna sakincha,greeting,greeting,0.692,ml,True
+hi need info,greeting,greeting,0.624,ml,True
+hello need information,greeting,greeting,0.6269,ml,True
+hello have query,greeting,greeting,0.9117,ml,True
+hi want to ask,greeting,greeting,0.7388,ml,True
+hello want to know,greeting,status_check_general,0.98,keyword,False
+hey curious,greeting,greeting,0.9569,ml,True
+hi interested,greeting,greeting,0.9698,ml,True
+hello concerned,greeting,greeting,0.9395,ml,True
+hi scared,greeting,greeting,0.9521,ml,True
+hello afraid,greeting,greeting,0.9615,ml,True
+namaste dara,greeting,greeting,0.985,ml,True
+hello critical,greeting,greeting,0.9321,ml,True
+namaste kritik,greeting,greeting,0.9871,ml,True
+hello right now,greeting,greeting,0.4741,ml,True
+hello quickly,greeting,greeting,0.9674,ml,True
+namaste jaldi,greeting,greeting,0.9853,ml,True
+hi fast,greeting,greeting,0.8281,ml,True
+dhanyabad,goodbye_thanks,goodbye_thanks,0.9651,ml,True
+thanks a lot,goodbye_thanks,goodbye_thanks,1.0,keyword,True
+dhanyabad dherai,goodbye_thanks,goodbye_thanks,0.9063,ml,True
+thank you very much,goodbye_thanks,goodbye_thanks,0.9892,ml,True
+dhanyabad sahayata ko lagi,goodbye_thanks,goodbye_thanks,0.7631,ml,True
+thanks for everything,goodbye_thanks,goodbye_thanks,0.9673,ml,True
+dhanyabad tapaimko sahayata ko lagi,goodbye_thanks,goodbye_thanks,0.6851,ml,True
+dhanyawaad sahayata ko lagi,goodbye_thanks,shelter_request,0.2881,ml,False
+dhanyabad jankari ko lagi,goodbye_thanks,goodbye_thanks,0.8764,ml,True
+thank you for listening,goodbye_thanks,goodbye_thanks,0.9617,ml,True
+bye,goodbye_thanks,goodbye_thanks,1.0,keyword,True
+good bye,goodbye_thanks,goodbye_thanks,0.95,keyword_fuzzy,True
+bye bye,goodbye_thanks,goodbye_thanks,0.9901,ml,True
+bye qsafe,goodbye_thanks,goodbye_thanks,0.9156,ml,True
+goodbye now,goodbye_thanks,goodbye_thanks,0.9318,ml,True
+bye now,goodbye_thanks,goodbye_thanks,0.9495,ml,True
+goodbye for now,goodbye_thanks,goodbye_thanks,0.9369,ml,True
+bye for now,goodbye_thanks,goodbye_thanks,0.9336,ml,True
+goodbye see you,goodbye_thanks,goodbye_thanks,0.8187,ml,True
+bye see you,goodbye_thanks,goodbye_thanks,0.7139,ml,True
+goodbye take care,goodbye_thanks,goodbye_thanks,0.9426,ml,True
+bye take care,goodbye_thanks,goodbye_thanks,0.9212,ml,True
+goodbye be safe,goodbye_thanks,goodbye_thanks,0.885,ml,True
+bye be safe,goodbye_thanks,goodbye_thanks,0.8279,ml,True
+ok bye,goodbye_thanks,goodbye_thanks,1.0,keyword,True
+okay bye,goodbye_thanks,goodbye_thanks,0.95,keyword_fuzzy,True
+ok bye bye,goodbye_thanks,goodbye_thanks,0.9906,ml,True
+okay bye bye,goodbye_thanks,goodbye_thanks,0.9749,ml,True
+ok thank you bye,goodbye_thanks,goodbye_thanks,0.9994,ml,True
+okay thank you bye,goodbye_thanks,goodbye_thanks,0.9977,ml,True
+that's it bye,goodbye_thanks,goodbye_thanks,0.9605,ml,True
+that's it goodbye,goodbye_thanks,goodbye_thanks,0.9689,ml,True
+dhanyawaad sahayata ko lagi please,goodbye_thanks,shelter_request,0.2966,ml,False
+goodbye take care qsafe,goodbye_thanks,goodbye_thanks,0.9161,ml,True
+help ok thank you bye,goodbye_thanks,goodbye_thanks,0.999,ml,True
+help dhanyabad,goodbye_thanks,goodbye_thanks,0.8767,ml,True
+thanks for everything qsafe,goodbye_thanks,goodbye_thanks,0.9198,ml,True
+goodbye see you qsafe,goodbye_thanks,goodbye_thanks,0.7843,ml,True
+dhanyabad tapaimko sahayata ko lagi help,goodbye_thanks,goodbye_thanks,0.6512,ml,True
+dhanyabad sahayata ko lagi please,goodbye_thanks,goodbye_thanks,0.6208,ml,True
+qsafe that's it bye,goodbye_thanks,goodbye_thanks,0.934,ml,True
+dhanyabad dherai urgent,goodbye_thanks,goodbye_thanks,0.8045,ml,True
+thank you very much now,goodbye_thanks,goodbye_thanks,0.9859,ml,True
+okay bye bye now,goodbye_thanks,goodbye_thanks,0.9694,ml,True
+help,sos_help_request,sos_help_request,1.0,keyword,True
+help me,sos_help_request,sos_help_request,1.0,keyword,True
+help please,sos_help_request,sos_help_request,0.9362,ml,True
+help pls,sos_help_request,sos_help_request,0.9715,ml,True
+sos,sos_help_request,sos_help_request,1.0,keyword,True
+please help me,sos_help_request,sos_help_request,0.95,keyword_fuzzy,True
+malai bachau please,sos_help_request,sos_help_request,0.7358,ml,True
+malai sahayata chaincha,sos_help_request,fallback_unclear,0.2477,fallback,False
+malai help chaincha,sos_help_request,sos_help_request,0.9618,ml,True
+rescue me,sos_help_request,sos_help_request,1.0,keyword,True
+please save me,sos_help_request,sos_help_request,0.8929,ml,True
+please rescue me,sos_help_request,sos_help_request,0.8656,ml,True
+save me please,sos_help_request,sos_help_request,0.8698,ml,True
+rescue me now,sos_help_request,sos_help_request,0.838,ml,True
+sos sos,sos_help_request,sos_help_request,0.8532,ml,True
+sos sos sos,sos_help_request,sos_help_request,0.8108,ml,True
+help help,sos_help_request,sos_help_request,0.9944,ml,True
+help help help,sos_help_request,sos_help_request,0.9932,ml,True
+someone help me,sos_help_request,sos_help_request,0.993,ml,True
+everybody help me,sos_help_request,sos_help_request,0.9751,ml,True
+please someone help me,sos_help_request,sos_help_request,0.9903,ml,True
+sos rescue me,sos_help_request,sos_help_request,0.9715,ml,True
+someone save me,sos_help_request,sos_help_request,0.9464,ml,True
+anyone save me,sos_help_request,sos_help_request,0.9517,ml,True
+everybody save me,sos_help_request,sos_help_request,0.7686,ml,True
+please someone save me,sos_help_request,sos_help_request,0.9438,ml,True
+everybody rescue me,sos_help_request,sos_help_request,0.8109,ml,True
+nepal sos help me,sos_help_request,sos_help_request,0.9826,ml,True
+everybody rescue me now,sos_help_request,sos_help_request,0.7926,ml,True
+qsafe malai help chaincha,sos_help_request,sos_help_request,0.9174,ml,True
+please help me now,sos_help_request,sos_help_request,0.9726,ml,True
+rescue me now please,sos_help_request,sos_help_request,0.8894,ml,True
+help help help qsafe,sos_help_request,sos_help_request,0.9788,ml,True
+nepal please save me,sos_help_request,sos_help_request,0.8064,ml,True
+sos save me qsafe,sos_help_request,sos_help_request,0.9239,ml,True
+someone help me please,sos_help_request,sos_help_request,0.9907,ml,True
+qsafe someone rescue me,sos_help_request,sos_help_request,0.8997,ml,True
+malai help chaincha nepal,sos_help_request,sos_help_request,0.8984,ml,True
+nepal malai sahayata chaincha,sos_help_request,fallback_unclear,0.2484,fallback,False
+anyone save me now,sos_help_request,sos_help_request,0.9403,ml,True
+emergency malai sahayata chaincha,sos_help_request,sos_help_request,0.3611,ml,True
+sos rescue me help,sos_help_request,sos_help_request,0.9965,ml,True
+help please someone save me,sos_help_request,sos_help_request,0.9931,ml,True
+please help help help,sos_help_request,sos_help_request,0.9865,ml,True
+earthquake now,earthquake_occurring_report,earthquake_occurring_report,1.0,keyword,True
+earthquake happening now,earthquake_occurring_report,earthquake_occurring_report,0.95,keyword_fuzzy,True
+earthquake occurring,earthquake_occurring_report,earthquake_occurring_report,0.9273,ml,True
+bhukampa chal raha hai,earthquake_occurring_report,earthquake_occurring_report,0.8173,ml,True
+घर हल्लियो,earthquake_occurring_report,earthquake_occurring_report,1.0,keyword,True
+भूकम्प आयो,earthquake_occurring_report,earthquake_occurring_report,1.0,keyword,True
+भूकम्प चल रहा है,earthquake_occurring_report,earthquake_occurring_report,0.8434,ml,True
+ground moving,earthquake_occurring_report,fallback_unclear,0.1656,fallback,False
+earthquake started,earthquake_occurring_report,earthquake_occurring_report,0.9224,ml,True
+earthquake began,earthquake_occurring_report,earthquake_occurring_report,0.9372,ml,True
+earthquake just started,earthquake_occurring_report,earthquake_occurring_report,0.9474,ml,True
+bhukampa suru bhayo,earthquake_occurring_report,earthquake_occurring_report,0.9142,ml,True
+bhukampa shuru hua,earthquake_occurring_report,earthquake_occurring_report,0.9594,ml,True
+bhukampa mehsoos hua,earthquake_occurring_report,earthquake_occurring_report,0.9382,ml,True
+major earthquake,earthquake_occurring_report,earthquake_occurring_report,0.8877,ml,True
+bhukampa kathin,earthquake_occurring_report,earthquake_occurring_report,0.9712,ml,True
+bhukampa gambhir,earthquake_occurring_report,earthquake_occurring_report,0.9783,ml,True
+bhukampa sakht,earthquake_occurring_report,earthquake_occurring_report,0.9369,ml,True
+light earthquake,earthquake_occurring_report,earthquake_occurring_report,0.9401,ml,True
+small earthquake,earthquake_occurring_report,earthquake_occurring_report,0.9172,ml,True
+minor earthquake,earthquake_occurring_report,earthquake_occurring_report,0.9018,ml,True
+earthquake magnitude,earthquake_occurring_report,earthquake_occurring_report,0.9187,ml,True
+bhukampa magnitude,earthquake_occurring_report,earthquake_occurring_report,0.962,ml,True
+bhukampa kitna bada,earthquake_occurring_report,earthquake_occurring_report,0.9249,ml,True
+bhukampa kitna kathin,earthquake_occurring_report,earthquake_occurring_report,0.9227,ml,True
+earthquake duration,earthquake_occurring_report,earthquake_occurring_report,0.7851,ml,True
+how long earthquake,earthquake_occurring_report,earthquake_occurring_report,0.8505,ml,True
+earthquake how long,earthquake_occurring_report,earthquake_occurring_report,0.8935,ml,True
+earthquake stopped,earthquake_occurring_report,earthquake_occurring_report,0.903,ml,True
+earthquake ended,earthquake_occurring_report,earthquake_occurring_report,0.9504,ml,True
+earthquake finished,earthquake_occurring_report,earthquake_occurring_report,0.9387,ml,True
+bhukampa ruk gaya,earthquake_occurring_report,earthquake_occurring_report,0.9414,ml,True
+aftershock coming,earthquake_occurring_report,aftershock_information_query,0.98,keyword,False
+earthquake again,earthquake_occurring_report,aftershock_information_query,0.98,keyword,False
+bhukampa phir,earthquake_occurring_report,earthquake_occurring_report,0.9426,ml,True
+earthquake magnitude please,earthquake_occurring_report,earthquake_occurring_report,0.6297,ml,True
+help earthquake began,earthquake_occurring_report,earthquake_occurring_report,0.7305,ml,True
+bhukampa aayo cha nepal,earthquake_occurring_report,earthquake_occurring_report,0.859,ml,True
+qsafe bhukampa suru bhayo,earthquake_occurring_report,earthquake_occurring_report,0.6721,ml,True
+घर हल्लियो urgent,earthquake_occurring_report,earthquake_occurring_report,0.3742,ml,True
+earthquake intensity emergency,earthquake_occurring_report,earthquake_occurring_report,0.7446,ml,True
+help major earthquake,earthquake_occurring_report,earthquake_occurring_report,0.7037,ml,True
+emergency earthquake happening now,earthquake_occurring_report,earthquake_occurring_report,0.7343,ml,True
+emergency earth shaking,earthquake_occurring_report,earthquake_occurring_report,0.7503,ml,True
+qsafe earthquake over,earthquake_occurring_report,earthquake_occurring_report,0.7164,ml,True
+qsafe bhukampa kathin,earthquake_occurring_report,earthquake_occurring_report,0.7624,ml,True
+bhukampa sakht urgent,earthquake_occurring_report,earthquake_occurring_report,0.7771,ml,True
+bhukampa suru bhayo help,earthquake_occurring_report,earthquake_occurring_report,0.7553,ml,True
+pinned under wall,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+पर्खालमुनि थुनिएँ,trapped_debris_report,trapped_debris_report,1.0,keyword,True
+इमारतमुनि दबिएको,trapped_debris_report,trapped_debris_report,0.6274,ml,True
+debris muni thuniyo,trapped_debris_report,trapped_debris_report,0.9805,ml,True
+bhagnaveshesh muni fasko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+imarat muni dabieko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+can't get out,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+trapped inside,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+buried alive,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+बाहिर निस्कन सक्दिन,trapped_debris_report,evacuation_guidance_query,0.3976,ml,False
+यहाँ फसेको,trapped_debris_report,trapped_debris_report,0.6354,ml,True
+निस्कन सकिन,trapped_debris_report,evacuation_guidance_query,0.346,ml,False
+भित्रै फसेको,trapped_debris_report,trapped_debris_report,0.8713,ml,True
+bahar niskna sakdina,trapped_debris_report,evacuation_guidance_query,0.353,ml,False
+bhitrai fasko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+jivit dabieko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+stuck under collapsed building,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+need rescue,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+malai uttaro,trapped_debris_report,trapped_debris_report,0.2999,ml,True
+bachau malai,trapped_debris_report,trapped_debris_report,0.4968,ml,True
+uttaro malai,trapped_debris_report,trapped_debris_report,0.2535,ml,True
+trapped in earthquake,trapped_debris_report,trapped_debris_report,0.5073,ml,True
+buried in rubble,trapped_debris_report,trapped_debris_report,0.5029,ml,True
+भग्नावशेषले थुनिएको,trapped_debris_report,trapped_debris_report,0.9642,ml,True
+bhukamppachi fasko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+malinma dabieko,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+तत्काल सहायता,trapped_debris_report,medical_emergency_request,0.4915,ml,False
+tatkal bachav chaincha,trapped_debris_report,fallback_unclear,0.1308,fallback,False
+aapatkalin nikasi,trapped_debris_report,preparedness_tips_query,0.3201,ml,False
+tatkal sahayata,trapped_debris_report,fallback_unclear,0.2282,fallback,False
+children stuck,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+परिवार फसेको,trapped_debris_report,trapped_debris_report,0.5048,ml,True
+बच्चा फसेको,trapped_debris_report,trapped_debris_report,0.9489,ml,True
+वृद्ध दबिएका,trapped_debris_report,trapped_debris_report,0.7869,ml,True
+help bachau malai,trapped_debris_report,sos_help_request,0.8095,ml,False
+help bahar niskna sakdina,trapped_debris_report,fallback_unclear,0.2292,fallback,False
+बच्चा फसेको emergency,trapped_debris_report,trapped_debris_report,0.8602,ml,True
+help भित्रै फसेको,trapped_debris_report,trapped_debris_report,0.8524,ml,True
+इमारतमुनि दबिएको please,trapped_debris_report,trapped_debris_report,0.5035,ml,True
+qsafe debris muni thuniyo,trapped_debris_report,trapped_debris_report,0.974,ml,True
+help children stuck,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+bhitrai fasko qsafe,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+trapped inside please,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+stuck under collapsed building emergency,trapped_debris_report,trapped_debris_report,0.98,keyword,True
+need ambulance,medical_emergency_request,medical_emergency_request,0.98,keyword,True
+call ambulance,medical_emergency_request,medical_emergency_request,0.98,keyword,True
+ambulance please,medical_emergency_request,medical_emergency_request,0.98,keyword,True
+emergency medical,medical_emergency_request,medical_emergency_request,0.4987,ml,True
+एम्बुलेन्स चाहियो,medical_emergency_request,medical_emergency_request,0.9821,ml,True
+एम्बुलेन्स बोलाउ,medical_emergency_request,medical_emergency_request,0.9078,ml,True
+आपतकालीन चिकित्सा,medical_emergency_request,fallback_unclear,0.1786,fallback,False
+ambulance chaincha,medical_emergency_request,medical_emergency_request,0.9203,ml,True
+ambulance kripaya,medical_emergency_request,medical_emergency_request,0.9206,ml,True
+hospital needed,medical_emergency_request,medical_emergency_request,0.98,keyword,True
+अस्पताल चाहिन्छ,medical_emergency_request,fallback_unclear,0.1542,fallback,False
+aspatal chaincha,medical_emergency_request,fallback_unclear,0.1672,fallback,False
+tatkal chikitsa sahayata,medical_emergency_request,medical_emergency_request,0.4295,ml,True
+not breathing,medical_emergency_request,medical_emergency_request,1.0,keyword,True
+person collapsed,medical_emergency_request,building_collapse_report,0.7526,ml,False
+बेहोश व्यक्ति,medical_emergency_request,family_member_missing,0.5071,ml,False
+सास फेर्न नसक्ने,medical_emergency_request,fallback_unclear,0.0983,fallback,False
+व्यक्ति ढलेको,medical_emergency_request,family_member_missing,0.3629,ml,False
+behosh vyakti,medical_emergency_request,fallback_unclear,0.2432,fallback,False
+sas pherna nasakne,medical_emergency_request,medical_emergency_request,0.4601,ml,True
+nadi nabhaeko,medical_emergency_request,fallback_unclear,0.099,fallback,False
+heart attack,medical_emergency_request,medical_emergency_request,1.0,keyword,True
+heart failure,medical_emergency_request,fallback_unclear,0.2074,fallback,False
+हृदयाघात,medical_emergency_request,medical_emergency_request,0.2709,ml,True
+हृदय रोकिएको,medical_emergency_request,medical_emergency_request,0.4079,ml,True
+severe bleeding,medical_emergency_request,medical_emergency_request,1.0,keyword,True
+गम्भीर रगत बग्दै,medical_emergency_request,injury_report,0.8619,ml,False
+भारी रगत बग्दै,medical_emergency_request,injury_report,0.2823,ml,False
+रगत रोक्नु पर्छ,medical_emergency_request,family_reunification_status,0.3518,ml,False
+bhari ragat bagdai,medical_emergency_request,medical_emergency_request,0.6559,ml,True
+bone sticking out,medical_emergency_request,fallback_unclear,0.1257,fallback,False
+had bahar niskieko,medical_emergency_request,fallback_unclear,0.1912,fallback,False
+nepal ambulance chaincha,medical_emergency_request,medical_emergency_request,0.8706,ml,True
+एम्बुलेन्स चाहियो nepal,medical_emergency_request,medical_emergency_request,0.9348,ml,True
+emergency vyakti dhaleko,medical_emergency_request,medical_emergency_request,0.5491,ml,True
+bone sticking out please,medical_emergency_request,fallback_unclear,0.21,fallback,False
+गम्भीर रगत बग्दै please,medical_emergency_request,injury_report,0.7259,ml,False
+रगत रोक्नु पर्छ now,medical_emergency_request,family_reunification_status,0.3231,ml,False
+please tatkal chikitsa sahayata,medical_emergency_request,medical_emergency_request,0.4715,ml,True
+fracture nepal,medical_emergency_request,fallback_unclear,0.1825,fallback,False
+building on fire,fire_incident_report,fire_incident_report,1.0,keyword,True
+house burning,fire_incident_report,fire_incident_report,0.98,keyword,True
+आगो,fire_incident_report,fire_incident_report,1.0,keyword,True
+imaratma aago,fire_incident_report,fire_incident_report,0.9235,ml,True
+ghar baldai,fire_incident_report,building_collapse_report,0.2921,ml,False
+smell smoke,fire_incident_report,fire_incident_report,0.98,keyword,True
+धुवाँको गन्ध,fire_incident_report,gas_leak_report,0.7076,ml,False
+jwala dekincha,fire_incident_report,fallback_unclear,0.0857,fallback,False
+need fire brigade,fire_incident_report,fire_incident_report,0.98,keyword,True
+fire truck needed,fire_incident_report,fire_incident_report,0.98,keyword,True
+अग्निशमन बोलाउ,fire_incident_report,emergency_contact_request,0.3646,ml,False
+अग्निशमन गाडी,fire_incident_report,fire_incident_report,0.315,ml,True
+agnishman bolau,fire_incident_report,emergency_contact_request,0.3775,ml,False
+agnishman gadi,fire_incident_report,emergency_contact_request,0.6603,ml,False
+people trapped in fire,fire_incident_report,trapped_debris_report,0.8248,ml,False
+can't escape fire,fire_incident_report,fire_incident_report,0.8135,ml,True
+आगोबाट बाहिर निस्कन सकिदैन,fire_incident_report,fire_incident_report,0.4677,ml,True
+आगोले निस्कने बाट रोक्यो,fire_incident_report,fire_incident_report,0.6519,ml,True
+agoma faskaka manis,fire_incident_report,fire_incident_report,0.3914,ml,True
+agobata bahar niskna sakidaina,fire_incident_report,family_member_missing,0.2829,ml,False
+agole niskne bata rokyo,fire_incident_report,evacuation_guidance_query,0.8766,ml,False
+ग्यास विस्फोट,fire_incident_report,gas_leak_report,0.8015,ml,False
+gas visphot,fire_incident_report,gas_leak_report,0.9248,ml,False
+qsafe gas aapatkala,fire_incident_report,gas_leak_report,0.3438,ml,False
+ग्यासको गन्ध please,fire_incident_report,gas_leak_report,0.9598,ml,False
+imaratma aago urgent,fire_incident_report,fire_incident_report,0.7436,ml,True
+please need fire brigade,fire_incident_report,fire_incident_report,0.98,keyword,True
+smell gas help,fire_incident_report,gas_leak_report,0.98,keyword,False
+धुवाँको गन्ध urgent,fire_incident_report,gas_leak_report,0.4413,ml,False
+agoma faskaka manis qsafe,fire_incident_report,fallback_unclear,0.1437,fallback,False
+help smell gas,fire_incident_report,gas_leak_report,0.98,keyword,False
+आगोबाट बाहिर निस्कन सकिदैन qsafe,fire_incident_report,evacuation_guidance_query,0.2792,ml,False
+agole niskne bata rokyo now,fire_incident_report,evacuation_guidance_query,0.864,ml,False
+help ग्यासको गन्ध,fire_incident_report,gas_leak_report,0.9876,ml,False
+gas leak emergency,fire_incident_report,gas_leak_report,0.98,keyword,False
+see fire emergency,fire_incident_report,fire_incident_report,0.98,keyword,True
+emergency fire truck needed,fire_incident_report,fire_incident_report,0.98,keyword,True
+agnishman bolau now,fire_incident_report,emergency_contact_request,0.3637,ml,False
+gas odor,gas_leak_report,gas_leak_report,0.9781,ml,True
+rotten egg smell,gas_leak_report,gas_leak_report,0.7343,ml,True
+gas odor strong,gas_leak_report,gas_leak_report,0.6225,ml,True
+ग्यासको गन्ध बलियो,gas_leak_report,gas_leak_report,0.9668,ml,True
+सल्फरको गन्ध,gas_leak_report,gas_leak_report,0.592,ml,True
+ग्यास गन्ध बलियो,gas_leak_report,gas_leak_report,0.9705,ml,True
+anda ko gandh,gas_leak_report,fallback_unclear,0.1767,fallback,False
+sulfur ko gandh,gas_leak_report,fallback_unclear,0.2224,fallback,False
+gas hissing,gas_leak_report,gas_leak_report,0.9848,ml,True
+leaking sound,gas_leak_report,gas_leak_report,0.3595,ml,True
+lik awaz,gas_leak_report,building_collapse_report,0.7706,ml,False
+gas awaz,gas_leak_report,gas_leak_report,0.8202,ml,True
+gas line damaged,gas_leak_report,gas_leak_report,0.7997,ml,True
+gas cylinder leak,gas_leak_report,gas_leak_report,0.98,keyword,True
+एलपीजी लिक,gas_leak_report,fallback_unclear,0.0976,fallback,False
+evacuate immediately,gas_leak_report,evacuation_guidance_query,0.98,keyword,False
+gas danger zone,gas_leak_report,gas_leak_report,0.3066,ml,True
+safe distance,gas_leak_report,safe_location_query,0.4896,ml,False
+सुरक्षित दुरी,gas_leak_report,safe_location_query,0.689,ml,False
+kshetr chodnu,gas_leak_report,fallback_unclear,0.1806,fallback,False
+emergency rotten egg smell,gas_leak_report,gas_leak_report,0.349,ml,True
+please gas odor strong,gas_leak_report,gas_leak_report,0.6506,ml,True
+ग्यास गन्ध बलियो help,gas_leak_report,gas_leak_report,0.9573,ml,True
+nepal evacuate immediately,gas_leak_report,evacuation_guidance_query,0.98,keyword,False
+ग्यास हिसिसिङ emergency,gas_leak_report,gas_leak_report,0.4666,ml,True
+help rotten egg smell,gas_leak_report,gas_leak_report,0.6123,ml,True
+turuntai nisknu please,gas_leak_report,evacuation_guidance_query,0.5589,ml,False
+gas gandh help,gas_leak_report,gas_leak_report,0.8685,ml,True
+qsafe lpg leak,gas_leak_report,gas_leak_report,0.6637,ml,True
+emergency gas leak,gas_leak_report,gas_leak_report,0.98,keyword,True
+help तुरुन्तै निस्कनु,gas_leak_report,evacuation_guidance_query,0.5619,ml,False
+nepal ग्यास गन्ध बलियो,gas_leak_report,gas_leak_report,0.9354,ml,True
+please gas ko gandh,gas_leak_report,gas_leak_report,0.9053,ml,True
+सल्फरको गन्ध emergency,gas_leak_report,gas_leak_report,0.3549,ml,True
+rotten egg smell qsafe,gas_leak_report,gas_leak_report,0.4621,ml,True
+anda ko gandh please,gas_leak_report,fallback_unclear,0.195,fallback,False
+emergency एलपीजी लिक,gas_leak_report,sos_help_request,0.2531,ml,False
+nepal ग्यासको गन्ध बलियो,gas_leak_report,gas_leak_report,0.9479,ml,True
+इमारत ढली,building_collapse_report,safe_location_query,0.3244,ml,False
+संरचना ढली,building_collapse_report,building_collapse_report,0.3789,ml,True
+ghar dhalyo,building_collapse_report,building_collapse_report,0.7383,ml,True
+sanrachana dhali,building_collapse_report,building_collapse_report,0.98,keyword,True
+bhavan dhalyo,building_collapse_report,building_collapse_report,0.6984,ml,True
+multi-story collapse,building_collapse_report,building_collapse_report,0.8757,ml,True
+apartment collapse,building_collapse_report,building_collapse_report,0.95,keyword_fuzzy,True
+commercial building collapse,building_collapse_report,building_collapse_report,0.9859,ml,True
+बहुमञ्जिला ढली,building_collapse_report,building_collapse_report,0.2757,ml,True
+अपार्टमेन्ट ढल्यो,building_collapse_report,building_collapse_report,0.8438,ml,True
+व्यावसायिक इमारत ढली,building_collapse_report,safe_location_query,0.2625,ml,False
+bahumanjila dhali,building_collapse_report,building_collapse_report,0.98,keyword,True
+apartment dhalyo,building_collapse_report,building_collapse_report,0.835,ml,True
+karyalaya bhavan dhalyo,building_collapse_report,building_collapse_report,0.5696,ml,True
+people trapped inside,building_collapse_report,trapped_debris_report,0.98,keyword,False
+residents trapped,building_collapse_report,trapped_debris_report,0.9568,ml,False
+people buried,building_collapse_report,trapped_debris_report,0.98,keyword,False
+भित्र फसेका मानिस,building_collapse_report,trapped_debris_report,0.8209,ml,False
+अधिवासी फसेका,building_collapse_report,trapped_debris_report,0.7834,ml,False
+मानिस दबिएका,building_collapse_report,trapped_debris_report,0.8581,ml,False
+bhitra faskaka manis,building_collapse_report,trapped_debris_report,0.98,keyword,False
+basinda faskaka,building_collapse_report,trapped_debris_report,0.98,keyword,False
+adhivasi faskaka,building_collapse_report,trapped_debris_report,0.98,keyword,False
+manis dabieka,building_collapse_report,trapped_debris_report,0.98,keyword,False
+concrete chunks,building_collapse_report,building_collapse_report,0.98,keyword,True
+मलिनको ढेर,building_collapse_report,trapped_debris_report,0.3721,ml,False
+स्टील बाँकिएको,building_collapse_report,trapped_debris_report,0.4038,ml,False
+malin ko dher,building_collapse_report,fallback_unclear,0.0985,fallback,False
+concrete tukra,building_collapse_report,fallback_unclear,0.1089,fallback,False
+huge noise,building_collapse_report,fallback_unclear,0.1426,fallback,False
+ठूलो आवाज,building_collapse_report,gas_leak_report,0.3805,ml,False
+भवन आवाज,building_collapse_report,building_collapse_report,0.7084,ml,True
+इमारत ध्वनि,building_collapse_report,safe_location_query,0.3022,ml,False
+qsafe apartment dhalyo,building_collapse_report,building_collapse_report,0.7223,ml,True
+manis dabieka qsafe,building_collapse_report,trapped_debris_report,0.98,keyword,False
+help people buried,building_collapse_report,trapped_debris_report,0.98,keyword,False
+nepal इमारत ढली,building_collapse_report,safe_location_query,0.2733,ml,False
+help ghar dhalyo,building_collapse_report,sos_help_request,0.3907,ml,False
+karyalaya bhavan dhalyo emergency,building_collapse_report,building_collapse_report,0.5043,ml,True
+nepal karyalaya bhavan dhalyo,building_collapse_report,building_collapse_report,0.5954,ml,True
+emergency apartment collapse,building_collapse_report,building_collapse_report,0.8991,ml,True
+संरचना ढली now,building_collapse_report,building_damage_check,0.3853,ml,False
+help huge noise,building_collapse_report,sos_help_request,0.7693,ml,False
+qsafe sanrachana dhali,building_collapse_report,building_collapse_report,0.98,keyword,True
+structural integrity,building_damage_check,building_damage_check,0.98,keyword,True
+मेरो घर सुरक्षित छ,building_damage_check,safe_location_query,0.2771,ml,False
+mero ghar surakshit cha,building_damage_check,building_damage_check,0.98,keyword,True
+sanrachanatmak akhanda,building_damage_check,building_damage_check,0.98,keyword,True
+kshati mulyankan,building_damage_check,fallback_unclear,0.1406,fallback,False
+cracks in walls,building_damage_check,building_damage_check,0.95,keyword_fuzzy,True
+आधार क्षति,building_damage_check,fallback_unclear,0.2466,fallback,False
+संरचनात्मक फुट,building_damage_check,building_damage_check,0.7999,ml,True
+adhar kshati,building_damage_check,building_damage_check,0.98,keyword,True
+sanrachanatmak phut,building_damage_check,building_damage_check,0.98,keyword,True
+safe to enter,building_damage_check,safe_location_query,0.2808,ml,False
+building stable,building_damage_check,building_collapse_report,0.4647,ml,False
+भित्र जान सुरक्षित,building_damage_check,safe_location_query,0.667,ml,False
+इमारत स्थिर,building_damage_check,safe_location_query,0.3394,ml,False
+structural engineer,building_damage_check,building_damage_check,0.7114,ml,True
+building evaluation,building_damage_check,evacuation_guidance_query,0.4151,ml,False
+safety certification,building_damage_check,safe_location_query,0.417,ml,False
+इमारत मूल्यांकन,building_damage_check,building_damage_check,0.6781,ml,True
+सुरक्षा प्रमाणीकरण,building_damage_check,safe_location_query,0.3151,ml,False
+engineer mulyankan,building_damage_check,building_damage_check,0.6472,ml,True
+suraksha pramanikaran,building_damage_check,safe_location_query,0.3155,ml,False
+इमारत मूल्यांकन nepal,building_damage_check,building_damage_check,0.5269,ml,True
+qsafe suraksha pramanikaran,building_damage_check,safe_location_query,0.5768,ml,False
+qsafe sanrachanatmak akhanda,building_damage_check,building_damage_check,0.98,keyword,True
+safe to enter nepal,building_damage_check,evacuation_guidance_query,0.3238,ml,False
+structural integrity nepal,building_damage_check,building_damage_check,0.98,keyword,True
+इमारत स्थिर please,building_damage_check,safe_location_query,0.296,ml,False
+cracks in walls nepal,building_damage_check,building_damage_check,0.8065,ml,True
+cracks in walls urgent,building_damage_check,building_damage_check,0.8869,ml,True
+please adhar kshati,building_damage_check,building_damage_check,0.98,keyword,True
+qsafe मेरो घर सुरक्षित छ,building_damage_check,safe_location_query,0.4102,ml,False
+आधार क्षति now,building_damage_check,building_damage_check,0.3761,ml,True
+please structural engineer,building_damage_check,building_damage_check,0.5287,ml,True
+building evaluation urgent,building_damage_check,evacuation_guidance_query,0.3157,ml,False
+sanrachanatmak phut qsafe,building_damage_check,building_damage_check,0.98,keyword,True
+help building evaluation,building_damage_check,evacuation_guidance_query,0.3185,ml,False
+emergency suraksha pramanikaran,building_damage_check,preparedness_tips_query,0.4084,ml,False
+cracks in walls now,building_damage_check,building_damage_check,0.9202,ml,True
+nepal इमारत मूल्यांकन,building_damage_check,building_damage_check,0.4989,ml,True
+adhar kshati emergency,building_damage_check,building_damage_check,0.98,keyword,True
+building stable now,building_damage_check,building_damage_check,0.4185,ml,True
+help संरचनात्मक फुट,building_damage_check,building_damage_check,0.6705,ml,True
+mero ghar surakshit cha please,building_damage_check,building_damage_check,0.98,keyword,True
+emergency building stable,building_damage_check,building_collapse_report,0.3496,ml,False
+emergency safe to enter,building_damage_check,fallback_unclear,0.2133,fallback,False
+nepal suraksha pramanikaran,building_damage_check,safe_location_query,0.2712,ml,False
+kshati mulyankan emergency,building_damage_check,fallback_unclear,0.1215,fallback,False
+aftershocks coming,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+more earthquakes expected,aftershock_information_query,earthquake_occurring_report,0.9675,ml,False
+when will aftershocks stop,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+aftershock duration,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प आउँदैछ,aftershock_information_query,aftershock_information_query,0.9773,ml,True
+थप भूकम्प अपेक्षा,aftershock_information_query,earthquake_occurring_report,0.4729,ml,False
+पश्चभूकम्प अवधि,aftershock_information_query,aftershock_information_query,0.9813,ml,True
+thap bhukamp apeksha,aftershock_information_query,earthquake_occurring_report,0.3993,ml,False
+pashbhukamp avadhi,aftershock_information_query,aftershock_information_query,0.9497,ml,True
+aftershock magnitude,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+how strong aftershocks,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+aftershock intensity,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प कति बलियो,aftershock_information_query,aftershock_information_query,0.9724,ml,True
+पश्चभूकम्प तीव्रता,aftershock_information_query,aftershock_information_query,0.954,ml,True
+pashbhukamp magnitude,aftershock_information_query,aftershock_information_query,0.9236,ml,True
+pashbhukamp kati baliyo,aftershock_information_query,aftershock_information_query,0.8393,ml,True
+aftershock pattern,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प समय,aftershock_information_query,aftershock_information_query,0.9731,ml,True
+arko pashbhukamp kahile,aftershock_information_query,aftershock_information_query,0.9556,ml,True
+pashbhukamp aavritti,aftershock_information_query,aftershock_information_query,0.9604,ml,True
+stay safe during aftershocks,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+aftershock drill,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प अभ्यास,aftershock_information_query,preparedness_tips_query,0.95,keyword_fuzzy,False
+pashbhukamp suraksha,aftershock_information_query,aftershock_information_query,0.8035,ml,True
+pashbhukamp abhyas,aftershock_information_query,aftershock_information_query,0.9494,ml,True
+please stay safe during aftershocks,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+please aftershocks coming,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प आकार please,aftershock_information_query,aftershock_information_query,0.9452,ml,True
+qsafe aftershock pattern,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+help how strong aftershocks,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+emergency बस्नु ढाक्नु पकड्नु,aftershock_information_query,preparedness_tips_query,0.6156,ml,False
+aftershock drill now,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+थप भूकम्प अपेक्षा nepal,aftershock_information_query,earthquake_occurring_report,0.309,ml,False
+emergency aftershock intensity,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प तीव्रता please,aftershock_information_query,aftershock_information_query,0.9099,ml,True
+aftershock intensity help,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+aftershock drill nepal,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+पश्चभूकम्प आउँदैछ help,aftershock_information_query,aftershock_information_query,0.9702,ml,True
+aftershock magnitude qsafe,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+nepal aftershocks coming,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+aftershock pattern please,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+qsafe pashbhukamp avadhi,aftershock_information_query,aftershock_information_query,0.9036,ml,True
+पश्चभूकम्प अवधि help,aftershock_information_query,aftershock_information_query,0.9732,ml,True
+help arko pashbhukamp kahile,aftershock_information_query,aftershock_information_query,0.9478,ml,True
+nepal basna dhaknu pakdnu,aftershock_information_query,fallback_unclear,0.0854,fallback,False
+aftershock intensity nepal,aftershock_information_query,aftershock_information_query,0.98,keyword,True
+earthquake preparedness,preparedness_tips_query,preparedness_tips_query,0.8615,ml,True
+safety tips,preparedness_tips_query,preparedness_tips_query,0.98,keyword,True
+आपद तयारी,preparedness_tips_query,preparedness_tips_query,0.8744,ml,True
+आपतकालीन किट,preparedness_tips_query,preparedness_tips_query,1.0,keyword,True
+सुरक्षा टिप्स,preparedness_tips_query,safe_location_query,0.7847,ml,False
+bhukamp tayari,preparedness_tips_query,earthquake_occurring_report,0.4339,ml,False
+emergency supplies,preparedness_tips_query,preparedness_tips_query,0.6785,ml,True
+first aid kit,preparedness_tips_query,first_aid_query,0.98,keyword,False
+खाना पानी भण्डारण,preparedness_tips_query,food_water_request,0.9319,ml,False
+प्राथमिक उपचार किट,preparedness_tips_query,first_aid_query,0.95,keyword_fuzzy,False
+khana pani bhandaran,preparedness_tips_query,food_water_request,0.9021,ml,False
+prathamik upchar kit,preparedness_tips_query,first_aid_query,0.98,keyword,False
+family emergency plan,preparedness_tips_query,evacuation_guidance_query,0.5295,ml,False
+contact information,preparedness_tips_query,emergency_contact_request,0.476,ml,False
+परिवार आपतकालीन योजना,preparedness_tips_query,evacuation_guidance_query,0.5369,ml,False
+सम्पर्क जानकारी,preparedness_tips_query,emergency_contact_request,0.5147,ml,False
+सुरक्षा प्रक्रिया,preparedness_tips_query,safe_location_query,0.6242,ml,False
+bhukamp abhyas,preparedness_tips_query,earthquake_occurring_report,0.4935,ml,False
+aapatkalin pratikriya,preparedness_tips_query,preparedness_tips_query,0.4409,ml,True
+खाना पानी भण्डारण help,preparedness_tips_query,food_water_request,0.7292,ml,False
+प्राथमिक उपचार किट please,preparedness_tips_query,first_aid_query,0.9,ml,False
+खाना पानी भण्डारण now,preparedness_tips_query,food_water_request,0.8736,ml,False
+first aid kit urgent,preparedness_tips_query,first_aid_query,0.98,keyword,False
+bhukamp abhyas please,preparedness_tips_query,fallback_unclear,0.1739,fallback,False
+contact information now,preparedness_tips_query,emergency_contact_request,0.412,ml,False
+contact information urgent,preparedness_tips_query,fallback_unclear,0.2463,fallback,False
+please prathamik upchar kit,preparedness_tips_query,first_aid_query,0.98,keyword,False
+family emergency plan nepal,preparedness_tips_query,evacuation_guidance_query,0.7158,ml,False
+help contact information,preparedness_tips_query,emergency_contact_request,0.3323,ml,False
+aapatkalin pratikriya qsafe,preparedness_tips_query,preparedness_tips_query,0.428,ml,True
+first aid kit help,preparedness_tips_query,first_aid_query,0.98,keyword,False
+please first aid kit,preparedness_tips_query,first_aid_query,0.98,keyword,False
+emergency khana pani bhandaran,preparedness_tips_query,food_water_request,0.8376,ml,False
+meeting point qsafe,preparedness_tips_query,preparedness_tips_query,0.98,keyword,True
+nepal भेटथलो,preparedness_tips_query,fallback_unclear,0.1903,fallback,False
+bhukamp tayari emergency,preparedness_tips_query,fallback_unclear,0.1736,fallback,False
+meeting point emergency,preparedness_tips_query,preparedness_tips_query,0.98,keyword,True
+bhukamp tayari nepal,preparedness_tips_query,fallback_unclear,0.1613,fallback,False
+please safety tips,preparedness_tips_query,preparedness_tips_query,0.98,keyword,True
+family emergency plan now,preparedness_tips_query,evacuation_guidance_query,0.5918,ml,False
+please family emergency plan,preparedness_tips_query,evacuation_guidance_query,0.4364,ml,False
+please contact information,preparedness_tips_query,emergency_contact_request,0.3109,ml,False
+आपद तयारी help,preparedness_tips_query,preparedness_tips_query,0.8506,ml,True
+safe exit path,evacuation_guidance_query,evacuation_guidance_query,0.98,keyword,True
+escape route,evacuation_guidance_query,road_blockage_report,0.4434,ml,False
+निकासी मार्ग,evacuation_guidance_query,evacuation_guidance_query,0.5553,ml,True
+सुरक्षित निस्कने मार्ग,evacuation_guidance_query,evacuation_guidance_query,0.7565,ml,True
+बाहिर निस्कने मार्ग,evacuation_guidance_query,evacuation_guidance_query,0.8137,ml,True
+nikasi marg,evacuation_guidance_query,road_blockage_report,0.3665,ml,False
+निकासी केन्द्र,evacuation_guidance_query,evacuation_guidance_query,0.5492,ml,True
+सुरक्षित क्षेत्र स्थान,evacuation_guidance_query,safe_location_query,0.9323,ml,False
+nikasi kendra,evacuation_guidance_query,family_reunification_status,0.303,ml,False
+evacuation procedures,evacuation_guidance_query,evacuation_guidance_query,0.9723,ml,True
+evacuation drill,evacuation_guidance_query,evacuation_guidance_query,0.9192,ml,True
+aapatkalin yojana,evacuation_guidance_query,preparedness_tips_query,0.8095,ml,False
+nikasi abhyas,evacuation_guidance_query,fallback_unclear,0.1744,fallback,False
+leave now,evacuation_guidance_query,fallback_unclear,0.1803,fallback,False
+immediate evacuation,evacuation_guidance_query,evacuation_guidance_query,0.9446,ml,True
+निकासी समय,evacuation_guidance_query,evacuation_guidance_query,0.6099,ml,True
+अहिले निस्कनु,evacuation_guidance_query,evacuation_guidance_query,0.6391,ml,True
+nikasi samay,evacuation_guidance_query,fallback_unclear,0.2398,fallback,False
+safe exit path qsafe,evacuation_guidance_query,evacuation_guidance_query,0.98,keyword,True
+ashray sthan please,evacuation_guidance_query,shelter_request,0.6923,ml,False
+safe exit path please,evacuation_guidance_query,evacuation_guidance_query,0.98,keyword,True
+safe exit path emergency,evacuation_guidance_query,evacuation_guidance_query,0.98,keyword,True
+nikasi marg help,evacuation_guidance_query,sos_help_request,0.3535,ml,False
+qsafe निकासी केन्द्र,evacuation_guidance_query,evacuation_guidance_query,0.6565,ml,True
+leave now emergency,evacuation_guidance_query,sos_help_request,0.3255,ml,False
+turuntai nisknu qsafe,evacuation_guidance_query,evacuation_guidance_query,0.6597,ml,True
+qsafe बाहिर निस्कने मार्ग,evacuation_guidance_query,evacuation_guidance_query,0.7769,ml,True
+nepal safe exit path,evacuation_guidance_query,evacuation_guidance_query,0.98,keyword,True
+भेटथलो emergency,evacuation_guidance_query,sos_help_request,0.2594,ml,False
+nepal तुरुन्तै निस्कनु,evacuation_guidance_query,evacuation_guidance_query,0.8386,ml,True
+evacuation procedures urgent,evacuation_guidance_query,evacuation_guidance_query,0.9009,ml,True
+nikasi samay please,evacuation_guidance_query,fallback_unclear,0.2232,fallback,False
+निकासी मार्ग emergency,evacuation_guidance_query,evacuation_guidance_query,0.5654,ml,True
+तुरुन्तै निस्कनु emergency,evacuation_guidance_query,evacuation_guidance_query,0.7524,ml,True
+aapatkalin yojana urgent,evacuation_guidance_query,preparedness_tips_query,0.756,ml,False
+अहिले निस्कनु now,evacuation_guidance_query,evacuation_guidance_query,0.6168,ml,True
+help निकासी मार्ग,evacuation_guidance_query,evacuation_guidance_query,0.368,ml,True
+निकासी समय now,evacuation_guidance_query,evacuation_guidance_query,0.6191,ml,True
+evacuation drill now,evacuation_guidance_query,evacuation_guidance_query,0.9067,ml,True
+सुरक्षित क्षेत्र स्थान emergency,evacuation_guidance_query,safe_location_query,0.8628,ml,False
+qsafe aapatkalin yojana,evacuation_guidance_query,preparedness_tips_query,0.8018,ml,False
+evacuation drill nepal,evacuation_guidance_query,evacuation_guidance_query,0.9395,ml,True
+safe location,safe_location_query,family_reunification_status,0.4835,ml,False
+where is safe,safe_location_query,safe_location_query,0.8454,ml,True
+safe place,safe_location_query,safe_location_query,1.0,keyword,True
+कहाँ सुरक्षित,safe_location_query,safe_location_query,0.9299,ml,True
+सुरक्षित ठाउँ,safe_location_query,safe_location_query,1.0,keyword,True
+surakshit sthan,safe_location_query,evacuation_guidance_query,0.3099,ml,False
+surakshit thau,safe_location_query,fallback_unclear,0.1949,fallback,False
+suraksha kshetr,safe_location_query,safe_location_query,0.7329,ml,True
+खुला स्थान सुरक्षा,safe_location_query,safe_location_query,0.8218,ml,True
+जमिन सुरक्षा,safe_location_query,safe_location_query,0.7094,ml,True
+khula sthan suraksha,safe_location_query,safe_location_query,0.5004,ml,True
+jamin suraksha,safe_location_query,safe_location_query,0.6887,ml,True
+building safety,safe_location_query,building_damage_check,0.6662,ml,False
+inside building,safe_location_query,building_damage_check,0.5155,ml,False
+इमारत बाहिर,safe_location_query,building_damage_check,0.3477,ml,False
+imarat bahar,safe_location_query,building_damage_check,0.2789,ml,False
+away from hazards,safe_location_query,fallback_unclear,0.176,fallback,False
+risk areas,safe_location_query,fallback_unclear,0.1156,fallback,False
+hazardous locations,safe_location_query,fallback_unclear,0.1243,fallback,False
+खतराबाट टाढा,safe_location_query,fallback_unclear,0.1388,fallback,False
+खतरनाक स्थान,safe_location_query,shelter_request,0.2698,ml,False
+khatrabata tada,safe_location_query,fallback_unclear,0.0842,fallback,False
+jokhim kshetr,safe_location_query,fallback_unclear,0.243,fallback,False
+khatranak sthan,safe_location_query,fallback_unclear,0.1405,fallback,False
+please कहाँ सुरक्षित,safe_location_query,safe_location_query,0.8924,ml,True
+इमारत सुरक्षा please,safe_location_query,safe_location_query,0.7685,ml,True
+emergency hazardous locations,safe_location_query,fallback_unclear,0.1554,fallback,False
+building safety now,safe_location_query,building_damage_check,0.6646,ml,False
+where is safe help,safe_location_query,safe_location_query,0.7415,ml,True
+इमारत बाहिर please,safe_location_query,building_damage_check,0.2513,ml,False
+खुला स्थान सुरक्षा now,safe_location_query,safe_location_query,0.6493,ml,True
+risk areas qsafe,safe_location_query,fallback_unclear,0.0837,fallback,False
+help safe location,safe_location_query,family_reunification_status,0.49,ml,False
+inside building help,safe_location_query,building_damage_check,0.3332,ml,False
+qsafe imarat bahar,safe_location_query,safe_location_query,0.3742,ml,True
+जोखिम क्षेत्र emergency,safe_location_query,safe_location_query,0.3297,ml,True
+jamin suraksha help,safe_location_query,safe_location_query,0.4325,ml,True
+help imarat bahar,safe_location_query,fallback_unclear,0.2224,fallback,False
+park suraksha urgent,safe_location_query,safe_location_query,0.6112,ml,True
+help khatranak sthan,safe_location_query,fallback_unclear,0.2147,fallback,False
+khatrabata tada help,safe_location_query,sos_help_request,0.4071,ml,False
+please खेत सुरक्षा,safe_location_query,safe_location_query,0.8713,ml,True
+खुला स्थान सुरक्षा please,safe_location_query,safe_location_query,0.6862,ml,True
+khatranak sthan help,safe_location_query,fallback_unclear,0.1449,fallback,False
+please suraksha kshetr,safe_location_query,safe_location_query,0.73,ml,True
+safe location qsafe,safe_location_query,family_reunification_status,0.4639,ml,False
+need shelter,shelter_request,shelter_request,0.98,keyword,True
+emergency housing,shelter_request,fallback_unclear,0.1465,fallback,False
+आश्रय चाहिन्छ,shelter_request,shelter_request,0.9359,ml,True
+आश्रय आवश्यक,shelter_request,shelter_request,0.8787,ml,True
+आपतकालीन आवास,shelter_request,fallback_unclear,0.1609,fallback,False
+अस्थायी आवास,shelter_request,fallback_unclear,0.2273,fallback,False
+ashray awashyak,shelter_request,shelter_request,0.8781,ml,True
+aapatkalin awas,shelter_request,preparedness_tips_query,0.3168,ml,False
+where is shelter,shelter_request,shelter_request,0.7454,ml,True
+नजिकै आश्रय,shelter_request,shelter_request,0.9425,ml,True
+स्थानीय आश्रय,shelter_request,shelter_request,0.9795,ml,True
+sthaniya ashray,shelter_request,shelter_request,0.7713,ml,True
+shelter capacity,shelter_request,shelter_request,0.9788,ml,True
+accommodation available,shelter_request,shelter_request,0.5724,ml,True
+आश्रय क्षमता,shelter_request,shelter_request,0.9167,ml,True
+बस्ने स्थान उपलब्ध,shelter_request,shelter_request,0.939,ml,True
+khali sthan,shelter_request,fallback_unclear,0.1576,fallback,False
+medical services,shelter_request,emergency_contact_request,0.3542,ml,False
+sanitation facilities,shelter_request,fallback_unclear,0.2222,fallback,False
+ashray suvidha,shelter_request,shelter_request,0.8141,ml,True
+chikitsa seva,shelter_request,emergency_contact_request,0.363,ml,False
+sarsaphai suvidha,shelter_request,fallback_unclear,0.1041,fallback,False
+नजिकै आश्रय qsafe,shelter_request,shelter_request,0.9265,ml,True
+need shelter emergency,shelter_request,shelter_request,0.98,keyword,True
+नजिकै आश्रय help,shelter_request,shelter_request,0.9301,ml,True
+आश्रय चाहिन्छ urgent,shelter_request,shelter_request,0.8708,ml,True
+आश्रय आवश्यक please,shelter_request,shelter_request,0.829,ml,True
+help अस्थायी आवास,shelter_request,sos_help_request,0.3314,ml,False
+qsafe medical services,shelter_request,medical_emergency_request,0.3759,ml,False
+sanitation facilities please,shelter_request,fallback_unclear,0.2145,fallback,False
+khali sthan urgent,shelter_request,fallback_unclear,0.1305,fallback,False
+please आश्रय क्षमता,shelter_request,shelter_request,0.9123,ml,True
+sanitation facilities qsafe,shelter_request,fallback_unclear,0.2222,fallback,False
+qsafe आपतकालीन आवास,shelter_request,fallback_unclear,0.2278,fallback,False
+emergency where is shelter,shelter_request,shelter_request,0.6431,ml,True
+please where is shelter,shelter_request,shelter_request,0.6946,ml,True
+aapatkalin awas please,shelter_request,fallback_unclear,0.2252,fallback,False
+need shelter urgent,shelter_request,shelter_request,0.98,keyword,True
+आश्रय क्षमता qsafe,shelter_request,shelter_request,0.8703,ml,True
+medical services help,shelter_request,emergency_contact_request,0.3222,ml,False
+ashray suvidha nepal,shelter_request,shelter_request,0.5168,ml,True
+आश्रय सुविधा emergency,shelter_request,shelter_request,0.8948,ml,True
+shelter location urgent,shelter_request,shelter_request,0.909,ml,True
+need food,food_water_request,food_water_request,0.98,keyword,True
+need water,food_water_request,food_water_request,0.98,keyword,True
+खाना चाहिन्छ,food_water_request,food_water_request,0.4259,ml,True
+तिर्खा लागेको,food_water_request,food_water_request,0.2546,ml,True
+pani chaincha,food_water_request,food_water_request,0.7739,ml,True
+bhok lageko,food_water_request,fallback_unclear,0.1509,fallback,False
+tirkha lageko,food_water_request,fallback_unclear,0.1027,fallback,False
+water distribution,food_water_request,food_water_request,0.9737,ml,True
+पानी वितरण,food_water_request,food_water_request,0.9701,ml,True
+राहत आपूर्ति,food_water_request,fallback_unclear,0.1525,fallback,False
+दहायता वितरण,food_water_request,fallback_unclear,0.1854,fallback,False
+pani vitran,food_water_request,food_water_request,0.9739,ml,True
+emergency food,food_water_request,preparedness_tips_query,0.2948,ml,False
+rations,food_water_request,food_water_request,0.95,keyword_fuzzy,True
+आपतकालीन खाना,food_water_request,food_water_request,0.2969,ml,True
+जीवित रहने किट,food_water_request,fallback_unclear,0.1308,fallback,False
+राशन,food_water_request,food_water_request,0.3572,ml,True
+aapatkalin pani,food_water_request,food_water_request,0.5581,ml,True
+drinking water,food_water_request,food_water_request,1.0,keyword,True
+safe water,food_water_request,food_water_request,0.7855,ml,True
+water purification,food_water_request,food_water_request,0.7991,ml,True
+piune pani,food_water_request,food_water_request,0.9189,ml,True
+surakshit pani,food_water_request,food_water_request,0.407,ml,True
+pani shuddhikaran,food_water_request,food_water_request,0.8141,ml,True
+nepal pani chaincha,food_water_request,food_water_request,0.8497,ml,True
+पानी वितरण nepal,food_water_request,food_water_request,0.9568,ml,True
+दहायता वितरण emergency,food_water_request,fallback_unclear,0.154,fallback,False
+pani shuddhikaran nepal,food_water_request,food_water_request,0.7963,ml,True
+राहत आपूर्ति help,food_water_request,fallback_unclear,0.2253,fallback,False
+तिर्खा लागेको help,food_water_request,sos_help_request,0.2883,ml,False
+help पानी वितरण,food_water_request,food_water_request,0.9262,ml,True
+rations qsafe,food_water_request,fallback_unclear,0.164,fallback,False
+khana vitran emergency,food_water_request,food_water_request,0.8732,ml,True
+clean water emergency,food_water_request,food_water_request,0.98,keyword,True
+पानी वितरण emergency,food_water_request,food_water_request,0.8383,ml,True
+tirkha lageko help,food_water_request,fallback_unclear,0.2344,fallback,False
+emergency aapatkalin pani,food_water_request,food_water_request,0.3049,ml,True
+nepal आपतकालीन खाना,food_water_request,food_water_request,0.3699,ml,True
+drinking water urgent,food_water_request,food_water_request,0.98,keyword,True
+जीवित रहने किट now,food_water_request,fallback_unclear,0.0973,fallback,False
+emergency khana vitran,food_water_request,food_water_request,0.8769,ml,True
+bhok lageko now,food_water_request,fallback_unclear,0.1116,fallback,False
+emergency need food,food_water_request,food_water_request,0.98,keyword,True
+emergency राशन,food_water_request,fallback_unclear,0.228,fallback,False
+family missing,family_member_missing,family_member_missing,0.98,keyword,True
+family lost,family_member_missing,family_member_missing,0.98,keyword,True
+परिवार हराएका,family_member_missing,family_member_missing,0.9684,ml,True
+परिवार फेला पार,family_member_missing,family_member_missing,0.7686,ml,True
+परिवार गुम,family_member_missing,family_reunification_status,0.6822,ml,False
+parivar haraeka,family_member_missing,family_member_missing,0.98,keyword,True
+priyajan haraeka,family_member_missing,family_member_missing,0.98,keyword,True
+parivar fela par,family_member_missing,family_reunification_status,0.98,keyword,False
+parivar gum,family_member_missing,family_member_missing,0.98,keyword,True
+haraeko vyakti,family_member_missing,family_member_missing,0.98,keyword,True
+haraeko manis,family_member_missing,family_member_missing,0.98,keyword,True
+haraeko report,family_member_missing,family_member_missing,0.5732,ml,True
+haraeko vyakti report,family_member_missing,family_member_missing,0.98,keyword,True
+haraeko manis report,family_member_missing,family_member_missing,0.98,keyword,True
+last contact,family_member_missing,family_member_missing,0.95,keyword_fuzzy,True
+last communication,family_member_missing,family_member_missing,0.98,keyword,True
+अन्तिम पटक कहाँ देखियो,family_member_missing,fallback_unclear,0.2835,ml,False
+अन्तिम सम्पर्क,family_member_missing,family_member_missing,0.4152,ml,True
+antim patak dekieko sthan,family_member_missing,fallback_unclear,0.1768,fallback,False
+antim patak kahan dekiyo,family_member_missing,fallback_unclear,0.148,fallback,False
+antim sampark,family_member_missing,emergency_contact_request,0.2685,ml,False
+family reunion,family_member_missing,family_reunification_status,0.9718,ml,False
+locate family,family_member_missing,family_reunification_status,0.769,ml,False
+family search,family_member_missing,family_reunification_status,0.5617,ml,False
+परिवार पुनर्मिलन,family_member_missing,family_reunification_status,0.9367,ml,False
+परिवार पत्ता लगाउनु,family_member_missing,family_member_missing,0.6394,ml,True
+parivar fela parnu,family_member_missing,family_reunification_status,0.98,keyword,False
+parivar patta lagaunu,family_member_missing,family_reunification_status,0.5363,ml,False
+parivar khoj,family_member_missing,family_reunification_status,0.7706,ml,False
+nepal parivar haraeka,family_member_missing,family_member_missing,0.98,keyword,True
+emergency loved one missing,family_member_missing,family_member_missing,0.7028,ml,True
+qsafe last contact,family_member_missing,family_member_missing,0.7247,ml,True
+please parivar fela par,family_member_missing,family_reunification_status,0.98,keyword,False
+परिवार गुम help,family_member_missing,family_reunification_status,0.4512,ml,False
+emergency परिवार गुम,family_member_missing,family_member_missing,0.261,ml,True
+please antim patak kahan dekiyo,family_member_missing,fallback_unclear,0.1194,fallback,False
+haraeko report qsafe,family_member_missing,family_member_missing,0.5808,ml,True
+हराएको मानिस urgent,family_member_missing,family_member_missing,0.9241,ml,True
+priyajan haraeka urgent,family_member_missing,family_member_missing,0.98,keyword,True
+help last contact,family_member_missing,family_member_missing,0.5955,ml,True
+parivar haraeka nepal,family_member_missing,family_member_missing,0.98,keyword,True
+परिवार पत्ता लगाउनु urgent,family_member_missing,family_member_missing,0.6038,ml,True
+nepal haraeko manis,family_member_missing,family_member_missing,0.98,keyword,True
+help locate family,family_member_missing,family_reunification_status,0.7453,ml,False
+please family missing,family_member_missing,family_member_missing,0.98,keyword,True
+please antim sampark,family_member_missing,fallback_unclear,0.1826,fallback,False
+family status,family_reunification_status,family_reunification_status,0.8539,ml,True
+where is family,family_reunification_status,family_reunification_status,0.98,keyword,True
+परिवार कहाँ छ,family_reunification_status,family_reunification_status,0.2618,ml,True
+पुनर्मिलन केन्द्र,family_reunification_status,family_reunification_status,0.6495,ml,True
+परिवार भेटथलो,family_reunification_status,family_reunification_status,0.8444,ml,True
+parivar beththalo,family_reunification_status,family_reunification_status,0.98,keyword,True
+punarmilan sthan,family_reunification_status,family_reunification_status,0.98,keyword,True
+family found,family_reunification_status,family_reunification_status,0.98,keyword,True
+located family,family_reunification_status,family_reunification_status,0.8912,ml,True
+परिवार फेला पारियो,family_reunification_status,family_member_missing,0.7382,ml,False
+परिवार पत्ता लाग्यो,family_reunification_status,family_member_missing,0.7096,ml,False
+parivar fela pariyo,family_reunification_status,family_reunification_status,0.98,keyword,True
+parivar patta lagyo,family_reunification_status,family_reunification_status,0.376,ml,True
+parivar jivit,family_reunification_status,family_reunification_status,0.6045,ml,True
+search status,family_reunification_status,status_check_general,0.4451,ml,False
+search progress,family_reunification_status,fallback_unclear,0.1467,fallback,False
+update on search,family_reunification_status,fallback_unclear,0.2403,fallback,False
+खोज स्थिति,family_reunification_status,fallback_unclear,0.222,fallback,False
+खोज अपडेट,family_reunification_status,family_reunification_status,0.3228,ml,True
+khoj sthiti,family_reunification_status,status_check_general,0.3933,ml,False
+khoj pragati,family_reunification_status,fallback_unclear,0.1596,fallback,False
+khoj update,family_reunification_status,status_check_general,0.4296,ml,False
+punarmilan sthan now,family_reunification_status,family_reunification_status,0.98,keyword,True
+qsafe parivar jivit,family_reunification_status,family_reunification_status,0.6303,ml,True
+nepal परिवार पत्ता लाग्यो,family_reunification_status,family_member_missing,0.6529,ml,False
+gathering point emergency,family_reunification_status,family_reunification_status,0.98,keyword,True
+family found please,family_reunification_status,family_reunification_status,0.98,keyword,True
+nepal parivar patta lagyo,family_reunification_status,family_reunification_status,0.3171,ml,True
+पुनर्मिलन केन्द्र now,family_reunification_status,family_reunification_status,0.607,ml,True
+update on search qsafe,family_reunification_status,fallback_unclear,0.1249,fallback,False
+emergency located family,family_reunification_status,family_reunification_status,0.6899,ml,True
+परिवार कहाँ छ nepal,family_reunification_status,family_reunification_status,0.2914,ml,True
+parivar beththalo nepal,family_reunification_status,family_reunification_status,0.98,keyword,True
+खोज अपडेट nepal,family_reunification_status,family_reunification_status,0.3695,ml,True
+emergency punarmilan kendra,family_reunification_status,family_reunification_status,0.98,keyword,True
+nepal parivar khoji,family_reunification_status,family_member_missing,0.98,keyword,False
+emergency gathering point,family_reunification_status,family_reunification_status,0.98,keyword,True
+nepal खोज अपडेट,family_reunification_status,fallback_unclear,0.2285,fallback,False
+खोज स्थिति qsafe,family_reunification_status,family_reunification_status,0.3835,ml,True
+please family location,family_reunification_status,family_reunification_status,0.7535,ml,True
+hurt,injury_report,injury_report,1.0,keyword,True
+casualty,injury_report,injury_report,0.98,keyword,True
+घाइते,injury_report,greeting,0.3363,ml,False
+चोटपट,injury_report,injury_report,0.4736,ml,True
+घायेको,injury_report,injury_report,0.3379,ml,True
+minor injury,injury_report,injury_report,0.98,keyword,True
+light injury,injury_report,injury_report,0.98,keyword,True
+सानो घाउ,injury_report,injury_report,0.7432,ml,True
+सानो पीडा,injury_report,fallback_unclear,0.1313,fallback,False
+serious injury,injury_report,injury_report,0.98,keyword,True
+critical condition,injury_report,injury_report,0.98,keyword,True
+gambhir avastha,injury_report,injury_report,0.98,keyword,True
+open wound,injury_report,injury_report,0.98,keyword,True
+laceration,injury_report,injury_report,0.98,keyword,True
+रगत बग्दै,injury_report,injury_report,0.3277,ml,True
+खुला घाउ,injury_report,injury_report,0.5263,ml,True
+चीर,injury_report,fallback_unclear,0.1523,fallback,False
+ragat bagdai,injury_report,medical_emergency_request,0.6857,ml,False
+khula ghau,injury_report,injury_report,0.5294,ml,True
+bone injury,injury_report,injury_report,0.98,keyword,True
+skeletal injury,injury_report,injury_report,0.98,keyword,True
+हाड चोट,injury_report,injury_report,0.7325,ml,True
+कंकाल चोट,injury_report,injury_report,0.5406,ml,True
+kankal chot,injury_report,injury_report,0.7167,ml,True
+head injury,injury_report,injury_report,1.0,keyword,True
+concussion,injury_report,fallback_unclear,0.147,fallback,False
+skull fracture,injury_report,injury_report,0.2841,ml,True
+टाउकोमा चोट,injury_report,injury_report,1.0,keyword,True
+मस्तिष्क झड्का,injury_report,injury_report,0.2891,ml,True
+खोपडी फ्र्याक्चर,injury_report,fallback_unclear,0.1435,fallback,False
+tauko ma chot,injury_report,injury_report,0.7022,ml,True
+mastishka jhadka,injury_report,fallback_unclear,0.3301,ml,False
+chemical burn,injury_report,injury_report,0.4383,ml,True
+electrical burn,injury_report,power_outage_report,0.5553,ml,False
+rasayanik jalan,injury_report,injury_report,0.5529,ml,True
+हाड भाँचिएको emergency,injury_report,trapped_debris_report,0.3688,ml,False
+broken bone emergency,injury_report,medical_emergency_request,0.6236,ml,False
+गम्भीर चोट help,injury_report,injury_report,0.9569,ml,True
+please had chot,injury_report,injury_report,0.5753,ml,True
+nepal kankal chot,injury_report,injury_report,0.5259,ml,True
+emergency bleeding,injury_report,injury_report,0.98,keyword,True
+emergency treatment,first_aid_query,first_aid_query,0.98,keyword,True
+आपतकालीन उपचार,first_aid_query,first_aid_query,0.3442,ml,True
+चोट उपचार,first_aid_query,first_aid_query,0.81,ml,True
+prathamik upchar,first_aid_query,first_aid_query,0.98,keyword,True
+aapatkalin upchar,first_aid_query,first_aid_query,0.98,keyword,True
+chikitsa madat,first_aid_query,first_aid_query,0.98,keyword,True
+cpr instructions,first_aid_query,first_aid_query,0.98,keyword,True
+cpr steps,first_aid_query,first_aid_query,0.98,keyword,True
+सीपीआर चरण,first_aid_query,fallback_unclear,0.2182,fallback,False
+सीपीआर मार्गदर्शन,first_aid_query,road_blockage_report,0.3311,ml,False
+cpr charan,first_aid_query,first_aid_query,0.98,keyword,True
+cardiopulmonary punarjivan,first_aid_query,first_aid_query,0.98,keyword,True
+bleeding control,first_aid_query,injury_report,0.98,keyword,False
+bandage application,first_aid_query,first_aid_query,0.98,keyword,True
+ragat rokne,first_aid_query,first_aid_query,0.98,keyword,True
+burn treatment,first_aid_query,first_aid_query,0.7596,ml,True
+thermal injury,first_aid_query,injury_report,0.98,keyword,False
+जलन उपचार,first_aid_query,first_aid_query,0.7532,ml,True
+ताप्क्रिय चोट,first_aid_query,injury_report,0.4446,ml,False
+jalan prathamik upchar,first_aid_query,first_aid_query,0.98,keyword,True
+broken bone treatment,first_aid_query,first_aid_query,0.4485,ml,True
+splint application,first_aid_query,fallback_unclear,0.0937,fallback,False
+immobilization,first_aid_query,fallback_unclear,0.1037,fallback,False
+फ्र्याक्चर हेरचाह,first_aid_query,first_aid_query,0.7773,ml,True
+हाड भाँचिएको उपचार,first_aid_query,first_aid_query,0.5924,ml,True
+स्प्लिन्ट लगाउने,first_aid_query,fallback_unclear,0.1418,fallback,False
+अस्थिरता,first_aid_query,fallback_unclear,0.2436,fallback,False
+fracture herachah,first_aid_query,first_aid_query,0.6412,ml,True
+splint lagane,first_aid_query,first_aid_query,0.4296,ml,True
+asthirata,first_aid_query,fallback_unclear,0.1031,fallback,False
+choking relief,first_aid_query,fallback_unclear,0.2152,fallback,False
+airway clearance,first_aid_query,fallback_unclear,0.1316,fallback,False
+choking first aid,first_aid_query,first_aid_query,0.98,keyword,True
+हाइमलिच मनुभर,first_aid_query,greeting,0.4815,ml,False
+dam rahat,first_aid_query,food_water_request,0.3432,ml,False
+dam prathamik upchar,first_aid_query,first_aid_query,0.98,keyword,True
+shock management,first_aid_query,fallback_unclear,0.2382,fallback,False
+झड्का उपचार,first_aid_query,first_aid_query,0.8096,ml,True
+झड्का व्यवस्थापन,first_aid_query,emergency_contact_request,0.3699,ml,False
+jhadka upchar,first_aid_query,first_aid_query,0.8999,ml,True
+aapatkalin upchar help,first_aid_query,first_aid_query,0.98,keyword,True
+स्प्लिन्ट लगाउने qsafe,first_aid_query,fallback_unclear,0.084,fallback,False
+thermal injury please,first_aid_query,injury_report,0.98,keyword,False
+broken bone treatment nepal,first_aid_query,first_aid_query,0.3721,ml,True
+shock management now,first_aid_query,fallback_unclear,0.2023,fallback,False
+please shock management,first_aid_query,fallback_unclear,0.1246,fallback,False
+please splint application,first_aid_query,fallback_unclear,0.1706,fallback,False
+emergency treatment emergency,first_aid_query,first_aid_query,0.98,keyword,True
+emergency number,emergency_contact_request,emergency_contact_request,0.9471,ml,True
+helpline number,emergency_contact_request,emergency_contact_request,1.0,keyword,True
+hotline number,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+emergency contact,emergency_contact_request,emergency_contact_request,1.0,keyword,True
+आपतकालीन नम्बर,emergency_contact_request,emergency_contact_request,0.9382,ml,True
+आपतकालीन सम्पर्क,emergency_contact_request,emergency_contact_request,0.7618,ml,True
+call police,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+प्रहरी आपतकाल,emergency_contact_request,emergency_contact_request,0.705,ml,True
+प्रहरी सहायता,emergency_contact_request,fallback_unclear,0.2343,fallback,False
+prahari bolau,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+prahari sahayata,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+hospital contact,emergency_contact_request,emergency_contact_request,0.6689,ml,True
+health services,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+chikitsa aapatkal,emergency_contact_request,emergency_contact_request,0.98,keyword,True
+fire services,emergency_contact_request,emergency_contact_request,0.8353,ml,True
+अग्निशमन,emergency_contact_request,fire_incident_report,0.4009,ml,False
+आगो सेवा,emergency_contact_request,fire_incident_report,0.9974,ml,False
+aago aapatkal,emergency_contact_request,fire_incident_report,0.868,ml,False
+aago seva,emergency_contact_request,fire_incident_report,0.551,ml,False
+disaster response,emergency_contact_request,preparedness_tips_query,0.3052,ml,False
+आपतकालीन सेवा,emergency_contact_request,fallback_unclear,0.1688,fallback,False
+बचाव सेवा,emergency_contact_request,trapped_debris_report,0.628,ml,False
+राहत सेवा,emergency_contact_request,shelter_request,0.3708,ml,False
+aapad pratikriya,emergency_contact_request,preparedness_tips_query,0.3588,ml,False
+official contact,emergency_contact_request,emergency_contact_request,0.6606,ml,True
+प्राधिकरण सम्पर्क,emergency_contact_request,emergency_contact_request,0.5907,ml,True
+सरकारी सेवा,emergency_contact_request,fallback_unclear,0.1718,fallback,False
+sarkari helpline,emergency_contact_request,emergency_contact_request,0.2942,ml,True
+adhikarik sampark,emergency_contact_request,emergency_contact_request,0.5871,ml,True
+pradhikaran sampark,emergency_contact_request,emergency_contact_request,0.8204,ml,True
+sarkari seva,emergency_contact_request,emergency_contact_request,0.7762,ml,True
+emergency management,emergency_contact_request,sos_help_request,0.2899,ml,False
+disaster management,emergency_contact_request,emergency_contact_request,0.4014,ml,True
+एनडीआरआरएमए सम्पर्क,emergency_contact_request,emergency_contact_request,0.6984,ml,True
+आपद प्राधिकरण,emergency_contact_request,fallback_unclear,0.1052,fallback,False
+आपद व्यवस्थापन,emergency_contact_request,emergency_contact_request,0.5253,ml,True
+ndrrma sampark,emergency_contact_request,emergency_contact_request,0.5633,ml,True
+aapatkalin vyavasthapan,emergency_contact_request,preparedness_tips_query,0.3588,ml,False
+aapad vyavasthapan,emergency_contact_request,fallback_unclear,0.2431,fallback,False
+आपद प्राधिकरण qsafe,emergency_contact_request,fallback_unclear,0.1539,fallback,False
+aago aapatkal please,emergency_contact_request,fire_incident_report,0.7911,ml,False
+please आपद व्यवस्थापन,emergency_contact_request,emergency_contact_request,0.3139,ml,True
+emergency प्रहरी नम्बर,emergency_contact_request,emergency_contact_request,0.9831,ml,True
+emergency ndrrma sampark,emergency_contact_request,emergency_contact_request,0.7172,ml,True
+emergency management now,emergency_contact_request,sos_help_request,0.4078,ml,False
+power outage,power_outage_report,power_outage_report,1.0,keyword,True
+electricity gone,power_outage_report,power_outage_report,0.98,keyword,True
+no power,power_outage_report,power_outage_report,0.98,keyword,True
+विद्युत विद्युत गयो,power_outage_report,power_outage_report,0.8616,ml,True
+विद्युत बन्द,power_outage_report,power_outage_report,0.8779,ml,True
+vidyut vidyut gayo,power_outage_report,power_outage_report,0.98,keyword,True
+vidyut banda,power_outage_report,power_outage_report,0.98,keyword,True
+electricity failure,power_outage_report,power_outage_report,0.9595,ml,True
+power failure,power_outage_report,power_outage_report,0.9842,ml,True
+power cut,power_outage_report,power_outage_report,0.9733,ml,True
+विद्युत कट,power_outage_report,power_outage_report,0.8459,ml,True
+vidyut bipalta,power_outage_report,power_outage_report,0.98,keyword,True
+grid bipalta,power_outage_report,power_outage_report,0.98,keyword,True
+vidyut kat,power_outage_report,power_outage_report,0.98,keyword,True
+city power gone,power_outage_report,power_outage_report,0.9877,ml,True
+kshetr blackout,power_outage_report,power_outage_report,0.98,keyword,True
+chimeki vidyut banda,power_outage_report,power_outage_report,0.98,keyword,True
+kshetriya vidyut banda,power_outage_report,power_outage_report,0.98,keyword,True
+power restoration,power_outage_report,power_outage_report,0.9661,ml,True
+when power back,power_outage_report,power_outage_report,0.9219,ml,True
+electricity return,power_outage_report,power_outage_report,0.8771,ml,True
+विद्युत कहिले आउँछ,power_outage_report,power_outage_report,0.932,ml,True
+विद्युत फर्कन्छ,power_outage_report,power_outage_report,0.4397,ml,True
+vidyut kahile aucha,power_outage_report,power_outage_report,0.98,keyword,True
+backup power,power_outage_report,power_outage_report,0.9807,ml,True
+alternative power,power_outage_report,power_outage_report,0.9533,ml,True
+आपतकालीन विद्युत,power_outage_report,fallback_unclear,0.1878,fallback,False
+जेनेरेटर चाहिन्छ,power_outage_report,medical_emergency_request,0.7178,ml,False
+ब्याकअप विद्युत,power_outage_report,power_outage_report,0.6963,ml,True
+वैकल्पिक विद्युत,power_outage_report,power_outage_report,0.4668,ml,True
+aapatkalin vidyut,power_outage_report,power_outage_report,0.98,keyword,True
+power line damage,power_outage_report,power_outage_report,0.9593,ml,True
+विद्युतीय खतरा,power_outage_report,power_outage_report,0.5327,ml,True
+विद्युत लाइन क्षति,power_outage_report,power_outage_report,0.318,ml,True
+tar khaseka,power_outage_report,fallback_unclear,0.1295,fallback,False
+nepal tar khaseka,power_outage_report,fallback_unclear,0.1149,fallback,False
+nepal विद्युतीय खतरा,power_outage_report,power_outage_report,0.5377,ml,True
+when power back qsafe,power_outage_report,power_outage_report,0.8387,ml,True
+backup power nepal,power_outage_report,power_outage_report,0.9464,ml,True
+qsafe blackout,power_outage_report,power_outage_report,0.98,keyword,True
+help chimeki vidyut banda,power_outage_report,power_outage_report,0.98,keyword,True
+power cut help,power_outage_report,power_outage_report,0.9117,ml,True
+chimeki vidyut banda emergency,power_outage_report,power_outage_report,0.98,keyword,True
+emergency vidyut vidyut gayo,power_outage_report,power_outage_report,0.98,keyword,True
+gali avaruddh,road_blockage_report,road_blockage_report,0.98,keyword,True
+landslide blocked,road_blockage_report,road_blockage_report,0.98,keyword,True
+पहिरोले अवरुद्ध,road_blockage_report,road_blockage_report,0.9543,ml,True
+सडकमा भग्नावशेष,road_blockage_report,building_collapse_report,0.6338,ml,False
+चट्टान खस्ने,road_blockage_report,fallback_unclear,0.1782,fallback,False
+माटो खस्ने,road_blockage_report,fallback_unclear,0.2098,fallback,False
+pahirole avaruddh,road_blockage_report,road_blockage_report,0.98,keyword,True
+chattan khase,road_blockage_report,road_blockage_report,0.98,keyword,True
+bridge collapse,road_blockage_report,road_blockage_report,0.95,keyword_fuzzy,True
+bridge damaged,road_blockage_report,road_blockage_report,0.8603,ml,True
+crossing blocked,road_blockage_report,road_blockage_report,0.924,ml,True
+पुल ढल्यो,road_blockage_report,building_collapse_report,0.7832,ml,False
+पुल असुरक्षित,road_blockage_report,safe_location_query,0.2752,ml,False
+पार हुन अवरुद्ध,road_blockage_report,road_blockage_report,0.8362,ml,True
+pul dhalyo,road_blockage_report,road_blockage_report,0.3239,ml,True
+pul asurakshit,road_blockage_report,road_blockage_report,0.3166,ml,True
+par hun avaruddh,road_blockage_report,road_blockage_report,0.6844,ml,True
+traffic jam,road_blockage_report,fallback_unclear,0.1153,fallback,False
+sadak banda,road_blockage_report,road_blockage_report,0.8664,ml,True
+vaikalpik marg chaincha,road_blockage_report,road_blockage_report,0.3786,ml,True
+emergency route,road_blockage_report,fallback_unclear,0.1797,fallback,False
+rescue route blocked,road_blockage_report,road_blockage_report,0.98,keyword,True
+पहुँच अवरुद्ध,road_blockage_report,road_blockage_report,0.9367,ml,True
+बचाव मार्ग अवरुद्ध,road_blockage_report,road_blockage_report,0.9491,ml,True
+aapatkalin marg,road_blockage_report,preparedness_tips_query,0.2695,ml,False
+ambulance avaruddh,road_blockage_report,medical_emergency_request,0.5769,ml,False
+clearing operation,road_blockage_report,fallback_unclear,0.1126,fallback,False
+road clearing,road_blockage_report,road_blockage_report,0.9516,ml,True
+debris removal,road_blockage_report,trapped_debris_report,0.732,ml,False
+highway reopening,road_blockage_report,road_blockage_report,0.5671,ml,True
+सफाई अभियान,road_blockage_report,food_water_request,0.2854,ml,False
+भग्नावशेश हटाउने,road_blockage_report,building_collapse_report,0.268,ml,False
+राजमार्ग पुनः खुल्ने,road_blockage_report,road_blockage_report,0.4282,ml,True
+safai abhiyan,road_blockage_report,fallback_unclear,0.1381,fallback,False
+bhagnaveshesh hataune,road_blockage_report,road_blockage_report,0.3391,ml,True
+rajamarg punah khulne,road_blockage_report,fallback_unclear,0.1675,fallback,False
+detour available,road_blockage_report,shelter_request,0.442,ml,False
+वैकल्पिक पथ,road_blockage_report,road_blockage_report,0.5946,ml,True
+vaikalpik marg uplabdha,road_blockage_report,road_blockage_report,0.5555,ml,True
+vaikalpik path,road_blockage_report,road_blockage_report,0.5214,ml,True
+madhyamik sadak,road_blockage_report,road_blockage_report,0.7067,ml,True
+emergency road closed,road_blockage_report,road_blockage_report,0.98,keyword,True
+landslide blocked please,road_blockage_report,road_blockage_report,0.98,keyword,True
+emergency vaikalpik marg chaincha,road_blockage_report,fallback_unclear,0.2395,fallback,False
+sadak safai urgent,road_blockage_report,fallback_unclear,0.2223,fallback,False
+nepal माटो खस्ने,road_blockage_report,fallback_unclear,0.1694,fallback,False
+landslide blocked nepal,road_blockage_report,road_blockage_report,0.98,keyword,True
+debris removal emergency,road_blockage_report,trapped_debris_report,0.5519,ml,False
+current situation,status_check_general,status_check_general,1.0,keyword,True
+वर्तमान स्थिति,status_check_general,fallback_unclear,0.2147,fallback,False
+के भइरहेको छ,status_check_general,medical_emergency_request,0.7432,ml,False
+स्थिति अपडेट,status_check_general,family_reunification_status,1.0,keyword,False
+नवीनतम समाचार,status_check_general,fallback_unclear,0.3458,ml,False
+vartaman sthiti,status_check_general,status_check_general,0.98,keyword,True
+emergency status,status_check_general,status_check_general,0.98,keyword,True
+आपद स्थिति,status_check_general,status_check_general,0.2692,ml,True
+संकट अपडेट,status_check_general,fallback_unclear,0.1594,fallback,False
+स्थिति रिपोर्ट,status_check_general,fallback_unclear,0.1223,fallback,False
+aapatkalin sthiti,status_check_general,fallback_unclear,0.2169,fallback,False
+sankat update,status_check_general,status_check_general,0.98,keyword,True
+sthiti report,status_check_general,fallback_unclear,0.1866,fallback,False
+area condition,status_check_general,status_check_general,0.98,keyword,True
+local status,status_check_general,status_check_general,0.98,keyword,True
+neighborhood status,status_check_general,status_check_general,0.98,keyword,True
+क्षेत्र अवस्था,status_check_general,status_check_general,0.2939,ml,True
+sthaniya sthiti,status_check_general,fallback_unclear,0.1853,fallback,False
+chimeki sthiti,status_check_general,status_check_general,0.3207,ml,True
+risk assessment,status_check_general,status_check_general,0.98,keyword,True
+खतरा स्तर,status_check_general,fallback_unclear,0.1033,fallback,False
+suraksha sthiti,status_check_general,safe_location_query,0.3648,ml,False
+ke surakshit cha,status_check_general,safe_location_query,0.3088,ml,False
+khatra star,status_check_general,fallback_unclear,0.16,fallback,False
+jokhim mulyankan,status_check_general,fallback_unclear,0.2078,fallback,False
+weather condition,status_check_general,status_check_general,0.98,keyword,True
+wind status,status_check_general,status_check_general,0.98,keyword,True
+temperature,status_check_general,fallback_unclear,0.1082,fallback,False
+तापक्रम,status_check_general,fallback_unclear,0.1131,fallback,False
+weather avastha,status_check_general,fallback_unclear,0.2016,fallback,False
+phone working,status_check_general,fallback_unclear,0.1944,fallback,False
+internet status,status_check_general,status_check_general,0.98,keyword,True
+network available,status_check_general,status_check_general,0.98,keyword,True
+फोन काम गर्दै,status_check_general,status_check_general,0.258,ml,True
+sanchar sthiti,status_check_general,fallback_unclear,0.1429,fallback,False
+internet sthiti,status_check_general,status_check_general,0.4441,ml,True
+network uplabdha,status_check_general,shelter_request,0.5883,ml,False
+resource availability,status_check_general,status_check_general,0.98,keyword,True
+help available,status_check_general,status_check_general,0.98,keyword,True
+स्रोत उपलब्धता,status_check_general,shelter_request,0.4708,ml,False
+मद्दत उपलब्ध,status_check_general,sos_help_request,0.7697,ml,False
+सेवा चालू,status_check_general,fallback_unclear,0.1171,fallback,False
+timeline update,status_check_general,status_check_general,0.3637,ml,True
+duration estimate,status_check_general,fallback_unclear,0.1353,fallback,False
+समयरेखा अपडेट,status_check_general,fallback_unclear,0.2155,fallback,False
+अवधि अनुमान,status_check_general,fallback_unclear,0.3692,ml,False
+बाँकी समय,status_check_general,fallback_unclear,0.2227,fallback,False
+kahile antya huncha,status_check_general,fallback_unclear,0.291,ml,False
+avadhi anuman,status_check_general,fallback_unclear,0.1409,fallback,False
+baki samay,status_check_general,fallback_unclear,0.1267,fallback,False
+don't understand,fallback_unclear,trapped_debris_report,0.2645,ml,False
+not sure,fallback_unclear,fallback_unclear,0.2468,fallback,True
+बुझ्न सकिदैन,fallback_unclear,fallback_unclear,0.4933,ml,True
+अनिश्चित,fallback_unclear,fallback_unclear,0.4757,ml,True
+aspashta anurodh,fallback_unclear,fallback_unclear,0.7519,ml,True
+bujhna sakidaina,fallback_unclear,family_member_missing,0.5361,ml,False
+what do you mean,fallback_unclear,fallback_unclear,0.7707,ml,True
+clarify please,fallback_unclear,medical_emergency_request,0.2719,ml,False
+explain more,fallback_unclear,fallback_unclear,0.1168,fallback,True
+need more details,fallback_unclear,fallback_unclear,0.1785,fallback,True
+स्पष्ट पार्नुहोस्,fallback_unclear,fallback_unclear,0.2329,fallback,True
+थप विवरण चाहिन्छ,fallback_unclear,fallback_unclear,0.2708,ml,True
+tapai ke bhannuhuncha,fallback_unclear,fallback_unclear,0.8996,ml,True
+thap vyakhya,fallback_unclear,fallback_unclear,0.1542,fallback,True
+thap bibaran chaincha,fallback_unclear,fallback_unclear,0.179,fallback,True
+not clear,fallback_unclear,fallback_unclear,0.373,ml,True
+फेरि भन्नुहोस्,fallback_unclear,fallback_unclear,0.3423,ml,True
+स्पष्ट छैन,fallback_unclear,fallback_unclear,0.7668,ml,True
+bujhna sakin,fallback_unclear,fallback_unclear,0.0991,fallback,True
+unclear text,fallback_unclear,fallback_unclear,0.7911,ml,True
+typo error,fallback_unclear,fallback_unclear,0.1227,fallback,True
+अस्पष्ट पाठ,fallback_unclear,fallback_unclear,0.7409,ml,True
+sandeshama galti,fallback_unclear,fallback_unclear,0.2125,fallback,True
+translation problem,fallback_unclear,fallback_unclear,0.2054,fallback,True
+not in nepali,fallback_unclear,fallback_unclear,0.1622,fallback,True
+not in english,fallback_unclear,fallback_unclear,0.2677,ml,True
+भाषा समस्या,fallback_unclear,fallback_unclear,0.1892,fallback,True
+नेपालीमा छैन,fallback_unclear,fallback_unclear,0.2332,fallback,True
+अंग्रेजीमा छैन,fallback_unclear,fallback_unclear,0.2351,fallback,True
+anuvad samasya,fallback_unclear,fallback_unclear,0.4007,ml,True
+nepalima chaina,fallback_unclear,fallback_unclear,0.4489,ml,True
+irrelevant,fallback_unclear,fallback_unclear,0.0894,fallback,True
+अप्रासंगिक,fallback_unclear,fallback_unclear,0.1441,fallback,True
+bishya bahira,fallback_unclear,fallback_unclear,0.1439,fallback,True
+sambandhit chaina,fallback_unclear,fallback_unclear,0.6277,ml,True
+random input,fallback_unclear,fallback_unclear,0.4098,ml,True
+gibberish,fallback_unclear,fallback_unclear,0.2444,fallback,True
+meaningless,fallback_unclear,fallback_unclear,0.2308,fallback,True
+बकवास,fallback_unclear,fallback_unclear,0.1239,fallback,True
+अर्थहीन,fallback_unclear,fallback_unclear,0.5903,ml,True
+bakwas,fallback_unclear,fallback_unclear,0.1534,fallback,True
+arthhin,fallback_unclear,fallback_unclear,0.1744,fallback,True
+arthvihin,fallback_unclear,fallback_unclear,0.1201,fallback,True
+test message,fallback_unclear,fallback_unclear,0.9203,ml,True
+checking system,fallback_unclear,fallback_unclear,0.2087,fallback,True
+परीक्षण सन्देश,fallback_unclear,fallback_unclear,0.7041,ml,True
+pranali janch,fallback_unclear,fallback_unclear,0.2253,fallback,True
+testing bot,fallback_unclear,fallback_unclear,0.6989,ml,True

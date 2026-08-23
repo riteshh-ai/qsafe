@@ -136,7 +136,7 @@ class ModelTrainer:
         fit_time = time.time() - start_time
         
         print(f"✓ Vectorizer fitted in {fit_time:.2f}s")
-        print(f"✓ Feature matrix shape: {X_train_vec.shape} (2,927 train × 15,000 features)")
+        print(f"✓ Feature matrix shape: {X_train_vec.shape}")
         
         print("\n🤖 Training Logistic Regression classifier...")
         self.model = LogisticRegression(

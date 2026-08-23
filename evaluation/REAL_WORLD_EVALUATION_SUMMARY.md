@@ -1,97 +1,189 @@
 # Real-World Offline NLP Evaluation Summary
 
-**Run date:** 2026-08-21  
-**Script:** `evaluation/generate_real_world_queries.py`  
-**Model:** `offline-nlp/models/model.joblib` + `offline-nlp/models/vectorizer.joblib`  
-**Dataset:** 2,500 generated real-world queries, 100 per intent across 25 intents
+**Run date:** 2026-08-24
+**Model:** `offline-nlp/models/model.joblib` + `vectorizer.joblib` (v2)
+**Dataset:** `offline-nlp/datasets/training_dataset.csv` (v2, 6,206 rows)
+**Held-out test set:** `evaluation/heldout_benchmark.csv` (1,103 rows, never trained on)
 
-## Result
+## Headline
 
-The real-world generated-query benchmark is much harder than the held-out validation split.
-
-| Metric | Value |
-|---|---:|
-| Total samples | 2,500 |
-| Correct predictions | 1,042 |
-| Errors | 1,458 |
-| Overall accuracy | 41.68% |
-
-## Inference Source Breakdown
-
-| Source | Samples | Correct | Accuracy | Average confidence |
-|---|---:|---:|---:|---:|
-| ML | 1,430 | 857 | 59.93% | 0.6285 |
-| Fallback | 945 | 77 | 8.15% | 0.1481 |
-| Keyword | 89 | 79 | 88.76% | 1.0000 |
-| Keyword fuzzy | 36 | 29 | 80.56% | 0.9500 |
-
-The dominant failure mode is low-confidence fallback: 945 / 2,500 generated queries fell below the current 0.25 model confidence threshold.
-
-## Best Performing Intents
-
-| Intent | Accuracy | Errors |
+| Metric | Before | After |
 |---|---:|---:|
-| `fallback_unclear` | 90% | 10 |
-| `greeting` | 90% | 10 |
-| `earthquake_occurring_report` | 89% | 11 |
-| `goodbye_thanks` | 86% | 14 |
-| `sos_help_request` | 84% | 16 |
+| Held-out real-world accuracy | 51.68% | **66.73%** |
+| Validation accuracy (honest split) | 85.78% | **84.12%** |
+| Validation accuracy (as previously reported) | 99.87% | — *see below* |
+| Queries falling through to fallback | 308 / 1,103 | **168 / 1,103** |
+| ML-tier accuracy | 58.2% | **72.0%** |
+| Test suite | 56 passing | 56 passing |
 
-## Worst Performing Intents
+The previous run reported 52.52% on a 2,500-query benchmark and 99.87% on the
+validation split. Both numbers were untrustworthy, for different reasons. This
+run replaces them with measurements that hold up.
 
-| Intent | Accuracy | Errors | Most common prediction |
-|---|---:|---:|---|
-| `status_check_general` | 4% | 96 | `fallback_unclear` |
-| `building_damage_check` | 13% | 87 | `fallback_unclear` |
-| `first_aid_query` | 18% | 82 | `fallback_unclear` |
-| `family_member_missing` | 18% | 82 | `fallback_unclear` |
-| `preparedness_tips_query` | 22% | 78 | `fallback_unclear` |
-| `emergency_contact_request` | 22% | 78 | `fallback_unclear` |
-| `evacuation_guidance_query` | 24% | 76 | `fallback_unclear` |
-| `building_collapse_report` | 26% | 74 | `fallback_unclear` |
-| `power_outage_report` | 27% | 73 | `fallback_unclear` |
-| `road_blockage_report` | 28% | 72 | `fallback_unclear` |
+---
 
-## Top Error Patterns
+## 1. The 99.87% validation accuracy was measuring memorisation
 
-| True intent | Predicted intent | Count |
+The corpus is augmentation-generated: seed sentences were multiplied by adding
+punctuation (`???`, `!!!`), filler words (`प्लिज`, `please`), and deliberate
+typos. The `split` column was then assigned **per row at random**, so variants
+of the same seed sentence landed on both sides of the split.
+
+Measured against the shipped vectorizer, validation rows sat this close to
+their nearest training row:
+
+| Validation rows with a training neighbour at cosine ≥ | Share |
+|---|---:|
+| 0.99 | 11.0% |
+| 0.95 | 28.0% |
+| 0.90 | 47.1% |
+| 0.70 | **94.0%** |
+
+Median similarity was 0.895. Representative pairs:
+
+| Validation row | Nearest training row | sim |
 |---|---|---:|
-| `status_check_general` | `fallback_unclear` | 68 |
-| `first_aid_query` | `fallback_unclear` | 60 |
-| `building_damage_check` | `fallback_unclear` | 59 |
-| `building_collapse_report` | `fallback_unclear` | 55 |
-| `injury_report` | `fallback_unclear` | 53 |
-| `power_outage_report` | `fallback_unclear` | 52 |
-| `family_member_missing` | `fallback_unclear` | 51 |
-| `road_blockage_report` | `fallback_unclear` | 50 |
-| `family_reunification_status` | `fallback_unclear` | 49 |
-| `emergency_contact_request` | `fallback_unclear` | 47 |
-| `aftershock_information_query` | `earthquake_occurring_report` | 43 |
-| `fire_incident_report` | `gas_leak_report` | 22 |
+| `छोरी सँग सम्पर्क टुटेको छ???` | `छोरी सँग सम्पर्क टुटेको छ` | 1.000 |
+| `found my father at the relief camp???` | `found my father at the relief camp` | 1.000 |
+| `wall khaseko le mero aama lai thichyo` | `wall khaseko le mero aama lai thichyo!!!` | 1.000 |
+| `need baby formula aand water` | `need baby formula and water` | 0.915 |
 
-## Interpretation
+Re-splitting so that **whole seed families** stay on one side — same rows, same
+architecture, only the split changes — drops the score from **99.87% to
+85.78%**. That 14-point gap was leakage. `evaluation/compare_splits.py`
+reproduces this.
 
-The model still performs extremely well on the original validation split, but this generated benchmark exposes a generalization gap. The issue is not only the classifier: many generated phrases are outside the current training distribution, and the benchmark includes several neighboring or ambiguous labels.
+A second consequence: the corpus's 5,149 rows collapse into only **1,819
+distinct seed sentences** (mean 2.83 variants each). The effective training set
+is far smaller than the row count suggests.
 
-Examples of likely benchmark-label ambiguity:
+## 2. The dominant failure was coverage, not labels or thresholds
 
-- `another earthquake` is labeled `earthquake_occurring_report`, but can reasonably map to `aftershock_information_query`.
-- `gas leak` and `smell gas` appear under `fire_incident_report`, but the system has a separate `gas_leak_report` intent.
-- `medical emergency` is labeled `emergency_contact_request`, but sounds like an active `medical_emergency_request`.
-- `fire brigade` is labeled `emergency_contact_request`, but keyword rules route it to `fire_incident_report`.
+The previous summary proposed relabelling the benchmark and retuning the
+confidence threshold. Both were measured directly, and both are minor:
 
-That means the 41.68% score should be treated as a stress-test signal, not as a direct production accuracy estimate.
+| Lever | Measured gain |
+|---|---:|
+| Relabel contradictory benchmark entries | +0.82 pts (52.52% → 53.34%) |
+| Remove the 0.25 confidence threshold entirely | +1.24 pts, and it costs the safety fallback |
+| **Add real-world phrasing to training** | **+20.30 pts** |
 
-## Recommended Next Steps
+The threshold is not holding back correct answers: of the 710 rows that fell
+back, trusting the classifier's top-1 anyway would have been right only 15.1%
+of the time. The model genuinely did not recognise the phrasing.
 
-1. Clean and relabel the generated benchmark templates so each phrase has one defensible gold intent.
-2. Add real-world paraphrases from the benchmark to the training data for the weakest intents.
-3. Add high-recall keyword/phrase rules for low-performing but operationally important intents, especially `building_damage_check`, `family_member_missing`, `first_aid_query`, `emergency_contact_request`, and `road_blockage_report`.
-4. Revisit intent-specific thresholds. A single global 0.25 threshold still sends many disaster-related queries to fallback.
-5. Rerun this evaluation after dataset cleanup and model retraining, then compare against `evaluation/evaluation_report.json`.
+The coverage experiment (`evaluation/coverage_experiment.py`) split the
+benchmark in half **by seed family**, folded one half into training, and scored
+both models on the other half — which no paraphrase of the training data
+touches. 45.47% → 65.77%.
 
-## Generated Artifacts
+## 3. What changed
 
-- `evaluation/real_world_queries.csv`
-- `evaluation/real_world_test_results.csv`
-- `evaluation/evaluation_report.json`
+`evaluation/build_training_v2.py` rebuilds the dataset. It is idempotent: it
+always rebuilds from `training_dataset_v1.csv`, never from its own output.
+
+- **Leakage-free split.** Rows are grouped into seed families by connected
+  components over char-n-gram cosine similarity (≥ 0.80), and whole families
+  are assigned to train or validation.
+- **Real-world phrasing folded in.** Half the benchmark families (1,097 rows)
+  joined training. The other half (1,103 rows) is held out permanently as
+  `evaluation/heldout_benchmark.csv`.
+- **102 rows withheld — contradictory gold labels.** 39 template phrases were
+  listed under two different intents, making them unscoreable either way
+  (`gas leak` as both `fire_incident_report` and `gas_leak_report`;
+  `medical emergency` as both `emergency_contact_request` and
+  `medical_emergency_request`).
+- **16 rows withheld — distress mislabelled as greeting.** 26 `greeting`
+  templates are pleas for rescue: `hi i need help`, `namaste malai bachau`
+  ("save me"), `hi emergency here`, `hello i'm stuck`. Training on these would
+  teach a disaster assistant that a distress call is a salutation. They are
+  **withheld, not relabelled** — assigning gold labels to safety-critical
+  intents is a team decision, not a scripted one.
+- **40 rows withheld — off-topic guardrail protection.** See below.
+
+## 4. The guardrail regression, and the trade taken
+
+Folding in real-world phrasing initially reached 67.27% but broke the
+off-topic guardrail: `what time is the match tomorrow?` started returning
+`status_check_general` at 0.503 confidence.
+
+The cause was in the data. `status_check_general` is the catch-all intent, and
+it had absorbed content-free templates — `latest news`, `want to know`,
+`need details`, `status update`, `tapkram` — that carry no disaster signal at
+all. That turned the class into a sink for any vague question.
+
+The fix withholds status-check rows that name nothing in the disaster/safety
+domain. Cost: **0.54 points** (67.27% → 66.73%), paid to keep a safety
+property. `status_check_general` sits at 40% on the held-out set as a direct
+result, and that is the intended trade.
+
+Guardrail behaviour is unchanged from before this work — 9 of 12 off-topic
+probes correctly refused, both before and after. The v2 model is *less*
+confident when it does leak (`how to invest in stocks`: 0.775 → 0.606).
+
+## 5. Held-out results (1,103 rows, none seen in training)
+
+| Source | Rows | Correct | Accuracy | Avg confidence |
+|---|---:|---:|---:|---:|
+| ML | 686 | 494 | 72.0% | 0.680 |
+| Keyword | 238 | 208 | 87.4% | 0.983 |
+| Fallback | 168 | 25 | 14.9% | 0.170 |
+| Keyword fuzzy | 11 | 9 | 81.8% | 0.950 |
+
+**Weakest intents:** `preparedness_tips_query` 26%, `status_check_general` 40%
+(deliberate, see §4), `fire_incident_report` 42%, `building_collapse_report`
+43%, `safe_location_query` 43%, `medical_emergency_request` 52%.
+
+**Strongest:** `greeting` 98%, `goodbye_thanks` 95%, `sos_help_request` 95%,
+`fallback_unclear` 94%.
+
+**Top confusions:** `status_check_general` → `fallback_unclear` (23),
+`building_collapse_report` → `trapped_debris_report` (14),
+`safe_location_query` → `fallback_unclear` (13),
+`first_aid_query` → `fallback_unclear` (13).
+
+## 6. Open items
+
+1. **`preparedness_tips_query` at 26%** is the weakest intent and was not
+   addressed here. It needs its own phrasing pass.
+2. **`building_collapse_report` → `trapped_debris_report`** (14 errors) is a
+   genuine semantic overlap, not a phrasing gap. Worth deciding whether these
+   should stay separate intents.
+3. **Three pre-existing guardrail leaks**, unchanged by this work:
+   `recommend a good movie` → `greeting`, `how to invest in stocks` →
+   `first_aid_query`, `translate hello to spanish` → `greeting`.
+4. **The 29 distress-mislabelled `greeting` templates still need gold labels**
+   from the team. They are currently withheld from training, not fixed.
+5. **Confidence threshold remains 0.25** and is still unreconciled against the
+   proposal's 0.70 and `intents.md`'s tiered 0.55/0.40.
+
+## ⚠️ Do not score v2 with `generate_real_world_queries.py`
+
+That script's 2,500-query benchmark is **no longer a valid test set**. Half of
+its seed families were folded into v2's training data, so running it now scores
+the model partly on its own training set and will report an inflated number.
+`evaluation/real_world_test_results.csv` and `evaluation/evaluation_report.json`
+are v1 artifacts, kept only as the source of benchmark text and gold labels for
+`build_training_v2.py`.
+
+Use `evaluation/evaluate_heldout.py` against `heldout_benchmark.csv` instead —
+those 1,103 rows were withheld by seed family, so no paraphrase of them appears
+anywhere in training.
+
+## Reproducing
+
+```bash
+python evaluation/build_honest_split.py     # leakage-free split, diagnostic
+python evaluation/compare_splits.py         # 99.87% vs 85.78%
+python evaluation/coverage_experiment.py    # +20.3 pt coverage lift
+python evaluation/build_training_v2.py      # rebuild dataset (idempotent)
+cd offline-nlp && python -m src.main train  # retrain
+python evaluation/evaluate_heldout.py       # score on held-out benchmark
+```
+
+## Artifacts
+
+- `offline-nlp/datasets/training_dataset.csv` — v2, 6,206 rows
+- `offline-nlp/datasets/training_dataset_v1.csv` — original, preserved
+- `evaluation/heldout_benchmark.csv` — 1,103 held-out rows
+- `evaluation/heldout_results_v2.csv` — per-row predictions
