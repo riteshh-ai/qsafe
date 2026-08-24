@@ -410,6 +410,24 @@ async function main() {
       allRows: { accuracy: all.accuracy, macroF1: all.macroF1 },
       unseenOnly: { accuracy: held.accuracy, accuracyCI95: [rlo, rhi], macroF1: held.macroF1, perClass: held.perClass },
     };
+
+    // Freeze the held-out benchmark so the honest number is reproducible and reviewable
+    // rather than something only this script can see.
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(
+      path.join(outDir, 'benchmark_heldout.csv'),
+      csv([['text', 'intent'], ...unseen.map((r) => [r.text, r.intent])]),
+    );
+    fs.writeFileSync(
+      path.join(outDir, 'benchmark_errors.csv'),
+      csv([
+        ['text', 'expected', 'predicted', 'tier', 'confidence'],
+        ...unseen
+          .map((r) => ({ r, p: engine.predict(r.text) }))
+          .filter(({ r, p }) => p.intent !== r.intent)
+          .map(({ r, p }) => [r.text, r.intent, p.intent, p.source, p.confidence]),
+      ]),
+    );
     console.log(`   real-world set             ${pct(all.accuracy)} over ${rwRows.length} rows`);
     console.log(`   real-world, unseen only    ${pct(held.accuracy)} over ${unseen.length} rows  <- most honest estimate`);
   }
