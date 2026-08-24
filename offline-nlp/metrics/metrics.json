@@ -1,0 +1,771 @@
+{
+  "generatedBy": "offline-nlp/node/scripts/report.js",
+  "runtime": "node v24.12.0",
+  "protocol": {
+    "hyperparameterSelection": "stratified 85/15 fit-dev split carved from the train split",
+    "seed": 42,
+    "reportedOn": "validation split, untouched during selection",
+    "note": "The validation split is never used to choose anything, only to report."
+  },
+  "dataset": {
+    "train": 5362,
+    "validation": 844,
+    "classes": 25
+  },
+  "hyperparameters": {
+    "C": 5,
+    "solver": "lbfgs",
+    "maxIterations": 400,
+    "confidenceThreshold": 0.25
+  },
+  "hyperparameterSearch": [
+    {
+      "C": 0.25,
+      "accuracy": 0.8850299401197604,
+      "macroF1": 0.8749342507483183,
+      "seconds": 22.675
+    },
+    {
+      "C": 0.5,
+      "accuracy": 0.8994011976047904,
+      "macroF1": 0.8935019232598101,
+      "seconds": 23.226
+    },
+    {
+      "C": 1,
+      "accuracy": 0.9137724550898204,
+      "macroF1": 0.9104392412967701,
+      "seconds": 26.125
+    },
+    {
+      "C": 2,
+      "accuracy": 0.9209580838323354,
+      "macroF1": 0.9181059765052482,
+      "seconds": 29.369
+    },
+    {
+      "C": 5,
+      "accuracy": 0.9269461077844311,
+      "macroF1": 0.923062479641334,
+      "seconds": 32.546
+    }
+  ],
+  "training": {
+    "converged": false,
+    "iterations": 135,
+    "loss": 1726.7501197373917
+  },
+  "validation": {
+    "fullEngine": {
+      "accuracy": 0.8258293838862559,
+      "accuracyCI95": [
+        0.7987815323147219,
+        0.8499245467453289
+      ],
+      "macroPrecision": 0.8567966100763078,
+      "macroRecall": 0.8192153230586416,
+      "macroF1": 0.8236238416394673,
+      "weightedF1": 0.8350792722832004
+    },
+    "mlTierOnly": {
+      "accuracy": 0.8151658767772512,
+      "macroPrecision": 0.8521561938599972,
+      "macroRecall": 0.8076961921630401,
+      "macroF1": 0.8132154762845603
+    },
+    "byTier": {
+      "keyword": {
+        "rows": 154,
+        "correct": 151,
+        "accuracy": 0.9805194805194806,
+        "share": 0.18246445497630331
+      },
+      "ml": {
+        "rows": 609,
+        "correct": 511,
+        "accuracy": 0.8390804597701149,
+        "share": 0.7215639810426541
+      },
+      "keyword_fuzzy": {
+        "rows": 26,
+        "correct": 26,
+        "accuracy": 1,
+        "share": 0.030805687203791468
+      },
+      "fallback": {
+        "rows": 55,
+        "correct": 9,
+        "accuracy": 0.16363636363636364,
+        "share": 0.06516587677725119
+      }
+    },
+    "perClass": [
+      {
+        "intent": "aftershock_information_query",
+        "support": 26,
+        "tp": 21,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1,
+        "recall": 0.8076923076923077,
+        "f1": 0.8936170212765957
+      },
+      {
+        "intent": "building_collapse_report",
+        "support": 31,
+        "tp": 27,
+        "fp": 30,
+        "fn": 4,
+        "precision": 0.47368421052631576,
+        "recall": 0.8709677419354839,
+        "f1": 0.6136363636363635
+      },
+      {
+        "intent": "building_damage_check",
+        "support": 25,
+        "tp": 17,
+        "fp": 6,
+        "fn": 8,
+        "precision": 0.7391304347826086,
+        "recall": 0.68,
+        "f1": 0.7083333333333334
+      },
+      {
+        "intent": "earthquake_occurring_report",
+        "support": 45,
+        "tp": 44,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1,
+        "recall": 0.9777777777777777,
+        "f1": 0.9887640449438202
+      },
+      {
+        "intent": "emergency_contact_request",
+        "support": 19,
+        "tp": 16,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1,
+        "recall": 0.8421052631578947,
+        "f1": 0.9142857142857143
+      },
+      {
+        "intent": "evacuation_guidance_query",
+        "support": 26,
+        "tp": 26,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "intent": "fallback_unclear",
+        "support": 29,
+        "tp": 25,
+        "fp": 47,
+        "fn": 4,
+        "precision": 0.3472222222222222,
+        "recall": 0.8620689655172413,
+        "f1": 0.4950495049504951
+      },
+      {
+        "intent": "family_member_missing",
+        "support": 49,
+        "tp": 40,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1,
+        "recall": 0.8163265306122449,
+        "f1": 0.898876404494382
+      },
+      {
+        "intent": "family_reunification_status",
+        "support": 55,
+        "tp": 36,
+        "fp": 0,
+        "fn": 19,
+        "precision": 1,
+        "recall": 0.6545454545454545,
+        "f1": 0.7912087912087912
+      },
+      {
+        "intent": "fire_incident_report",
+        "support": 42,
+        "tp": 42,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9767441860465116,
+        "recall": 1,
+        "f1": 0.988235294117647
+      },
+      {
+        "intent": "first_aid_query",
+        "support": 17,
+        "tp": 9,
+        "fp": 4,
+        "fn": 8,
+        "precision": 0.6923076923076923,
+        "recall": 0.5294117647058824,
+        "f1": 0.5999999999999999
+      },
+      {
+        "intent": "food_water_request",
+        "support": 29,
+        "tp": 22,
+        "fp": 3,
+        "fn": 7,
+        "precision": 0.88,
+        "recall": 0.7586206896551724,
+        "f1": 0.8148148148148148
+      },
+      {
+        "intent": "gas_leak_report",
+        "support": 24,
+        "tp": 20,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091
+      },
+      {
+        "intent": "goodbye_thanks",
+        "support": 37,
+        "tp": 37,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "intent": "greeting",
+        "support": 37,
+        "tp": 35,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.9459459459459459,
+        "recall": 0.9459459459459459,
+        "f1": 0.9459459459459459
+      },
+      {
+        "intent": "injury_report",
+        "support": 45,
+        "tp": 36,
+        "fp": 2,
+        "fn": 9,
+        "precision": 0.9473684210526315,
+        "recall": 0.8,
+        "f1": 0.8674698795180723
+      },
+      {
+        "intent": "medical_emergency_request",
+        "support": 48,
+        "tp": 18,
+        "fp": 6,
+        "fn": 30,
+        "precision": 0.75,
+        "recall": 0.375,
+        "f1": 0.5
+      },
+      {
+        "intent": "power_outage_report",
+        "support": 27,
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "intent": "preparedness_tips_query",
+        "support": 20,
+        "tp": 16,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889
+      },
+      {
+        "intent": "road_blockage_report",
+        "support": 38,
+        "tp": 38,
+        "fp": 5,
+        "fn": 0,
+        "precision": 0.8837209302325582,
+        "recall": 1,
+        "f1": 0.9382716049382717
+      },
+      {
+        "intent": "safe_location_query",
+        "support": 28,
+        "tp": 24,
+        "fp": 2,
+        "fn": 4,
+        "precision": 0.9230769230769231,
+        "recall": 0.8571428571428571,
+        "f1": 0.888888888888889
+      },
+      {
+        "intent": "shelter_request",
+        "support": 36,
+        "tp": 31,
+        "fp": 9,
+        "fn": 5,
+        "precision": 0.775,
+        "recall": 0.8611111111111112,
+        "f1": 0.8157894736842106
+      },
+      {
+        "intent": "sos_help_request",
+        "support": 42,
+        "tp": 40,
+        "fp": 10,
+        "fn": 2,
+        "precision": 0.8,
+        "recall": 0.9523809523809523,
+        "f1": 0.8695652173913043
+      },
+      {
+        "intent": "status_check_general",
+        "support": 21,
+        "tp": 8,
+        "fp": 20,
+        "fn": 13,
+        "precision": 0.2857142857142857,
+        "recall": 0.38095238095238093,
+        "f1": 0.32653061224489793
+      },
+      {
+        "intent": "trapped_debris_report",
+        "support": 48,
+        "tp": 42,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1,
+        "recall": 0.875,
+        "f1": 0.9333333333333333
+      }
+    ],
+    "bestThresholdByMacroF1": {
+      "tau": 0.05,
+      "macroF1": 0.8270652204945805
+    }
+  },
+  "realWorldHeldOut": {
+    "totalRows": 2500,
+    "overlappingTrain": 1159,
+    "unseenRows": 1341,
+    "allRows": {
+      "accuracy": 0.8004,
+      "macroF1": 0.8085154068101856
+    },
+    "unseenOnly": {
+      "accuracy": 0.6442953020134228,
+      "accuracyCI95": [
+        0.6182934785544255,
+        0.6694727535430943
+      ],
+      "macroF1": 0.6647828005012105,
+      "perClass": [
+        {
+          "intent": "aftershock_information_query",
+          "support": 54,
+          "tp": 42,
+          "fp": 2,
+          "fn": 12,
+          "precision": 0.9545454545454546,
+          "recall": 0.7777777777777778,
+          "f1": 0.8571428571428572
+        },
+        {
+          "intent": "building_collapse_report",
+          "support": 49,
+          "tp": 21,
+          "fp": 8,
+          "fn": 28,
+          "precision": 0.7241379310344828,
+          "recall": 0.42857142857142855,
+          "f1": 0.5384615384615385
+        },
+        {
+          "intent": "building_damage_check",
+          "support": 49,
+          "tp": 27,
+          "fp": 10,
+          "fn": 22,
+          "precision": 0.7297297297297297,
+          "recall": 0.5510204081632653,
+          "f1": 0.6279069767441859
+        },
+        {
+          "intent": "earthquake_occurring_report",
+          "support": 48,
+          "tp": 45,
+          "fp": 9,
+          "fn": 3,
+          "precision": 0.8333333333333334,
+          "recall": 0.9375,
+          "f1": 0.8823529411764706
+        },
+        {
+          "intent": "emergency_contact_request",
+          "support": 54,
+          "tp": 33,
+          "fp": 18,
+          "fn": 21,
+          "precision": 0.6470588235294118,
+          "recall": 0.6111111111111112,
+          "f1": 0.6285714285714287
+        },
+        {
+          "intent": "evacuation_guidance_query",
+          "support": 56,
+          "tp": 32,
+          "fp": 25,
+          "fn": 24,
+          "precision": 0.5614035087719298,
+          "recall": 0.5714285714285714,
+          "f1": 0.5663716814159292
+        },
+        {
+          "intent": "fallback_unclear",
+          "support": 50,
+          "tp": 47,
+          "fp": 183,
+          "fn": 3,
+          "precision": 0.20434782608695654,
+          "recall": 0.94,
+          "f1": 0.33571428571428574
+        },
+        {
+          "intent": "family_member_missing",
+          "support": 50,
+          "tp": 34,
+          "fp": 14,
+          "fn": 16,
+          "precision": 0.7083333333333334,
+          "recall": 0.68,
+          "f1": 0.6938775510204083
+        },
+        {
+          "intent": "family_reunification_status",
+          "support": 53,
+          "tp": 28,
+          "fp": 19,
+          "fn": 25,
+          "precision": 0.5957446808510638,
+          "recall": 0.5283018867924528,
+          "f1": 0.56
+        },
+        {
+          "intent": "fire_incident_report",
+          "support": 57,
+          "tp": 25,
+          "fp": 8,
+          "fn": 32,
+          "precision": 0.7575757575757576,
+          "recall": 0.43859649122807015,
+          "f1": 0.5555555555555555
+        },
+        {
+          "intent": "first_aid_query",
+          "support": 48,
+          "tp": 26,
+          "fp": 10,
+          "fn": 22,
+          "precision": 0.7222222222222222,
+          "recall": 0.5416666666666666,
+          "f1": 0.619047619047619
+        },
+        {
+          "intent": "food_water_request",
+          "support": 49,
+          "tp": 34,
+          "fp": 7,
+          "fn": 15,
+          "precision": 0.8292682926829268,
+          "recall": 0.6938775510204082,
+          "f1": 0.7555555555555555
+        },
+        {
+          "intent": "gas_leak_report",
+          "support": 58,
+          "tp": 39,
+          "fp": 22,
+          "fn": 19,
+          "precision": 0.639344262295082,
+          "recall": 0.6724137931034483,
+          "f1": 0.6554621848739496
+        },
+        {
+          "intent": "goodbye_thanks",
+          "support": 48,
+          "tp": 46,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.9583333333333334,
+          "f1": 0.9787234042553191
+        },
+        {
+          "intent": "greeting",
+          "support": 55,
+          "tp": 50,
+          "fp": 2,
+          "fn": 5,
+          "precision": 0.9615384615384616,
+          "recall": 0.9090909090909091,
+          "f1": 0.9345794392523366
+        },
+        {
+          "intent": "injury_report",
+          "support": 57,
+          "tp": 42,
+          "fp": 15,
+          "fn": 15,
+          "precision": 0.7368421052631579,
+          "recall": 0.7368421052631579,
+          "f1": 0.7368421052631579
+        },
+        {
+          "intent": "medical_emergency_request",
+          "support": 59,
+          "tp": 27,
+          "fp": 12,
+          "fn": 32,
+          "precision": 0.6923076923076923,
+          "recall": 0.4576271186440678,
+          "f1": 0.5510204081632654
+        },
+        {
+          "intent": "power_outage_report",
+          "support": 47,
+          "tp": 43,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.9555555555555556,
+          "recall": 0.9148936170212766,
+          "f1": 0.9347826086956522
+        },
+        {
+          "intent": "preparedness_tips_query",
+          "support": 54,
+          "tp": 15,
+          "fp": 24,
+          "fn": 39,
+          "precision": 0.38461538461538464,
+          "recall": 0.2777777777777778,
+          "f1": 0.3225806451612903
+        },
+        {
+          "intent": "road_blockage_report",
+          "support": 52,
+          "tp": 29,
+          "fp": 3,
+          "fn": 23,
+          "precision": 0.90625,
+          "recall": 0.5576923076923077,
+          "f1": 0.6904761904761905
+        },
+        {
+          "intent": "safe_location_query",
+          "support": 49,
+          "tp": 22,
+          "fp": 22,
+          "fn": 27,
+          "precision": 0.5,
+          "recall": 0.4489795918367347,
+          "f1": 0.47311827956989244
+        },
+        {
+          "intent": "shelter_request",
+          "support": 53,
+          "tp": 34,
+          "fp": 13,
+          "fn": 19,
+          "precision": 0.723404255319149,
+          "recall": 0.6415094339622641,
+          "f1": 0.68
+        },
+        {
+          "intent": "sos_help_request",
+          "support": 49,
+          "tp": 47,
+          "fp": 22,
+          "fn": 2,
+          "precision": 0.6811594202898551,
+          "recall": 0.9591836734693877,
+          "f1": 0.7966101694915255
+        },
+        {
+          "intent": "status_check_general",
+          "support": 90,
+          "tp": 37,
+          "fp": 5,
+          "fn": 53,
+          "precision": 0.8809523809523809,
+          "recall": 0.4111111111111111,
+          "f1": 0.5606060606060607
+        },
+        {
+          "intent": "trapped_debris_report",
+          "support": 53,
+          "tp": 39,
+          "fp": 22,
+          "fn": 14,
+          "precision": 0.639344262295082,
+          "recall": 0.7358490566037735,
+          "f1": 0.6842105263157895
+        }
+      ]
+    }
+  },
+  "curatedProbes": {
+    "eval_dataset.json": {
+      "total": 40,
+      "correct": 30,
+      "accuracy": 0.75,
+      "misses": [
+        {
+          "query": "Need an ambulance immediately, someone is bleeding heavily and unconscious",
+          "expected": "medical_emergency_request",
+          "got": "injury_report"
+        },
+        {
+          "query": "मद्दत चाहियो! मेरो घर भत्कियो र मान्छे पुरिएका छन्!",
+          "expected": "trapped_debris_report",
+          "got": "building_collapse_report"
+        },
+        {
+          "query": "तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",
+          "expected": "medical_emergency_request",
+          "got": "injury_report"
+        },
+        {
+          "query": "नजिकको सुरक्षित आश्रयस्थल कहाँ छ?",
+          "expected": "shelter_request",
+          "got": "safe_location_query"
+        },
+        {
+          "query": "safe place kaha cha shelter chaincha family ko lagi",
+          "expected": "shelter_request",
+          "got": "safe_location_query"
+        },
+        {
+          "query": "What are the historical major earthquakes recorded in Nepal and their magnitudes?",
+          "expected": "earthquake_info",
+          "got": "fallback_unclear"
+        },
+        {
+          "query": "विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?",
+          "expected": "earthquake_info",
+          "got": "earthquake_occurring_report"
+        },
+        {
+          "query": "खाना खायौ? के गर्दै छौ?",
+          "expected": "fallback_unclear",
+          "got": "status_check_general"
+        },
+        {
+          "query": "🆘 🚑 🔥",
+          "expected": "sos_help_request",
+          "got": "medical_emergency_request"
+        },
+        {
+          "query": "ahile k garne ma pachi bhukampa thamiye pachi",
+          "expected": "aftershock_information_query",
+          "got": "status_check_general"
+        }
+      ]
+    },
+    "validation_dataset.json": {
+      "total": 40,
+      "correct": 30,
+      "accuracy": 0.75,
+      "misses": [
+        {
+          "query": "Need an ambulance immediately, someone is bleeding heavily and unconscious",
+          "expected": "medical_emergency_request",
+          "got": "injury_report"
+        },
+        {
+          "query": "मद्दत चाहियो! मेरो घर भत्कियो र मान्छे पुरिएका छन्!",
+          "expected": "trapped_debris_report",
+          "got": "building_collapse_report"
+        },
+        {
+          "query": "तुरन्त एम्बुलेन्स पठाउनुहोस्, गम्भीर चोट लागेको छ",
+          "expected": "medical_emergency_request",
+          "got": "injury_report"
+        },
+        {
+          "query": "खाना खायौ? के गर्दै छौ?",
+          "expected": "fallback_unclear",
+          "got": "status_check_general"
+        },
+        {
+          "query": "🆘 🚑 🔥",
+          "expected": "sos_help_request",
+          "got": "medical_emergency_request"
+        },
+        {
+          "query": "What are the historical major earthquakes recorded in Nepal and their magnitudes?",
+          "expected": "earthquake_info",
+          "got": "fallback_unclear"
+        },
+        {
+          "query": "नजिकको सुरक्षित आश्रयस्थल कहाँ छ?",
+          "expected": "shelter_request",
+          "got": "safe_location_query"
+        },
+        {
+          "query": "विगतमा नेपालमा आएका ठूला भूकम्पहरूको इतिहास के छ?",
+          "expected": "earthquake_info",
+          "got": "earthquake_occurring_report"
+        },
+        {
+          "query": "safe place kaha cha shelter chaincha family ko lagi",
+          "expected": "shelter_request",
+          "got": "safe_location_query"
+        },
+        {
+          "query": "ahile k garne ma pachi bhukampa thamiye pachi",
+          "expected": "aftershock_information_query",
+          "got": "status_check_general"
+        }
+      ]
+    }
+  },
+  "classes": [
+    "aftershock_information_query",
+    "building_collapse_report",
+    "building_damage_check",
+    "earthquake_occurring_report",
+    "emergency_contact_request",
+    "evacuation_guidance_query",
+    "fallback_unclear",
+    "family_member_missing",
+    "family_reunification_status",
+    "fire_incident_report",
+    "first_aid_query",
+    "food_water_request",
+    "gas_leak_report",
+    "goodbye_thanks",
+    "greeting",
+    "injury_report",
+    "medical_emergency_request",
+    "power_outage_report",
+    "preparedness_tips_query",
+    "road_blockage_report",
+    "safe_location_query",
+    "shelter_request",
+    "sos_help_request",
+    "status_check_general",
+    "trapped_debris_report"
+  ]
+}

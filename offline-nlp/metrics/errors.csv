@@ -1,0 +1,148 @@
+text,expected,predicted,tier,confidence
+wall bhatkiyo road ma now,building_collapse_report,road_blockage_report,ml,0.6329
+strong gassmell xa building ma,gas_leak_report,fire_incident_report,ml,0.2621
+malai thaha xaina k garne asap,status_check_general,fallback_unclear,fallback,0.138
+want to update status that my motheris safe,family_reunification_status,status_check_general,ml,0.3893
+my sister collapsed adn not waking up,medical_emergency_request,building_collapse_report,ml,0.3583
+बेहोस भएको मान्छेलाई कसरी मद्दत गर्ने है,first_aid_query,sos_help_request,ml,0.4673
+malai thaha xaina k gaarne,status_check_general,fallback_unclear,fallback,0.111
+give me next steps please,status_check_general,sos_help_request,ml,0.3695
+give me next steps please???,status_check_general,sos_help_request,ml,0.3695
+my grandmother collapsed an dnot waking up,medical_emergency_request,building_collapse_report,ml,0.3261
+medical emergecny cha help garnu,medical_emergency_request,sos_help_request,ml,0.7241
+want to update status that my brother is safe,family_reunification_status,status_check_general,ml,0.298
+भूकम्पपछि केगर्ने,status_check_general,fallback_unclear,fallback,0.2019
+want to upddate status that my grandmother is safe,family_reunification_status,fallback_unclear,fallback,0.232
+ghar collapse bhayo hami bhitra fasyou,trapped_debris_report,building_collapse_report,ml,0.7104
+someone fainted need medical help,medical_emergency_request,first_aid_query,ml,0.3971
+want to update satus that my grandfather is safe,family_reunification_status,fallback_unclear,fallback,0.2474
+want to update status that my mother is safe,family_reunification_status,status_check_general,ml,0.3157
+where can we take shelter safely,safe_location_query,shelter_request,ml,0.5137
+family ko lagi foodsupply chai,food_water_request,shelter_request,ml,0.7286
+wall bhatkiyo road ma,building_collapse_report,road_blockage_report,ml,0.6828
+cannot find my son after the quake,family_member_missing,fallback_unclear,fallback,0.2343
+want to update status that my grandmother is safe,family_reunification_status,status_check_general,ml,0.282
+ghar collapse bbhayo hami bhitra fasyou,trapped_debris_report,building_collapse_report,ml,0.7599
+पराकम्पपछि घरभित्र सुत्न सुरक्षित छ कि,aftershock_information_query,building_damage_check,ml,0.8237
+where is the nearestrelief camp,shelter_request,safe_location_query,ml,0.3155
+my brother collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.2944
+my brother collapsed and nto waking up,medical_emergency_request,building_collapse_report,ml,0.4053
+my mother collapsed aand not waking up,medical_emergency_request,building_collapse_report,ml,0.3233
+cannot find my sn after the quake,family_member_missing,building_damage_check,ml,0.2733
+cannot find my mother after the quake help,family_member_missing,fallback_unclear,fallback,0.211
+तिमीले के के गर्न सक्छौ,fallback_unclear,status_check_general,ml,0.4593
+मर्केको खुट्टाको लागिके गर्ने,first_aid_query,injury_report,ml,0.3079
+next steps k oh bhannu hos,status_check_general,fallback_unclear,ml,0.2648
+cannot find my son after thequake,family_member_missing,fallback_unclear,fallback,0.168
+want to update status that my siser is safe,family_reunification_status,status_check_general,ml,0.5262
+mysister collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.5653
+भूकम्पपछि के गर्ने,status_check_general,fallback_unclear,fallback,0.2248
+my mother collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.3199
+पराकम्पपछि घरभित्र सुत्न सुरक्षित छ कि है,aftershock_information_query,building_damage_check,ml,0.8379
+next steps k ho bhannu hos,status_check_general,fallback_unclear,fallback,0.1776
+next ssteps k ho bhannu hos,status_check_general,fallback_unclear,fallback,0.2278
+someone fainted need medicalhelp,medical_emergency_request,sos_help_request,ml,0.3244
+my brother collapsed and not waking up pls,medical_emergency_request,building_collapse_report,ml,0.3043
+want to update status that my brother is safe asap,family_reunification_status,status_check_general,ml,0.2899
+taauko bata raagat bagira xa,injury_report,medical_emergency_request,ml,0.4789
+want to update stats that my grandmother is safe,family_reunification_status,fallback_unclear,fallback,0.2052
+taauko bataraagat bagira xa,injury_report,medical_emergency_request,ml,0.4967
+give menext steps please,status_check_general,fallback_unclear,fallback,0.1424
+भवन अलिकति ढल्किएको छ खतरा छ कि हजुर,building_damage_check,building_collapse_report,ml,0.2655
+wall batkiyo road ma,building_collapse_report,road_blockage_report,ml,0.7565
+my grandfather collapsed and not wakinng up,medical_emergency_request,fallback_unclear,fallback,0.248
+who do i callfor rescue,emergency_contact_request,fallback_unclear,fallback,0.2402
+cannot find my brrother after the quake,family_member_missing,fallback_unclear,fallback,0.2133
+my grandmother collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.2553
+family ko lagi food supply cahi,food_water_request,shelter_request,ml,0.4685
+want to updatestatus that my sister is safe,family_reunification_status,fallback_unclear,fallback,0.1593
+need foodsupplies for family,food_water_request,shelter_request,ml,0.4979
+malai thaha xaina k garne,status_check_general,fallback_unclear,fallback,0.1441
+how to stoop bleeding,first_aid_query,injury_report,keyword,0.98
+my grandmother collapsed and no waking up,medical_emergency_request,building_collapse_report,ml,0.2517
+आपतकालीन किटमा के के हुनुपर्छ छिटो,preparedness_tips_query,fallback_unclear,fallback,0.1453
+मर्केको खुट्टाको लागि के गर्ने,first_aid_query,status_check_general,ml,0.3044
+मर्केकोखुट्टाको लागि के गर्ने,first_aid_query,status_check_general,ml,0.3547
+cannot finnd my mother after the quake,family_member_missing,fallback_unclear,fallback,0.182
+taauko bata aragat bagira xa,injury_report,medical_emergency_request,ml,0.449
+my mther collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.4934
+family ko lgai food supply chai,food_water_request,shelter_request,ml,0.3704
+taaauko bata raagat bagira xa,injury_report,medical_emergency_request,ml,0.4779
+next stepsk ho bhannu hos,status_check_general,fallback_unclear,fallback,0.2259
+my gradfather collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.3513
+my sister collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.3443
+aftreshock update please,aftershock_information_query,fallback_unclear,fallback,0.1729
+तिमीले के के गर्न सक्छौ???,fallback_unclear,status_check_general,ml,0.4593
+where can wet ake shelter safely,safe_location_query,shelter_request,ml,0.4741
+ghar collapse bhayo hamib hitra fasyou,trapped_debris_report,building_collapse_report,ml,0.8329
+where can we take sheltter safely,safe_location_query,fallback_unclear,fallback,0.1964
+someone fainted need medical help???,medical_emergency_request,first_aid_query,ml,0.3971
+my grandfather collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.2528
+आपतकालीन किटमा के के हुनुपर्छ,preparedness_tips_query,fallback_unclear,fallback,0.1722
+भवन अलिकति ढल्किएको छ खतरा छ कि,building_damage_check,building_collapse_report,ml,0.3599
+बेहोस भएको मान्छेलाई कसरी मद्दत गर्ने छिटो,first_aid_query,sos_help_request,ml,0.4113
+ghar collapse bhayohami bhitra fasyou,trapped_debris_report,building_collapse_report,ml,0.7735
+पाल शिविरको स्थान चाहियो हजुर,shelter_request,food_water_request,ml,0.2648
+बेहोस भएको मान्छेलाई कसरी मद्दत गर्ने,first_aid_query,sos_help_request,ml,0.4288
+want to update status that my sister is safe,family_reunification_status,status_check_general,ml,0.4234
+nepal red cross helplinenumber,emergency_contact_request,fallback_unclear,fallback,0.2483
+पाल शिविरको स्थान चाहियो,shelter_request,food_water_request,ml,0.2624
+आपतकालीन किटमा केके हुनुपर्छ,preparedness_tips_query,fallback_unclear,fallback,0.1155
+पराकम्पपछि घरभित्र सुत्न सुरक्षितछ कि,aftershock_information_query,building_damage_check,ml,0.7288
+hlepp,sos_help_request,greeting,ml,0.3494
+brokenarm need help,injury_report,sos_help_request,ml,0.639
+family ko lagi food supply chai,food_water_request,shelter_request,ml,0.6659
+cannot fin my brother after the quake,family_member_missing,fallback_unclear,fallback,0.2164
+भवन अलिकतिढल्किएको छ खतरा छ कि,building_damage_check,building_collapse_report,ml,0.3285
+who do i call for rescue,emergency_contact_request,fallback_unclear,fallback,0.1642
+पाल शिविरकोस्थान चाहियो,shelter_request,food_water_request,ml,0.2972
+my house has cracks is it safe,building_damage_check,status_check_general,keyword,0.98
+strong gassmell xa buliding ma,gas_leak_report,fallback_unclear,fallback,0.2001
+my sister collapsed adn no twaking up,medical_emergency_request,building_collapse_report,ml,0.4262
+my grndmother collapsed an dnot waking up,medical_emergency_request,building_collapse_report,ml,0.4133
+medical eemrgecny cha help garnu,medical_emergency_request,sos_help_request,ml,0.7206
+medicl emergecny cha help garnu,medical_emergency_request,sos_help_request,ml,0.9121
+wnt to update status that my brother is safe,family_reunification_status,status_check_general,ml,0.3087
+wnt to upddate status that my grandmother is safe,family_reunification_status,fallback_unclear,fallback,0.2424
+ghr collapse bhayo hami bhitra fasyou,trapped_debris_report,building_collapse_report,ml,0.5001
+someone afinted need medical help,medical_emergency_request,first_aid_query,ml,0.2979
+someone finted need medical help,medical_emergency_request,first_aid_query,ml,0.3158
+h,greeting,fallback_unclear,fallback,0.1593
+पराकम्पपछि घरभित्र सुत्न सुरक्षित छ कि,aftershock_information_query,building_damage_check,ml,0.8237
+where is the nearestrelie fcamp,shelter_request,safe_location_query,ml,0.4418
+my brother collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.2944
+my brother collpsed and nto waking up,medical_emergency_request,fallback_unclear,fallback,0.2463
+strong gs smell ni the building,gas_leak_report,fallback_unclear,fallback,0.2402
+acnnot find my son after thequake,family_member_missing,fallback_unclear,fallback,0.1749
+इँटा खसेर ला्गयो!!,injury_report,fallback_unclear,fallback,0.2088
+want to update stauts that my siser is safe,family_reunification_status,fallback_unclear,fallback,0.2307
+wnt to update status that my siser is safe,family_reunification_status,status_check_general,ml,0.5401
+mysister collapesd and not waking up,medical_emergency_request,fallback_unclear,fallback,0.1491
+my motherc ollapsed and not waking up,medical_emergency_request,fallback_unclear,fallback,0.2131
+wall bhatkioy roadma,building_collapse_report,road_blockage_report,ml,0.4696
+कक  क छिटो,fallback_unclear,road_blockage_report,ml,0.3841
+strong gs smell in the building,gas_leak_report,building_damage_check,ml,0.3041
+next steps kh o bhannu hos,status_check_general,fallback_unclear,fallback,0.1831
+wnt to update status that my brother is safe asap,family_reunification_status,status_check_general,ml,0.2993
+taauko bata raagat abgira xa,injury_report,fallback_unclear,fallback,0.2162
+taauko abtaraagat bagira xa,injury_report,medical_emergency_request,ml,0.5384
+भवन अलिकति ढल्किएोक छ खतरा छ कि हजुर,building_damage_check,building_collapse_report,ml,0.3721
+fmily ko lagi food supply cahi,food_water_request,shelter_request,ml,0.3645
+want to updatestatus thatm y sister is safe,family_reunification_status,fallback_unclear,fallback,0.1877
+want to update status that my grandfathre is safe,family_reunification_status,status_check_general,ml,0.4063
+आपतकलाीन किटमा के के हुनुपर्छ छिटो,preparedness_tips_query,fallback_unclear,fallback,0.1029
+मर्केकोखुट्टाको लागि के गर्ने,first_aid_query,status_check_general,ml,0.3547
+taauko bata raagat bagira xa,injury_report,medical_emergency_request,ml,0.4789
+तिमीले के के गर्न स्कछौ???,fallback_unclear,status_check_general,ml,0.67
+hy htere,greeting,fallback_unclear,fallback,0.2224
+ghr collapse bhayo hamib hitra fasyou,trapped_debris_report,building_collapse_report,ml,0.6038
+where can we atke sheltter safely,safe_location_query,fallback_unclear,fallback,0.2184
+food dsitribution point najik cha ki now,food_water_request,shelter_request,ml,0.2623
+my grndfather collapsed and not waking up,medical_emergency_request,building_collapse_report,ml,0.3407
+भवन अलिकति ढल्किएको छ खतरा छ कि,building_damage_check,building_collapse_report,ml,0.3599
+wnt to update status that my sister is safe,family_reunification_status,status_check_general,ml,0.4373
+hlepp,sos_help_request,greeting,ml,0.3494
+ground shknig very hard,earthquake_occurring_report,fallback_unclear,fallback,0.1901
+cnnot fin my brother after the quake,family_member_missing,fallback_unclear,fallback,0.2249
+भवन अलिकतिढल्किएको छ खरता छ कि,building_damage_check,building_collapse_report,ml,0.3909
+my house hs cracks is it safe,building_damage_check,status_check_general,keyword,0.98
