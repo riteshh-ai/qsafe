@@ -1,0 +1,249 @@
+[
+  {
+    "text": "my brother is trapped under debris",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+  {
+    "text": "घर भत्किँदा बुबा थुनिनुभयो",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+  {
+    "text": "debris muni manxe thuniyeko cha",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+  {
+    "text": "wall collapsed and someone is trapped",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+  {
+    "text": "पर्खालमुनि मान्छे थुनिएको छ",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+  {
+    "text": "thuniyeko manxe lai rescue garnu",
+    "intent": "trapped_debris_report",
+    "split": "train"
+  },
+
+  {
+    "text": "How to prepare an earthquake emergency kit?",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+  {
+    "text": "भूकम्पको तयारी कसरी गर्ने",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+  {
+    "text": "emergency kit ma k k huncha",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+  {
+    "text": "How should my family prepare for earthquakes?",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+  {
+    "text": "गो ब्यागमा के के राख्ने",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+  {
+    "text": "go bag kasari tayar garne",
+    "intent": "preparedness_tips_query",
+    "split": "train"
+  },
+
+  {
+    "text": "need an ambulance",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+  {
+    "text": "एम्बुलेन्स चाहियो",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+  {
+    "text": "ambulance chaincha",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+  {
+    "text": "someone is unconscious",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+  {
+    "text": "बिरामीलाई सास फेर्न गाह्रो भयो",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+  {
+    "text": "manxe behosh bhayo",
+    "intent": "medical_emergency_request",
+    "split": "train"
+  },
+
+  {
+    "text": "Will there be more aftershocks?",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+  {
+    "text": "पराकम्प आउँछ कि",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+  {
+    "text": "aftershock aauncha ki",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+  {
+    "text": "Will the ground shake again?",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+  {
+    "text": "फेरि धक्का आउने सम्भावना छ",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+  {
+    "text": "feri dhakka aaucha hola",
+    "intent": "aftershock_information_query",
+    "split": "train"
+  },
+
+  {
+    "text": "Road blocked by landslide",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+  {
+    "text": "सडक बन्द भएको छ",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+  {
+    "text": "road block bhayo",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+  {
+    "text": "Bridge has collapsed",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+  {
+    "text": "पहिरोले बाटो बन्द गर्यो",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+  {
+    "text": "landslide le road banda cha",
+    "intent": "road_blockage_report",
+    "split": "train"
+  },
+
+  {
+    "text": "Found my family member safe",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+  {
+    "text": "मेरो दाइ सुरक्षित भेटिनुभयो",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+  {
+    "text": "mero family safe bhetiyo",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+  {
+    "text": "My mother has been found",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+  {
+    "text": "हराएको परिवार भेटियो",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+  {
+    "text": "aama safe bhetinubhayo",
+    "intent": "family_reunification_status",
+    "split": "train"
+  },
+
+  {
+    "text": "How to perform CPR?",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+  {
+    "text": "रगत बग्न रोक्ने उपाय के हो",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+  {
+    "text": "cpr kasari garne",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+  {
+    "text": "How to bandage a wound?",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+  {
+    "text": "जलेको घाउको प्राथमिक उपचार",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+  {
+    "text": "bleeding kasari rokne",
+    "intent": "first_aid_query",
+    "split": "train"
+  },
+
+  {
+    "text": "thank you very much",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  },
+  {
+    "text": "धन्यवाद",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  },
+  {
+    "text": "dhanyabad",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  },
+  {
+    "text": "bye take care",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  },
+  {
+    "text": "फेरि भेटौँला",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  },
+  {
+    "text": "bye see you",
+    "intent": "goodbye_thanks",
+    "split": "train"
+  }
+]
