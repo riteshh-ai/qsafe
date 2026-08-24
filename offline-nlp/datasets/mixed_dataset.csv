@@ -1,0 +1,1227 @@
+text,intent
+mero didi bhukampa pachi missing hunuhuncha,family_member_missing
+cannot move stuck under conccrete malai,trapped_debris_report
+help garnu na lpz,sos_help_request
+namaste ma euta prashna sodhnac hahanchu,greeting
+hami abhi evacuate garnu parxa ki,evacuation_guidance_query
+just testing 123,fallback_unclear
+malai nikalnu hos thuniyeko xu,trapped_debris_report
+raati asna tent chai,shelter_request
+sprain bhayeko khutta ko lagi k garne,first_aid_query
+pani ko suply band bhayo pani chai,food_water_request
+gharhallyo bhukampa jasto,earthquake_occurring_report
+aago chittai failira xa school najik ma,fire_incident_report
+mero aama unconsciousbhayo,medical_emergency_request
+evacuation ko laagi khulla thau kaha cha,safe_location_query
+ploice emergency number dinu hos,emergency_contact_request
+building mafire xa hamro area najik,fire_incident_report
+bhukampa ko jhatka abhi feelbhayo,earthquake_occurring_report
+meroo family member safe bhetiyo,family_reunification_status
+mero buwa lai badly injury bayo,injury_report
+mero buwa pinned under debris malai help chai,trapped_debris_report
+hello ji sanchai hunuhuncha,greeting
+thanku sir ali help bhayo,goodbye_thanks
+bihana dekhi mero buwa bata khabar xaina,family_member_missing
+jhatka mahsus bayo 5 minute agadi,earthquake_occurring_report
+re cross ko helpline number,emergency_contact_request
+bhukampa report garna man xa Kathmandu a,earthquake_occurring_report
+help pls ma dherai fright ma xu,sos_help_request
+building safe cha kikasari thaha pauney,building_damage_check
+arkobhukampa aaunxa ki,aftershock_information_query
+"dhanyabbad, bye bye",goodbye_thanks
+aaja raati arko jhatkaaaunxa ki,aftershock_information_query
+bhukampagayo Pokhara ma,earthquake_occurring_report
+hamro ghar unsaafe xa shelter chai,shelter_request
+haa tma minor chot xa,injury_report
+Kathmandu jana sakidaina road band cha,road_blockage_report
+sos malai helpchai,sos_help_request
+Kathmandu ma power line khaseko cha pls,power_outage_report
+aago chittai failira xa Kathmandu ma,fire_incident_report
+building bata evacuate garnesteps,evacuation_guidance_query
+aftershockaaunxa ki,aftershock_information_query
+bihana dekhi mero bhai bata khabar xaina,family_member_missing
+mero didi debris muni thuniyo,trapped_debris_report
+cylinder bata gaschuhi raxa,gas_leak_report
+pregnant lady ali emergency care chai,medical_emergency_request
+mero aama ghar aaunu bhako axina ahile samma,family_member_missing
+mero saathi lai ambulance chai urgent plz,medical_emergency_request
+mero aama ghar aaunu bhako xaina ahlie samma,family_member_missing
+mero saathi laai badly injury bhayo,injury_report
+medical emergency cha helpgarnu,medical_emergency_request
+gana gauna aknu huncha,fallback_unclear
+road block bhayo landslide le gaun najik help,road_blockage_report
+mero buwa debris muni thuniyo,trapped_debris_report
+tapai kati umer ko hunuhuncha help,fallback_unclear
+k garne vanera guide garnu hos help,status_check_general
+ghar collapse bhayo hami bhitra fasyou,trapped_debris_report
+bhachiyeko haat ko first aid k ho,first_aid_query
+bhukampa ko jhatka abhi feel hbayo,earthquake_occurring_report
+afteshock aaunxa ki,aftershock_information_query
+tent camp ko loctaion chai,shelter_request
+bhukampa report garna man xa meero ghar najik ma,earthquake_occurring_report
+thanks yesto helpful huncha,goodbye_thanks
+"namaste bot, are u online",greeting
+tapai kati umer ko hunuuhuncha,fallback_unclear
+electrical fire lagyo plz,fire_incident_report
+wall khaseko le mero bhai lai thichyo,trapped_debris_report
+mero aama safe cha vanera status update garna mna xa,family_reunification_status
+bihana dekhi mero buwa bbata khabar xaina,family_member_missing
+hmai kaha shelter linna sakxam safely,safe_location_query
+aftershock pachi ghar bhitra sutna safe cha ki help,aftershock_information_query
+bhukapma aayo,earthquake_occurring_report
+ahile  garne ma,status_check_general
+ghar bata dhhuwa airaxa,fire_incident_report
+wall khaseko le mero buwa lai thichyo,trapped_debris_report
+bhukampa pachi emro aama lai bhettauna sakina,family_member_missing
+Kathmandu ko lagi aftershock warning!!!,aftershock_information_query
+mero ai help chaincha,sos_help_request
+hostelma ambulance patau na,medical_emergency_request
+gas stove le aago lgayo,fire_incident_report
+Kathmandu kolagi evacuation plan,evacuation_guidance_query
+hamro ghar unsafe xa shelterc hai,shelter_request
+wall khaseko lemero aama lai thichyo,trapped_debris_report
+mero bhai unconscious bhayo plz,medical_emergency_request
+malai nikalnu hos thuniyeko xu urgent pls,trapped_debris_report
+ghau bhayeko thau ma kasari treat garne,first_aid_query
+malai pillar lethichyo cannot move,trapped_debris_report
+ghar hallyo bhukampa jasto now,earthquake_occurring_report
+aago chittai failira xa hamro area ma plz,fire_incident_report
+mero aamalai ambulance chai urgent,medical_emergency_request
+relief camp najik cha ki!!!,shelter_request
+aago chittai failira xa bazaar ma,fire_incident_report
+ghar baliraxa fire brigade chhai,fire_incident_report
+gaun najik ko pul bhatkiyo,road_blockage_report
+mausam kasto cha,fallback_unclear
+bhukampa report garna man xa hamroarea ma,earthquake_occurring_report
+wall khasekole mero bhai lai thichyo,trapped_debris_report
+bhukampa gayo Kathmandu ma???,earthquake_occurring_report
+yahasaaf pani xaina,food_water_request
+rescue ko lagi kaha phone garne???,emergency_contact_request
+bhukampa dekhi bijuli xaiina,power_outage_report
+mero buwa lai badly injury bhayo,injury_report
+mero bha ighar aaunu bhako xaina ahile samma,family_member_missing
+behosh bhako manxe laikasari help garne,first_aid_query
+rescue chai xa ma thuniyeko xu,trapped_debris_report
+power outage cha hamro area ma,power_outage_report
+road ma crack bayo jana sakidaina,road_blockage_report
+road block bhayo landslide le gaun najik,road_blockage_report
+Kathmandu ko lagi aftershock warning,aftershock_information_query
+arko bhukampa aaunxa ki,aftershock_information_query
+school area ma ambulance patauna,medical_emergency_request
+bijuli kahilea aunxa,power_outage_report
+road ma crack bhayo jana sakidaina asap,road_blockage_report
+ghau ma bandage kasai garne,first_aid_query
+jhatka mahsus bhay o5 minute agadi,earthquake_occurring_report
+cha tkhasyo bhukampa ma,building_collapse_report
+mero saathi debris munni thuniyo,trapped_debris_report
+next ssteps k ho bhannu hos,status_check_general
+mero mama ko phone lagdaina bhukampa dekhi,family_member_missing
+pelase help garnu bhai,sos_help_request
+mero bhai pinned under debris malai help chai,trapped_debris_report
+mero aaam debris muni thuniyo,trapped_debris_report
+emergency kit ma k khunu parxa,preparedness_tips_query
+doctor chaixa abhi nai,medical_emergency_request
+ahile k garne ma,status_check_general
+dhanyabad that helped a lot,goodbye_thanks
+strong tremor bhukampa jasto???,earthquake_occurring_report
+aag ochittai failira xa school najik ma,fire_incident_report
+bhukampa report garna manxa Pokhara ma,earthquake_occurring_report
+gaun najik kko pul bhatkiyo,road_blockage_report
+mero didi safe cha vanera status update garna man xa!!!,family_reunification_status
+Kathmandu najik ko pulbhatkiyo,road_blockage_report
+hamro ghar pura bhatkiyo help,building_collapse_report
+baby formula ra pani chai,food_water_request
+strong gas smell xabuilding ma,gas_leak_report
+mero ghar lai earthquake safe kasari banaune pls,preparedness_tips_query
+dherai raagat bagira xa medic chai xa,medical_emergency_request
+najik ko relief camp kaha cha,shelter_request
+mero buwa ko phone lagdaina bhukampa dekhi,family_member_missing
+schoolbuilding half bhatkiyo,building_collapse_report
+mero ghar ma ambulancce patau na,medical_emergency_request
+mero buwa lai ambulancechai urgent,medical_emergency_request
+sabai hallyo bhukampa le,earthquake_occurring_report
+ghar hallyo bhukampa jasto,earthquake_occurring_report
+earrthquake bhayo hamro area ma,earthquake_occurring_report
+bhukampa report garna man xa ahmro area ma,earthquake_occurring_report
+road ma crack bhayo jana sakidaina,road_blockage_report
+"danyabad, bye bye",goodbye_thanks
+tapai k k gaarna saknu huncha,fallback_unclear
+mero saathi lai deep wound xa asap,injury_report
+furniturelai khasnu bata kasari secure garne,preparedness_tips_query
+road block bhayo landslide le Kathmandu najik???,road_blockage_report
+earthquake agadi k k ready rakhne plz,preparedness_tips_query
+cannot move stuck under concrete malai,trapped_debris_report
+saaf khane pani urgent chai!!!,food_water_request
+sprai nbhayeko khutta ko lagi k garne,first_aid_query
+building ma fire xa bazaar najik pls,fire_incident_report
+k oh yo bot,fallback_unclear
+mero saaathi lai deep wound xa,injury_report
+thanks yestohelpful huncha,goodbye_thanks
+2 din dekhi bijuli xaina,power_outage_report
+Kathmandu ma power line khaseko cha,power_outage_report
+tent camp ko location chai,shelter_request
+ahile k garnu parxa,status_check_general
+jhatka mahsu sbhayo 5 minute agadi,earthquake_occurring_report
+doctor chai xa abhi nai now,medical_emergency_request
+mero didi laai safely locate garya,family_reunification_status
+strong tremor bhukampa jasto,earthquake_occurring_report
+evacuation ko lagi khulla thau kaha cha!!!,safe_location_query
+bhukampaa gayo Pokhara ma,earthquake_occurring_report
+namaste can you help me,greeting
+baby formula ra paani chai,food_water_request
+hamro area ma safe zone kaha cha pls,safe_location_query
+mero sathi pinned under debris malai help chai,trapped_debris_report
+"namaste bot,are u online",greeting
+aaja raati arko jhatkaa aunxa ki,aftershock_information_query
+mero didi lai deep wound xa plz,injury_report
+aftershock aaunxa ki???,aftershock_information_query
+mero buwa lai safely locate garya,family_reunification_status
+bhukampa report garna man xa Kathmandu ma now,earthquake_occurring_report
+ghar pura bhatkiyo???,building_collapse_report
+ghar balirraxa fire brigade chai,fire_incident_report
+wall khaseko le mero aama lai thichyo,trapped_debris_report
+gas ko smell airaxa bhukampa pachi plz,gas_leak_report
+ghar ekdam hallyo earthquake hoki k ho,earthquake_occurring_report
+cannot move stuck under concrete malai???,trapped_debris_report
+haat ma minor chotxa,injury_report
+relief camp najik cha ki,shelter_request
+power outage cha hamro area ma???,power_outage_report
+gas stove le aago lagyo,fire_incident_report
+sabai hallyo bhukampale,earthquake_occurring_report
+building bata bahira niskane safest tarika,evacuation_guidance_query
+mero buwa lai mbulance chai urgent,medical_emergency_request
+relief camp ma mero didi bhetiyo,family_reunification_status
+building ma fire xa school najik najik,fire_incident_report
+haat bhachiyo help chai,injury_report
+ksaari safely evacuate garne,evacuation_guidance_query
+aago chittai failira xa school najikma,fire_incident_report
+furniture lai khasnubata kasari secure garne,preparedness_tips_query
+ghau bhayeko thau ma kasari treat gare,first_aid_query
+hello jisanchai hunuhuncha,greeting
+mero ghar lia earthquake safe kasari banaune,preparedness_tips_query
+relief camp najik cha ki pls,shelter_request
+mero bhai sanga abhi reunite bhayo help,family_reunification_status
+dhannyabad ekdum helpful thiyo,goodbye_thanks
+hamro area ko lagi evacuation plan???,evacuation_guidance_query
+"namaste, are you there help",greeting
+mero didi pinned under debris malai help chi,trapped_debris_report
+bhukamp aaayo,earthquake_occurring_report
+sos maai help chai,sos_help_request
+kun khulla thau safe cha gather garna pls,safe_location_query
+aago chittaifailira xa bazaar ma,fire_incident_report
+ghar bhitra farkkana milxa ki,building_damage_check
+mero saathi bhukampa pachi missing hunuhuncha plz,family_member_missing
+taaauko bata raagat bagira xa,injury_report
+mero bhai lai safely locate garya,family_reunification_status
+mero aama unconscious bhayo plz,medical_emergency_request
+ghar pura bhatkiyo,building_collapse_report
+tourist police ko number dinu hos,emergency_contact_request
+joke bhanna saknu hucha,fallback_unclear
+mero didi lai badly injur ybhayo,injury_report
+thanks a lot bhai help,goodbye_thanks
+thank u dai malaithaha bhayo,goodbye_thanks
+road block bhayo landslide le hamro area najik,road_blockage_report
+frie brigade ko contact number,emergency_contact_request
+aftershock aaunxa ki,aftershock_information_query
+aago lagyo buhkampa pachi,fire_incident_report
+abhi ghar bhitar jana milxa ki,building_damage_check
+tapai k k garna saknu huncha plz,fallback_unclear
+mero mama sanga coontact tutyo,family_member_missing
+help pls ma dherai fright maxu,sos_help_request
+gaun jana akidaina road band cha,road_blockage_report
+building ma firee xa school najik najik,fire_incident_report
+ghau bhayeko thau ma kasari treat garne now,first_aid_query
+mero buwalai chest ma dukheko xa,medical_emergency_request
+mero didi safe cha vanera status update garna man xa,family_reunification_status
+sos sos help pls,sos_help_request
+mero didi sanga abhi reunite bhayo,family_reunification_status
+mero saathi lai badly injury bhayo,injury_report
+mero mama sanga contact tutyo,family_member_missing
+taauko bata raagat bagira xa,injury_report
+please rescueme malai help chai,sos_help_request
+ambulance ko numbr k ho,emergency_contact_request
+hello dai malai kei sodhnu thiyo,greeting
+earthquake preparedness ko tips dinu hos,preparedness_tips_query
+bachcha haru lai earthquake drill ko lagi kasari prepare garne,preparedness_tips_query
+hamro area mafire lagyo,fire_incident_report
+building ma fire xa hamro area najik???,fire_incident_report
+hamro area ko lagi aftershock warning,aftershock_information_query
+mero aama pinned under debris malai help chai urgent pls,trapped_debris_report
+mero saathi lai chest ma dukheko xa,medical_emergency_request
+meero saathi lai chest ma dukheko xa,medical_emergency_request
+hamro ghar pura bhatkiyo,building_collapse_report
+najikko relief camp kaha cha,shelter_request
+mero buwa lai chest ma dukheko xa,medical_emergency_request
+earthquakego bag kasari prepare garne,preparedness_tips_query
+building ma fire xa Kathmandu najik asap,fire_incident_report
+gas lea kbhayo ghar ma,gas_leak_report
+mero buwa pinned under debris malaih elp chai,trapped_debris_report
+aftershock pachi ghar bhitra sutna safe cha ki,aftershock_information_query
+bhukampa report garna man xa Pokhara ma,earthquake_occurring_report
+road block bhayo landslide le Kathmandu najik,road_blockage_report
+Kathmandu ma poewr line khaseko cha,power_outage_report
+aftershock pachi ghar bhitra ustna safe cha ki,aftershock_information_query
+random type gadai xu,fallback_unclear
+mero bhai sanga abhi reunite bhayo,family_reunification_status
+bhachhiyeko haat ko first aid k ho,first_aid_query
+ahile k action ilnu parxa,status_check_general
+hamro areama bijuli katti bhayo,power_outage_report
+kitchen ma gas dherai chuhira xa urgent pls,gas_leak_report
+Kathmandu ma ammbulance patau na,medical_emergency_request
+thanks a lot bhai,goodbye_thanks
+help chaincha ma darai xu,sos_help_request
+jhatka mahsus bhayo 5 minute agadi,earthquake_occurring_report
+bhukampa pachi mero didi lai bhettauna skaina,family_member_missing
+mero aama sanga abhi reunite bhayo,family_reunification_status
+pura bulding dhalyo Kathmandu ma,building_collapse_report
+mero aama lai safely locate garya,family_reunification_status
+ahile ko sitution k ho,status_check_general
+bazaarma fire lagyo,fire_incident_report
+red cross ko helpline number,emergency_contact_request
+Kathmandu najik ko pul bhatkiyo plz,road_blockage_report
+mero aama pinned uner debris malai help chai,trapped_debris_report
+bijulii kahile aaunxa,power_outage_report
+aago lagyo bhukampa pachi,fire_incident_report
+hami kahashelter linna sakxam safely,safe_location_query
+ghar ekdam hallyo earthquake ho ki k ho,earthquake_occurring_report
+school ara ma ambulance patau na,medical_emergency_request
+merobuwa lai badly injury bhayo,injury_report
+poleko thau ko firstaid,first_aid_query
+temporary shelter kkaha paunxa,shelter_request
+bhukmpa aayo abhi,earthquake_occurring_report
+aaja rati arko jhatka aaunxa ki,aftershock_information_query
+hey bhauju k cha,greeting
+mero family ra kids ko lagi shelter chhai,shelter_request
+relief camp ma mero buwabhetiyo,family_reunification_status
+najikai ko apartment bhatkiyo,building_collapse_report
+bhukampa report garna man xa Kathmandu ma pls,earthquake_occurring_report
+ambulance chaincha malai,medical_emergency_request
+mero bhai safecha vanera status update garna man xa,family_reunification_status
+wall batkiyo road ma,building_collapse_report
+sprain bhayeko khutta ko lagi k garrne,first_aid_query
+mero buwa debrismuni thuniyo,trapped_debris_report
+mero bhai lai deep wound xa,injury_report
+hello dai malai kehi sodhnu thiyo,greeting
+mero bhai lai ambulance chai ugent,medical_emergency_request
+hami abhi evcauate garnu parxa ki,evacuation_guidance_query
+bihana dekhi mero mama bata habar xaina,family_member_missing
+namastecan you help me,greeting
+bhukampa pachi mero bhai lai bhettauna sakina,family_member_missing
+rescueko lagi kaha phone garne,emergency_contact_request
+ghar bhitra farkana milxa ki,building_damage_check
+mero aama sangaabhi reunite bhayo,family_reunification_status
+building aliaktitilt bhayo danger cha ki,building_damage_check
+mero aama ghar aaunu bhako xaina ahile samma,family_member_missing
+debrisle highway band bhayo,road_blockage_report
+khana ra pani sakiyo help,food_water_request
+mero didi lai deep wound xa,injury_report
+thank you dai next time feri sodhchu,goodbye_thanks
+mero didi pinned under debris malai help chhai,trapped_debris_report
+thanksyesto helpful huncha,goodbye_thanks
+hamro gha rnajik gas leak bhayo,gas_leak_report
+mero khutta ma chot lagyyo,injury_report
+purabuilding dhalyo gaun ma,building_collapse_report
+gharp ura bhatkiyo,building_collapse_report
+hi are uu working offline,greeting
+relief camp mma mero buwa bhetiyo,family_reunification_status
+bhukampa aayo bhi,earthquake_occurring_report
+bhukampa pachi crack aayo,building_damage_check
+thank u sir ali help bhayo,goodbye_thanks
+mero saath unconscious bhayo,medical_emergency_request
+building safe cha ki kasari thaha pauney urgent pls,building_damage_check
+ghar hallyobhukampa jasto,earthquake_occurring_report
+relief camp ma mero diidi bhetiyo,family_reunification_status
+najik ko assembly point kaaha cha,safe_location_query
+bhukampa achi crack aayo,building_damage_check
+pura buidling dhalyo gaun ma,building_collapse_report
+mero dii bhukampa pachi missing hunuhuncha,family_member_missing
+bijuli kahile aaaunxa,power_outage_report
+brick khaseko le agyo,injury_report
+gas leak bhayo ghar ma,gas_leak_report
+arko bhukampa aaunxa ki???,aftershock_information_query
+relief camp ma mero didi bhhetiyo,family_reunification_status
+gaun jana sakidaina roa dband cha,road_blockage_report
+building ma ifre xa hamro area najik,fire_incident_report
+haat bhachiyo help chai pls,injury_report
+mero saathi lai chest ma dukehko xa,medical_emergency_request
+reelief camp ma mero bhai bhetiyo,family_reunification_status
+anle sprain bhayo hidna sakina,injury_report
+saaf khane pani urgent chi,food_water_request
+medical emergency cha help garnu,medical_emergency_request
+najika iko safe zone kaha cha,safe_location_query
+wall ma thulo crcak cha evacuate garne ki,building_damage_check
+bhukampako jhatka aaile feel bhayo,earthquake_occurring_report
+help chaincha a darai xu,sos_help_request
+hamro area jana sakidaina road band cha,road_blockage_report
+hello ji sanchai hunuhunccha,greeting
+mero ghar ma ambulance patau na,medical_emergency_request
+Kathmandu najik ko pul bhatkiyo,road_blockage_report
+hostel ma ambulance patau na urgent pls,medical_emergency_request
+strongtremor bhukampa jasto,earthquake_occurring_report
+power outage cha hamro ara ma,power_outage_report
+food distribution point najik cha ki now,food_water_request
+cylinder bata gas chuhi raxa,gas_leak_report
+bhukampa gayo Pokhara ma,earthquake_occurring_report
+mero bhai debrismuni thuniyo,trapped_debris_report
+hi malai chahyo help,greeting
+mero bhai sanga contact tutyo pls,family_member_missing
+hi malai chahiyo help,greeting
+bhukampa pachi mero didilai bhettauna sakina,family_member_missing
+najikai ko sfae zone kaha cha,safe_location_query
+thank u da malai thaha bhayo,goodbye_thanks
+gas leak bayo ghar ma,gas_leak_report
+thanks yesto helpfu huncha,goodbye_thanks
+thanks bro ekdam ramro jankai,goodbye_thanks
+mero buwa safe cha vanera status update garna man xa!!!,family_reunification_status
+tent camp ko location chai!!!,shelter_request
+tapai kati uer ko hunuhuncha,fallback_unclear
+ankle sprain bhayo hidna sakina,injury_report
+najik ko reliefcamp kaha cha,shelter_request
+mero buwa safe cha vannera status update garna man xa,family_reunification_status
+evacuation ko instructions dinu hos???,evacuation_guidance_query
+"namaste, ar you there",greeting
+mero buwa lai aambulance chai urgent,medical_emergency_request
+mero buwa la ichest ma dukheko xa,medical_emergency_request
+k hoo yo bot,fallback_unclear
+main road bnad cha,road_blockage_report
+mero bwua sanga abhi reunite bhayo,family_reunification_status
+kitchen ma aago agyo bhukampa ko bela,fire_incident_report
+mero bhai lai baldy injury bhayo,injury_report
+ahile kgarnu parxa,status_check_general
+malai kahaa jana safe huncha,safe_location_query
+behosh bhako mnxe lai kasari help garne,first_aid_query
+merolai help chaincha,sos_help_request
+hel chaincha ma darai xu,sos_help_request
+Kathmandu ma ambulance patau na,medical_emergency_request
+yo bhukampa sanga related xaina urgent pls,fallback_unclear
+mero buwa safe cha vanera status update garna man xa,family_reunification_status
+help chainchama darai xu,sos_help_request
+budo budi sannga kasari evacuate garne,evacuation_guidance_query
+next stepsk ho bhannu hos,status_check_general
+ghau bhayeko thau makasari treat garne,first_aid_query
+bazara ma fire lagyo,fire_incident_report
+mero aama ko phone lagdaina bhukampa dekhi,family_member_missing
+mero family ra kids ko lagi shelter chai,shelter_request
+tapai k k garna saknu huncha,fallback_unclear
+building bata evacuate garne steps,evacuation_guidance_query
+temporary shelter kaha paunxa,shelter_request
+gharbaliraxa fire brigade chai,fire_incident_report
+shelter chaincha mero family ko lagi plz,shelter_request
+mero buwa sanga abhi reunite bhayo,family_reunification_status
+namaste bot are u online,greeting
+thank u dai malai thaha bhayo,goodbye_thanks
+merro buwa lai safely locate garya,family_reunification_status
+koi vane help gara na,sos_help_request
+mero saathi pinned under debris mlaai help chai,trapped_debris_report
+hii tapaiko naam k ho,greeting
+please help garnu bhai urgent pls,sos_help_request
+aago lagyo bhukamppa pachi,fire_incident_report
+electrical firre lagyo,fire_incident_report
+mero saathi bhukampa pachi missing hunuhuncha,family_member_missing
+red corss ko helpline number,emergency_contact_request
+cpr kasari garne,first_aid_query
+thank u dai malai thahabhayo,goodbye_thanks
+hey bhauju kcha,greeting
+mero bhai lai badly injury bhayo plz,injury_report
+mero didi ko phone lagdaina bhukampa dekhi,family_member_missing
+saaf khane pani urgentchai,food_water_request
+hey are youthe earthquake bot,greeting
+hey bot k xa halkhabar,greeting
+ghar bhitra farkana milxa ki pls,building_damage_check
+khana ra pani sakiyo,food_water_request
+ghar collapse bbhayo hami bhitra fasyou,trapped_debris_report
+"namaste, are you there",greeting
+cpr kaari garne,first_aid_query
+mero saathi debris muni thuniyo,trapped_debris_report
+namaste ca you help me,greeting
+bhukampa pachi mero aama lai bhettauna sakna,family_member_missing
+mero saathi haru ra kids ko lagi shelter cchai,shelter_request
+emergency kit ma k k hunu pparxa,preparedness_tips_query
+mero bhai safe cha vanera status update garna man xa,family_reunification_status
+bihana dekhi mero buwa bata khabarxaina,family_member_missing
+hamro area ma safe zone kaha cha,safe_location_query
+building safe cha ki kasari thaha pauney,building_damage_check
+hiare u working offline,greeting
+mero didi lai dee pwound xa,injury_report
+bhukampa gayo hamro area ma???,earthquake_occurring_report
+mreo buwa unconscious bhayo,medical_emergency_request
+pura buliding dhalyo hamro area ma,building_collapse_report
+tourist police koo number dinu hos,emergency_contact_request
+hamro area ma safe znoe kaha cha,safe_location_query
+meero mama sanga contact tutyo,family_member_missing
+fire brigade ko contact numbeer,emergency_contact_request
+mero saathi bhukapa pachi missing hunuhuncha,family_member_missing
+aftershock kati samma rahanxa help,aftershock_information_query
+kio cha help garne,sos_help_request
+aaja raati arko jhatka aaunxa ki,aftershock_information_query
+mero saathi lai deepwound xa,injury_report
+kitchen ma gaas dherai chuhira xa,gas_leak_report
+mero didi lai safely locate garya,family_reunification_status
+mero bhai bhukampa pachi missing hunuhuncha now,family_member_missing
+food distribution point najikcha ki,food_water_request
+khane panichaincha,food_water_request
+ok bye ta dhanyabbad,goodbye_thanks
+bhukampa apchi mero saathi lai bhettauna sakina,family_member_missing
+mero bhai bhukampa pachi missin ghunuhuncha,family_member_missing
+aago chittai failira xa hamro area ma pls,fire_incident_report
+mero didi lai deeep wound xa,injury_report
+buildig bata bahira niskane safest tarika,evacuation_guidance_query
+bihana dekhi mero bhaibata khabar xaina,family_member_missing
+wall bhatkiyo road ma,building_collapse_report
+sos sos help,sos_help_request
+gaun jana sakidaina road band cha,road_blockage_report
+mero didisanga abhi reunite bhayo,family_reunification_status
+Kathmandu ma fire lagyo asap,fire_incident_report
+ahilek garne ma,status_check_general
+meroo buwa lai deep wound xa,injury_report
+justt testing 123,fallback_unclear
+yo ghar ma basna afe cha ki xaina,building_damage_check
+koi vane help gara na urgent pls,sos_help_request
+mero bhai sanga contacttutyo,family_member_missing
+fire brigade kocontact number,emergency_contact_request
+hello daik cha khabar,greeting
+mero buwa lai deep wound xxa,injury_report
+power outagec ha hamro area ma,power_outage_report
+hamro area ko lagi evacuation plan,evacuation_guidance_query
+mero aama unconscious bayo,medical_emergency_request
+relief cmp ma mero aama bhetiyo,family_reunification_status
+debris le highway band bhaayo,road_blockage_report
+wall m acrack dekhiyo,building_damage_check
+ghar baliraxa fire brigade chai,fire_incident_report
+tapai k k garna saknu hunncha,fallback_unclear
+mero bhai lai badly innjury bhayo,injury_report
+bhukampa gayo Pokhraa ma,earthquake_occurring_report
+evacuation koroute k ho,evacuation_guidance_query
+mero didi debris mun thuniyo,trapped_debris_report
+raagat bagna roknu ko upaya k ho plz,first_aid_query
+hii tapia ko naam k ho,greeting
+ghar bhatkiyo Kathmandu ma,building_collapse_report
+head injury bhayodebris khaseko le,injury_report
+haat bhachiyo help chai help,injury_report
+merobuwa debris muni thuniyo,trapped_debris_report
+mero aama safe cha vanera status update garna man xa,family_reunification_status
+pura building dalyo hamro area ma,building_collapse_report
+hi bhai kasto cha,greeting
+dhanyabad ekdum helpful thiyo,goodbye_thanks
+relief camp ma mero bhai bhetiyo,family_reunification_status
+mero aama laai chest ma dukheko xa,medical_emergency_request
+merobhai lai safely locate garya,family_reunification_status
+head injurybhayo debris khaseko le,injury_report
+mero bhai ghar aaunu bhako xaina ahile samma,family_member_missing
+yaha saaf panix aina,food_water_request
+wall khaseko le mero bhai lai thichyo now,trapped_debris_report
+sas pherna sakeko xainakoi,medical_emergency_request
+mero bhai laiambulance chai urgent,medical_emergency_request
+thank you dai nex ttime feri sodhchu,goodbye_thanks
+mero ghar lai earthuake safe kasari banaune,preparedness_tips_query
+bihana dekhi mero didi bata khabar xaina,family_member_missing
+mero aama debris muni thuniyo urgent pls,trapped_debris_report
+mero buwa lai ambulance chai urgent,medical_emergency_request
+hijo dekhi khana xaiina,food_water_request
+mero buwa lai safey locate garya,family_reunification_status
+najikai ko apartmentbhatkiyo,building_collapse_report
+building ma fire xa Kathmandu najik,fire_incident_report
+poleko thau ko first aid,first_aid_query
+hijo dekhi khana xaaina,food_water_request
+haat ma minor chot xa now,injury_report
+doctor chai ax abhi nai,medical_emergency_request
+mreo didi ko phone lagdaina bhukampa dekhi,family_member_missing
+ambulancechaincha malai,medical_emergency_request
+sos malai help chai,sos_help_request
+emergecny contact number haru ko list,emergency_contact_request
+mero aama debris muni thuniyo,trapped_debris_report
+help pls ma dheraai fright ma xu,sos_help_request
+bhachiyko haat ko first aid k ho,first_aid_query
+hi maali chahiyo help,greeting
+food distribution point najik cha ki asap,food_water_request
+hamro area ma power line khaseko cha,power_outage_report
+gharbhatkiyo Kathmandu ma,building_collapse_report
+hellp garnu na plz,sos_help_request
+rleief camp ma mero didi bhetiyo,family_reunification_status
+rescue chai x ma thuniyeko xu,trapped_debris_report
+mero bhai debris munithuniyo,trapped_debris_report
+saaf khane pani urgent chai,food_water_request
+food distribution point najik cha ki,food_water_request
+mero didi ghar aaunu bhako xaina ahile samma,family_member_missing
+bhukampa gayo Kathmandu ma,earthquake_occurring_report
+dherai raagat bagira xa meic chai xa,medical_emergency_request
+ok got it dhnayabad bahini,goodbye_thanks
+najikai ko apartment bhatkiyo now,building_collapse_report
+baby formula ra panichai,food_water_request
+immediate help chai xa urgent pls,sos_help_request
+Kathmandu ma safe zonekaha cha,safe_location_query
+hey bot k xa halkhabar now,greeting
+merosaathi lai ambulance chai urgent,medical_emergency_request
+najikai ko safe zonee kaha cha,safe_location_query
+wall bhatkiyo road ma now,building_collapse_report
+Ktahmandu jana sakidaina road band cha,road_blockage_report
+hamroo area ma power line khaseko cha,power_outage_report
+mero saathi haru ra kids ko lagi shelter chai,shelter_request
+mero didi laibadly injury bhayo,injury_report
+bhukampa ko jhatka abhi feel bhayo,earthquake_occurring_report
+Kathmandu ma safe zone kaha cha,safe_location_query
+help pls ma dherai frihgt ma xu,sos_help_request
+random type gardai xu,fallback_unclear
+mero didi ghar aaunu bhako xaina ahile samma help,family_member_missing
+mero didi lai badly injjury bhayo,injury_report
+emregency kit ma k k hunu parxa,preparedness_tips_query
+mero bhailai deep wound xa,injury_report
+building ma fire xa school najik najik urgent pls,fire_incident_report
+emergency kit ma k k hunu parxa,preparedness_tips_query
+evacuation ko lagi khulla thau kaha cha,safe_location_query
+mero ghar ma crack aayo safe chaki,building_damage_check
+aftershock kati strong huncha help,aftershock_information_query
+mero buwa lai deep wound xa,injury_report
+mero saathi unconscious bhayo,medical_emergency_request
+ambulance ko number k ho,emergency_contact_request
+thank u sir ali help bhayo now,goodbye_thanks
+hi malai chahhiyo help,greeting
+relief camp ma merobuwa bhetiyo,family_reunification_status
+thanks bro ekdam ramro jankari,goodbye_thanks
+emergency contac tnumber haru ko list,emergency_contact_request
+malai thaha xaina k gaarne,status_check_general
+bhukmpa gayo mero ghar najik ma,earthquake_occurring_report
+wall ma crack dekhiyo plz,building_damage_check
+ghar bhitra farkana mmilxa ki,building_damage_check
+family ko lgai food supply chai,food_water_request
+bhukampa dekhi bijuli xaia,power_outage_report
+shelter chaincha mero faimly ko lagi,shelter_request
+hey bot k a halkhabar,greeting
+ghar bhtkiyo Kathmandu ma,building_collapse_report
+gaun najik k opul bhatkiyo,road_blockage_report
+bhukampa ko jhatka 5 minute agadi feel bhayo help,earthquake_occurring_report
+just testing 1223,fallback_unclear
+Kathandu ma safe zone kaha cha,safe_location_query
+main road band cha,road_blockage_report
+electtrical fire lagyo,fire_incident_report
+ahile k grnu parxa,status_check_general
+malai nikalnu hos thuniyeko xu pls,trapped_debris_report
+Kathmanduu ma fire lagyo,fire_incident_report
+ok bye ta dhanyabad,goodbye_thanks
+mero saathi debrismuni thuniyo,trapped_debris_report
+gas stove le aagolagyo,fire_incident_report
+Kathmandu jana sakidaina road band cha asap,road_blockage_report
+wall khaseko le mero saathi lai thiichyo,trapped_debris_report
+gana gauna sakn uhuncha,fallback_unclear
+tourist police konumber dinu hos,emergency_contact_request
+sas phherna sakeko xaina koi,medical_emergency_request
+mero aama pinned under debris malia help chai,trapped_debris_report
+cylinder batagas chuhi raxa,gas_leak_report
+bhachiyeko haat o first aid k ho,first_aid_query
+ghar bhatkiyo hamro area ma???,building_collapse_report
+pura building dhalyo hamro areama,building_collapse_report
+medical emergency cha help garnu help,medical_emergency_request
+hi bhaikasto cha,greeting
+aago lagyo bhukampa pachi pls,fire_incident_report
+"dhanyabad, bye bye",goodbye_thanks
+safe place kaha cha,safe_location_query
+mero buwa unconscious bhayo,medical_emergency_request
+hamro area najik ko pul bhatkiyo,road_blockage_report
+ahile ko situation kk ho,status_check_general
+bhukampa ko jhatka aaile feel bhayo,earthquake_occurring_report
+joke bhanna saknu huncha now,fallback_unclear
+building aliakti tilt bhao danger cha ki,building_damage_check
+aago chittai failira xa Kathmandu ma???,fire_incident_report
+police emergency number dinu hhos,emergency_contact_request
+help garnuna plz,sos_help_request
+building bata evacuate garne steps now,evacuation_guidance_query
+mero aama unconscious bhayo,medical_emergency_request
+mausam kasto ccha,fallback_unclear
+chat khasyo bhukampa ma,building_collapse_report
+kun khulla thau safe cha gather garna!!!,safe_location_query
+strong tremor bhuampa jasto,earthquake_occurring_report
+bhukampa aayo help,earthquake_occurring_report
+trapped xughar bhatkeko debris muni,trapped_debris_report
+relief camp ma meero aama bhetiyo,family_reunification_status
+aago chittai failira xa hamro area ma,fire_incident_report
+polekothau ko first aid,first_aid_query
+bhukampagayo hamro area ma,earthquake_occurring_report
+k garne vannera guide garnu hos,status_check_general
+relief camp m mero bhai bhetiyo,family_reunification_status
+bhukampa report garna man xa Gorkha ma urgent pls,earthquake_occurring_report
+gharbhatkiyo gaun ma,building_collapse_report
+earthquake agadi k k ready rakhne urgent pls,preparedness_tips_query
+Kathmandu najik gas leak bhayo urgent pls,gas_leak_report
+earthquake bhyo hamro area ma,earthquake_occurring_report
+help asap malai dheerai dar lagyo,sos_help_request
+bhukampa gayo mero ghar najik ma,earthquake_occurring_report
+trapped xu ghar bhatkeko debris muni,trapped_debris_report
+hey bhaujuk  cha,greeting
+ambulance chaincha malai pls,medical_emergency_request
+mero buwa ko phone lagdaina bhukampa deekhi,family_member_missing
+hello dai k cha khabar,greeting
+malaai pillar le thichyo cannot move,trapped_debris_report
+raati basna tent chai,shelter_request
+gaun jana skidaina road band cha,road_blockage_report
+building safe cha ki kaasari thaha pauney,building_damage_check
+pura building dhalyo Kathmanduma,building_collapse_report
+bhukampa aayo abhi,earthquake_occurring_report
+building bata bahira niiskane safest tarika,evacuation_guidance_query
+hamro area ko lagi aftershock warning!!!,aftershock_information_query
+Kathmandu najik gas leak bhayo,gas_leak_report
+kitchen ma gas dherai chuhira xa,gas_leak_report
+just testing123,fallback_unclear
+big bhukampajasto lagyo,earthquake_occurring_report
+next steps k ho bhannu hos,status_check_general
+khane pani chainha,food_water_request
+road block bhayo landslide le gaaun najik,road_blockage_report
+ambulance ko number  kho,emergency_contact_request
+thank you dai nex time feri sodhchu,goodbye_thanks
+building ma fire xa Kathmandu najiik,fire_incident_report
+earthquake go bag kasari prepare garne urgent pls,preparedness_tips_query
+wall khaseko le mero saathi lai tichyo,trapped_debris_report
+bhukampa report garna man xa Kathmandu ma,earthquake_occurring_report
+earthquake agadi k k ready rakhne,preparedness_tips_query
+mero bhai unconscious hbayo,medical_emergency_request
+bhukampa pcahi k garne,status_check_general
+bhetieko family member lai kasari register arne,family_reunification_status
+head injury bhayo debris khaseko le,injury_report
+sos soshelp,sos_help_request
+red cross ko helpline number asap,emergency_contact_request
+haat ma minor chot xa,injury_report
+aago chittai failira xa bazaar ma pls,fire_incident_report
+khana ra pan sakiyo,food_water_request
+mero didi ko phone lagdaina bhukampa dehki,family_member_missing
+hamro area najik ko upl bhatkiyo,road_blockage_report
+sabai hallyo bhukaampa le,earthquake_occurring_report
+bhukampa rreport garna man xa Pokhara ma,earthquake_occurring_report
+2 din dekhi bijuli xaina pls,power_outage_report
+bihana dekhi mero bhai bata khabarxaina,family_member_missing
+ghar collapse bhayo hamib hitra fasyou,trapped_debris_report
+wall khaseko le mero bai lai thichyo,trapped_debris_report
+pani ko supply badn bhayo pani chai,food_water_request
+mero family member safebhetiyo,family_reunification_status
+bachcha haru lai earthquake dril lko lagi kasari prepare garne,preparedness_tips_query
+aftershoock kati samma rahanxa,aftershock_information_query
+Kathmandu jana skidaina road band cha,road_blockage_report
+strong gas smell xa building ma,gas_leak_report
+building aliakti tilt bhayo danger cha ki,building_damage_check
+mauusam kasto cha,fallback_unclear
+mero didi debri smuni thuniyo,trapped_debris_report
+bhukampa ko jhatka aaile feel bhayo!!!,earthquake_occurring_report
+pleaserescue me malai help chai,sos_help_request
+mero bhai lai deep woound xa,injury_report
+bhiana dekhi mero buwa bata khabar xaina,family_member_missing
+pregnant lady lai emergency care chai plz,medical_emergency_request
+power outage cha Kathmandu ma,power_outage_report
+please help garnu bhaai,sos_help_request
+2 din dekhi bijuli xaina???,power_outage_report
+mero saathi lai ammbulance chai urgent,medical_emergency_request
+Kathmandu maambulance patau na,medical_emergency_request
+aftershock kat istrong huncha,aftershock_information_query
+cannot move stuck underconcrete malai,trapped_debris_report
+hamro area ma bijulikatti bhayo,power_outage_report
+dhanyabad ekdum helpful thiyo plz,goodbye_thanks
+mero didi pinned under debris malai help chai,trapped_debris_report
+hamro area ko algi evacuation plan,evacuation_guidance_query
+bhukampa pachi mero saathi lai bhettauna sakina,family_member_missing
+bhukampa gayo hamr oarea ma,earthquake_occurring_report
+electrical fire lagyo,fire_incident_report
+earthquake preparedness k otips dinu hos,preparedness_tips_query
+malai pillar le thichyo cannot move,trapped_debris_report
+sas pherna sakeko xaina koi,medical_emergency_request
+mero saathi pinned under debris malai help chai,trapped_debris_report
+immedite help chai xa,sos_help_request
+please rescue me mlai help chai,sos_help_request
+gana gauna saknuhuncha,fallback_unclear
+hostel ma ambulance patau na,medical_emergency_request
+bhukampa report garna man xaGorkha ma,earthquake_occurring_report
+road block bhayo landslide le hamro aarea najik,road_blockage_report
+budo budi sanga kasari evacuate garne,evacuation_guidance_query
+dheai raagat bagira xa medic chai xa,medical_emergency_request
+khane pani chaincha now,food_water_request
+hello ji sanchhai hunuhuncha,greeting
+bihana dekhimero mama bata khabar xaina,family_member_missing
+ghau ma bandage kasari garne,first_aid_query
+mausam kastocha,fallback_unclear
+thanksbro ekdam ramro jankari,goodbye_thanks
+bihana dekih mero didi bata khabar xaina,family_member_missing
+hamro ghar najik gas leak bhayo,gas_leak_report
+building m fire xa Kathmandu najik,fire_incident_report
+chat khasyobhukampa ma,building_collapse_report
+mero buwa lai safely locaet garya,family_reunification_status
+school najik ma firee lagyo,fire_incident_report
+mero ghar lai earthquake safe kasari banaune,preparedness_tips_query
+k ho yo bot,fallback_unclear
+hey bhauju k cha asap,greeting
+poleko thau ko firts aid,first_aid_query
+main road ban dcha,road_blockage_report
+mero didi pinned under debrism alai help chai,trapped_debris_report
+school najik ma firelagyo,fire_incident_report
+khanara pani sakiyo,food_water_request
+hamro ghar najiik gas leak bhayo,gas_leak_report
+random tye gardai xu,fallback_unclear
+arko bhukampa aaunxaki,aftershock_information_query
+pani ko supply band bhayo pani chai,food_water_request
+hiik help garna saknu hunxa,greeting
+bhukampa report garna man xa Gorkha ma asap,earthquake_occurring_report
+namaste ma euta prashna sodhna chahanchu,greeting
+ahlie k garnu parxa,status_check_general
+mero saathi unconsciuos bhayo,medical_emergency_request
+k garne vanera guide garnu hos,status_check_general
+emergency supplies kati choti check garne pls,preparedness_tips_query
+kitchen ma aago lagyo bhukampa ko bela,fire_incident_report
+brick khasekole lagyo,injury_report
+ahile k action linu aprxa,status_check_general
+school najik ma fire lagyo,fire_incident_report
+ok tanks bye is ma jaanchu,goodbye_thanks
+mero aama ghar aaunu bhako xaina ahile samma now,family_member_missing
+mainn road band cha,road_blockage_report
+fire brigade ko contact number,emergency_contact_request
+eathquake preparedness ko tips dinu hos,preparedness_tips_query
+earthquake bhayo hamro area ma,earthquake_occurring_report
+ghar bhatkiyo hamr oarea ma,building_collapse_report
+bhukampa paci mero saathi lai bhettauna sakina,family_member_missing
+bhukampa pachi mero bhai li bhettauna sakina,family_member_missing
+road blockbhayo landslide le gaun najik,road_blockage_report
+strong gas smell xa building ma!!!,gas_leak_report
+hami kaha shelter linna sakxam safly,safe_location_query
+raagat bagna roknu ko upaya k ho,first_aid_query
+Kathmandu am power line khaseko cha,power_outage_report
+mero gar ma ambulance patau na,medical_emergency_request
+mero buwa pinnedunder debris malai help chai,trapped_debris_report
+power outage cha Kathmanu ma,power_outage_report
+ok got it dhanyabad bahini,goodbye_thanks
+yo ghar ma basna safe cha ki xaina,building_damage_check
+mero bhai lai deep woud xa,injury_report
+hamro ghar pura bhatkiyo pls,building_collapse_report
+mero buwa sanga abhi reunitebhayo,family_reunification_status
+wall khaseko le mero saathi lai thichyo help,trapped_debris_report
+"namaste, areyou there",greeting
+mero aama lai ambulance chai urgent???,medical_emergency_request
+wall khasekoo le mero didi lai thichyo,trapped_debris_report
+doctor chai xa abhi nai,medical_emergency_request
+bihana dekhi mero aama bata khabar xaina,family_member_missing
+earthquake go bag kasari prepare garne,preparedness_tips_query
+mero buwa pinned under debris mala help chai,trapped_debris_report
+temporar yshelter kaha paunxa,shelter_request
+building ma fire xa hamro area najik,fire_incident_report
+chat khasyo bhukampa ma pls,building_collapse_report
+hostel najik gas leak bhayo now,gas_leak_report
+kitchen mag as dherai chuhira xa,gas_leak_report
+mero lai helpchaincha,sos_help_request
+bhukampa pachi mero mama laibhettauna sakina,family_member_missing
+mero bhai pinned under deris malai help chai,trapped_debris_report
+mero aama buwa ra ids ko lagi shelter chai,shelter_request
+raati bsna tent chai,shelter_request
+gana gauna saknu huncha,fallback_unclear
+bhukampa pachi mero aama lai bhettauna sakina,family_member_missing
+ahile ko situation k ho help,status_check_general
+mero ghar ma help chai xa plz,sos_help_request
+ankle sprain bhayohidna sakina,injury_report
+bhukampa pachi mero didi lai bhettauna sakina urgent pls,family_member_missing
+namaste can you help mme,greeting
+aago chittai failira xa school najik ma???,fire_incident_report
+mero bhai sanga ocntact tutyo,family_member_missing
+brick khaseko le lagyo asap,injury_report
+mero saathi lai badly injuryb hayo,injury_report
+safe place kahacha,safe_location_query
+haat bhachiyo help chai???,injury_report
+mero saathipinned under debris malai help chai,trapped_debris_report
+mero mama ko phone lagdaina bhukampa dekhi???,family_member_missing
+taauko bata aragat bagira xa,injury_report
+bhukampa report garna mman xa mero ghar najik ma,earthquake_occurring_report
+mero ghar mahelp chai xa,sos_help_request
+shelter chainca mero family ko lagi,shelter_request
+ghar bhatkiyo gaun ma,building_collapse_report
+hamroarea najik ko pul bhatkiyo,road_blockage_report
+ghar collapse bhayohami bhitra fasyou,trapped_debris_report
+debris le highway band bhayo,road_blockage_report
+hi are u working offline,greeting
+hello daimalai kehi sodhnu thiyo,greeting
+hello dai k cha khabar help,greeting
+wall bhatkiyo roadma,building_collapse_report
+bhukampa dekhi bijulixaina,power_outage_report
+tapai kati umer ko hunuhuncha,fallback_unclear
+meroaama lai ambulance chai urgent,medical_emergency_request
+gas stove le aagoo lagyo,fire_incident_report
+building ma fire xa school najik najik asap,fire_incident_report
+relief capm najik cha ki,shelter_request
+helpp asap malai dherai dar lagyo,sos_help_request
+ahile ko situation k ho,status_check_general
+wall khaseko le mero ama lai thichyo,trapped_debris_report
+mero familyra kids ko lagi shelter chai,shelter_request
+merofamily member safe bhetiyo,family_reunification_status
+cylidner bata gas chuhi raxa,gas_leak_report
+sprai bhayeko khutta ko lagi k garne,first_aid_query
+bhukampa gayo hamro area ma,earthquake_occurring_report
+merosaathi unconscious bhayo,medical_emergency_request
+mero aama lai safely locateg arya,family_reunification_status
+meor buwa lai deep wound xa,injury_report
+hamro area ma fir lagyo,fire_incident_report
+malai bachau please,sos_help_request
+najkai ko apartment bhatkiyo,building_collapse_report
+sos malai help chai urgent pls,sos_help_request
+big bhukampa jasto lagyo,earthquake_occurring_report
+bhukampa report garna man xa hamro area ma urgent pls,earthquake_occurring_report
+wall ma thulo crack cha evacuate garne ki,building_damage_check
+yo ghar ma basna safe cha ki xaina now,building_damage_check
+koi cha helpgarne,sos_help_request
+hllo dai k cha khabar,greeting
+heyare you the earthquake bot,greeting
+mero aama lai ambulance chai urgent,medical_emergency_request
+wall khaseko le mero didi lai thichyo,trapped_debris_report
+wall khaseko le mero buwalai thichyo,trapped_debris_report
+yaha ma safe zone kaha cha now,safe_location_query
+hostel najik gas leak bhayo???,gas_leak_report
+hey are you the earthquake bot,greeting
+merobhai sanga abhi reunite bhayo,family_reunification_status
+ghar bhatkiyo hamro area ma,building_collapse_report
+bhukampa ko jhatk 5 minute agadi feel bhayo,earthquake_occurring_report
+please help garnu bhai,sos_help_request
+road block bhayo landslide le hamro area najik help,road_blockage_report
+ghar bata dhuwa airaxa asap,fire_incident_report
+malai kaha jana safe hunccha,safe_location_query
+wallk haseko le mero buwa lai thichyo,trapped_debris_report
+bhukampa pachik garne,status_check_general
+bhukampa gayo Kathmandu ma!!!,earthquake_occurring_report
+sos sos heelp,sos_help_request
+immeediate help chai xa,sos_help_request
+bhukampa gayo Gorkha ma help,earthquake_occurring_report
+hamro area ma safezone kaha cha,safe_location_query
+bhukampa pachi mero mama lai bhettauna sakina urgent pls,family_member_missing
+hamro raea najik ko pul bhatkiyo,road_blockage_report
+saf eplace kaha cha,safe_location_query
+koi vane help gaa na,sos_help_request
+earthquake go bag kasari prepare garne asap,preparedness_tips_query
+evacuation ko instructionsdinu hos,evacuation_guidance_query
+schoool building half bhatkiyo,building_collapse_report
+pura building dhalyo hamro area ma,building_collapse_report
+mero mamasanga contact tutyo,family_member_missing
+scholo najik ma fire lagyo,fire_incident_report
+khutta ma cho tlagyo running bela,injury_report
+"dhanyaabd, that helped a lot",goodbye_thanks
+bab yformula ra pani chai,food_water_request
+school building half bhatikyo,building_collapse_report
+hamro ghar najik gas leakbhayo,gas_leak_report
+bhukampa pachi k ggarne,status_check_general
+bhukampa dekhi bijuli xaina,power_outage_report
+mero bhai lai ambulance chai urgent,medical_emergency_request
+yaha ma safe zone kaha cha,safe_location_query
+trapped xu ghar bhatkeko debrsi muni,trapped_debris_report
+furniture lai khasnu bata kasari secure garne,preparedness_tips_query
+hii k help gara saknu hunxa,greeting
+sabai hallyo bhukampa le!!!,earthquake_occurring_report
+najik ko assembly point kaha cha asap,safe_location_query
+malai thaha xaina k garne asap,status_check_general
+behosh bhako manxe lai kasari help garne,first_aid_query
+hii tapai ko naam k ho,greeting
+mero bhai bhukampa pach missing hunuhuncha,family_member_missing
+mero bhai sangaabhi reunite bhayo,family_reunification_status
+hijo dekhi khana xaina urgent pls,food_water_request
+raagat bagna roknu ko upayak ho,first_aid_query
+bhukampa pachi mero mama lai bhettauna sakina,family_member_missing
+evacuation k route k ho,evacuation_guidance_query
+bazaar ma fire lagyo,fire_incident_report
+gas ko smell airaxa bhukampa pachi,gas_leak_report
+temporary shelter kaha paunxa now,shelter_request
+"namastebot, are u online",greeting
+ok bye t adhanyabad,goodbye_thanks
+ankle sprain bhayo hidna sakina!!!,injury_report
+school building half bhatkiyo,building_collapse_report
+school area ma ambulance patau na,medical_emergency_request
+bihana dekhii mero bhai bata khabar xaina,family_member_missing
+ghar bhatkiyo hamro area ma pls,building_collapse_report
+mero aama debris muni thniyo,trapped_debris_report
+debris le highway band bayo,road_blockage_report
+mero ghar ma crack aayo safe cha ki!!!,building_damage_check
+bhukampa kojhatka aaile feel bhayo,earthquake_occurring_report
+gs ko smell airaxa bhukampa pachi,gas_leak_report
+bhukampa pachi k garne,status_check_general
+strong gassmell xa building ma,gas_leak_report
+earthquaake agadi k k ready rakhne,preparedness_tips_query
+"dhanyabad, that heped a lot",goodbye_thanks
+mero mama ko phone lagdaina bhukampa dekhi!!!,family_member_missing
+Kathmandu ko lagi aftershocck warning,aftershock_information_query
+mero aamako phone lagdaina bhukampa dekhi,family_member_missing
+brick khaseko le lagyo,injury_report
+khutta ma chot lagyo running bbela,injury_report
+bachcha haru lai earthquake drill ko lagi kasari prepare garne plz,preparedness_tips_query
+mero didi lai badly injury bhayo,injury_report
+rescue chai xa ma thuniyekoxu,trapped_debris_report
+cprkasari garne,first_aid_query
+bhetieko family member laai kasari register garne,family_reunification_status
+tent cmap ko location chai,shelter_request
+hamro area ko lagi aftershock warning urgent pls,aftershock_information_query
+Kathmandu ko lagi evaccuation plan,evacuation_guidance_query
+meero didi lai safely locate garya,family_reunification_status
+mero khutta ma chotlagyo,injury_report
+mero khutta am chot lagyo,injury_report
+abhi ghar bhitra jana milxaa ki,building_damage_check
+mero bhai lai badly injury bhayo,injury_report
+random tyype gardai xu,fallback_unclear
+hamro ghar puar bhatkiyo,building_collapse_report
+raati basna tentc hai,shelter_request
+bhukampa report garna man xaPokhara ma,earthquake_occurring_report
+aftershock kati samma rahanxa asap,aftershock_information_query
+bhukampa gayomero ghar najik ma,earthquake_occurring_report
+bihana deki mero aama bata khabar xaina,family_member_missing
+bhukampa report garna man xa Gorkha ma,earthquake_occurring_report
+gas leak bhayo ghar ma???,gas_leak_report
+mero khutta ma chot lagyo,injury_report
+kitchen m aago lagyo bhukampa ko bela,fire_incident_report
+mero bhai lai chest am dukheko xa,medical_emergency_request
+wall khaseo le mero buwa lai thichyo,trapped_debris_report
+merodidi bhukampa pachi missing hunuhuncha,family_member_missing
+aago chiittai failira xa Kathmandu ma,fire_incident_report
+hami abhi evacuate garnu parxa ki urgent pls,evacuation_guidance_query
+pura building dhalyo Kathmandu ma,building_collapse_report
+mero didi ghar aaunu bhako xaina ahile samma now,family_member_missing
+hamro area ma bijuli katti bhayo,power_outage_report
+mero aama safe cha vanera status update garnaman xa,family_reunification_status
+bhukampa pachi mero bhai lai bhettauna sakina pls,family_member_missing
+yo ghar ma basna safe cha ki xania,building_damage_check
+bhukampa ko jhatka 5 minute agadi feel bhayo,earthquake_occurring_report
+wall ma crack dekhiyo now,building_damage_check
+ok thanks bye is ma jjaanchu,goodbye_thanks
+wall ma thulo crack cha evacuate garne ki pls,building_damage_check
+hii k help garna saknu unxa,greeting
+police emergency number dinu hos,emergency_contact_request
+malaii pillar le thichyo cannot move,trapped_debris_report
+power outage cha Katmandu ma,power_outage_report
+medical emergecny cha help garnu,medical_emergency_request
+Kathmandu ma fire lagyo,fire_incident_report
+relief camp ma mero buwa bhetiyo,family_reunification_status
+mero saathi lai badly injury bhayo plz,injury_report
+mero saathi lai deep wound xa,injury_report
+bhukampa gayo Gorkhama,earthquake_occurring_report
+hey are you the earthquake bot pls,greeting
+mero bhai debris muni thuniyo,trapped_debris_report
+najik ko assebmly point kaha cha,safe_location_query
+tourist police ko number dinuhos,emergency_contact_request
+mero saathi debris muni thuniyo help,trapped_debris_report
+bhukampa pachi mero mama lai bhettaunasakina,family_member_missing
+hamro area ko lagi evacuationplan,evacuation_guidance_query
+mero family ra kids ko lagi sehlter chai,shelter_request
+hami kaha shelter linna sakxam safely,safe_location_query
+earthquake preparedness kotips dinu hos,preparedness_tips_query
+building ma firexa bazaar najik,fire_incident_report
+thanks a lot bahi,goodbye_thanks
+emergency contact number haru ko list,emergency_contact_request
+mero saathi bhukampa pachi missing hunuhuncha asap,family_member_missing
+gaun najik ko pul bhtakiyo,road_blockage_report
+"dhanyabad, that helped a lot",goodbye_thanks
+bhukampa report garna man xa mero ghar najik ma,earthquake_occurring_report
+mero bai lai ambulance chai urgent,medical_emergency_request
+bihana dekhi mero mama bata khabar xaina,family_member_missing
+family ko lagi food supply chai,food_water_request
+joke bhanna saknu huncha,fallback_unclear
+mero bhai debris mmuni thuniyo,trapped_debris_report
+aftershock pachi ghar bhitra sutna safe cha ki now,aftershock_information_query
+malai bacahu please,sos_help_request
+malai kahajana safe huncha,safe_location_query
+mero aama lai chest ma dukheko xa,medical_emergency_request
+mero dididebris muni thuniyo,trapped_debris_report
+hamro area ma bijuli atti bhayo,power_outage_report
+road bolck bhayo landslide le Kathmandu najik,road_blockage_report
+mero bhai bhukampa pachi missing hunuhuncha,family_member_missing
+kun khulla thau safe cha gather garna,safe_location_query
+ghar bata dhuwa airaxa,fire_incident_report
+earthquakebhayo hamro area ma,earthquake_occurring_report
+Kathmandu kolagi aftershock warning,aftershock_information_query
+mero saathi lai ambulance chai urgent,medical_emergency_request
+pura building dhalyo gaun ma asap,building_collapse_report
+aago chittai failira xa hamro arrea ma,fire_incident_report
+merobuwa unconscious bhayo,medical_emergency_request
+malai bahcau please,sos_help_request
+namaste ma euta prashna sodhna chahanchu!!!,greeting
+meroaama lai safely locate garya,family_reunification_status
+Kathmandu najik gas leakbhayo,gas_leak_report
+mero saathi harura kids ko lagi shelter chai,shelter_request
+building aliakti tilt bhayo danger chaki,building_damage_check
+pregnant lady laiemergency care chai,medical_emergency_request
+k garne vanera guide garnuhos,status_check_general
+mero bhai lai sfaely locate garya,family_reunification_status
+buildin ma fire xa bazaar najik,fire_incident_report
+bhukampa gao mero ghar najik ma,earthquake_occurring_report
+ghar ekdam hallyo earthquake ho ki k ho now,earthquake_occurring_report
+bhukampa pachi mero bhai lai bhttauna sakina,family_member_missing
+aago chittai ailira xa Kathmandu ma,fire_incident_report
+mer obhai lai safely locate garya,family_reunification_status
+thank u sira li help bhayo,goodbye_thanks
+sas pherna sakeko xxaina koi,medical_emergency_request
+namaste ma euta prashna sodhnachahanchu,greeting
+joke bhhanna saknu huncha,fallback_unclear
+mero aama ko phone lagdaina bhukampadekhi,family_member_missing
+mero didi ghar aaunu bhako xain aahile samma,family_member_missing
+aago chittai faiira xa bazaar ma,fire_incident_report
+family ko lagi foodsupply chai,food_water_request
+hijo dekhi khana xaina,food_water_request
+meroo didi sanga abhi reunite bhayo,family_reunification_status
+mero saathi aru ra kids ko lagi shelter chai,shelter_request
+mero bhai pinned under debris malai help chai help,trapped_debris_report
+building ma fire xa bazaar najik,fire_incident_report
+khutta ma chot lagyo running bela now,injury_report
+police eemrgency number dinu hos,emergency_contact_request
+help asap malai dherai dar lagyo,sos_help_request
+hamro area ma fire lagyo,fire_incident_report
+ghar ekdamm hallyo earthquake ho ki k ho,earthquake_occurring_report
+mero bhaisafe cha vanera status update garna man xa,family_reunification_status
+next steps k oh bhannu hos,status_check_general
+merodidi safe cha vanera status update garna man xa,family_reunification_status
+Kathmandu ma safe zone kahha cha,safe_location_query
+mero bhai safe cha vanera status update garna manxa,family_reunification_status
+wall khaseko le mero saathi lai thichyo,trapped_debris_report
+bachcha haru lai earthquakke drill ko lagi kasari prepare garne,preparedness_tips_query
+pani ko supply band bhayo pani chai asap,food_water_request
+mero aama buwa ra kids ko lagi shelteer chai,shelter_request
+building bata bahira nniskane safest tarika,evacuation_guidance_query
+mero bhai sanga contact tutyo,family_member_missing
+ok thanks bye is ma jaanchu,goodbye_thanks
+kitchen ma aago lagyo bhukammpa ko bela,fire_incident_report
+mero bhai lai chest ma dukheko xa,medical_emergency_request
+abhi ghar bhitra ajna milxa ki,building_damage_check
+Kathmanndu ma ambulance patau na,medical_emergency_request
+mero ghar ma help chai xa help,sos_help_request
+big bhukamppa jasto lagyo,earthquake_occurring_report
+bihana dekhi mero didi bata kabar xaina,family_member_missing
+please rescue me malai help chai,sos_help_request
+mero aamma lai safely locate garya,family_reunification_status
+relief camp ma mero aaa bhetiyo,family_reunification_status
+mero buwa ko phone lagdaina bhukampa dekhi urgent pls,family_member_missing
+yo bhukampa sanga related xaina,fallback_unclear
+hi are u working offline asap,greeting
+hamro area ma power line khasekocha,power_outage_report
+bhukampa report garna man xa hamro area ma,earthquake_occurring_report
+najik ko releif camp kaha cha,shelter_request
+mero didi sanga abhi reunite bhhayo,family_reunification_status
+ahile k action linu parxa,status_check_general
+emergency supplis kati choti check garne,preparedness_tips_query
+mero aama lai chest ma dukheko xa plz,medical_emergency_request
+najik ko assembly point kaha cha,safe_location_query
+power outage chaKathmandu ma,power_outage_report
+mero aama kophone lagdaina bhukampa dekhi,family_member_missing
+big bhukammpa jasto lagyo,earthquake_occurring_report
+emergency supplies kati choti check garne,preparedness_tips_query
+relief camp ma merob hai bhetiyo,family_reunification_status
+help asap malai dheraidar lagyo,sos_help_request
+bhukampa aayo,earthquake_occurring_report
+thanks bro ekdamramro jankari,goodbye_thanks
+koi cha help garne,sos_help_request
+bhetieko family member lai kasari register garne,family_reunification_status
+"dhanyaabd, bye bye",goodbye_thanks
+mero lai help chaincha,sos_help_request
+bijuli kahile aaunxa,power_outage_report
+aftershock kati samma rahanxa,aftershock_information_query
+shelter chaincha mero family ko lagi,shelter_request
+mero bhai laichest ma dukheko xa,medical_emergency_request
+hamro area ma power line khaseko cha plz,power_outage_report
+Kathmandu najikk gas leak bhayo,gas_leak_report
+mero bhai lai chest madukheko xa,medical_emergency_request
+mero didi safe cha vanea status update garna man xa,family_reunification_status
+kun khulla thau safe cha gather gana,safe_location_query
+mero bbhai ghar aaunu bhako xaina ahile samma,family_member_missing
+mero aama sanga abhi reunite bhayo plz,family_reunification_status
+hello dai malai ekhi sodhnu thiyo,greeting
+help garnu na plz,sos_help_request
+khane pani chaincha,food_water_request
+safe place kaha cha asap,safe_location_query
+hii k help garna saknu hunxa,greeting
+immediate help chai xa,sos_help_request
+rescue ko lagi kaha phone garne help,emergency_contact_request
+budo budi sanga kasari evacuaet garne,evacuation_guidance_query
+bhukampa pachi mero didi lai bhettauna sakina,family_member_missing
+wall khaseko le mero aama lai thichyo!!!,trapped_debris_report
+mero ghar ma crack aayo safe cha ki,building_damage_check
+dhanyabad ekdum helpfulthiyo,goodbye_thanks
+koi avne help gara na,sos_help_request
+ok gt it dhanyabad bahini,goodbye_thanks
+emergency supplies kati choti check garne now,preparedness_tips_query
+malai nkialnu hos thuniyeko xu,trapped_debris_report
+bihana dekhi mero didi btaa khabar xaina,family_member_missing
+meero didi ko phone lagdaina bhukampa dekhi,family_member_missing
+head injury bhayo debris khaseko le urgent pls,injury_report
+hostel ma ambulance paatu na,medical_emergency_request
+mero aama bbuwa ra kids ko lagi shelter chai,shelter_request
+najikai ko safe zone kaha cha,safe_location_query
+hamro area jana sakidaina road band cha now,road_blockage_report
+wall ma thulo crack cha evacuate garneki,building_damage_check
+o bye ta dhanyabad,goodbye_thanks
+thanks a lotb hai,goodbye_thanks
+bihana dekhi mero aamaa bata khabar xaina,family_member_missing
+relief camp ma mero aama bhetiyo,family_reunification_status
+mero ghar ma help chai xa,sos_help_request
+yaha saafpani xaina,food_water_request
+abhi ghar bhitra jana milxa ki,building_damage_check
+wall khaseko le mero didi la thichyo,trapped_debris_report
+gas ko smell airaxa bhukampa pachi pls,gas_leak_report
+trappeed xu ghar bhatkeko debris muni,trapped_debris_report
+bhukampa pachi merosaathi lai bhettauna sakina,family_member_missing
+Kathmandu ko lagi evacuation plan,evacuation_guidance_query
+hamro ghar unsafexa shelter chai,shelter_request
+evacuation ko route k ho asap,evacuation_guidance_query
+behosh bhako manxe lai kasari elp garne,first_aid_query
+mero family member safe bhetiyo,family_reunification_status
+ahile k agrne ma,status_check_general
+mero bhai unconscious bhayo,medical_emergency_request
+pura building dhalyo gaun ma,building_collapse_report
+road block bhayo landslide lehamro area najik,road_blockage_report
+pregnant lady lai emergency care chai,medical_emergency_request
+mero ghra ma ambulance patau na,medical_emergency_request
+building bata evacuate gane steps,evacuation_guidance_query
+hamro area ko lagi afetrshock warning,aftershock_information_query
+mero buwa debris muni thuniyo pls,trapped_debris_report
+furniture lai khasnu batakasari secure garne,preparedness_tips_query
+aftershock kati strong huncha,aftershock_information_query
+malai thaha xaina k garne,status_check_general
+mero aama ai chest ma dukheko xa,medical_emergency_request
+mero aama sanga bahi reunite bhayo,family_reunification_status
+wall ma crack dekhiyo,building_damage_check
+mero didi bhhukampa pachi missing hunuhuncha,family_member_missing
+mero didi lai safely locat egarya,family_reunification_status
+dherai raaat bagira xa medic chai xa,medical_emergency_request
+malai kaha jana safe huncha,safe_location_query
+aftershock katistrong huncha,aftershock_information_query
+amulance ko number k ho,emergency_contact_request
+family ko lagi food supply cahi,food_water_request
+h bhai kasto cha,greeting
+bhukampaaayo abhi,earthquake_occurring_report
+bihana dekhi mero aama bata khabar aina,family_member_missing
+ghar bata dhuwa airaxa now,fire_incident_report
+ghau ma bandage ksaari garne,first_aid_query
+mero aama pinned under debris malai help chai,trapped_debris_report
+evacuation ko route k ho,evacuation_guidance_query
+hami abhi evacuate garun parxa ki,evacuation_guidance_query
+budo budi sanga kasari evacuate ganre,evacuation_guidance_query
+thank youdai next time feri sodhchu,goodbye_thanks
+gha pura bhatkiyo,building_collapse_report
+kasari safely evacaute garne,evacuation_guidance_query
+mero aama buwa ra kids ko lagi shelter chai,shelter_request
+kasari safely evacuate garne now,evacuation_guidance_query
+hamro area janaa sakidaina road band cha,road_blockage_report
+mero bhai pinned unde debris malai help chai,trapped_debris_report
+merobuwa sanga abhi reunite bhayo,family_reunification_status
+bhukampa pachicrack aayo,building_damage_check
+mero buwa ko phone lagdaina bhukampaa dekhi,family_member_missing
+mero buwa safe chavanera status update garna man xa,family_reunification_status
+koi cha hel pgarne,sos_help_request
+ghau ma bandage kasari agrne,first_aid_query
+ghar hatkiyo gaun ma,building_collapse_report
+evacuation ko instructions dinu hos,evacuation_guidance_query
+hostel najik gas leak bhayo!!!,gas_leak_report
+rescue ko lagi kaha phone garne,emergency_contact_request
+mero buwa lai badly injuyr bhayo,injury_report
+evacuation ko instrcutions dinu hos,evacuation_guidance_query
+mero aama safe chaa vanera status update garna man xa,family_reunification_status
+school rea ma ambulance patau na,medical_emergency_request
+yaha saaf pani xaina,food_water_request
+hi bhai kasto cha???,greeting
+mero bhai unonscious bhayo,medical_emergency_request
+yaha ma safe zon ekaha cha,safe_location_query
+bhukampa pachi crack aayo pls,building_damage_check
+hii tapai ko naa mk ho,greeting
+malai bachau pleae,sos_help_request
+bhukampa gayo Gorkha ma,earthquake_occurring_report
+hamro ghar unsafe xa shelter chai,shelter_request
+yo bhukampa sanga relatd xaina,fallback_unclear
+bhukamp ko jhatka abhi feel bhayo,earthquake_occurring_report
+ok thanks bye is ma jaanchhu,goodbye_thanks
+wall khaseko le mreo didi lai thichyo,trapped_debris_report
+evacuation ko laggi khulla thau kaha cha,safe_location_query
+kasari safely evacuate garne,evacuation_guidance_query
+mero ghar ma cracka ayo safe cha ki,building_damage_check
+2 dni dekhi bijuli xaina,power_outage_report
+hostel najik gas leak bhayo,gas_leak_report
+khutta ma chot lagyo running bela,injury_report
+taauko bataraagat bagira xa,injury_report
+mero buwa unconscious bhayo pls,medical_emergency_request
