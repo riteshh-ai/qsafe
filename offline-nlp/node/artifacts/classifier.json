@@ -1,0 +1,51 @@
+{
+ "classes": [
+  "aftershock_information_query",
+  "building_collapse_report",
+  "building_damage_check",
+  "earthquake_occurring_report",
+  "emergency_contact_request",
+  "evacuation_guidance_query",
+  "fallback_unclear",
+  "family_member_missing",
+  "family_reunification_status",
+  "fire_incident_report",
+  "first_aid_query",
+  "food_water_request",
+  "gas_leak_report",
+  "goodbye_thanks",
+  "greeting",
+  "injury_report",
+  "medical_emergency_request",
+  "power_outage_report",
+  "preparedness_tips_query",
+  "road_blockage_report",
+  "safe_location_query",
+  "shelter_request",
+  "sos_help_request",
+  "status_check_general",
+  "trapped_debris_report"
+ ],
+ "nClasses": 25,
+ "nFeatures": 15000,
+ "dtype": "float64",
+ "byteOrder": "little",
+ "layout": {
+  "wordIdf": {
+   "offset": 0,
+   "length": 5000
+  },
+  "charIdf": {
+   "offset": 5000,
+   "length": 10000
+  },
+  "coef": {
+   "offset": 15000,
+   "length": 375000
+  },
+  "intercept": {
+   "offset": 390000,
+   "length": 25
+  }
+ }
+}
